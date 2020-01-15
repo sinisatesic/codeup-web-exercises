@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -23,18 +23,18 @@
 ******************************** !-->
 
 <!-- TODO TOGETHER: Review the following form - focus on the structure, method, and action	-->
-<form method="POST" action="PUT YOUR HOOKBIN URL HERE!">
+<!--<form method="POST" action="https://hookb.in/eKXO6xDBVJtr9g86QpMk">-->
 
-    <label for="username">Username</label>
-    <input id="username" name="username" type="text">
-    <br>
+<!--    <label for="username">Username</label>-->
+<!--    <input id="username" name="username" type="text">-->
+<!--    <br>-->
 
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password">
-    <br>
+<!--    <label for="password">Password</label>-->
+<!--    <input id="password" name="password" type="password">-->
+<!--    <br>-->
 
-    <input type="submit">
-</form>
+<!--    <input type="submit">-->
+<!--</form>-->
 
 
 <!-- TODO: Practice submitting different values from the form. View the results on your hookbin dashboard.	-->
@@ -46,6 +46,56 @@
 
 
 <!-- TODO TOGETHER: Build a form, using a GET request, with an input to enter and submit a zipcode	-->
+
+<form action="https://hookb.in/eKXO6xDBVJtr9g86QpMk" method="POST">
+
+    <label for="zipcode-input">Enter zipcode</label>
+    <input type="text" id="zipcode-input" name="zipcode" placeholder="enter zipcode">
+    <button type="submit">Submit</button>
+
+</form>
+
+<!--text area example below:-->
+
+<!--<label for="comment">Enter comment</label>-->
+<!--<textarea name="comment" id="comment" cols="30" rows="10"></textarea>-->
+
+<br>
+
+<!--select example below:-->
+
+<!--<label for="coffee-select">select best coffee</label>-->
+<!--<select name="coffee" id="coffee-select">-->
+<!--    <option value="light">Light roast</option>-->
+<!--    <option value="medium">Medium roast</option>-->
+<!--    <option value="dark">Dark roast</option>-->
+<!--</select>-->
+
+<br>
+
+<!--checkbox example below:-->
+
+<!--<input type="checkbox" name="newsletter" value="true" checked>Sign up for newsletter-->
+
+<br>
+
+<!--radio example below:-->
+
+<!--<h3>Select an answer:</h3>-->
+<!--<label for="a-radio">A</label>-->
+<!--<input type="radio" id="a-radio" name="question1" value="a">-->
+<!--<br>-->
+
+<!--<label for="b-radio">B</label>-->
+<!--<input type="radio" id="b-radio" name="question1" value="b">-->
+<!--<br>-->
+
+<!--<label for="c-radio">C</label>-->
+<!--<input type="radio" id="c-radio" name="question1" value="c">-->
+<br>
+
+
+
 <!-- TODO TOGETHER: What is the main difference we notice with a GET request vs POST request? *HINT - Check URL	-->
 
 
@@ -127,6 +177,28 @@
 		- Windows
 		- Other
  -->
+
+<h2>What kind of phone do you own?</h2>
+
+<label for="Android">
+    Android
+    <input type="checkbox" id="android" name="phone" value="android">
+</label>
+
+<label for="ios">
+    iOS
+    <input type="checkbox" id="ios" name="phone" value="ios">
+</label>
+
+<label for="windows">
+    Windows
+    <input type="checkbox" id="windows" name="phone" value="windows">
+</label>
+
+<label for="other">
+    Other
+    <input type="checkbox" id="other" name="phone" value="other">
+</label>
 
 
 
