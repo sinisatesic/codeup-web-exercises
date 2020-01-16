@@ -1,0 +1,22 @@
+/*this is syntax for css comment(s)*/
+
+
+.fancy-header {
+    color: purple;
+    font-family: Luminari;
+    animation: bounce .5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translate3d(0, 20px, 0); color: pink;
+    }
+    50%{
+        transform: translate3d(0, -10px, 0); color: gold;
+    }
+    100%{
+        transform: translate3d(0, 20px, 0); color: lime;
+    }
+
+}
