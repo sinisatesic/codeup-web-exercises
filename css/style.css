@@ -1,22 +1,127 @@
 /*this is syntax for css comment(s)*/
 
+* {
+    font-family: 'Bangers', cursive;
+    text-shadow: black;
+}
 
-.fancy-header {
-    color: purple;
-    font-family: Luminari;
-    animation: bounce .5s;
+#backgroundImage {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: absolute;
+}
+
+#backgroundImage::after {
+    content: "";
+    background: no-repeat fixed center url("https://vignette.wikia.nocookie.net/starwars/images/0/02/Jar_Jar_SWSB.png/revision/latest?cb=20160910034613");
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    position: absolute;
+    border-radius: 50%;
+}
+/*html {*/
+/*    background: url("https://vignette.wikia.nocookie.net/starwars/images/0/02/Jar_Jar_SWSB.png/revision/latest?cb=20160910034613");*/
+/*    background-size: cover;*/
+/*}*/
+
+#mainHeader {
+    text-align: center;
+    animation: growey 2s;
     animation-iteration-count: infinite;
 }
 
-@keyframes bounce {
+@keyframes growey {
     0%{
-        transform: translate3d(0, 20px, 0); color: pink;
+        transform: scaleX(1); color: #0c5c99;
+    }
+    25%{
+        transform: scaleX(1.25); color: #49b8d6;
     }
     50%{
-        transform: translate3d(0, -10px, 0); color: gold;
+        transform: scaleX(2.5); color: #56d1bf;
+    }
+    75%{
+        transform: scaleX(1.25); color: #8fdbb9;
     }
     100%{
-        transform: translate3d(0, 20px, 0); color: lime;
+        transform: scaleX(1); color: #0c5c99;
     }
-
 }
+
+body h1, h2 {
+    color: #074866;
+    text-decoration: underline;
+}
+
+img {
+    border-radius: 50%;
+    animation: shakey 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shakey {
+    0%{
+        transform: translate3d(7px, 0, 20px);
+    }
+    25%{
+        transform: translate3d(20px, 0, 22px);
+    }
+    50%{
+        transform: translate3d(0, 25px, 0);
+    }
+    75%{
+        transform: translate3d(20px, 0, 22px);
+    }
+    100%{
+        transform: translate3d(7px, 0, 20px);
+    }
+}
+
+li {
+    color: #ab00d6;
+    list-style-type: hebrew;
+}
+
+table, td, tr, p {
+    padding: 10px;
+    font-size: 1.75em;
+    color: gold;
+}
+
+tr:hover {
+    background: rebeccapurple;
+}
+
+a:visited {
+    color: maroon;
+}
+
+a:hover {
+    color: pink;
+}
+
+
+/*.fancy-header {*/
+/*    color: purple;*/
+/*    animation: bounce .5s;*/
+/*    animation-iteration-count: infinite;*/
+/*    text-indent: 25px;*/
+/*}*/
+
+/*@keyframes bounce {*/
+/*    0%{*/
+/*        transform: translate3d(0, 20px, 0); color: pink;*/
+/*    }*/
+/*    50%{*/
+/*        transform: translate3d(0, -10px, 0); color: gold;*/
+/*    }*/
+/*    100%{*/
+/*        transform: translate3d(0, 20px, 0); color: lime;*/
+/*    }*/
+
+/*}*/
