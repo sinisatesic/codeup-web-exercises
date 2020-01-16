@@ -8,22 +8,24 @@
     <title>Register With Us</title>
 </head>
 <body>
-<form action="https://www.elformo.com/forms/454e4aa3-6e03-48ba-8932-269d43a32896" method="post" accept-charset="UTF-8">
+<form action="https://www.elformo.com/forms/454e4aa3-6e03-48ba-8932-269d43a32896" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
 
     <label for="email">Email</label>
-    <input id="email" name="email" type="text" placeholder="Enter Your Email">
-
+    <input id="email" name="email" type="email" placeholder="Enter Your Email">
+    <br>
     <label for="password">Password</label>
     <input id="password" name="password" type="password" placeholder="Enter Your Password">
-
+    <br>
     <label for="comment">Enter Comment</label>
     <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Enter Your Comments"></textarea>
     <br>
+    <section>
     <h3>How Did You Hear About Us?</h3>
-    <label><input type="checkbox" name="q1[]" value="billboard"> Billboard</label>
-    <label><input type="checkbox" name="q1[]" value="radio-ad"> Radio Advertisement</label>
-    <label><input type="checkbox" name="q1[]" value="internet"> Internet Advertisement</label>
-    <label><input type="checkbox" name="q1[]" value="other"> Other</label>
+    <label><input type="checkbox" name="aboutUs[]" id="billboard" value="billboard"> Billboard</label>
+    <label><input type="checkbox" name="aboutUs[]" id="radio" value="radio-ad"> Radio Advertisement</label>
+    <label><input type="checkbox" name="aboutUs[]" id="internet" value="internet"> Internet Advertisement</label>
+    <label><input type="checkbox" name="aboutUs[]" id="other" value="other"> Other</label>
+    </section>
     <br><br>
     <label for="browsers">Which Browser Are You Using?</label>
     <select name="browsers" id="browsers">
