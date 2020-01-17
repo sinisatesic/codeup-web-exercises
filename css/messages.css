@@ -1,13 +1,27 @@
+/*below are variable examples(bonus on this exercise):*/
+
+/*--text-info: red;*/
+/*--bg-info: blue;*/
+/*--text-success: green;*/
+/*--bg-success: yellow;*/
+/*--text-warning: orange;*/
+/*--bg-warning: white;*/
+/*--text-error: black;*/
+/*--bg-error: teal;*/
+
+/*background: var(--text-info);  <-- this goes within css selector within css stylesheet */
+
+
 body, html {
     height: 100%;
     width: 100%;
     padding: 25px;
     margin: 15px;
-    font-family: Arial, Ubuntu, sans-serif;
-    box-sizing: border-box;
+font-family: Arial, Ubuntu, sans-serif;
+box-sizing: border-box;
 }
 
-div {
+.message {
     width: 90%;
     height: 5%;
     border: 1px solid lightgrey;
