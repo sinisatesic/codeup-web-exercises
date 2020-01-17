@@ -1,0 +1,96 @@
+/*html {*/
+/*    background: url("../img/eagle.png");*/
+/*    margin: auto;*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*}*/
+
+html {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: absolute;
+}
+
+html::after {
+    content: "";
+    background: no-repeat center url("../img/eagle.png");
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    position: absolute;
+    border-radius: 50%;
+}
+
+#flagBody {
+    width: 300px;
+    height: 200px;
+    border: 5px solid gold;
+    margin-left: 30%;
+    margin-top: 20%;
+    position: absolute;
+}
+
+#bluePortion {
+    width: 33%;
+    height: 100%;
+    background: #1100ab;
+    margin: auto;
+    float: left;
+}
+
+#star {
+    margin: 87.5px 25px;
+    position: relative;
+    display: block;
+    color: white;
+    width: 0px;
+    height: 0px;
+    border-right: 25px solid transparent;
+    border-bottom: 17.5px solid white;
+    border-left: 25px solid transparent;
+    transform: rotate(35deg);
+}
+#star:before {
+    border-bottom: 20px solid white;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -11.75px;
+    left: -15.75px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+#star:after {
+    position: absolute;
+    display: block;
+    color: white;
+    top: .75px;
+    left: -26.25px;
+    width: 0px;
+    height: 0px;
+    border-right: 25px solid transparent;
+    border-bottom: 17.5px solid white;
+    border-left: 25px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
+
+
+#whitePortion {
+    width: 100%;
+    height: 50%;
+    background: #fafafa;
+}
+
+#redPortion {
+    width: 100%;
+    height: 50%;
+    background: #a80000;
+}
