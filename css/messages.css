@@ -1,37 +1,38 @@
 body, html {
     height: 100%;
     width: 100%;
-    padding: 10px;
-    margin: 10px;
+    padding: 25px;
+    margin: 15px;
     font-family: Arial, Ubuntu, sans-serif;
     box-sizing: border-box;
 }
 
 div {
-    width: 80%;
+    width: 90%;
     height: 5%;
-    border: 1px solid;
-    margin: 10px 0;
-    border-radius: 25px;
+    border: 1px solid lightgrey;
+    margin: 20px 0;
+    border-radius: 10px;
     padding: 20px;
+    font-size: 1.5em;
 }
 
 .message-info {
-    background: lightblue;
-    color: blue;
+    background: #81a6f7;
+    color: #6714f7;
 }
 
 .message-success {
-    background: lightgreen;
-    color: green;
+    background: #daffa3;
+    color: #5c8f10;
 }
 
 .message-warning {
-    background: lightyellow;
-    color: goldenrod;
+    background: #fafa78;
+    color: #a19b1d;
 }
 
 .message-error {
-    background: salmon;
-    color: red;
+    background: #f7b7b2;
+    color: #b50560;
 }
