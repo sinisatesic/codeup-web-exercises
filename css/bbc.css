@@ -1,0 +1,30 @@
+.top-nav {
+    background: white;
+    width: 100%;
+    position: fixed;
+    z-index: 1200;
+    border: 1px solid black;
+    margin-top: -10px;
+}
+
+.bbc-logo {
+    margin: 2em 1em;
+    width: 5%;
+    height: 5%;
+    float: left;
+    margin-left: 20%;
+
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 1.5em;
+    float: right;
+}
+
+#404 {
+    width: 100%;
+    height: 30px;
+    background: purple;
+    position: relative;
+}
