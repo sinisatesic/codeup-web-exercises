@@ -227,6 +227,7 @@ a {
 
 .profile-items {
     list-style-type: none;
+    margin: 0 -40px;
 }
 
 .timeline {
@@ -243,6 +244,7 @@ a {
 
 .container {
     padding: 2em;
+    margin: .5em;
 }
 
 .media {
