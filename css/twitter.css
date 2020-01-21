@@ -1,3 +1,153 @@
+/*:root {*/
+/*    --main-bg: #E6ECF0;*/
+/*    --link-color: #3B94D9;*/
+/*    --main-link-color: #848487;*/
+/*    --light-bg: #FFF;*/
+/*    --separator-color: #DDD;*/
+/*}*/
+/** {*/
+/*    box-sizing: border-box;*/
+/*}*/
+/*body, html {*/
+/*    background-color: var(--main-bg);*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    font-family: Arial, Ubuntu, sans-serif;*/
+/*}*/
+/*header {*/
+/*    background-image: url("https://loremflickr.com/1200/300");*/
+/*    background-size: cover;*/
+/*    min-height: 300px;*/
+/*    padding-top: 275px;*/
+/*}*/
+/*a {*/
+/*    color: var(--link-color);*/
+/*}*/
+/*.top-nav {*/
+/*    background: var(--light-bg);*/
+/*    width: 100%;*/
+/*    position: fixed;*/
+/*    z-index: 1200;*/
+/*}*/
+
+/*.nav {*/
+/*    list-style-type: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+/*.nav li{*/
+/*    list-style-type: none;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.nav-item {*/
+/*    padding: 1.5em;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.nav-link {*/
+/*    color: var(--main-link-color);*/
+/*    font-weight: bold;*/
+/*    text-decoration: none;*/
+/*    padding: 1.5em;*/
+/*}*/
+/*.nav-link:hover {*/
+/*    color: var(--link-color);*/
+/*    padding: 1.5em;*/
+/*}*/
+/*.profile {*/
+/*    height: 80px;*/
+/*    background: var(--light-bg);*/
+/*}*/
+
+/*.profile-details {*/
+/*    float: left;*/
+/*    width: calc(25% - 1em);*/
+/*    margin: 0 .5em;*/
+/*}*/
+
+/*.profile-image {*/
+/*    position: absolute;*/
+/*    top: 245px;*/
+/*}*/
+
+/*.profile-form {*/
+/*    float: right;*/
+/*    line-height: 55px;*/
+/*    margin: 1em 0;*/
+/*}*/
+
+/*.profile-items {*/
+/*    padding: 0 0;*/
+/*    list-style-type: none;*/
+/*}*/
+
+/*.timeline {*/
+/*    float: left;*/
+/*    width: calc(50% - 1em);*/
+/*    margin: 0 .5em;*/
+/*}*/
+
+/*.who-to-follow {*/
+/*    float: left;*/
+/*    width: calc(25% - 1em);*/
+/*    margin: 0 .5em;*/
+/*}*/
+
+/*.container {*/
+/*    padding: 2em;*/
+/*}*/
+
+/*.media {*/
+/*    background-position: var(--light-bg);*/
+/*    border-bottom: var(--separator-color);*/
+/*    bottom: 1px;*/
+/*    padding: .5em;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.media-image {*/
+/*    max-width: 50px;*/
+/*    margin-top: 1.33em;*/
+/*    float: left;*/
+/*}*/
+
+/*.media-body {*/
+/*    width: calc(100% - 50px);*/
+/*    float: left;*/
+/*    background-color: white;*/
+/*    margin: -7px 0;*/
+/*}*/
+
+/*.btn {*/
+/*    border: 1px solid var(--main-link-color);*/
+/*    color: var(--main-link-color);*/
+/*    background: var(--light-bg);*/
+/*    font-weight: bold;*/
+/*    padding: 8px;*/
+/*    border-radius: 5px;*/
+/*}*/
+/*.btn-large {*/
+/*    font-size: 1.3em;*/
+/*    padding: 10px;*/
+/*}*/
+/*.img-circle {*/
+/*    border-radius: 100%;*/
+/*    border: 4px solid var(--light-bg);*/
+/*}*/
+/*.text-right {*/
+/*    text-align: right;*/
+/*}*/
+/*.text-muted {*/
+/*    color: var(--main-link-color);*/
+/*}*/
+
+
+
+
+
 :root {
     --main-bg: #E6ECF0;
     --link-color: #3B94D9;
@@ -27,12 +177,21 @@ a {
 }
 .top-nav {
     background: var(--light-bg);
+    width: 100%;
+    position: fixed;
+    z-index: 1200;
 }
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
+.nav-item {
+    display: inline-block;
+    padding: 1.5em;
+}
+
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
@@ -43,7 +202,68 @@ a {
 }
 .profile {
     background: var(--light-bg);
+    height: 80px;
 }
+
+.profile-details {
+    width: calc(25% - .5em);
+    float: left;
+    margin: .5em 0;
+}
+
+.profile-image {
+    position: absolute;
+    top: 245px;
+}
+
+.profile-form {
+    float: left;
+    line-height: 80px;
+}
+
+.profile-entry {
+    margin: .5em;
+}
+
+.profile-items {
+    list-style-type: none;
+}
+
+.timeline {
+    width: calc(50% - .5em);
+    float: left;
+    margin: .5em 0;
+}
+
+.who-to-follow {
+    width: calc(25% - .5em);
+    float: right;
+    margin: .5em 0;
+}
+
+.container {
+    padding: 2em;
+}
+
+.media {
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px var(--separator-color) solid;
+    padding: .5em;
+    overflow: hidden;
+}
+
+.media-image {
+    max-width: 50px;
+    margin-top: 1.33em;
+    float: left;
+}
+
+.media-body {
+    width: calc(100% - 50px);
+    float: left;
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
