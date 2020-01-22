@@ -20,7 +20,25 @@
 		.flex-container {
 			width: 100%;
 			border: 3px solid goldenrod;
+			display: flex;
+			flex-direction: row;
+			/*justify-content: space-between;*/
+			height: 15em;
 			/*Add flex properties*/
+			/*align-items: baseline;*/
+		}
+
+		/*align items: baseline, example*/
+		#box-1 {
+			flex-grow: 1;
+		}
+
+		#box-2 {
+			flex-grow: 2;
+		}
+
+		#box-3 {
+			flex-grow: 3;
 		}
 
 		.flex-item{
@@ -49,7 +67,7 @@
 	<div class="flex-item" id="box-3">Item 3</div>
 
 	<!-- Abbreviation that we can use!	-->
-	<!--	div.flex-item#${flex item $}*17 -->
+<!--	div.flex-item#${flex item $}*17-->
 
 </div>
 
