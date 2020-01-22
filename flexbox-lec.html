@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox Basics Examples</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			font-family: Helvetica;
+			font-weight: bold;
+		}
+
+		.note-item{
+			font-weight: normal;
+		}
+
+		.flex-container {
+			width: 100%;
+			border: 3px solid goldenrod;
+			/*Add flex properties*/
+		}
+
+		.flex-item{
+			background: #BFD45D;
+			border: 2px solid #F9EFD6;
+			padding: 1em;
+		}
+
+
+	</style>
+</head>
+<body>
+<h1>FLEXBOX</h1>
+<ul>
+	<li class="note-item">Lesson Objective: We are going to focus on the properties of flexbox and how we can control the individual items.</li>
+	<li class="note-item">Flexbox gives us a lot of control on how we align along a dimension</li>
+	<li class="note-item">Flexbox MDN Docs --> <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox</a></li>
+</ul>
+
+<hr>
+<h3>Flexbox Examples</h3>
+
+<div class="flex-container">
+	<div class="flex-item" id="box-1" >Item 1</div>
+	<div class="flex-item" id="box-2" >Item 2</div>
+	<div class="flex-item" id="box-3">Item 3</div>
+
+	<!-- Abbreviation that we can use!	-->
+	<!--	div.flex-item#${flex item $}*17 -->
+
+</div>
+
+<!--
+	**********************************
+			FLEXBOX CONTAINER
+	**********************************
+
+	>> There are no flexbox declarations yet... so this is the output right now (View original output)
+	TODO TOGETHER: Lets add display: flex to the parent container now. View the output
+
+	>> Any direct children of this flex container are now flex items of their flex parent.
+
+	>> Notice how the flex items now appear to be inline-level elements. They are still block-level but their behaviour is now controlled by flexbox.
+
+	>> Items display in a row (flex-direction is row).
+	>> The items will stretch to fill the size of the cross axis.
+	>> The items do not stretch on the main axis, but can shrink.
+	>> The flex-basis property is set to auto.
+	>> The flex-wrap property is set to nowrap.
+
+
+	**********************************
+			FLEXBOX AXES
+	**********************************
+	>> see slides && curriculum
+	>> In a row: horizontal axis ="main axis" and vertical axis ="cross axis
+	>> In a column: vertical axis ="main axis" and horizontal axis ="cross axis
+
+
+
+	**********************************
+			FLEX DIRECTION
+	**********************************
+
+	By default, flex items are arranged in a row: (view current output)
+
+	TODO TOGETHER:
+		Explicitly assign flex-direction: row and column
+		>>> flex-direction: column
+
+
+	TODO: Practice assigning different flex-direction properties to the flex container - row, row-reverse, column, column-reverse
+
+
+	*****************************
+			JUSTIFY CONTENT
+	*****************************
+
+	>> justify-content -> To control the position of elements on their main axis
+		- When in row: horizontal
+		- When in column: vertical
+		- Note* - when in column direction the flex container must have a specified height
+
+
+	TODO: Reset flex-direction to row
+
+	TODO TOGETHER: Explore the following property values for flex-direction: row and justify-content:_________
+		flex-start
+		flex-end
+		center
+
+	TODO: Explore the following property values for flex-direction: row and justify-content:_________
+		space-between
+		space-around
+		space-evenly
+
+
+	TODO TOGETHER: Explore the following property values for flex-direction: column and justify-content:_________
+		flex-start
+		flex-end
+		center
+
+	TODO: Explore the following property values for flex-direction: column and justify-content:_________
+		space-between
+		space-around
+		space-evenly
+
+
+	*****************************
+			ALIGN ITEMS
+	*****************************
+
+	The align-items property is used to set the position of items along the cross axis
+	>> For this property to have an effect
+	 	- the parent container height must be greater than the items
+	 	- and (or) the items have different heights.
+
+	TODO TOGETHER: Explore the following property values for flex-direction:row, height: 5em; and align-items: _______
+		flex-start
+		flex-end
+		stretch (* the default value)
+		center
+
+	TODO: Explore the following property values for flex-direction:column and align-items: __________
+		flex-start
+		flex-end
+		stretch (* the default value)
+		center
+
+
+	>> align-items: baseline. Useful when the flex items have different heights and we want to center them using their text.
+	TODO TOGETHER: Explore align-items: baseline
+
+
+	*****************************
+			FLEX WRAP
+	*****************************
+	>> When more items are present than can fit within a flex container of a certain width, the flex-wrap property helps control how these extra items behave
+
+	TODO TOGETHER: Explore the following for flex-wrap
+		nowrap (*default value)
+		wrap
+		wrap-reverse
+
+
+	*****************************
+			ALIGN CONTENT
+	*****************************
+	>> When multiple rows or columns of flex items are present, the spacing of these lines of items may be controlled along the cross axis by targeting the align-content property
+
+	TODO TOGETHER: Explore the following for align-content
+		flex-direction:row, flex-wrap: wrap, height: 15em; align-content: flex-start;
+		flex-direction:row, flex-wrap: wrap, height: 15em; align-content: center;
+		flex-direction:row, flex-wrap: wrap, height: 15em; align-content: space-evenly;
+
+	*****************************
+				REVIEW
+	*****************************
+
+	TODO: Exercise 1 (from curriculum) - Using Flexbox Trainer, complete several basic problems, then complete several challenge problems. Use this as a resource to return to for practicing your flexbox skills!
+
+	TODO BONUS: Review the extra resources
+---------------------------------------------------------------------------------------------------------------------------
+FLEX ITEM PROPERTIES: In addition to setting the properties a parent/flex container, several properties can be set on individual flex items to control their positioning within a row or column.
+
+	*****************************
+				Order
+	*****************************
+	>> Allows us to reshuffle how items are displayed
+	>> The default number is 0
+	>> before all the items = -1
+	>> this is helpful when we have responsive layouts if we have a certain layout depending on screen size
+
+	TODO TOGETHER: Physically change the order of the items in the html
+
+	TODO TOGETHER: Set #box-2 order to 1
+
+	TODO: Set #box-1 order to 2 and #box-3 order to 1
+
+
+	*****************************
+			Align Self
+	*****************************
+	>> Allows us to individually control the cross axis of our items
+
+	TODO TOGETHER: Set .flex-container to 10em
+
+	TODO TOGETHER: Set #box-1 to align-self: flex-start; Set #box-2 to align-self: center; Set #box-3 to align-self: flex-end;
+
+
+	*****************************
+			Flex Grow
+	*****************************
+	>> Allows us to dynamically change the size of an element along the main axis
+	>> if we dont set a width - the items will have a width of the content area and the padding
+	>> Default set to 0
+	>> When set to 1 - turning flex grow "on"
+	>> Flex-grow with different values other than 0 & 1 changes the proportion
+
+	TODO TOGETHER: Remove align-self properties. Set #box-3 flex-grow to 1
+
+	TODO TOGETHER: Set #box-2 flex-grow to 1
+
+	TODO: Set #box-1 flex-grow to 1;
+
+	TODO: Set #box-3 flex-grow to 2;
+
+	*****************************
+			Flex Basis
+	*****************************
+	TODO: Review Flex Basis @ https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
+
+
+
+	*****************************
+			Resources
+	*****************************
+	>> https://jonibologna.com/assets/flexboxfieldguide.pdf
+	>> https://jonibologna.com/content/flexboxsheet.pdf
+	>> http://flexbox.malven.co/
+
+
+
+
+
+
+
+
+ -->
+
+
+
+</body>
+</html>
