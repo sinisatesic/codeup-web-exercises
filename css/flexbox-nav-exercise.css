@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    background: grey;
+    display: flex;
+}
+
+#left-nav {
+   flex-wrap: wrap;
+    align-items: baseline;
+}
