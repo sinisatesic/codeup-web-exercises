@@ -15,6 +15,7 @@ h2, h3 {
 }
 
 .container {
+    display: flex;
     margin: 0 auto;
     width: 80%;
 }
@@ -28,15 +29,21 @@ h2, h3 {
 .border {border: 2px solid black;}
 
 .card {
+    display: flex;
     width: 400px;
     height: 800px;
     background: white;
     padding: 1em;
     margin: 0 auto;
+    justify-content: space-evenly;
+    flex-direction: column;
     /* enter needed declarations here */
 }
 
 section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     /* enter needed declarations here */
 }
 
@@ -45,7 +52,28 @@ section:nth-of-type(1) {
     background: lightgreen;
     /* enter needed declarations here */
 }
+
+section:nth-of-type(2) {
+    height: 3em;
+    justify-content: flex-start;
+    align-items: center;
+    /* enter needed declarations here */
+}
+section:nth-of-type(2) div:first-child{
+    flex-grow: 1;
+    order: 0;
+    /* enter needed declarations here */
+}
+section:nth-of-type(2) div:last-child{
+    flex-grow: 2;
+    order: -1;
+    /* enter needed declarations here */
+}
+/*section:nth-of-type(1) div:first-child {*/
+/*    !* enter needed declarations here *!*/
+/*}*/
 section:nth-of-type(1) div:last-child {
+    align-self: flex-start;
     /* enter needed declarations here */
 }
 
@@ -55,13 +83,13 @@ section:nth-of-type(1) div:last-child {
     height: 1em;
 }
 
-.purple-box:nth-of-type(1) {
-    /* enter needed declarations here */
-}
+/*.purple-box:nth-of-type(1) {*/
+/*    !* enter needed declarations here *!*/
+/*}*/
 
-.purple-box:nth-of-type(2) {
-    /* enter needed declarations here */
-}
+/*.purple-box:nth-of-type(2) {*/
+/*    !* enter needed declarations here *!*/
+/*}*/
 
 .blue-box {
     width: 100%;
@@ -70,10 +98,13 @@ section:nth-of-type(1) div:last-child {
 }
 
 section:nth-of-type(3) {
+    display: flex;
+    justify-content: flex-end;
     /* enter needed declarations here */
 }
 
 section:nth-of-type(3) h3 {
+    flex-grow: 3;
     /* enter needed declarations here */
 
 }
@@ -90,6 +121,7 @@ section:nth-of-type(3) h3 {
     height: 5em;
     width: 5em;
     background: brown;
+    flex-grow: 1;
     /* enter needed declarations here */
 }
 
@@ -98,7 +130,7 @@ section:nth-of-type(3) h3 {
 }
 
 section:nth-of-type(5) {
-    /* enter needed declarations here */
+    justify-content: space-evenly;
 }
 
 .yellow-box {
@@ -110,6 +142,8 @@ section:nth-of-type(5) {
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
+    flex-wrap: wrap;
+    align-items: center;
     /* enter needed declarations here */
 }
 
@@ -122,3 +156,138 @@ section:nth-of-type(6) {
 .grey-box:nth-of-type(odd) {
     height: 4em;
 }
+
+
+/** {box-sizing: border-box;}*/
+
+/*body {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    background: lightskyblue;*/
+/*    font-family: Chalkboard, sans-serif;*/
+/*}*/
+
+/*h1 {text-align: center;}*/
+
+/*h2, h3 {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.container {*/
+/*    margin: 0 auto;*/
+/*    width: 80%;*/
+/*}*/
+
+/*.green-box {*/
+/*    background: green;*/
+/*    height: 1em;*/
+/*    width: 2em;*/
+/*}*/
+
+/*.border {border: 2px solid black;}*/
+
+/*.card {*/
+/*    width: 400px;*/
+/*    height: 800px;*/
+/*    background: white;*/
+/*    padding: 1em;*/
+/*    margin: 0 auto;*/
+/*    display: flex;*/
+/*    justify-content: space-evenly;*/
+/*    flex-direction: column;*/
+
+/*    !* enter needed declarations here *!*/
+/*}*/
+
+/*section {*/
+/*    display: flex;*/
+/*    !* enter needed declarations here *!*/
+/*}*/
+
+/*section:nth-of-type(1) {*/
+/*    height: 3em;*/
+/*    background: lightgreen;*/
+/*    !* enter needed declarations here *!*/
+/*}*/
+/*section:nth-of-type(1) div:last-child {*/
+/*    !* enter needed declarations here *!*/
+/*}*/
+
+/*.purple-box {*/
+/*    background: fuchsia;*/
+/*    width: 3em;*/
+/*    height: 1em;*/
+/*}*/
+
+/*.purple-box:nth-of-type(1) {*/
+/*    !* enter needed declarations here *!*/
+/*}*/
+
+/*.purple-box:nth-of-type(2) {*/
+/*    !* enter needed declarations here *!*/
+/*}*/
+
+/*.blue-box {*/
+/*    width: 100%;*/
+/*    background: blue;*/
+/*    height: 10em;*/
+/*}*/
+
+/*section:nth-of-type(3) {*/
+/*    !* enter needed declarations here *!*/
+/*}*/
+
+/*section:nth-of-type(3) h3 {*/
+/*    !* enter needed declarations here *!*/
+
+/*}*/
+
+/*.orange-circle {*/
+/*    background: orange;*/
+/*    width: 2em;*/
+/*    height: 2em;*/
+/*    border-radius: 1em;*/
+/*    margin: .5em;*/
+/*}*/
+
+/*.large-brown-box {*/
+/*    height: 5em;*/
+/*    width: 5em;*/
+/*    background: brown;*/
+/*    !* enter needed declarations here *!*/
+/*}*/
+
+/*.large-brown-box:nth-of-type(2) {*/
+/*    margin: 0 1em;*/
+/*}*/
+
+/*section:nth-of-type(5) {*/
+/*    !* enter needed declarations here *!*/
+/*}*/
+
+/*.yellow-box {*/
+/*    background: yellow;*/
+/*    width: 2em;*/
+/*    height: 2em;*/
+/*}*/
+
+/*section:nth-of-type(6) {*/
+/*    background: coral;*/
+/*    height: 14em;*/
+/*    !* enter needed declarations here *!*/
+/*}*/
+
+/*.grey-box {*/
+/*    background: grey;*/
+/*    width: 3em;*/
+/*    height: 3em;*/
+/*}*/
+
+/*.grey-box:nth-of-type(odd) {*/
+/*    height: 4em;*/
+/*}*/
+
+
+
+
