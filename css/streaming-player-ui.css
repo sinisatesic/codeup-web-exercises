@@ -1,13 +1,26 @@
 * {
     box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
 }
 
 body {
-    background: mediumpurple;
     color: white;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(135deg, mediumpurple, lightblue);
+    animation: backgroundy 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes backgroundy {
+    0%{
+        background: #fcf4a4;
+    }
+    50%{
+        background: #fae269;
+    }
+    100%{
+        background: #fcf4a4;
+    }
 }
 
 .wrapper {
@@ -29,7 +42,7 @@ ul {
 }
 
 header {
-    background: purple;
+    background: #f5b505;
     grid-area: 1/ 2 / 2 / 6;
 
     /* TODO: define the grid area of header such that it takes up the first row and middle three columns(maybe done)*/
@@ -37,6 +50,7 @@ header {
 
 nav {
     grid-area: 2/ 2 / 3 / 3;
+    background: transparent;
     /* TODO: define the grid area of nav such that it takes up the second column of the second row(maybe done) */
 }
 
@@ -74,7 +88,7 @@ header a:hover {
 }
 
 .header-background {
-    background: purple;
+    background: #edc042;
     grid-area: 1/ 1 / 2 / 5;
     column-gap: 0;
     /* TODO: define the grid area of this element to take up the entire first row of the .container grid(probably done) */
@@ -122,12 +136,18 @@ nav a:hover {
     border-radius: 10px;
     position: relative;
     background-color: black;
-    transition: ease-in .2s;
+    border-top-left-radius: 17%;
+    border-top-right-radius: 29%;
+    border-bottom-left-radius: 37%;
+    border-bottom-right-radius: 49%;
     /* TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
 }
 
 .card:hover {
     border-color: #111;
+    transform: scale(.5);
+    transition: ease-in .5s;
+    transform: rotate(360deg);
 }
 
 .card a {
