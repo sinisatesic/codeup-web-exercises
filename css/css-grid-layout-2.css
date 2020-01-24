@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    background: pink;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.cells {
+    background: #9acd32;
+    border: 5px solid white;
+}
+
+#header {
+    grid-area: 1/ 1/ 2/ 6;
+}
+
+#nav {
+    grid-area: 2/ 1/ 8/ 2;
+}
+
+#article {
+    grid-area: 2/ 2/ 7/ 6;
+}
+
+#ads {
+    grid-area: 7/ 2/ 8/ 6;
+}
+
+#footer {
+    grid-area: 8/ 1/ 9/ 6;
+}
+
+.description {
+    padding: 15px;
+}
