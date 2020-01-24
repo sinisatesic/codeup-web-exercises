@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    background: pink;
+}
+
+.cells {
+    background: #ffd700;
+    border: 5px solid white;
+}
+
+.description {
+    padding: 15px;
+    color: white;
+    font-size: 2em;
+}
+
+#cell1 {
+    grid-area: 1/ 1/ 2/ 5;
+}
+
+#cell2 {
+    grid-area: 2/ 1/ 6/ 2;
+}
+
+#cell3 {
+    grid-area: 2/ 2/ 3/ 3;
+}
+
+#cell4 {
+    grid-area: 2/ 3/ 3/ 5;
+}
+
+#cell5 {
+    grid-area: 3/ 2/ 4/ 4;
+}
+
+#cell6 {
+    grid-area: 3/ 4/ 3/ 5;
+}
+
+#cell7 {
+    grid-area: 4/ 2/ 5/ 3;
+}
+
+#cell8 {
+    grid-area: 4/ 3/ 5/ 4;
+}
+
+#cell9 {
+    grid-area: 4/ 4/ 5/ 5;
+}
+
+#cell10 {
+    grid-area: 5/ 2/ 6/ 5;
+}
+
