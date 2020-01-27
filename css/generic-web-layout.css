@@ -53,18 +53,25 @@ li a:hover {
 #vertical-menu {
     display: flex;
     flex-direction: column;
+}
 
+#vertical-menu:hover {
+    /*background: #d6d66f;*/
+    /*transition: ease-in .5s;*/
 }
 
 .menu li {
     display: grid;
-    /*margin: auto 5px;*/
-    /*padding: 15px;*/
 }
 
 #vertical-menu li a {
     color: black;
     text-decoration: none;
+}
+
+#vertical-menu li:hover {
+    background: #d6d66f;
+    transition: ease-in .5s;
 }
 
 .articles {
@@ -90,6 +97,7 @@ li a:hover {
 .ads {
     background: yellow;
     grid-area: 3/ 13/ 5/ 20;
+    justify-content: space-evenly;
 }
 
 .ad-divs-small {
@@ -115,7 +123,7 @@ li a:hover {
 }
 
 .next-pages a {
-    color: black;
+    color: grey;
 }
 
 #footer {
@@ -141,8 +149,31 @@ li a:hover {
 }
 
 #powered-by {
-    /*margin: auto -5px;*/
+    margin: auto -5px;
 }
 
-
+#page1:hover {
+    transition: ease-in .5s;
+    background: #000;
+}
+#page2:hover {
+    transition: ease-in .5s;
+    background: #170303;
+}
+#page3:hover {
+    transition: ease-in .5s;
+    background: #210909;
+}
+#page4:hover {
+    transition: ease-in .5s;
+    background: #2e1111;
+}
+#page5:hover {
+    transition: ease-in .5s;
+    background: #4a2121;
+}
+#pageNext:hover {
+    transition: ease-in .5s;
+    background: #663434;
+}
 
