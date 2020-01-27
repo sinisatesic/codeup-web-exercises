@@ -21,6 +21,7 @@ body{
     grid-area: 1/ 1/ 2/ 21;
     overflow: auto;
     color: white;
+    height: 50%;
 }
 
 #header {
@@ -48,11 +49,13 @@ li a:hover {
 .menu {
     background: #f0f0f0;
     grid-area: 2/ 1/ 21/ 3;
+    min-height: 100vh;
 }
 
 #vertical-menu {
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
+    /*display: flex;*/
+    /*flex-direction: column;*/
 }
 
 #vertical-menu:hover {
@@ -95,9 +98,8 @@ li a:hover {
 /*}*/
 
 .ads {
-    background: yellow;
-    grid-area: 3/ 13/ 5/ 20;
-    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
 }
 
 .ad-divs-small {
