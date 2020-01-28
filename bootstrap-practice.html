@@ -10,6 +10,22 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+
+    <style>
+        #main-jumbotron{
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("img/bed-animal-dog.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+        #jumbotron-container{
+            color: white;
+        }
+        .embed-responsive .card-img-top {
+            object-fit: cover;
+        }
+    </style>
+
 </head>
 <body>
 <!--below is pasted-in navbar from Bootstrap:-->
@@ -35,6 +51,119 @@
         </ul>
     </div>
 </nav>
+
+<!--jumbotron begins below:-->
+<div class="jumbotron jumbotron-fluid" id="main-jumbotron">
+
+    <div class="container" id="jumbotron-container">
+        <h1 class="display-4">PETLAND, SON</h1>
+        <p class="lead">Check these dogs out, son.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Find da best dog in da world</a>
+    </div>
+
+</div>
+
+<!--jumbotron ends above^-->
+
+<div class="container">
+    <h1>Featured Doges</h1>
+
+    <div class="row">
+
+        <!--start of card-->
+                <div class="col-12 col-md-4">
+                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <img src="img/animal1.jpg" class="card-img-top embed-responsive-item" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">**D3stroyer**</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        <!--end of card-->
+
+        <!--start of card-->
+        <div class="col-12 col-md-4">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <img src="img/animal2.jpg" class="card-img-top embed-responsive-item" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">**eR4dicat0R**</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!--end of card-->
+
+        <!--start of card-->
+        <div class="col-12 col-md-4">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <img src="img/animal3.jpg" class="card-img-top embed-responsive-item" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">**PU1v3riz3R**</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!--end of card-->
+
+        <!--start of card-->
+        <div class="col-12 col-md-4">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <img src="img/animal4.jpg" class="card-img-top embed-responsive-item" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">**Bl4ze**</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!--end of card-->
+
+        <!--start of card-->
+        <div class="col-12 col-md-4">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <img src="img/animal5.jpg" class="card-img-top embed-responsive-item" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">**L4z3R**</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!--end of card-->
+
+        <!--start of card-->
+        <div class="col-12 col-md-4">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <img src="img/animal6.jpg" class="card-img-top embed-responsive-item" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">**BL4Zer**</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!--end of card-->
+
+    </div>
+
+</div>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
