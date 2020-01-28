@@ -1,181 +1,283 @@
+/** {*/
+/*    box-sizing: border-box;*/
+/*    grid-column-gap: 0px;*/
+/*}*/
+/*body{*/
+/*    margin: 0;*/
+/*    min-height: 100vh;*/
+/*    min-width: 100vw;*/
+
+/*}*/
+
+/*#whole-page {*/
+
+/*    display: grid;*/
+/*    grid-template-rows: repeat(15, 1fr);*/
+/*    grid-template-columns: repeat(15, 1fr);*/
+/*}*/
+
+/*#top-header {*/
+/*    background: black;*/
+/*    grid-area: 1/ 1/ 2/ 21;*/
+/*    overflow: auto;*/
+/*    color: white;*/
+/*    height: 50%;*/
+/*}*/
+
+/*#header {*/
+/*    list-style-type: none;*/
+/*    display: flex;*/
+/*}*/
+
+/*li {*/
+/*    margin: 0px 20px;*/
+
+/*}*/
+
+/*li a {*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*    padding: 10px;*/
+/*    margin: 10px;*/
+
+/*}*/
+
+/*li a:hover {*/
+/*    color: gold;*/
+/*}*/
+
+/*.menu {*/
+/*    background: #f0f0f0;*/
+/*    grid-area: 2/ 1/ 21/ 3;*/
+/*    min-height: 100vh;*/
+/*}*/
+
+/*#vertical-menu {*/
+/*    min-height: 100vh;*/
+/*    !*display: flex;*!*/
+/*    !*flex-direction: column;*!*/
+/*}*/
+
+/*#vertical-menu:hover {*/
+/*    !*background: #d6d66f;*!*/
+/*    !*transition: ease-in .5s;*!*/
+/*}*/
+
+/*.menu li {*/
+/*    display: grid;*/
+/*}*/
+
+/*#vertical-menu li a {*/
+/*    color: black;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*#vertical-menu li:hover {*/
+/*    background: #d6d66f;*/
+/*    transition: ease-in .5s;*/
+/*}*/
+
+/*.articles {*/
+/*    padding: 50px;*/
+/*}*/
+
+/*#articles-section {*/
+/*    grid-area: 2/ 3/ 15/ 13;*/
+/*}*/
+
+/*!*#article1 {*!*/
+/*!*    grid-area: 3/ 3/ 5/ 12;*!*/
+/*!*}*!*/
+
+/*!*#article2 {*!*/
+/*!*    grid-area: 7/ 3/ 9/ 12;*!*/
+/*!*}*!*/
+
+/*!*#article3 {*!*/
+/*!*    grid-area: 11/ 3/ 13/ 12;*!*/
+/*!*}*!*/
+
+/*.ads {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*.ad-divs-small {*/
+/*    border: 1px solid black;*/
+/*    padding: 10px 0;*/
+/*    height: 50px;*/
+/*    width: 150px;*/
+/*}*/
+
+/*.ad-divs-big {*/
+/*    margin: 10px 0;*/
+/*    padding: 10px 0;*/
+/*    width: 150px;*/
+/*    height: 100px;*/
+/*    border: 1px solid black;*/
+/*}*/
+
+/*.next-pages {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    grid-area: 17/ 9/ 18/ 10;*/
+/*}*/
+
+/*.next-pages a {*/
+/*    color: grey;*/
+/*}*/
+
+/*#footer {*/
+/*    background: lightgrey;*/
+/*    grid-area: 18/ 3/ 20/ 21;*/
+/*}*/
+
+/*.footer-title {*/
+/*    margin: 25px 5px;*/
+/*    color: white;*/
+/*}*/
+
+/*#powered {*/
+/*    display: flex;*/
+/*    background: grey;*/
+/*    grid-area: 20/ 3/ 21/ 21;*/
+/*}*/
+
+/*#powered p, a {*/
+/*    color: white;*/
+/*    padding: 5px;*/
+
+/*}*/
+
+/*#powered-by {*/
+/*    margin: auto -5px;*/
+/*}*/
+
+/*#page1:hover {*/
+/*    transition: ease-in .5s;*/
+/*    background: #000;*/
+/*}*/
+/*#page2:hover {*/
+/*    transition: ease-in .5s;*/
+/*    background: #170303;*/
+/*}*/
+/*#page3:hover {*/
+/*    transition: ease-in .5s;*/
+/*    background: #210909;*/
+/*}*/
+/*#page4:hover {*/
+/*    transition: ease-in .5s;*/
+/*    background: #2e1111;*/
+/*}*/
+/*#page5:hover {*/
+/*    transition: ease-in .5s;*/
+/*    background: #4a2121;*/
+/*}*/
+/*#pageNext:hover {*/
+/*    transition: ease-in .5s;*/
+/*    background: #663434;*/
+/*}*/
+
+
+
 * {
     box-sizing: border-box;
-    grid-column-gap: 0px;
 }
-body{
+
+body {
     margin: 0;
-    min-height: 100vh;
-    min-width: 100vw;
-
 }
 
-#whole-page {
-
+#main-container {
     display: grid;
-    grid-template-rows: repeat(15, 1fr);
-    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
-#top-header {
-    background: black;
-    grid-area: 1/ 1/ 2/ 21;
-    overflow: auto;
-    color: white;
-    height: 50%;
-}
-
-#header {
-    list-style-type: none;
+/*below, the grid-area is required to determine the dimensions of horizontal nav bar; need this:*/
+#nav-bar-horizontal {
+    grid-area: 1/ 1/ 2/ 4;
+    overflow: visible;
     display: flex;
 }
 
-li {
-    margin: 0px 20px;
-
+/*below, the display: flex results in horizontal nav bar becoming horizontal in layout:*/
+#nav-bar-horizontal ul {
+    background: black;
+    display: flex;
+    width: 100%;
 }
 
-li a {
+/*below, 100% width is required in order to stretch list items across horiz. nav bar:*/
+#nav-bar-horizontal ul li {
+    background: black;
+    width: 100%;
+}
+
+#nav-bar-horizontal ul li a {
     color: white;
-    text-decoration: none;
-    padding: 10px;
-    margin: 10px;
-
 }
 
-li a:hover {
-    color: gold;
-}
-
-.menu {
-    background: #f0f0f0;
-    grid-area: 2/ 1/ 21/ 3;
-    min-height: 100vh;
-}
-
-#vertical-menu {
-    min-height: 100vh;
+#nav-bar-vertical {
+    /*grid-area: 2/ 1/ 5/ 1;*/
+    /*width: 20%;*/
     /*display: flex;*/
-    /*flex-direction: column;*/
 }
 
-#vertical-menu:hover {
-    /*background: #d6d66f;*/
-    /*transition: ease-in .5s;*/
+#nav-bar-vertical ul {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
 }
 
-.menu li {
-    display: grid;
+#main-container section h1{
+    color: lightblue;
 }
 
-#vertical-menu li a {
-    color: black;
-    text-decoration: none;
+#section-two {
+    grid-area: 3/ 2/ 4/ 3;
 }
 
-#vertical-menu li:hover {
-    background: #d6d66f;
-    transition: ease-in .5s;
+#section-three {
+    grid-area: 4/ 2/ 5/ 3;
 }
-
-.articles {
-    padding: 50px;
-}
-
-#articles-section {
-    grid-area: 2/ 3/ 15/ 13;
-}
-
-/*#article1 {*/
-/*    grid-area: 3/ 3/ 5/ 12;*/
+/*#nav-bar-vertical {*/
+/*    grid-area: 2/ 1/ 5/ 2;*/
 /*}*/
 
-/*#article2 {*/
-/*    grid-area: 7/ 3/ 9/ 12;*/
-/*}*/
-
-/*#article3 {*/
-/*    grid-area: 11/ 3/ 13/ 12;*/
-/*}*/
-
+/*below, display flex will make ads' borders appear vertical; need column flex dir. for horiz.:*/
 .ads {
     display: flex;
     flex-direction: column;
 }
 
-.ad-divs-small {
+.ads .small-ads {
     border: 1px solid black;
-    padding: 10px 0;
-    height: 50px;
-    width: 150px;
+    flex-grow: 1;
+    margin-bottom: 5px;
 }
 
-.ad-divs-big {
-    margin: 10px 0;
-    padding: 10px 0;
-    width: 150px;
-    height: 100px;
+.ads .big-ads {
     border: 1px solid black;
-
+    flex-grow: 2;
 }
 
-.next-pages {
-    display: flex;
-    flex-direction: row;
-    grid-area: 17/ 9/ 18/ 10;
+#ads-second {
+    grid-area: 3/ 3/ 4/ 4;
 }
 
-.next-pages a {
-    color: grey;
+#ads-third {
+    grid-area: 4/ 3/ 5/ 4;
 }
 
 #footer {
-    background: lightgrey;
-    grid-area: 18/ 3/ 20/ 21;
+
 }
 
-.footer-title {
-    margin: 25px 5px;
-    color: white;
-}
-
-#powered {
-    display: flex;
+#footer-row {
     background: grey;
-    grid-area: 20/ 3/ 21/ 21;
+    grid-area: 5/ 2/ 6/ 4;
+    overflow: hidden;
 }
-
-#powered p, a {
-    color: white;
-    padding: 5px;
-
-}
-
-#powered-by {
-    margin: auto -5px;
-}
-
-#page1:hover {
-    transition: ease-in .5s;
-    background: #000;
-}
-#page2:hover {
-    transition: ease-in .5s;
-    background: #170303;
-}
-#page3:hover {
-    transition: ease-in .5s;
-    background: #210909;
-}
-#page4:hover {
-    transition: ease-in .5s;
-    background: #2e1111;
-}
-#page5:hover {
-    transition: ease-in .5s;
-    background: #4a2121;
-}
-#pageNext:hover {
-    transition: ease-in .5s;
-    background: #663434;
-}
-
