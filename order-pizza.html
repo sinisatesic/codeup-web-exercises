@@ -51,7 +51,8 @@
 
 <div class="container">
     <!-- container starts above -->
-<!--    jumbotron starts below-->
+
+<!--    jumbotron starts here-->
     <div class="jumbotron jumbotron-fluid" id="main-jumbotron">
 
         <div class="d-none d-lg-block" id="jumbotron-container">
@@ -92,9 +93,21 @@
                     Hand Tossed
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+<!--                    <li class="list-group-item">Cras justo odio</li>-->
+
+                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+
+                    <div class="form-check">
+                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">Small ("10")</label>
+                    </div>
+
+
+                    <div class="form-check">
+                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio2" value="option1" aria-label="...">Medium ("12")</label>
+                    </div>
+
+
+
                 </ul>
             </div>
 <!--            here ends first nested card; card within card-->
@@ -104,12 +117,19 @@
                     Crispy Thin
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                    <div class="form-check">
+                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">Small ("10")</label>
+                    </div>
+                    <div class="form-check">
+                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">Medium ("12")</label>
+                    </div>
                 </ul>
             </div>
-
+            <div class="card-footer text-muted">
+                    <button type="button" class="footer-buttons"">Next Step ></button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -135,32 +155,59 @@
     <!--    here begins the large card; container card-->
     <div class="card-container">
         <div class="card-body">
-            <h3 id="cheese-header">Choose size and crust</h3>
+            <h3 id="cheese-header">Choose cheese and sauce</h3>
 
             <!--            here begins first nested card; card within card-->
             <div class="card">
                 <div class="card-header">
-                    Hand Tossed
+                    Cheese
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                        <div class="form-group">
+                            <label>How much?</label>
+                            <select class="custom-select">
+                                <option selected>Normal</option>
+                                <option value="1">Light</option>
+                                <option value="2">Extra</option>
+                                <option value="3">Double</option>
+                            </select>
+                        </div>
+<!--                    <li class="list-group-item">Dapibus ac facilisis in</li>-->
+<!--                    <li class="list-group-item">Vestibulum at eros</li>-->
                 </ul>
             </div>
             <!--            here ends first nested card; card within card-->
 
             <div class="card">
                 <div class="card-header">
-                    Crispy Thin
+                    Sauce
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <div class="form-group">
+                        <label>What type?</label>
+                        <select class="custom-select">
+                            <option selected>Tomato sauce</option>
+                            <option value="1">Marinara sauce</option>
+                            <option value="2">BBQ Sauce</option>
+                            <option value="3">Alfredo Sauce</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>How much?</label>
+                        <select class="custom-select">
+                            <option selected>Normal</option>
+                            <option value="1">Light</option>
+                            <option value="2">Extra</option>
+                        </select>
+                    </div>
                 </ul>
             </div>
-
+            <div class="card-footer text-muted">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary">< Previous Step</button>
+                    <button type="button" class="btn btn-secondary">Next Step ></button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -186,7 +233,7 @@
     <!--    here begins the large card; container card-->
     <div class="card-container">
         <div class="card-body">
-            <h3 id="toppings-header">Choose size and crust</h3>
+            <h3 id="toppings-header">Choose toppings</h3>
 
             <!--            here begins first nested card; card within card-->
             <div class="card">
@@ -211,8 +258,11 @@
                     <li class="list-group-item">Vestibulum at eros</li>
                 </ul>
             </div>
-
+            <div class="card-footer text-muted">
+                2 days ago
+            </div>
         </div>
+
     </div>
 <!--    here ends large cards;card containers-->
 

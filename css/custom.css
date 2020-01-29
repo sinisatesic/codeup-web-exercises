@@ -3,13 +3,18 @@
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("../img/pizza.png");
     background-size: cover;
     background-position: center;
-    width: 100%;
+
 
 }
 #jumbotron-container{
     color: saddlebrown;
     padding: 0;
 }
+
+/*div#main-jumbotron.jumbotron.jumbotron-fluid {*/
+/*    width: 100%;*/
+/*    background-size: cover;*/
+/*}*/
 
 h1 {
     background: white;
@@ -26,6 +31,40 @@ h1 {
     border-bottom: 0px;
 }
 
+button.btn.btn-primary {
+    border: 1px solid grey;
+}
+
+button.btn.btn-secondary {
+    color: white;
+    background: #2d7cf6;
+}
+
+.footer-buttons {
+    /*background: #2d7cf6;*/
+    /*color: white;*/
+    /*border-radius: 5px;*/
+    /*border: none;*/
+    /*align-content: flex-end;*/
+}
+
+button.footer-buttons {
+    background: #2d7cf6;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    align-content: flex-end;
+    margin-left: 85%;
+}
+
+/*#next-button {*/
+/*    background: blue;*/
+/*    border: 1px solid grey;*/
+/*    border-radius: 5px;*/
+/*    margin-left: 90%;*/
+/*    color: white;*/
+/*}*/
+
 span.badge.badge-light {
     border-radius: 35%;
 }
@@ -33,15 +72,23 @@ span.badge.badge-light {
 .card-body.card {
     padding: 10px;
     margin: 10px;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 div.card-body {
     display: flex;
     flex-direction: column;
     padding: 0px;
-
 }
+
+div.card-footer.text-muted {
+    display: flex;
+}
+
+/*button#next-button {*/
+/*    align-content: flex-end;*/
+/*    justify-content: flex-end;*/
+/*}*/
 
 card {
     padding: 10px;
@@ -49,8 +96,16 @@ card {
 
 div.card {
     margin: 10px;
+    border: 1px solid grey;
+}
 
-    flex-basis: inherit;
+div.input-group {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+div.form-check {
+    border: .5px solid lightgrey;
 }
 
 .card-container {
@@ -63,17 +118,34 @@ button.btn.btn-outline-success.my-2.my-sm-0 {
     border-bottom: 1px solid slategray;
 }
 
+label {
+    margin-left: 20px;
+    padding: 10px 0;
+}
+
 
 #crust-header {
-    background: blue;
+    background: #2d7cf6;
     padding: 10px;
     color: white;
 }
 
+#cheese-header {
+    background: #2d7cf6;
+    padding: 10px;
+    color: white;
+}
+
+select.custom-select {
+    width: 95%;
+    margin-left: 20px;
+}
 
 .card-body {
     width: 100%;
 }
+
+input#blankRadio1.form-check-input.position-static
 /*.embed-responsive .card-img-top {*/
 /*    object-fit: cover;*/
 /*}*/
