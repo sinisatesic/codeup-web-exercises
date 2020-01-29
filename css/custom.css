@@ -1,12 +1,78 @@
 
 #main-jumbotron{
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("img/pizza.png");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("../img/pizza.png");
     background-size: cover;
     background-position: center;
     width: 100%;
+
 }
 #jumbotron-container{
+    color: saddlebrown;
+    padding: 0;
+}
+
+h1 {
+    background: white;
+    opacity: 50%;
+    text-align: center;
+    padding: 0;
+}
+
+
+.btn {
+    background: transparent;
+    color: slategray;
+    border: 1px solid slategray;
+    border-bottom: 0px;
+}
+
+span.badge.badge-light {
+    border-radius: 35%;
+}
+
+.card-body.card {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+div.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+
+}
+
+card {
+    padding: 10px;
+}
+
+div.card {
+    margin: 10px;
+
+    flex-basis: inherit;
+}
+
+.card-container {
+    border: 1px solid slategray;
+    display: flex;
+}
+
+
+button.btn.btn-outline-success.my-2.my-sm-0 {
+    border-bottom: 1px solid slategray;
+}
+
+
+#crust-header {
+    background: blue;
+    padding: 10px;
     color: white;
+}
+
+
+.card-body {
+    width: 100%;
 }
 /*.embed-responsive .card-img-top {*/
 /*    object-fit: cover;*/
