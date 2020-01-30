@@ -49,11 +49,11 @@
 
 <!--navbar ends right above this comment^ this particular navbar enables for collapse when size "leaves" large-->
 
-<div class="container">
+
     <!-- container starts above -->
 
 <!--    jumbotron starts here-->
-    <div class="jumbotron jumbotron-fluid" id="main-jumbotron">
+    <div class="jumbotron jumbotron-fluid d-none d-lg-block" id="main-jumbotron">
 
         <div class="d-none d-lg-block" id="jumbotron-container">
             <h1 class=>Welcome to Pizza World!</h1>
@@ -62,206 +62,401 @@
     </div>
 <!--    jumbotron ends here-->
 
-<!--    here begins the tab options, 1-3-->
+
+
+
+<!--tab holding (main) container starts here -->
+<div class="container col-xs-12 col-sm-12 col-md-12 col-log-12 col-xl-12">
+
     <p class="h2">Build your own pizza!</p>
     <hr>
+
+
     <ul class="nav nav-tabs">
-
-        <button type="button" class="btn btn-primary">
-            <span class="badge badge-light">1</span>Size and crust
-        </button>
-
-        <button type="button" class="btn btn-primary">
-            <span class="badge badge-light">2</span>Cheese and Sauce
-        </button>
-
-        <button type="button" class="btn btn-primary">
-            <span class="badge badge-light">3</span>Toppings
-        </button>
+        <li class="nav-item">
+            <a href="#size-crust" class="nav-link active" role="tab" data-toggle="tab">Size and Crust</a>
+        </li>
+        <li class="nav-item">
+            <a href="#cheese-sauce" class="nav-link" role="tab" data-toggle="tab">Cheese and Sauce</a>
+        </li>
+        <li class="nav-item">
+            <a href="#toppings" class="nav-link" role="tab" data-toggle="tab">Toppings</a>
+        </li>
     </ul>
 <!--    here ends the tab-section below jumbotron-->
 
 
-<!--    here begins the large card; container card-->
-    <div class="card-container">
-        <div class="card-body">
-            <h3 id="crust-header">Choose size and crust</h3>
+<!--   -YOUTUBE SHIT START- -->
+    <div class="tab-content">
+        <div role="tabpane" class="tab-pane active fade" id="size-crust">
 
-<!--            here begins first nested card; card within card-->
-            <div class="card">
-                <div class="card-header">
-                    Hand Tossed
-                </div>
-                <ul class="list-group list-group-flush">
-<!--                    <li class="list-group-item">Cras justo odio</li>-->
+            <div class="card-container">
+                <div class="card-body">
+                    <h3 class="custom-headers">Choose size and crust</h3>
 
-                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                    <!--            here begins first nested card; card within card-->
+                    <div class="card">
+                        <div class="card-header">
+                            Hand Tossed
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <!--                    <li class="list-group-item">Cras justo odio</li>-->
 
-                    <div class="form-check">
-                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">Small ("10")</label>
+                            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">Small ("10")</label>
+                            </div>
+
+
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio2" value="option1" aria-label="...">Medium ("12")</label>
+                            </div>
+
+
+
+                        </ul>
                     </div>
+                    <!--            here ends first nested card; card within card-->
 
-
-                    <div class="form-check">
-                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio2" value="option1" aria-label="...">Medium ("12")</label>
+                    <div class="card">
+                        <div class="card-header">
+                            Crispy Thin
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio3" value="option1" aria-label="...">Small ("10")</label>
+                            </div>
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio4" value="option1" aria-label="...">Medium ("12")</label>
+                            </div>
+                        </ul>
                     </div>
+                    <div class="card-footer text-right">
 
-
-
-                </ul>
-            </div>
-<!--            here ends first nested card; card within card-->
-
-            <div class="card">
-                <div class="card-header">
-                    Crispy Thin
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
-                    <div class="form-check">
-                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">Small ("10")</label>
+                        <div class="btn-group" role="group" aria-label="Basic example"  data-toggle="tab" href="#cheese-sauce">
+                            <button type="button" class="btn btn-secondary">Next Step ></button>
+                        </div>
+<!-- <button type="button" data-toggle="tab" id="cheese-sauce" class="footer-buttons">Next Step ></button>-->
                     </div>
-                    <div class="form-check">
-                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">Medium ("12")</label>
-                    </div>
-                </ul>
-            </div>
-            <div class="card-footer text-muted">
-                    <button type="button" class="footer-buttons"">Next Step ></button>
                 </div>
             </div>
         </div>
+
+
+        <div role="tabpane" class="tab-pane fade" id="cheese-sauce">
+
+            <div class="card-container">
+                <div class="card-body">
+                    <h3 class="custom-headers">Choose cheese and sauce</h3>
+
+                    <!--            here begins first nested card; card within card-->
+                    <div class="card">
+                        <div class="card-header">
+                            Cheese
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <div class="form-group">
+                                <label>How much?</label>
+                                <select class="custom-select">
+                                    <option selected>Normal</option>
+                                    <option value="1">Light</option>
+                                    <option value="2">Extra</option>
+                                    <option value="3">Double</option>
+                                </select>
+                            </div>
+                            <!--                    <li class="list-group-item">Dapibus ac facilisis in</li>-->
+                            <!--                    <li class="list-group-item">Vestibulum at eros</li>-->
+                        </ul>
+                    </div>
+                    <!--            here ends first nested card; card within card-->
+
+                    <div class="card">
+                        <div class="card-header">
+                            Sauce
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <div class="form-group">
+                                <label>What type?</label>
+                                <select class="custom-select">
+                                    <option selected>Tomato sauce</option>
+                                    <option value="1">Marinara sauce</option>
+                                    <option value="2">BBQ Sauce</option>
+                                    <option value="3">Alfredo Sauce</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>How much?</label>
+                                <select class="custom-select">
+                                    <option selected>Normal</option>
+                                    <option value="1">Light</option>
+                                    <option value="2">Extra</option>
+                                </select>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="card-footer text-right">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary" data-toggle="tab" href="#size-crust">< Previous Step</button>
+                            <button type="button" class="btn btn-secondary" data-toggle="tab" href="#toppings">Next Step ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--            here ends second tab page content-->
+        </div>
+
+
+<!--here begins third tab page content-->
+        <div role="tabpane" class="tab-pane fade" id="toppings">
+
+            <div class="card-container">
+                <div class="card-body">
+                    <h3 class="custom-headers">Choose toppings</h3>
+
+                    <!--            here begins first nested card; card within card-->
+                    <div class="card">
+                        <div class="card-header">
+                            Choose Meats
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="checkbox" name="blankCheckbox" id="checkBox1" value="option1" aria-label="...">Beef</label>
+                            </div>
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="checkbox" name="blankCheckbox" id="checkBox2" value="option2" aria-label="...">Ham</label>
+                            </div>
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="checkbox" name="blankCheckbox" id="checkBox3" value="option3" aria-label="...">Philly Steak</label>
+                            </div>
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="checkbox" name="blankCheckbox" id="checkBox4" value="option4" aria-label="...">Bacon</label>
+                            </div>
+                        </ul>
+                    </div>
+                    <!--            here ends first nested card; card within card-->
+
+                    <div class="card">
+                        <div class="card-header">
+                            Choose Vegetables
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="checkbox" name="blankCheckbox" id="checkBox5" value="option5" aria-label="...">Green Peppers</label>
+                            </div>
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="checkbox" name="blankCheckbox" id="checkBox6" value="option6" aria-label="...">Mushrooms</label>
+                            </div>
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="checkbox" name="blankCheckbox" id="checkBox7" value="option7" aria-label="...">Onions</label>
+                            </div>
+                            <div class="form-check">
+                                <label><input class="form-check-input position-static" type="checkbox" name="blankCheckbox" id="checkBox8" value="option8" aria-label="...">Jalapeño Peppers</label>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="card-footer text-right">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary" data-toggle="tab">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
     </div>
 
-    <hr>
 
-    <ul class="nav nav-tabs">
 
-        <button type="button" class="btn btn-primary">
-            <span class="badge badge-light">1</span>Size and crust
-        </button>
 
-        <button type="button" class="btn btn-primary">
-            <span class="badge badge-light">2</span>Cheese and Sauce
-        </button>
+<!--&lt;!&ndash;   FIRST TAB PAGE !!@##   ;&gt;-->
 
-        <button type="button" class="btn btn-primary">
-            <span class="badge badge-light">3</span>Toppings
-        </button>
-    </ul>
+<!--    <div class="card-container">-->
+<!--        <div class="card-body">-->
+<!--            <h3 id="crust-header">Choose size and crust</h3>-->
+
+<!--&lt;!&ndash;            here begins first nested card; card within card&ndash;&gt;-->
+<!--            <div class="card">-->
+<!--                <div class="card-header">-->
+<!--                    Hand Tossed-->
+<!--                </div>-->
+<!--                <ul class="list-group list-group-flush">-->
+<!--&lt;!&ndash;                    <li class="list-group-item">Cras justo odio</li>&ndash;&gt;-->
+
+<!--                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>-->
+
+<!--                    <div class="form-check">-->
+<!--                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">Small ("10")</label>-->
+<!--                    </div>-->
+
+
+<!--                    <div class="form-check">-->
+<!--                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio2" value="option1" aria-label="...">Medium ("12")</label>-->
+<!--                    </div>-->
+
+
+
+<!--                </ul>-->
+<!--            </div>-->
+<!--&lt;!&ndash;            here ends first nested card; card within card&ndash;&gt;-->
+
+<!--            <div class="card">-->
+<!--                <div class="card-header">-->
+<!--                    Crispy Thin-->
+<!--                </div>-->
+<!--                <ul class="list-group list-group-flush">-->
+<!--                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>-->
+<!--                    <div class="form-check">-->
+<!--                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">Small ("10")</label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <label><input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio2" value="option1" aria-label="...">Medium ("12")</label>-->
+<!--                    </div>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="card-footer text-muted">-->
+<!--                    <button type="button" class="footer-buttons">Next Step ></button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <hr>-->
+
+<!--here begins second (prolly wrong) tab section!-->
+<!--    <ul class="nav nav-tabs">-->
+
+<!--        <button type="button" class="btn btn-primary">-->
+<!--            <span class="badge badge-light">1</span>Size and crust-->
+<!--        </button>-->
+
+<!--        <button type="button" class="btn btn-primary">-->
+<!--            <span class="badge badge-light">2</span>Cheese and Sauce-->
+<!--        </button>-->
+
+<!--        <button type="button" class="btn btn-primary">-->
+<!--            <span class="badge badge-light">3</span>Toppings-->
+<!--        </button>-->
+<!--    </ul>-->
     <!--    here ends the tab-section below jumbotron-->
 
 
-    <!--    here begins the large card; container card-->
-    <div class="card-container">
-        <div class="card-body">
-            <h3 id="cheese-header">Choose cheese and sauce</h3>
 
-            <!--            here begins first nested card; card within card-->
-            <div class="card">
-                <div class="card-header">
-                    Cheese
-                </div>
-                <ul class="list-group list-group-flush">
-                        <div class="form-group">
-                            <label>How much?</label>
-                            <select class="custom-select">
-                                <option selected>Normal</option>
-                                <option value="1">Light</option>
-                                <option value="2">Extra</option>
-                                <option value="3">Double</option>
-                            </select>
-                        </div>
+
+
+
+    <!-- HERE BEGINS SECOND TAB PAGE!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@-->
+
+<!--    <div class="card-container">-->
+<!--        <div class="card-body">-->
+<!--            <h3 id="cheese-header">Choose cheese and sauce</h3>-->
+
+<!--            &lt;!&ndash;            here begins first nested card; card within card&ndash;&gt;-->
+<!--            <div class="card">-->
+<!--                <div class="card-header">-->
+<!--                    Cheese-->
+<!--                </div>-->
+<!--                <ul class="list-group list-group-flush">-->
+<!--                        <div class="form-group">-->
+<!--                            <label>How much?</label>-->
+<!--                            <select class="custom-select">-->
+<!--                                <option selected>Normal</option>-->
+<!--                                <option value="1">Light</option>-->
+<!--                                <option value="2">Extra</option>-->
+<!--                                <option value="3">Double</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+<!--&lt;!&ndash;                    <li class="list-group-item">Dapibus ac facilisis in</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="list-group-item">Vestibulum at eros</li>&ndash;&gt;-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            &lt;!&ndash;            here ends first nested card; card within card&ndash;&gt;-->
+
+<!--            <div class="card">-->
+<!--                <div class="card-header">-->
+<!--                    Sauce-->
+<!--                </div>-->
+<!--                <ul class="list-group list-group-flush">-->
+<!--                    <div class="form-group">-->
+<!--                        <label>What type?</label>-->
+<!--                        <select class="custom-select">-->
+<!--                            <option selected>Tomato sauce</option>-->
+<!--                            <option value="1">Marinara sauce</option>-->
+<!--                            <option value="2">BBQ Sauce</option>-->
+<!--                            <option value="3">Alfredo Sauce</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label>How much?</label>-->
+<!--                        <select class="custom-select">-->
+<!--                            <option selected>Normal</option>-->
+<!--                            <option value="1">Light</option>-->
+<!--                            <option value="2">Extra</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="card-footer text-muted">-->
+<!--                <div class="btn-group" role="group" aria-label="Basic example">-->
+<!--                    <button type="button" class="btn btn-secondary">< Previous Step</button>-->
+<!--                    <button type="button" class="btn btn-secondary">Next Step ></button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <hr>-->
+
+<!--here is third nav tab, prolly also wrong-->
+<!--    <ul class="nav nav-tabs">-->
+<!--        <button type="button" class="btn btn-primary">-->
+<!--            <span class="badge badge-light">1</span>Size and crust-->
+<!--        </button>-->
+
+<!--        <button type="button" class="btn btn-primary">-->
+<!--            <span class="badge badge-light">2</span>Cheese and Sauce-->
+<!--        </button>-->
+
+<!--        <button type="button" class="btn btn-primary">-->
+<!--            <span class="badge badge-light">3</span>Toppings-->
+<!--        </button>-->
+<!--    </ul>-->
+
+
+
+<!--THIRD TAB PAGE HERE@@@@@@@@@@@@@@@@@!!!!!!!!!!!!!!!-->
+
+<!--    <div class="card-container">-->
+<!--        <div class="card-body">-->
+<!--            <h3 id="toppings-header">Choose toppings</h3>-->
+
+<!--            &lt;!&ndash;            here begins first nested card; card within card&ndash;&gt;-->
+<!--            <div class="card">-->
+<!--                <div class="card-header">-->
+<!--                    Hand Tossed-->
+<!--                </div>-->
+<!--                <ul class="list-group list-group-flush">-->
+<!--                    <li class="list-group-item">Cras justo odio</li>-->
 <!--                    <li class="list-group-item">Dapibus ac facilisis in</li>-->
 <!--                    <li class="list-group-item">Vestibulum at eros</li>-->
-                </ul>
-            </div>
-            <!--            here ends first nested card; card within card-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            &lt;!&ndash;            here ends first nested card; card within card&ndash;&gt;-->
 
-            <div class="card">
-                <div class="card-header">
-                    Sauce
-                </div>
-                <ul class="list-group list-group-flush">
-                    <div class="form-group">
-                        <label>What type?</label>
-                        <select class="custom-select">
-                            <option selected>Tomato sauce</option>
-                            <option value="1">Marinara sauce</option>
-                            <option value="2">BBQ Sauce</option>
-                            <option value="3">Alfredo Sauce</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>How much?</label>
-                        <select class="custom-select">
-                            <option selected>Normal</option>
-                            <option value="1">Light</option>
-                            <option value="2">Extra</option>
-                        </select>
-                    </div>
-                </ul>
-            </div>
-            <div class="card-footer text-muted">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary">< Previous Step</button>
-                    <button type="button" class="btn btn-secondary">Next Step ></button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr>
-
-    <ul class="nav nav-tabs">
-
-        <button type="button" class="btn btn-primary">
-            <span class="badge badge-light">1</span>Size and crust
-        </button>
-
-        <button type="button" class="btn btn-primary">
-            <span class="badge badge-light">2</span>Cheese and Sauce
-        </button>
-
-        <button type="button" class="btn btn-primary">
-            <span class="badge badge-light">3</span>Toppings
-        </button>
-    </ul>
-    <!--    here ends the tab-section below jumbotron-->
-
-
-    <!--    here begins the large card; container card-->
-    <div class="card-container">
-        <div class="card-body">
-            <h3 id="toppings-header">Choose toppings</h3>
-
-            <!--            here begins first nested card; card within card-->
-            <div class="card">
-                <div class="card-header">
-                    Hand Tossed
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
-            <!--            here ends first nested card; card within card-->
-
-            <div class="card">
-                <div class="card-header">
-                    Crispy Thin
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
-            <div class="card-footer text-muted">
-                2 days ago
-            </div>
-        </div>
+<!--            <div class="card">-->
+<!--                <div class="card-header">-->
+<!--                    Crispy Thin-->
+<!--                </div>-->
+<!--                <ul class="list-group list-group-flush">-->
+<!--                    <li class="list-group-item">Cras justo odio</li>-->
+<!--                    <li class="list-group-item">Dapibus ac facilisis in</li>-->
+<!--                    <li class="list-group-item">Vestibulum at eros</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="card-footer text-muted">-->
+<!--                2 days ago-->
+<!--            </div>-->
+<!--        </div>-->
 
     </div>
 <!--    here ends large cards;card containers-->
