@@ -49,15 +49,10 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*border: 3px solid black;*/
 }
 
 #block2 {
     background-color: #cb342e;
-    /*width: 100%;*/
-    /*height: 100%;*/
     grid-column-start: 3;
     grid-column-end: 9;
     grid-row-start: 1;
@@ -66,8 +61,6 @@
 
 #block3 {
     background-color: #f5cc47;
-    /*width: 100%;*/
-    /*height: 100%;*/
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
@@ -76,8 +69,6 @@
 
 #block4 {
     background-color: #ffffff;
-    /*width: 100%;*/
-    /*height: 100%;*/
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 4;
@@ -86,9 +77,6 @@
 
 #block5 {
     background-color: #ffffff;
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*border: 1px solid black;*/
     grid-column-start: 5;
     grid-column-end: 9;
     grid-row-start: 4;
@@ -97,9 +85,6 @@
 
 #block6 {
     background-color: #ffffff;
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*border: 1px solid black;*/
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 6;
@@ -108,9 +93,6 @@
 
 #block7 {
     background-color: #f5cc47;
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*border: 1px solid black;*/
     grid-column-start: 5;
     grid-column-end: 9;
     grid-row-start: 6;
@@ -119,9 +101,6 @@
 
 #block8 {
     background-color: #cb342e;
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*border: 1px solid black;*/
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 8;
@@ -130,9 +109,6 @@
 
 #block9 {
     background-color: #334577;
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*border: 1px solid black;*/
     grid-column-start: 3;
     grid-column-end: 9;
     grid-row-start: 8;
