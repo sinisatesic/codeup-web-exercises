@@ -10,6 +10,8 @@
     ​
     <title>JS W/ HTML</title>
     ​
+
+
     <style>
         body{
             font-family: 'Open Sans', sans-serif;
@@ -24,6 +26,8 @@
             list-style-type: circle;
         }
     </style>
+
+
 </head>
 <body>
 <div class="container">
@@ -57,6 +61,7 @@
 ​
 ​
 <script>
+
     /* **************************************
               THIS IS AN INLINE EXAMPLE
      ****************************************/
@@ -64,9 +69,15 @@
     // Your javascript code goes in this script tag!
     ​
     //TODO: Console.log "Hello from inline javascript"
+
+    // console.log("wassssup braj");
+
 </script>
 ​
-<script src="external-lec.js"></script>
+<script src="js/external-lec.js">
+
+
+</script>
 ​
 ​
 ​
@@ -82,6 +93,7 @@
     ​
     //TODO TOGETHER: Write an alert ---> alert("Message goes here.");
     ​
+    alert("WINNAH");
     ​
     //TODO: Write an alert with an alert message
     ​
@@ -94,6 +106,11 @@
     ​
     //TODO TOGETHER: Write a confirm interaction and console.log the result
     ​
+    var userConfirm = confirm("Would ya like to party?");
+
+    console.log(userConfirm);
+
+    alert("User selected: " + userConfirm);
     ​
     // TODO: Select the OK option. View the result. Select the cancel option. View the result.
     ​
@@ -103,7 +120,9 @@
      ******************************/
     // TODO TOGETHER: Write a prompt interaction. Console.log the result
     ​
-    ​
+    ​var userPrompt = prompt("What's ya fav animal?");
+
+    alert(userPrompt);
     ​
     // TODO: Write an additional prompt. Console.log the result
     ​
