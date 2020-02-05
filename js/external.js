@@ -90,3 +90,26 @@ var isPremiumMember = confirm("Are you a premium member?");
 
 var discountAppliedStatus = offerIsValid && (isPremiumMember || numberOfItems < 2);
 alert("Can use discount: " + discountAppliedStatus);
+
+
+
+// var isSevenNumber = !isNaN(7);
+// console.log("Is seven numa: "+isSevenNumber);
+
+
+//Immediately Invoked Function Expression example. A best practice would be to utilize one IFEE as a 'container' for all of your JS; this will secure info from being global.  :
+
+(function() {
+    function somethingSuperImportant() {
+        return "Example info that's sensitive"
+    }
+
+    console.log(somethingSuperImportant());
+
+})();
+
+// just IFEE syntax:
+//
+//     (function() {
+//
+//     })();
