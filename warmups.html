@@ -100,17 +100,41 @@
 <!--</script>-->
 
 
-Write a function that returns true or false based off whether the number passed, squared, is evenly divisible by 3.
+<!--Write a function that returns true or false based off whether the number passed, squared, is evenly divisible by 3.-->
 
-(modulator info: basically, if remainder once divided is zerio; so, if divided by three, and remainder is zero, it will be true)
+<!--(modulator info: basically, if remainder once divided is zerio; so, if divided by three, and remainder is zero, it will be true)-->
+<!--<script>-->
+<!--function byThree(x) {-->
+<!--    if (x * x) % 3 === 0;-->
+<!--}-->
+
+<!--console.log(byThree(3));-->
+<!--// </script>-->
+
+
+<!--//Write a function called isString that accepts a single input, and returns true of the data type is a string or false if it is not a string-->
+
 <script>
-function byThree(x) {
-    if (x * x) % 3 === 0;
-}
+   function isString(input) {
+       if (typeof input === "string"){
+           return true;
+       } else {
+           return false;
+       }
+   }
 
-console.log(byThree(3));
+   console.log(isString(true));
+   console.log(isString("hello"));
+
+   // OR, simpler but less detailed way:
+
+    // function isString(input) {
+    //    return typeof input === "string";
+    // }
 
 </script>
+
+
 
 </body>
 </html>
