@@ -93,6 +93,8 @@ alert("Can use discount: " + discountAppliedStatus);
 
 
 
+
+
 // var isSevenNumber = !isNaN(7);
 // console.log("Is seven numa: "+isSevenNumber);
 
