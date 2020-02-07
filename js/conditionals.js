@@ -15,86 +15,128 @@
  *
  * Can you refactor your code to use functions?
  */
+//FOR THIS FIRST ONE, NESTING IS KEY
 
-// var wouldYouLikeToEnterNumber = (confirm("would you like to enter a number?"));
-// if(wouldYouLikeToEnterNumber){
-//     var userInputNumber = Number(prompt("What number do you select?"));
-//     var isNumber = !isNaN(userInputNumber);
-//
-//     if(isNumber){
-//         if(userInputNumber % 2 === 0){
-//             alert("Your number is even");
-//         } else if(userInputNumber % 3 === 0){
-//             alert("Your number is odd");
-//         } else {
-//             alert("This is not a number; please enter number");
-//         }
-//
-//         var numberPlusHundred = userInputNumber + 100;
-//         alert("Your number plus 100 is " + numberPlusHundred);
-//
-//         if(userInputNumber < 0){
-//             alert("Number is negative");
-//         } else {
-//             alert("Number is positive");
-//         }
-//     }else {
-//         alert("This is not a number; please enter a number");
-//     }
-//
-//
-//
-//
-// }
+var wouldYouLikeToEnterNumber = (confirm("would you like to enter a number?"));
+if(wouldYouLikeToEnterNumber) {
+    var userInputNumber = Number(prompt("What number do you select?"));
+    var isNumber = !isNaN(userInputNumber);
 
+    if (isNumber) {
+        if (userInputNumber % 2 === 0) {
+            alert("Your number is even");
+        } else if (userInputNumber % 3 === 0) {
+            alert("Your number is odd");
+        }
 
-/**
- * TODO:
- * Create a function named `analyzeColor` that accepts a string that is a color
- * name as input. This function should return a message that related to that
- * color. Only worry about the colors defined below, if the color passed is not
- * one of the ones defined below, return a message that says so
- *
- * Example:
- *  > analyzeColor('blue') // returns "blue is the color of the sky"
- *  > analyzeColor('red') // returns "Strawberries are red"
- *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
- *
- * You should use an if-else-if-else block to return different messages.
- *
- * Test your function by passing various string literals to it and
- * console.logging the function's return value
- */
+        var numberPlusHundred = parseFloat(userInputNumber);
+        alert("Your number plus 100 is " + (numberPlusHundred + 100));
 
+        //look more into parseInt and parse
 
-function analyzeColor(stringInput) {
-    var returnContainer;
-
-    if (stringInput === 'blue') {
-        returnContainer = "blue is the color of the sky";
-    } else if (stringInput === 'red') {
-        returnContainer = "Strawberries are red";
-    } else if (stringInput === 'cyan') {
-        returnContainer = "I don't know anything about cyan";
+        if (userInputNumber < 0) {
+            alert("Number is negative");
+        } else {
+            alert("Number is positive");
+        }
     } else {
-        returnContainer = "i don't know man";
+        alert("This is not a number; please enter a number");
+    }
+//
+    ////////////////
+    ////////////////
+    //////////////// Above is refracted to functions, below:
+    ////////////////
+    ////////////////
+
+    // function isNum(input) { //taking user number input
+    //     return !isNan(input) // true -> number, false -> NaN
+    // }
+    //
+    // function isEven(num) {
+    //     return num % 2 === 0; // true -> even, false -> odd
+    // }
+    //
+    // function plus100(num) {
+    //     var userNum = parseFloat(num);
+    //     var returnString = "Your number plus 100 is " + (userNum + 100);
+    //     return returnString;
+    // }
+    //
+    // function isNegative(num) {
+    //     return num < 0; // true = less than zero (negative)
+    //                     // false = number is > 0 (positive)
+    // }
+    //
+    //
+    // function mainFunction(willContinue) {
+    //     // call all functions
+    //     if(willContinue) {
+    //         var userInput = prompt("What number would you like to enter?");
+    //         if(isNum(userInput)) {
+    //             // get number details
+    //             var isEvenMessage = (isEven(userInput) ? "Your number is even" : "Your number is odd");
+    //             alert(isEvenMessage);
+    //             // plus 100
+    //             alert(plus100(userInput)); //alert the plus 100 string from above function
+    //             //negative or positive
+    //             var isNegativeMessage = (isNegative(userInput) ? "Number is negative" : "number is positive");
+    //             alert(isNegativeMessage);
+    //         } else { //if they don't enter a number
+    //             alert("This is not a number; please enter a number");
+    //         }
+    //     } //outside of this if statement, they clicked cancel
+    // }
+
+    // var willContinueFunc = confirm("would you like to enter a number");
+    // mainFunction(willContinueFunc);
+//
+//
+//
+//
+
+
+    /**
+     * TODO:
+     * Create a function named `analyzeColor` that accepts a string that is a color
+     * name as input. This function should return a message that related to that
+     * color. Only worry about the colors defined below, if the color passed is not
+     * one of the ones defined below, return a message that says so
+     *
+     * Example:
+     *  > analyzeColor('blue') // returns "blue is the color of the sky"
+     *  > analyzeColor('red') // returns "Strawberries are red"
+     *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
+     *
+     * You should use an if-else-if-else block to return different messages.
+     *
+     * Test your function by passing various string literals to it and
+     * console.logging the function's return value
+     */
+
+
+    function analyzeColor(color) {
+        var returnContainer = "";
+
+        if (color === "blue") {
+            returnContainer = "blue is the color of the sky";
+        } else if (color === "red") {
+            returnContainer = "Strawberries are red";
+        } else if (color === "cyan") {
+            returnContainer = "I don't know anything about cyan";
+        } else {
+            returnContainer = "i don't know man";
+        }
+
+        return returnContainer;
     }
 
-    return returnContainer;
-}
-
-
-
-
-    //
-
-console.log(analyzeColor("blue"));
-console.log(analyzeColor("red"));
-console.log(analyzeColor("cyan"));
-console.log(analyzeColor("blah"));
+    // console.log(analyzeColor("blue"));
+    // console.log(analyzeColor("red"));
+    // console.log(analyzeColor("cyan"));
+    // console.log(analyzeColor("blah"));
 //
 //
-
 
 
 // function Fruit(name,color,shape){
@@ -115,33 +157,39 @@ console.log(analyzeColor("blah"));
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
-/**
- * TODO:
- * Pass the `randomColor` variable to your function and console.log the results.
- * You should see a different message every time you refresh the page
- */
-console.log(analyzeColor(randomColor));
-/**
- * TODO:
- * Refactor your above function to use a switch-case statement
- */
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    /**
+     * TODO:
+     * Pass the `randomColor` variable to your function and console.log the results.
+     * You should see a different message every time you refresh the page
+     */
+    console.log(analyzeColor(randomColor));
 
-switch(stringInput) {
-    case "blue":
-        alert("blue is the color of the sky");
-        break;
-    case "red":
-        alert("strawberries are red");
-        break;
-    case "cyan":
-        alert("I don't know anything about cyan");
-        break;
-    default:
-        alert("You're not even talking colors");
-        break;
-}
+    /**
+     * TODO:
+     * Refactor your above function to use a switch-case statement
+     */
+    function analyzeColorSwitch(color) { //may need to change function name to analyzeColor
+        var returnContainer = "";
+
+        switch (stringInput) {
+            case "blue":
+                alert("blue is the color of the sky");
+                break;
+            case "red":
+                alert("strawberries are red");
+                break;
+            case "cyan":
+                alert("I don't know anything about cyan");
+                break;
+            default:
+                alert("You're not even talking colors");
+                break;
+        }
+    }
+
+    console.log(analyzeColor(randomColor));
 
     /**
      * TODO:
@@ -154,7 +202,8 @@ switch(stringInput) {
     console.log(analyzeColor(userColor));
 
     alert(analyzeColor(userColor));
-/* ########################################################################## */
+
+    /* ########################################################################## */
 
     /**
      * TODO:
@@ -176,16 +225,16 @@ switch(stringInput) {
      * return value.
      */
     function calculateTotal(luckyNumber, totalAmount) {
-        var bucket;
-        if(luckyNumber === 0){
+        var bucket = "";
+        if (luckyNumber === 0) {
             bucket = totalAmount;
-        } else if(luckyNumber === 1){
+        } else if (luckyNumber === 1) {
             bucket = totalAmount - (totalAmount * .10);
-        } else if(luckyNumber === 2){
+        } else if (luckyNumber === 2) {
             bucket = totalAmount - (totalAmount * .25)
-        } else if(luckyNumber === 3){
+        } else if (luckyNumber === 3) {
             bucket = totalAmount - (totalAmount * .35)
-        } else if(luckyNumber === 4){
+        } else if (luckyNumber === 4) {
             bucket = totalAmount - (totalAmount * .50)
         } else {
             bucket = totalAmount - totalAmount;
@@ -193,8 +242,41 @@ switch(stringInput) {
 
         return bucket;
     }
+}
 
-    // console.log(calculateTotal(5, 100));
+    console.log(calculateTotal(5, 100));
+
+//
+// CASEY'S EXAMPLE::: /////////
+//
+function calculateTotal(luckyNumber, totalAmount) {
+    var discountRate = 0;
+    switch(luckyNumber) {
+        case 0:
+            discountRate = 0;
+            break;
+        case 1:
+            discountRate = .10;
+            break;
+        case 2:
+            discountRate = 0.25;
+            break;
+        case 3:
+            discountRate = .35;
+            break;
+        case 4:
+            discountRate = .5;
+            break;
+        case 5:
+            discountRate = 1;
+            break;
+    }
+    // total - (discountRate * total)
+    return totalAmount - (discountRate * totalAmount);
+}
+
+
+
     // function calculateTotal(luckyNumber, totalAmount) {
     //
     //     if(luckyNumber * 1 = totalAmount){
@@ -219,7 +301,11 @@ switch(stringInput) {
      * price before the discount was, and what their price after the discount is.
      */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var totalBill = prompt("What was your total bill?");
+alert("Your lucky number is: " + luckyNumber);
+alert("Your new total bill is: " + calculateTotal(luckyNumber, totalBill).toFixed(2));
 
 
 //
