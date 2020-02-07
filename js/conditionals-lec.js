@@ -331,6 +331,20 @@ if(weather === "rainy"){
 // =============== SWITCH STATEMENT ================
 //TODO Together:
 
+var pleaseEnterNumber = (confirm("Would you like to enter a number?"));
+var whatNumber = Number(prompt("What number do you select?"));
+
+switch(pleaseEnterNumber) {
+    case whatNumber % 2 === 0;
+        alert("Your number is even");
+        break;
+
+}
+
+//
+//
+//
+
 var pizzaPreference = (prompt("What kind of pizza do you like?")).toLowerCase();
 console.log("User pizza input: " + pizzaPreference);
 
