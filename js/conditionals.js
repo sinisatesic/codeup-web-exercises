@@ -18,7 +18,7 @@
 //FOR THIS FIRST ONE, NESTING IS KEY
 
 var wouldYouLikeToEnterNumber = (confirm("would you like to enter a number?"));
-if(wouldYouLikeToEnterNumber) {
+if (wouldYouLikeToEnterNumber) {
     var userInputNumber = Number(prompt("What number do you select?"));
     var isNumber = !isNaN(userInputNumber);
 
@@ -32,7 +32,7 @@ if(wouldYouLikeToEnterNumber) {
         var numberPlusHundred = parseFloat(userInputNumber);
         alert("Your number plus 100 is " + (numberPlusHundred + 100));
 
-        //look more into parseInt and parse
+        //look more into parseInt and parseFloat
 
         if (userInputNumber < 0) {
             alert("Number is negative");
@@ -49,47 +49,47 @@ if(wouldYouLikeToEnterNumber) {
     ////////////////
     ////////////////
 
-    // function isNum(input) { //taking user number input
-    //     return !isNan(input) // true -> number, false -> NaN
-    // }
-    //
-    // function isEven(num) {
-    //     return num % 2 === 0; // true -> even, false -> odd
-    // }
-    //
-    // function plus100(num) {
-    //     var userNum = parseFloat(num);
-    //     var returnString = "Your number plus 100 is " + (userNum + 100);
-    //     return returnString;
-    // }
-    //
-    // function isNegative(num) {
-    //     return num < 0; // true = less than zero (negative)
-    //                     // false = number is > 0 (positive)
-    // }
-    //
-    //
-    // function mainFunction(willContinue) {
-    //     // call all functions
-    //     if(willContinue) {
-    //         var userInput = prompt("What number would you like to enter?");
-    //         if(isNum(userInput)) {
-    //             // get number details
-    //             var isEvenMessage = (isEven(userInput) ? "Your number is even" : "Your number is odd");
-    //             alert(isEvenMessage);
-    //             // plus 100
-    //             alert(plus100(userInput)); //alert the plus 100 string from above function
-    //             //negative or positive
-    //             var isNegativeMessage = (isNegative(userInput) ? "Number is negative" : "number is positive");
-    //             alert(isNegativeMessage);
-    //         } else { //if they don't enter a number
-    //             alert("This is not a number; please enter a number");
-    //         }
-    //     } //outside of this if statement, they clicked cancel
-    // }
+    function isNum(input) { //taking user number input
+        return !isNan(input) // true -> number, false -> NaN
+    }
 
-    // var willContinueFunc = confirm("would you like to enter a number");
-    // mainFunction(willContinueFunc);
+    function isEven(num) {
+        return num % 2 === 0; // true -> even, false -> odd
+    }
+
+    function plus100(num) {
+        var userNum = parseFloat(num);
+        var returnString = "Your number plus 100 is " + (userNum + 100);
+        return returnString;
+    }
+
+    function isNegative(num) {
+        return num < 0; // true = less than zero (negative)
+                        // false = number is > 0 (positive)
+    }
+
+
+    function mainFunction(willContinue) {
+        // call all functions
+        if (willContinue) {
+            var userInput = prompt("What number would you like to enter?");
+            if (isNum(userInput)) {
+                // get number details
+                var isEvenMessage = (isEven(userInput) ? "Your number is even" : "Your number is odd");
+                alert(isEvenMessage);
+                // plus 100
+                alert(plus100(userInput)); //alert the plus 100 string from above function
+                //negative or positive
+                var isNegativeMessage = (isNegative(userInput) ? "Number is negative" : "number is positive");
+                alert(isNegativeMessage);
+            } else { //if they don't enter a number
+                alert("This is not a number; please enter a number");
+            }
+        } //outside of this if statement, they clicked cancel
+    }
+
+    var willContinueFunc = confirm("would you like to enter a number");
+    mainFunction(willContinueFunc);
 //
 //
 //
@@ -229,7 +229,7 @@ if(wouldYouLikeToEnterNumber) {
         if (luckyNumber === 0) {
             bucket = totalAmount;
         } else if (luckyNumber === 1) {
-            bucket = totalAmount - (totalAmount * .10);
+            bucket = totalAmount - (totalAmount * .10)
         } else if (luckyNumber === 2) {
             bucket = totalAmount - (totalAmount * .25)
         } else if (luckyNumber === 3) {
@@ -244,14 +244,14 @@ if(wouldYouLikeToEnterNumber) {
     }
 }
 
-    console.log(calculateTotal(5, 100));
+console.log(calculateTotal(5, 100));
 
 //
 // CASEY'S EXAMPLE::: /////////
 //
 function calculateTotal(luckyNumber, totalAmount) {
     var discountRate = 0;
-    switch(luckyNumber) {
+    switch (luckyNumber) {
         case 0:
             discountRate = 0;
             break;
@@ -276,30 +276,29 @@ function calculateTotal(luckyNumber, totalAmount) {
 }
 
 
+// function calculateTotal(luckyNumber, totalAmount) {
+//
+//     if(luckyNumber * 1 = totalAmount){
+//         return totalAmount;
+//     } else if(luckyNumber = .10){
+//         return luckyNumber * totalAmount;
+//     } else if(luckyNumber = .25){
+//         return luckyNumber * totalAmount;
+//     } else if(luckyNumber = .5){
+//         return luckyNumber * totalAmount;
+//     } else(luckyNumber = 1){
+//         return luckyNumber * totalAmount;
+//     }
+// }
 
-    // function calculateTotal(luckyNumber, totalAmount) {
-    //
-    //     if(luckyNumber * 1 = totalAmount){
-    //         return totalAmount;
-    //     } else if(luckyNumber = .10){
-    //         return luckyNumber * totalAmount;
-    //     } else if(luckyNumber = .25){
-    //         return luckyNumber * totalAmount;
-    //     } else if(luckyNumber = .5){
-    //         return luckyNumber * totalAmount;
-    //     } else(luckyNumber = 1){
-    //         return luckyNumber * totalAmount;
-    //     }
-    // }
-
-    // console.log(calculateTotal(1, 100));
-    /**
-     * TODO:
-     * Uncomment the line below to generate a random number between 0 and 6.
-     * Prompt the user for their total bill, then use your `calculateTotal` function
-     * and alerts to display to the user what their lucky number was, what their
-     * price before the discount was, and what their price after the discount is.
-     */
+// console.log(calculateTotal(1, 100));
+/**
+ * TODO:
+ * Uncomment the line below to generate a random number between 0 and 6.
+ * Prompt the user for their total bill, then use your `calculateTotal` function
+ * and alerts to display to the user what their lucky number was, what their
+ * price before the discount was, and what their price after the discount is.
+ */
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
 
