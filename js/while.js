@@ -40,6 +40,19 @@ while(i <= 32768){
 //     console.log(i);
 //     i++;
 // } while(i < 10);
+can't go home until ConesToSell = 0
+// var conesToSell = Math.floor(Math.random() * 50) + 50;
+// var conePurchase = Math.floor(Math.random() * 5) + 1;
+
+
+var conesToSell = Math.floor(Math.random() * 50) + 50;
+do{
+    var conePurchase = Math.floor(Math.random() * 5) + 1;
+
+    var numberOfConesAfterSale = conesToSell - conePurchase;
+    conePurchase;
+} while(numberOfConesAfterSale > 0);
+
 
 // var allCones = Math.floor(Math.random() * 50) + 50;
 // var conePurchase = Math.floor(Math.random() * 5) + 1;
