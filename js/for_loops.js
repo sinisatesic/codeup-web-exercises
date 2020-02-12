@@ -1,30 +1,54 @@
-function showMultiplicationTable(){
-
-    for (var x = 1; x <= 10; x++) {
-        for (var i = x; i <= 10; i++){
-            var result = x * 1;
-            console.log(x + ' * ' + i + ' = ' + result);
-        }
+function showMultiplicationTable(x) {
+    for (var i = 1; i <= 10; i++) {
+        var result = x * i;
+        console.log(x + ' * ' + i + ' = ' + result);
     }
 }
 
-console.log(showMultiplicationTable(5));
-
+showMultiplicationTable(7);
 
 
 //
 //
 //
+//pseudo code for below. Pseudo code can help you know what to search for regarding the problem at hand:
 
-for (var i = 0;i < 10; i++){
-    var newNum =  Math.floor(Math.random() * 200) + 20;
-    if(newNum % 2 == 0){
+//1. for loop --> var i = 0; i < 10; i++;
+//2. Inside for loop, generate random number between 20 & 200 --> Math.floor
+//3. We need to check the randomNumber
+//      if it's even --> console.log(random number is even) --> randomNumber % 2 == 0
+//      if it's odd --> console.log(random number is odd)
+
+for (var i = 0; i < 10; i++) {
+    var newNum = Math.floor(Math.random() * 180) + 20;
+    if (newNum % 2 == 0) {
         console.log(newNum + " is even");
     } else {
         console.log(newNum + " is odd");
     }
-
 }
+
+// first approach using repeat method:
+
+for(var i = 1; i < 10; i++){
+    console.log(i.toString().repeat(i));
+}
+
+// second approach using nested loop:
+for(var outerLoop = 1; outerLoop < 10; outerLoop++){
+    var output = ""; //this is bucket placeholder for return values
+    for(var innerLoop = 1; innerLoop <= outerLoop; innerLoop++){
+        output = output + outerLoop;
+    }
+
+    console.log(output);
+}
+
+
+// for (var i = 1; i < 10; i++){
+//     for(var x = i ; x < i; x++)
+//     console.log(x);
+// }
 
 //
 
@@ -47,9 +71,16 @@ for (var i = 0;i < 10; i++){
 
 //
 
-for (var i = 100; i >= 5; i=-5){
+for (var i = 100; i >= 5; i-=5) {
     console.log(i);
 }
 //
+
+// another way using condition:
+for(var i = 100; i >=5; i--){
+    if(i % 5 === 0){
+        console.log(i);
+    }
+}
 //
 
