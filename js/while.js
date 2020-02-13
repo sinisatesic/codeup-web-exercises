@@ -79,7 +79,9 @@ do{
 
 console.log("sold the cones");
 
-
+for (var i = 1; i < 16; i++){
+    console.log(i);
+}
 
 //
 // var conesToSell = Math.floor(Math.random() * 50) + 50;
