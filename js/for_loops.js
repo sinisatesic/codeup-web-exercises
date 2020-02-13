@@ -1,12 +1,17 @@
-function showMultiplicationTable(x) {
+function showMultiplicationTable(a) {
     for (var i = 1; i <= 10; i++) {
-        var result = x * i;
-        console.log(x + ' * ' + i + ' = ' + result);
+        var result = a * i;
+        console.log(a + ' * ' + i + ' = ' + result);
     }
 }
 
+showMultiplicationTable(a){
+    for (var i = 1; i <= 10; i++){
+        var result = a * i;
+        console.log(a + ' * ' + i + ' = ' + result);
+    }
+}
 showMultiplicationTable(7);
-
 
 
 

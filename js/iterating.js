@@ -14,6 +14,13 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
+    //or:
+
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
+
     console.log(names.length);
 
     /**
@@ -55,16 +62,19 @@
     var numbers = ['numOne','numTwo','numThree','numFour'];
 
     function first(numbers){
-        console.log(numbers[0]);
+        return (numbers[0]);
     }
+    console.log(numbers);
 
     function second(numbers){
-        console.log(numbers[1]);
+        return (numbers[1]);
     }
+    console.log(numbers);
 
     function last(numbers){
-        console.log(numbers[numbers.length - 1]);
+        return (numbers[numbers.length - 1]);
     }
+    console.log(numbers);
 
 
     //
