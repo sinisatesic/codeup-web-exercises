@@ -8,6 +8,8 @@ function showMultiplicationTable(x) {
 showMultiplicationTable(7);
 
 
+
+
 //
 //
 //

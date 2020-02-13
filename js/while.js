@@ -51,10 +51,10 @@ while(i <= 65536){
 // } while(i < 10);
 
 
-pseudo code for this prob:
-
-1. Generate the total amount of cones to sell for the days --> allCones
-2. Now we are in the oop - need to generate / check how many cones the customer wants to buy --> conesPurchased
+// pseudo code for this prob:
+//
+// 1. Generate the total amount of cones to sell for the days --> allCones
+// 2. Now we are in the oop - need to generate / check how many cones the customer wants to buy --> conesPurchased
     //if conesPurchased > allCones --> not enough cones to sell(sad path - dev term; try in future checking for sad path first)
     //if I do have enough cones --> I can sell them! allCones = allcones - conesPurchased --> (happy path)
     //repeat this process while allCones > 0
@@ -71,7 +71,7 @@ do{
         var sadPathMessage = "Cannot sell you "+conesPurchased+" , I only have " +allCones+" left";
         console.log(sadPathMessage);
     } else {
-        allCones = allCones - conesPurchased;
+        allCones = allCones - conesPurchased; //same as allCones -= conesPurchased
         var happyPathMessage = conesPurchased + " cones sold..." + allCones +" cones to sell";
         console.log(happyPathMessage)
     }
