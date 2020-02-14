@@ -19,16 +19,15 @@ console.log("hello from conditionals lec.js!");
 //TODO Together: Show a specific navbar if user is admin
 var isAdmin = true;
 if(isAdmin) {
-    //display specific navbar.
+    console.log("Displaying Admin Navbar");
 }
 //
-// console.log("Displaying Admin Navbar");
+
 
 //TODO Together: Send a 20% off coupon if its users birthday
 
 var isBirthday = true;
 if(isBirthday) {
-    //send 20% coupon
     console.log("Sending Coupon");
 }
 
@@ -111,7 +110,7 @@ function canIHas(input){
 //
 function gameOver(input){
     var numberOfLives = parseFloat(0);
-    if (input === numberOfLives){
+    if (input == numberOfLives){ //note that you tested with trip equal, and "0" came back undefined. It's cause of parsefloat on above var, it will force numerical value
         alert("game over");
     }
 }
