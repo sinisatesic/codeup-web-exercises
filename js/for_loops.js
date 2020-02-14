@@ -5,14 +5,6 @@ function showMultiplicationTable(a) {
     }
 }
 
-showMultiplicationTable(a){
-    for (var i = 1; i <= 10; i++){
-        var result = a * i;
-        console.log(a + ' * ' + i + ' = ' + result);
-    }
-}
-showMultiplicationTable(7);
-
 
 
 //
@@ -35,6 +27,15 @@ for (var i = 0; i < 10; i++) {
     }
 }
 
+
+for (var i = 1; i < 51; i++){
+    if (i % 2 === 0) {
+        console.log(i + ' is even');
+    } else {
+        console.log(i + ' is false');
+    }
+}
+
 // first approach using repeat method:
 
 for(var i = 1; i < 10; i++){
@@ -44,6 +45,7 @@ for(var i = 1; i < 10; i++){
 // second approach using nested loop:
 for(var outerLoop = 1; outerLoop < 10; outerLoop++){
     var output = ""; //this is bucket placeholder for return values
+
     for(var innerLoop = 1; innerLoop <= outerLoop; innerLoop++){
         output = output + outerLoop;
     }

@@ -19,11 +19,11 @@
      */
 
     console.log('Adding "The Sun" to the beginning of the planets array.');
-    planets.unshift("The Sun");
+    planets.unshift("The Sun"); //unshift permanently changes the original array
     console.log(planets);
 
     console.log('Adding "Pluto" to the end of the planets array.');
-    planets.push("Pluto")
+    planets.push("Pluto");
     console.log(planets);
 
     console.log('Removing "The Sun" from the beginning of the planets array.');
@@ -33,7 +33,6 @@
     console.log('Removing "Pluto" from the end of the planets array.');
     planets.pop("Pluto");
     console.log(planets);
-    lkjsdf
 
     console.log('Finding and logging the index of "Earth" in the planets array.');
     var earthIndex = planets.indexOf("Earth");

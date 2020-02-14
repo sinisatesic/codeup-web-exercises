@@ -26,12 +26,25 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
+    var stringWithBreaks = planetsArray.join("<br>");
+    console.log(stringWithBreaks);
 
-    var planetsString = "Mercury<br>Venus<br>Earth<br>Mars<br>Jupiter<br>Saturn<br>Uranus<br>Neptune";
-    var planetsArray = planetsString.split('<br>');
-    console.log(myString);
 
     //it would be useful when utilizing the string on html file; it would create new line for each of the string components
 
-    var planetsString = "<ul><li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li></ul>"
-})();
+ // using a loop for the bonus:
+
+var listLoopString = '<ul>'; //beginning of our unordered list
+planetsArray.forEach(function(planet){
+listLoopString += '<li>';
+    listLoopString += planet; //actual list item inside the unordered list
+    listLoopString += '</li>';
+});
+listLoopString += '</ul>'; // end of our unordered list
+
+    // in one line
+    var listString = '<ul><li>' + planetsArray.join("</li><li>") + '</li></ul>';
+    //console.log(listString);
+
+
+});

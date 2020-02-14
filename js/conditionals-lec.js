@@ -17,55 +17,57 @@ console.log("hello from conditionals lec.js!");
 
 // ================ IF STATEMENT EXAMPLES ================
 //TODO Together: Show a specific navbar if user is admin
-// var isAdmin = true;
-// if(isAdmin) {
-//     //display specific navbar.
-// }
+var isAdmin = true;
+if(isAdmin) {
+    //display specific navbar.
+}
 //
 // console.log("Displaying Admin Navbar");
 
 //TODO Together: Send a 20% off coupon if its users birthday
 
-// var isBirthday = true;
-// if(isBirthday) {
-//     //send 20% coupon
-//     console.log("Sending Coupon");
-// }
+var isBirthday = true;
+if(isBirthday) {
+    //send 20% coupon
+    console.log("Sending Coupon");
+}
 
 //TODO Together: Write an if statement that alerts "It's raining" if isRainy is true
 
-// var isRainy = true;
-//
-// if(isRainy) {
-//     alert("It's raining")
-// }
+var isRainy = true;
+
+if(isRainy) {
+    alert("It's raining")
+}
 
 //TODO Together: Write an if statement that alerts the user whether or not they have enough money to buy a new item. Assume there are no hidden fees or taxes.
 
-// var currentBalance = 100;
-// var itemCost = 50;
-//
-// if(currentBalance > itemCost) {
-//     alert("You can do it!");
-// }
+var currentBalance = 100;
+var itemCost = 50;
+
+if(currentBalance > itemCost) {
+    alert("You can do it!");
+} else {
+    alert("Nah son, need mo cream");
+}
 
 //TODO: Write an if statement that alerts "Sorry, game over" if numberOfLives is 0
 //
-// var numberOfLives = 0;
-// var isGameOver = true;
-//
-// if(numberOfLives = isGameOver) {
-//     alert("Sorry, game over");
-// }
+var numberOfLives = 0;
+var isGameOver = true;
+
+if(numberOfLives = isGameOver) {
+    alert("Sorry, game over");
+}
 
 
-/////// BETTER VERSION: ///////
+/////// SIMPLER VERSION: ///////
 //
-// var numberOfLives = 0;
-//
-// if(numberOfLives === 0) {
-//     alert("Sorry, game over!");
-// }
+var numberOfLives = 0;
+
+if(numberOfLives === 0) {
+    alert("Sorry, game over!");
+}
 
 
 
@@ -73,27 +75,72 @@ console.log("hello from conditionals lec.js!");
 
 //TODO: Write an if statement that alerts "It's snowing!" if weather is equal to "snowing"
 
-// var snowing = true;
-//
-// if(snowing) {
-//     alert("It's snowing!");
-// }
+var snowing = true;
+
+if(snowing) {
+    alert("It's snowing!");
+}
+
+//OR, to include weather variable:
+
+
+var weather = "snowing"
+if (weather === "snowing"){
+    alert("It's snowing");
+}
 
 //TODO: Write an if statement that alerts true if numberInput is greater than but not equal to 10
 
-// var number = 11;
-// if(number < 10) {
-//     alert("number greater than 10");
-// }
+var numberInput = 11;
+if(numberInput > 10) {
+    alert(true);
+}
 
 
 //TODO: EXTRA BONUS - Refactor each of the previous statements as functions.
 
-// function isGreaterThanTen(number) {
-//     if(number < 10) {
-//         alert("number greater than 10");
-//     }
-// }
+function canIHas(input){
+    var currentBalance = 100;
+    if (currentBalance > input){
+        alert("Buy that ish");
+    } else {
+        alert("Nah son, need mo moolah");
+    }
+}
+//
+//
+function gameOver(input){
+    var numberOfLives = parseFloat(0);
+    if (input === numberOfLives){
+        alert("game over");
+    }
+}
+gameOver(0);
+//
+//
+function isSnowing(input){
+    var weather = "snowing"
+    if (input === weather){
+        alert("it's snowing");
+    }
+}
+isSnowing(weather);
+// OR
+function isSnowing(input){
+    var snowing = true;
+    if (input == snowing){
+        alert("it's snowing");
+    }
+}
+isSnowing(snowing);
+//
+//
+function isGreaterThanTen(number) {
+    if(number > 10) {
+        alert(true);
+    }
+}
+isGreaterThanTen(11);
 
 
 
@@ -110,13 +157,13 @@ console.log("hello from conditionals lec.js!");
 // =============== IF / ELSE STATEMENT EXAMPLES ================
 //TODO Together: Show a specific navbar if user is admin, else show a different navbar
 
-// var isAdmin = true;
-// if(isAdmin) {
-//     //display specific navbar.
-//     console.log("displaying admin navbar");
-// } else {
-//     console.log("displaying regular navbar");
-// }
+var isAdmin = true;
+if(isAdmin) {
+    //display specific navbar.
+    console.log("displaying admin navbar");
+} else {
+    console.log("displaying regular navbar");
+}
 
 //TODO Together: Write an if statement that alerts "It's raining" if isRainy is true, else return "have a nice day!"
 
@@ -297,7 +344,7 @@ console.log(trafficLight("yellow"));
 
 //TODO Together: Regular way
 
-var message;
+
 var success = true;
 
 if (success) {
@@ -331,19 +378,7 @@ if(weather === "rainy"){
 // =============== SWITCH STATEMENT ================
 //TODO Together:
 
-var pleaseEnterNumber = (confirm("Would you like to enter a number?"));
-var whatNumber = Number(prompt("What number do you select?"));
 
-switch(pleaseEnterNumber) {
-    case whatNumber % 2 === 0;
-        alert("Your number is even");
-        break;
-
-}
-
-//
-//
-//
 
 var pizzaPreference = (prompt("What kind of pizza do you like?")).toLowerCase();
 console.log("User pizza input: " + pizzaPreference);
