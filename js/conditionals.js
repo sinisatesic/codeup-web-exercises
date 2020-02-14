@@ -170,7 +170,7 @@ if (wouldYouLikeToEnterNumber) {
      * TODO:
      * Refactor your above function to use a switch-case statement
      */
-    function analyzeColorSwitch(color) { //may need to change function name to analyzeColor
+    function analyzeColor(color) { //may need to change function name to analyzeColor
         var returnContainer = "";
 
         switch (stringInput) {

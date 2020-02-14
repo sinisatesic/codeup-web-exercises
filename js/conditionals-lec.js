@@ -167,13 +167,13 @@ if(isAdmin) {
 //TODO Together: Write an if statement that alerts "It's raining" if isRainy is true, else return "have a nice day!"
 
 
-// var isRaining = false;
-//
-// if(isRaining) {
-//     alert("It's raining");
-// } else {
-//     alert("have nice day! Ver nice!");
-// }
+var isRaining = true;
+
+if(isRaining) {
+    alert("It's raining");
+} else {
+    alert("have nice day! Ver nice!");
+}
 
 //TODO: Write an if statement that alerts "Sorry, game over" if numberOfLives is 0, else alert "Next Level!"
 
