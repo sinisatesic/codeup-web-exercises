@@ -28,6 +28,8 @@ for (var i = 0; i < 10; i++) {
 }
 
 
+
+
 for (var i = 1; i < 51; i++){
     if (i % 2 === 0) {
         console.log(i + ' is even');
@@ -52,31 +54,6 @@ for(var outerLoop = 1; outerLoop < 10; outerLoop++){
 
     console.log(output);
 }
-
-
-// for (var i = 1; i < 10; i++){
-//     for(var x = i ; x < i; x++)
-//     console.log(x);
-// }
-
-//
-
-// for (var i = 0; i < 10; i++){
-//     for (var x = i; x < 10; x++){
-//
-//     }
-//     console.log(i);
-// }
-
-//
-// for (var i = 0; i < 10; i++){
-//     for (var x = 0; x <= 9; x++){
-//         for (var z = 0; z < x; z++){
-//             console.log(i);
-//         }
-//     }
-//     console.log(x)
-// }
 
 //
 
