@@ -49,3 +49,33 @@ while(c < 10){
 
 ////////////////////
 ////////////////////
+
+//from edabit: write a function that returns true if the last character of a word is "n"; otherwise return false:
+
+function isLastCharacterN(word) {
+    return word.charAt(word.length - 1) === "n";
+}
+
+function isLastCharacterN(word) {
+    return word.chartAt(word.length - 1) === "n";
+}
+
+function isLastCharacter(word) {
+    return word.charAt(word.length - 1) === "n";
+}
+
+function isLastCharacter(word) {
+    return word.charAt(word.length - 1) === "n";
+}
+
+function isLastCharacter(word) {
+    return word.charAt(word.length - 1) === "n";
+}
+
+function isLastCharacterN(word) {
+    return word.charAt(word.length - 1) === "n";
+}
+
+function isLastCharacterN(word) {
+    return word.charAt(word.length - 1) === "n";
+}
