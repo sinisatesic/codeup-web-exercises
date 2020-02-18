@@ -187,4 +187,6 @@ Math.sqrt(-5);
 console.log(Math.pow(4, 2));
 
 console.log(Math.sqrt(Math.pow(4, 3))); // this will return 8, as 4 cubed is 64, then square root of 64 is 8
-
+//
+// setInterval --> after every x amount of milliseconds, the anonymous function will repeat
+//with setTimeout --> set functionality to fire-off after a delay of desired milliseconds; will delay once and not repeat
