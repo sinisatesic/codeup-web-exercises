@@ -181,3 +181,10 @@ Math.sqrt(-5);
 
 // Math.PI  -- this property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159
 
+//these math functions will take in input(s) and convert to number value; if it can't, it will return NaN
+//more practice content, below:
+
+console.log(Math.pow(4, 2));
+
+console.log(Math.sqrt(Math.pow(4, 3))); // this will return 8, as 4 cubed is 64, then square root of 64 is 8
+
