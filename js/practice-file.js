@@ -115,9 +115,22 @@ for (var i = 1; i <= 100; i++){
 
 //Returns a random integer between min and max:
 
+// function getRandomInt(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1) + min);
+// } //need to be able to comprehend the syntax structure in full!!
+//more notes from lesson 2.17.20 on this topic, below:
+
+var max = 10;
+var min = 1;
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
-} //need to be able to comprehend the syntax structure in full!!
+}  //Math.floor will always round down. Here, you will never get 10 because of rounding down of Math.floor (always rounds down)
+//Also, if you change Math.floor to Math.ceil, here, you will never reach 1 because of rounding up of Math.ceil (always rounds up);
+
+//Math.round = Rounds according to the rules we learned in grammar school, i.e. scale of deciam of .1 to .9.
+
+//Math.ceil = rounds up (3.14 would equal 4. Also, if you make enough decimal points, it will escape the rounding-up)
+/////////////////
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);

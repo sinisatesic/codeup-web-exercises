@@ -1,3 +1,8 @@
+
+
+//OY, practice typing these and inputting them into console; muscle memory and console comfort in that way
+
+
 function showMultiplicationTable(a) {
     for (var i = 1; i <= 10; i++) {
         var result = a * i;
@@ -5,6 +10,24 @@ function showMultiplicationTable(a) {
     }
 }
 
+function fruit(name,color,shape){
+    this.name = name;
+    this.color = color;
+    this.shape = shape;
+
+    this.describe = function(){
+        return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+    }
+}
+let melon = new fruit('melon','green','round');
+console.log(melon.describe());
+
+for (var i = 1; i <= 100; i++){
+    if (i % 15 === 0) console.log("FizzBuzz");
+    else if (i % 3 === 0) console.log("Fizz");
+    else if (i % 5 === 0) console.log("Buzz");
+    else console.log(i);
+}
 
 
 //

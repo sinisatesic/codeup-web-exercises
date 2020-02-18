@@ -31,7 +31,7 @@
      */
 
     person.sayHello = function() {
-        console.log("Hello from " + person.firstName + ' ' + person.lastName);
+        console.log("Hello from " + person.firstName + ' ' + person.lastName); // you can also use "this" keyword here, for ex "this.firstName"
     }
 
     console.log(person.sayHello());
@@ -68,11 +68,12 @@
     shoppers.forEach(function(shopper){
         if (shopper.amount > 200){ //take notice on syntax on calling content from shoppers array; notice because of forEach, you have to log it as shopper.amount
             var discount = shopper.amount - shopper.amount * .20;
-            console.log(discount);
+            console.log("Shopper " + shopper.name + " has earned a 12% discount; total equals = " + discount);
         } else {
-            console.log(shopper.amount);
+            console.log("Shopper " + shopper.name + " total equals = " + shopper.amount); //you can also add toFixed here after shopper.amount, for greater accuracy
         }
-    })
+    });
+
 
 
 
@@ -127,6 +128,10 @@
             }
         },
     ];
+
+    //practice for each loop for this content, below:
+
+   //git pull this page so you get this extra forEach loop that was here for the books objects-array!
 
     console.log(books[0].title)
     console.log(books[0].author.firstName)
