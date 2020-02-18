@@ -50,19 +50,6 @@
      * and console.log the relevant messages for each person
      */
 
-        // var shoppers = [
-        //     {name: 'Cameron', amount: 180},
-        //     {name: 'Ryan', amount: 250},
-        //     {name: 'George', amount: 320}
-        // ];
-        // if (shoppers.name.amount > 200){
-        //     shoppers.forEach(function(shopper){
-        //         console.log(shoppers.name.amount = shoppers.name.amount * .20);
-        // } else {
-        // shoppers.forEach(function(shopper){
-        //     console.log(shoppers.name.amount);
-        // });
-
     var shoppers = [
             {
                 name: 'Cameron',
