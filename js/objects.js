@@ -30,7 +30,7 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = function () {
+    person.sayHello = function() {
         console.log("Hello from " + person.firstName + ' ' + person.lastName);
     }
 
@@ -77,7 +77,7 @@
                 amount: 320
             }
         ];
-    //here ends array of objects; per advice, I separated each of them for readability and clarity on my end.
+    //here ends array of objects; per advice, I separated each of them for readability and clarity on user end.
     shoppers.forEach(function(shopper){
         if (shopper.amount > 200){ //take notice on syntax on calling content from shoppers array; notice because of forEach, you have to log it as shopper.amount
             var discount = shopper.amount - shopper.amount * .20;
@@ -119,10 +119,10 @@
         },
 
         {
-            title: "The Cosmic Serpent",
+            title: "A Search in Secret Egypt",
             author: {
-                firstName: "Jeremy",
-                lastName: "Narby"
+                firstName: "Paul",
+                lastName: "Brunton"
             }
         },
         {
