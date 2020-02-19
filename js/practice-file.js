@@ -15,39 +15,7 @@ let banana = new fruit('banana','yellow','banana-shape');
 console.log(banana.describe());
 
 ////////////////////
-function fruit(name,color,shape){
-    this.name = name;
-    this.color = color;
-    this.shape = shape;
 
-    this.describe = function(){
-        return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
-    }
-}
-let melon = new fruit('melon','green','round');
-console.log(melon.describe());
-
-let numbers = [1,2,3,4,5];
-
-numbers.forEach(function(number){
-    console.log(number);
-});
-
-for (var i = 1; i <= 100; i++){
-    if (i % 15 === 0) console.log("FizzBuzz");
-    else if (i % 3 === 0) console.log("Fizz");
-    else if (i % 5 === 0) console.log("Buzz");
-    else console.log(i);
-}
-
-function multiplyTable(a){
-    for (var a = 1; a <= 10; a++){
-        for (var b = 1; b < a; b++){
-            var result = a * b;
-            console.log(a + ' * ' + b + ' = ' + result);
-        }
-    }
-}
 ////////////////////
 
 for (var i = 1; i <= 100; i++){
@@ -259,6 +227,17 @@ function sevenBoom(arr) {
     return 'there is no 7 in the array';
 }
 
+//
+
+function sevenBoom(arr) {
+    for(let el of arr) { //According to user "undefined" on Stack Overflow, el is "just an identifier and it refers to an element, a DOM element, which is a convention in that library."
+        if(el.toString().split('').includes('7')) {
+            return "Boom!"
+        }
+    }
+    return "there is no 7 in the array"
+}
+
 ////////////
 
 //Write a function that removes the last vowel in each word in a sentence.
@@ -291,4 +270,30 @@ function removeLastVowel(str) {
 const removeLastVowel=str=>
     str.replace(/([aeiou])([^aeiou]*)(\s|\.)/ig,""+`$2`+`$3`)
 
+///////// practice on wed. 2.19.20
 
+var header = document.getElementById("header");//creates variable that equates to targeting header element in html document
+
+header.innerText = "new text input; this replaces older html text in header"; //targest inner text (html) of the selected variable, which is header element, and replaces it with following string input
+//in addition to creating addition/new text this way, you can also do so with html code
+//ex:
+var paragraph = document.getElementsByTagName("p")[0];
+var pText = paragraph.innerText;
+console.log(pText);
+
+//now, you can change inner html:
+paragraph.innerHTML = pText + "<img alt='example' src='img/moja1.jpg'>"; //this will insert image in html
+
+//now, content on attribute selection/manipulation
+
+var img = document.getElementsByTagName("img")[0];
+
+console.log(img.hasAttribute("class"));//returns false since there is no class attribute in image element
+
+if (!img.hasAttribute("class")){
+    img.setAttribute("class","fancy-gif");//this conditional asserts that if there is no class attribute in image element, then setAttribute will add in the attributes class NAMED fancy-gif(key-value pair!!!!)
+}
+//styling example:
+var header = document.getElementById("header");
+header.style["background-color"] = "#fff";
+header.style.color = "#000";
