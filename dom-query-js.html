@@ -36,6 +36,10 @@
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         mainHeader.innerHTML = "JavaScript is Cool";
 
+        //.innerText is more safe, so:
+
+        mainHeader.innerText = "JavaScript is Cool";
+
         // console.log(mainHeader); //this log is for testing purposes
 
         // TODO: Uncomment the next line and get the sub header element by id
@@ -52,16 +56,25 @@
 
         // console.log(listItems); //this log is for testing purposes
         // TODO: Set text color on every other list item to grey
+        //David used for loop for this todo and next one:
+        for(var i = 0;i < listItems.length; i++){
+            if(listItems[i].getAttribute("data-dbid") === "1"){
+                listItems[i].style.color = "blue";      //have to specify index in order to affect specific node/html element
+            } else if (i % 2 === 0) {
+                listItems[i].style.color = "grey";
+            }
 
-        listItems[1].style.color = "grey";
-        listItems[3].style.color = "grey";
+        }
+
+        // listItems[1].style.color = "grey";
+        // listItems[3].style.color = "grey";
         // TODO: Set text color of li with dbid = 1 to blue
-        listItems[0].style.color = "blue";
+        // listItems[0].style.color = "blue";
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!"; //tried it without index of [0], and it didn't work! Note dis
+        subParagraphs[0].innerText = "Mission Accomplished!"; //tried it without index of [0], and it didn't work! Note dis
     })();
 </script>
 </body>

@@ -297,3 +297,8 @@ if (!img.hasAttribute("class")){
 var header = document.getElementById("header");
 header.style["background-color"] = "#fff";
 header.style.color = "#000";
+
+1 step = 6 |  6x1 = 6
+2 step = 11 | 6x2 = 12 -1 = 11
+3 step = 16 | 6x3 = 18 - 2 = 16
+4 step = 21 | 6x4 = 24 - 3 = 21
