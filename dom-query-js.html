@@ -7,7 +7,6 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
-<button></button>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -61,6 +60,12 @@
         }
         document.getElementById("buttonOne").addEventListener('click', eventForButtonOne);
 
+        //////// David's example on first problem for second lesson (simpler): ////////
+
+        // document.getElementById("btn-1").addEventListener("click", function() {
+        //     mainHeader.innerText = "JavaScript is Cool";
+        // });
+
 
         // // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
@@ -79,6 +84,11 @@
         document.getElementById("buttonTwo").addEventListener('click', eventForButtonTwo);
         //
 
+        //////// David's example for second problem on second lesson of today: //////////
+        // document.getElementById("btn-1").addEventListener("click", function() {
+        //     subHeader.style.color = "blue";
+        // });
+
         //
         // // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName("li");
@@ -87,7 +97,7 @@
         // David used for loop for this to do and next one:
 
 
-            var eventForButtonThree = function(event) {             //THIS IS THIRD PROBLEM FOR SECOND LESSON!
+            var eventForButtonThree = function(event) {             //third problem
                 for(var i = 0;i < listItems.length; i++){
                     if(listItems[i].getAttribute("data-dbid") === "1"){
                         listItems[i].style.color = "blue";      //have to specify index in order to affect specific node/html element
@@ -99,6 +109,18 @@
         document.getElementById("buttonThree").addEventListener('click', eventForButtonThree);
         //
         //
+        ////// David's example for third: ///////
+        // document.getElementById("buttonThree").addEventListener('click', function(){
+        //     for(var i = 0;i < listItems.length; i++){
+        //         if(listItems[i].getAttribute("data-dbid") === "1"){
+        //             listItems[i].style.color = "blue";      //have to specify index in order to affect specific node/html element
+        //         } else if (i % 2 === 0) {
+        //             listItems[i].style.color = "grey";
+        //         }
+        //     }
+        // });
+
+
         //
         // // listItems[1].style.color = "grey";
         // // listItems[3].style.color = "grey";
@@ -112,11 +134,20 @@
         //
         //
 
-        var eventForButtonFour = function(event) {
+        var eventForButtonFour = function(event) {      //THIS IS ANSWER TO FOURTH PROBLEM IN SECOND LESSON!!!
             subParagraphs[0].innerText = "Mission Accomplished!";
         }
 
         document.getElementById("buttonFour").addEventListener('click', eventForButtonFour);
+
+
+
+        ////// David's example for fourth for second lesson: ///////
+        // document.getElementById("buttonFour").addEventListener('click', function(){
+        //     subParagraphs[0].innerText = "Mission Accomplished!";
+        // });
+
+
     })();
 </script>
 </body>
