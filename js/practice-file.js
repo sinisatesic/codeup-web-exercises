@@ -190,3 +190,38 @@ console.log(Math.sqrt(Math.pow(4, 3))); // this will return 8, as 4 cubed is 64,
 //
 // setInterval --> after every x amount of milliseconds, the anonymous function will repeat
 //with setTimeout --> set functionality to fire-off after a delay of desired milliseconds; will delay once and not repeat
+
+///////////////
+//edabit:
+//Create a function that takes an array of numbers and return "Boom!" if the number 7 appears in the array. Otherwise, return "there is no 7 in the array":
+
+function sevenBoom(arr){
+    if (arr.join().includes(7)){
+        return "Boom!";
+    } else {
+        return "there is no 7 in the array";
+    }
+}
+
+//additional answers that are neat:
+
+const sevenBoom = arr =>
+    /7/.test(arr) ? 'Boom!' : 'there is no 7 in the array';
+
+//
+
+const sevenBoom =(arr) =>{
+    return arr.toString().includes(7) ? "Boom!":"there is no 7 in the array"
+}
+
+//
+
+function sevenBoom(arr) {
+    for (var i in arr) {
+        var a = (''+arr[i]).split('');
+        for (var j in a) {
+            if (a[j] == '7') return 'Boom!';
+        }
+    }
+    return 'there is no 7 in the array';
+}

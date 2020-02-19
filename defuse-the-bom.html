@@ -17,7 +17,7 @@
     var interval = 1000;
 
     // TODO: This function needs to be called once every second
-    var detonate = setInterval(function () {
+    var detonate = setInterval(function() {
             if (detonationTimer == 0) {
                 alert('EXTERMINATE!');
                 document.body.innerHTML = '';
@@ -25,7 +25,7 @@
                 document.getElementById('timer').innerHTML = detonationTimer;
             }
             detonationTimer--;
-        }, interval);
+        }, interval); //here, you can also just put 1000 instead of variable equaling 1000 (ms)
 
 
     // TODO: When this function runs, it needs to
