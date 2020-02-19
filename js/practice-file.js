@@ -194,9 +194,9 @@ console.log(Math.sqrt(Math.pow(4, 3))); // this will return 8, as 4 cubed is 64,
 ///////////////
 //edabit:
 //Create a function that takes an array of numbers and return "Boom!" if the number 7 appears in the array. Otherwise, return "there is no 7 in the array":
-
+//below is first hard edabit i got through; use as first pod problem
 function sevenBoom(arr){
-    if (arr.join().includes(7)){
+    if (arr.join().includes(7)){ // look up in detail .join and .includes for explanation
         return "Boom!";
     } else {
         return "there is no 7 in the array";
@@ -225,3 +225,36 @@ function sevenBoom(arr) {
     }
     return 'there is no 7 in the array';
 }
+
+////////////
+
+//Write a function that removes the last vowel in each word in a sentence.
+//edabit again - very hard lvl, but got off forum site
+
+////////////
+
+function targetLastVowel(string) {
+    var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    for (var i = string.length - 1; i >= 0; i = i - 1) {
+        if (vowels.indexOf(string[i]) >= 0) {
+            var noLastVowel = string.slice(0, i) + string.slice(i + 1);
+            return noLastVowel;
+        }
+    }
+    return string;
+}
+
+function removeLastVowel(str) {
+    var array = str.split(" ");
+    var finalString = [];
+    for (var i = 0; i < array.length; i = i + 1) {
+        finalString.push(targetLastVowel(array[i]));
+    }
+    return finalString.join(" ");
+}
+
+///more edabit answers on this:
+const removeLastVowel=str=>
+    str.replace(/([aeiou])([^aeiou]*)(\s|\.)/ig,""+`$2`+`$3`)
+
+
