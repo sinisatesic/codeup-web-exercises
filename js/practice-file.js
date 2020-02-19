@@ -298,7 +298,40 @@ var header = document.getElementById("header");
 header.style["background-color"] = "#fff";
 header.style.color = "#000";
 
-1 step = 6 |  6x1 = 6
-2 step = 11 | 6x2 = 12 -1 = 11
-3 step = 16 | 6x3 = 18 - 2 = 16
-4 step = 21 | 6x4 = 24 - 3 = 21
+
+
+//// SECOND LESSON OF THE DAY: 2.19.20 - DOM Events ---
+
+//when using the addEventListener method, note the three parameters:
+//document.getElementById("someID").addEventListener("type", function(){}, useCapture);
+
+//example:
+
+document.getElementById("little-text").addEventListener("click", littleEvent); //littleEvent here is function in lesson David did. To stop event after one time, add removeEventListener
+
+///edabit shite
+// 1 step = 6 |  6x1 = 6
+// 2 step = 11 | 6x2 = 12 -1 = 11
+// 3 step = 16 | 6x3 = 18 - 2 = 16
+// 4 step = 21 | 6x4 = 24 - 3 = 21
+
+////
+////
+function matchHouses(step) {
+    if (step) {
+        return (step * 5) + 1;
+    }
+
+    return 0;
+}
+////
+////
+function matchHouses(step) {
+    if(step === 0) {
+        return 0;
+    }else{
+        return (step*6)-(step -1);
+    }
+}
+////
+////
