@@ -231,7 +231,7 @@ function sevenBoom(arr) {
 //Write a function that removes the last vowel in each word in a sentence.
 //edabit again - very hard lvl, but got off forum site
 
-////////////
+////////////!
 
 function targetLastVowel(string) {
     var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
