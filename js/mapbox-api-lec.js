@@ -12,6 +12,18 @@
 
 //TODO TOGETHER: Set map to san antonio area using the coordinates [-98.4916, 29.4252]
 
+mapboxgl.accessToken = mapboxToken;
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/satellite-streets-v11',
+    zoom: 24,
+    center: [31.134667,  29.9792458] //longitude first; latitude second
+});
+
+
+
+
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~15 minutes)
 
 
@@ -25,10 +37,19 @@
 
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-98.4916, 29.4260]. This marker will mark the Alamo on our map.
 // TODO TOGETHER: Change the color of the marker
+var markerOptions = { //this is an object that is being passed into the marker (below)
+    color: "#ff0000", //here, option is "color"
+    draggable: true
+}
+
+var marker = new mapboxgl.Marker(markerOptions)
+    .setLngLat([-98.486209, 29.426007])
+    .addTo(map);
 
 
-// TODO: Experiment with the color, and setting the LngLat
-// TODO: Update the marker object to make the marker draggable. *Hint: reference the docs!
+
+// TODO: Experiment with the color, and setting the LngLat  //done
+// TODO: Update the marker object to make the marker draggable. *Hint: reference the docs! //done
 
 
 /**********************************************
@@ -39,7 +60,21 @@
 
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
+
+// var popup = new mapboxgl.Popup()
+//     .setLngLat([-98.489615, 29.426827])
+//     .setHTML("<p>Codeup Rocks!</p>")
+//     .addTo(map)
+
+var alamoPopup = new mapboxgl.Popup()
+    // .setHTML("<h1>Remember da Alamos</h1>")
+    .setText("Remember da Alamos")
+    .addTo(map);
+
+marker.setPopup(alamoPopup);
+
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the alamo marker.
+
 
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
