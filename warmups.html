@@ -133,105 +133,129 @@
 <!--    // }-->
 
 <!--</script>-->
+<!--<script>-->
+<!--    var reindeerList = [-->
+<!--        {-->
+<!--            name: "Dot",-->
+<!--            age: 5,-->
+<!--            isGold: false-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Dasher",-->
+<!--            age: 8,-->
+<!--            isGold: true-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Patch",-->
+<!--            age: 2,-->
+<!--            isGold: false-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Rocket",-->
+<!--            age: 6,-->
+<!--            isGold: false-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Dancer",-->
+<!--            age: 9,-->
+<!--            isGold: true-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Prancer",-->
+<!--            age: 5,-->
+<!--            isGold: true-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Groot",-->
+<!--            age: 9,-->
+<!--            isGold: false-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Vixen",-->
+<!--            age: 9,-->
+<!--            isGold: true-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Comet",-->
+<!--            age: 11,-->
+<!--            isGold: true-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Archie",-->
+<!--            age: 3,-->
+<!--            isGold: false-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Cupid",-->
+<!--            age: 13,-->
+<!--            isGold: true-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Donder",-->
+<!--            age: 16,-->
+<!--            isGold: true-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Boots",-->
+<!--            age: 16,-->
+<!--            isGold: false-->
+<!--        },-->
+<!--        {-->
+<!--            name: "Blizten",-->
+<!--            age: 16,-->
+<!--            isGold: true-->
+<!--        }-->
+<!--    ];-->
+<!--//below is example of this with for loop-->
+<!--function getGold(reindeerArray){                //bucket first!!!!-->
+<!--    var bucket = [];-->
+
+<!--    for(var i = 0; i < reindeerArray.length; i++){-->
+<!--        if(reindeerArray[i].isGold === true){-->
+<!--            bucket.push(reindeerArray[i]);-->
+<!--        }-->
+<!--    }-->
+<!--    return bucket;-->
+<!--}-->
+<!--    console.log(getGold(reindeerList));-->
+
+<!--//below is example of solving with forEach loop-->
+
+<!--    function getGold(reindeerArray){-->
+<!--        var bucket = [];                            //anytime you're returning array or arrays, set up bucket first-->
+<!--        reindeerArray.forEach(function(reindeer){ //anonymous function makes the loop run-->
+<!--            if(reindeer.isGold === true){           //for each loop is meant to iterate through every single thing/array in this case. For loop is meant when you want to escape from loop-->
+<!--                bucket.push(reindeer);              //.push is meant for arrays, only-->
+<!--            }-->
+<!--        })-->
+
+<!--        return bucket;-->
+<!--    }-->
+<!--        console.log(getGold(reindeerList));-->
+<!--</script>-->
+
 <script>
-    var reindeerList = [
-        {
-            name: "Dot",
-            age: 5,
-            isGold: false
-        },
-        {
-            name: "Dasher",
-            age: 8,
-            isGold: true
-        },
-        {
-            name: "Patch",
-            age: 2,
-            isGold: false
-        },
-        {
-            name: "Rocket",
-            age: 6,
-            isGold: false
-        },
-        {
-            name: "Dancer",
-            age: 9,
-            isGold: true
-        },
-        {
-            name: "Prancer",
-            age: 5,
-            isGold: true
-        },
-        {
-            name: "Groot",
-            age: 9,
-            isGold: false
-        },
-        {
-            name: "Vixen",
-            age: 9,
-            isGold: true
-        },
-        {
-            name: "Comet",
-            age: 11,
-            isGold: true
-        },
-        {
-            name: "Archie",
-            age: 3,
-            isGold: false
-        },
-        {
-            name: "Cupid",
-            age: 13,
-            isGold: true
-        },
-        {
-            name: "Donder",
-            age: 16,
-            isGold: true
-        },
-        {
-            name: "Boots",
-            age: 16,
-            isGold: false
-        },
-        {
-            name: "Blizten",
-            age: 16,
-            isGold: true
-        }
-    ];
-//below is example of this with for loop
-function getGold(reindeerArray){                //bucket first!!!!
-    var bucket = [];
 
-    for(var i = 0; i < reindeerArray.length; i++){
-        if(reindeerArray[i].isGold === true){
-            bucket.push(reindeerArray[i]);
-        }
+    // Write a function that returns a message that says hello to someone by accessing the name property of a passed object. If the passed
+    // argument's name property is anything but a string, or the argument is not an object, return "Hello, my dudes!"
+
+    nameObject = {
+        name: "Sini"
     }
-    return bucket;
-}
-    console.log(getGold(reindeerList));
 
-//below is example of solving with forEach loop
-
-    function getGold(reindeerArray){
-        var bucket = [];                            //anytime you're returning array or arrays, set up bucket first
-        reindeerArray.forEach(function(reindeer){ //anonymous function makes the loop run
-            if(reindeer.isGold === true){           //for each loop is meant to iterate through every single thing/array in this case. For loop is meant when you want to escape from loop
-                bucket.push(reindeer);              //.push is meant for arrays, only
-            }
-        })
-
-        return bucket;
+    function returnHello(name){
+       if (typeof obj === "object" && typeof obj.name === "string"){
+           return "Hello, " + obj.name + "!";
+       } else {
+           return "Hello, my dudes!";
+       }
     }
-        console.log(getGold(reindeerList));
+
+
+
+    console.log(helloToObject({name: "Otis"}));
+    console.log(helloToObject({name: {firstName: "Milo", lastName: "Chatran"}}));
+    console.log(helloToObject(7));
 </script>
 
 

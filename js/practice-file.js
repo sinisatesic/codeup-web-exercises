@@ -371,3 +371,19 @@ function Book(title,author){
 let PP = new Book('Pride and Prejudice','Jane Austen');
 let H = new Book('Hamlet','William Shakespeare');
 let WP = new Book('War and Peace', 'Leo Tolstoy');
+
+//reversing a number without toString:
+
+Reverse = function(number) {
+    var reversed = 0;
+
+    while (number != 0) {
+        reversed *= 10;
+        reversed += number % 10;
+        number -= number % 10;
+        number /= 10;
+    }
+
+    return reversed;
+
+}

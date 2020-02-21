@@ -23,19 +23,22 @@
         }
             @keyframes funkytime {
                 0% {
-                    transform: scale(1); color: green;
+                    transform: translate3d(0, 3px, 0); color: #2d6e99;
                 }
-                25% {
-                    transform: scale(1.15); color: green;
+                20% {
+                    transform: translate3d(0, 2px, 0); color: #2d6e99;
                 }
-                50% {
-                    transform: scale(1.25); color: white;
+                40% {
+                    transform: translate3d(0, -3px, 0); color: #2d6e99;
                 }
-                75% {
-                    transform: scale(1.15); color: white;
+                60% {
+                    transform: translate3d(0, -5px, 0); color: #1a3246;
                 }
-                100% {
-                    transform: scale(1); color: red;
+                80% {
+                    transform: translate3d(0, 2px, 0); color: #1a3246;
+                }
+                100%{
+                    transform: translate3d(0, 3px, 0); color: #1a3246;
                 }
 
             }
@@ -49,19 +52,22 @@
 
         @keyframes funkytime2 {
             0% {
-                transform: scale(1); color: #EC7416;
+                transform: translate3d(0, 3px, 0); color: #eb6841; animation-delay: 1.5s;
             }
-            25% {
-                transform: scale(.9); color: #A3AB1F;
+            20% {
+                transform: translate3d(0, 2px, 0); color: #eb6841;
             }
-            50% {
-                transform: scale(.75); color: white;
+            40% {
+                transform: translate3d(0, -3px, 0); color: #eb6841;
             }
-            75% {
-                transform: scale(.9); color: #EC7416;
+            60% {
+                transform: translate3d(0, -5px, 0); color: #da9461;
             }
-            100% {
-                transform: scale(1); color: #A3AB1F;
+            80% {
+                transform: translate3d(0, 2px, 0); color: #da9461;
+            }
+            100%{
+                transform: translate3d(0, 3px, 0); color: #da9461;
             }
 
         }
@@ -77,17 +83,20 @@
             0% {
                 transform: translate3d(0, 3px, 0); color: #000;
             }
-            25% {
-                transform: translate3d(0, 1px, 0); color: #000;
+            20% {
+                transform: translate3d(0, 2px, 0); color: #000;
             }
-            50% {
+            40% {
                 transform: translate3d(0, -3px, 0); color: #000;
             }
-            75% {
-                transform: translate3d(0, 1px, 0); color: #000;
+            60% {
+                transform: translate3d(0, -5px, 0); color: #000;
             }
-            100% {
-                transform: translate3d(0, 3px, 0); color: #000;
+            80% {
+                transform: translate3d(0, 2px, 0); color: #000;
+            }
+            100%{
+                transform: translate3d(0, 3px, 0); color: #000; animation-delay: 1.5s;
             }
 
         }
