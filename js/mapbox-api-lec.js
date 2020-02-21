@@ -17,7 +17,7 @@ mapboxgl.accessToken = mapboxToken;
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/satellite-streets-v11',
-    zoom: 24,
+    zoom: 12,
     center: [31.134667,  29.9792458] //longitude first; latitude second
 });
 
@@ -91,13 +91,31 @@ marker.setPopup(alamoPopup);
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup. Comment out previous map code.
 
 
-//TODO: Using the geocode method above, add a marker at Codeup to the map
+geocode("600 Navarro St, San Antonio, TX, 78205", mapboxToken).then(function(result){ //result equals return of the anonymous function
+    console.log(result);            //results in long and lat in console as an array
+});
+
+//another example:
+
+// geocode("The White House", mapboxToken).then(function(result){
+//     console.log(result);
+//     // map.setCenter(result);
+//     map.flyTo({center: result, zoom: 15});
+//     // map.setZoom(5)
+// });
+
+//TODO: Using the geocode method above, add a marker at Codeup to the map //done
 //TODO: Instead of setCenter try using map.jumpTo()
-//TODO: Instead of setCenter try using map.flyTo()
+//TODO: Instead of setCenter try using map.flyTo() //done
 
 
 
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -98.4861, lat: 29.4260} to get a physical address for the alamo
+
+reverseGeocode({lng: -98.4861, lat: 29.4260}, mapboxToken).then(function(result){
+    console.log(result);
+});
+
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
 
 
