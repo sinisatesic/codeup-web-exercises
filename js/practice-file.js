@@ -39,6 +39,18 @@ function multiply(a){ //work on this one
 
 multiply(7);
 
+//
+function multiply(q) {
+    for (var q = 1; q <= 10; q++){
+        for (var z = 1; z < q; z++){
+            var result = q * z;
+            console.log(q + ' * ' + z + ' = ' + result);
+        }
+    }
+}
+
+multiply(12);
+
 
 ////////////////////
 ////////////////////
@@ -386,4 +398,95 @@ Reverse = function(number) {
 
     return reversed;
 
+}
+
+//edabit problem:
+//Your function will be passed two functions, f and g, that don't take any parameters. Your function has to call them, and return a string which indicates which function returned the larger number.
+//
+// If f returns the larger number, return the string f.
+// If g returns the larger number, return the string g.
+// If the functions return the same number, return the string neither.
+// Examples
+// whichIsLarger(() => 5, () => 10) ➞ "g"
+//
+// whichIsLarger(() => 25,  () => 25) ➞ "neither"
+//
+// whichIsLarger(() => 505050, () => 5050) ➞ "f"
+
+function whichIsLarger(f,g){
+    bucket = "";
+    if (f() > g()){
+        bucket = "f";
+    } else if (g() > f()){
+        bucket = "g";
+    } else {
+        bucket = "neither";
+    }
+    return bucket; //remember, whenever you return bucket, it has to be within function it's referenced to
+}
+
+function whichIsLarger(f, g){
+    bucket = "";
+    if (f() > g()){
+        bucket = "f";
+    } else if (g() > f()){
+        bucket = "g";
+    } else {
+        bucket = "neither";
+    }
+    return bucket;
+}
+
+function whichIsLarger(f, g){
+    bucket = "";
+    if (f() > g()){
+        bucket = "f";
+    } else if (g() > f()){
+        bucket = "g";
+    } else {
+        bucket = "neither";
+    }
+    return bucket;
+}
+
+function whichIsLarger(f, g){
+    bucket = "";
+    if (f() > g()){
+        bucket = "f";
+    } else if (g() > f()){
+        bucket = "g";
+    } else {
+        bucket = "neither";
+    }
+    return bucket;
+}
+
+function whichIsLarger(f, g){
+    bucket = "";
+    if (f() > g()){
+        bucket = "f";
+    } else if (g() > f()){
+        bucket = "g";
+    } else {
+        bucket = "neither";
+    }
+    return bucket;
+}
+
+function whichIsLarger(f, g){
+    bucket = "";
+    if (f() > g()){
+        bucket = "f";
+    } else if (g() > f()){
+        bucket = "g";
+    } else {
+        bucket = "neither";
+    }
+    return bucket;
+}
+
+//below is an example of a different answer for this; much shorter and elegant:
+
+function whichIsLarger(f, g) {
+    return f()>g()?'f':g()>f()?'g':'neither'
 }

@@ -239,8 +239,8 @@
     // Write a function that returns a message that says hello to someone by accessing the name property of a passed object. If the passed
     // argument's name property is anything but a string, or the argument is not an object, return "Hello, my dudes!"
 
-    nameObject = {
-        name: "Sini"
+    obj = {
+        name: ""
     }
 
     function returnHello(name){
@@ -253,9 +253,9 @@
 
 
 
-    console.log(helloToObject({name: "Otis"}));
-    console.log(helloToObject({name: {firstName: "Milo", lastName: "Chatran"}}));
-    console.log(helloToObject(7));
+    console.log(returnHello({name: "Otis"}));
+    console.log(returnHello({name: {firstName: "Milo", lastName: "Chatran"}}));
+    console.log(returnHello(7));
 </script>
 
 
