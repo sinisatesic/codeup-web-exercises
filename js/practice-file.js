@@ -509,3 +509,21 @@ function oneOddOneEven(n){
         return "true";
     }
 }
+//practice below
+var array = [];
+for (var i = 0; i < 5; i++){
+    if (i == 2) continue;
+    array.push(i);
+}
+console.log(array);
+
+
+//practice below:
+var arr = [
+    [1,2], [3,4], [5,6]
+];
+for (var i = 0; i < arr.length; i++){
+    for (var j = 0; j < arr[i].length; j++){
+        console.log(arr[i][j]);
+    }
+}
