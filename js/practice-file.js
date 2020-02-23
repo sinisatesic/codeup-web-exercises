@@ -548,3 +548,11 @@ for (var elem in data) {
 
 //if you wish to get only a specific value, you can do below (example):
 console.log(data["hasToPoop"]); //this logs true because of value for this property in object
+
+
+///below is example of looping through a hypothetical object with a forEach loop:
+
+Object.keys(myObject).forEach(function(key) {
+    console.log(key); // logs keys in myObject (pretty sure the keys are properties within object)
+    console.log(myObject[key]); // logs values in myObject
+});
