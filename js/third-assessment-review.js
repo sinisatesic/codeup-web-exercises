@@ -31,8 +31,8 @@
 
 function filterNumbers(numbers) {
     arr = [];
-    numbers.forEach(function(number){
-        if (typeof number === "number"){
+    numbers.forEach(function (number) {
+        if (typeof number === "number") {
             arr.push(number)
         }
     });
@@ -43,58 +43,58 @@ filterNumbers(["fred", true, 5, 3]);
 
 function filterNumbers(numbers) {
     arr = [];
-    numbers.forEach(function(number){
-        if (typeof number === "number"){
+    numbers.forEach(function (number) {
+        if (typeof number === "number") {
             arr.push(number)
         }
     });
     return arr.sort();
 }
 
-function filterNumbers(numbers){
+function filterNumbers(numbers) {
     arr = [];
-    numbers.forEach(function(number){
-        if (typeof number === "number"){
+    numbers.forEach(function (number) {
+        if (typeof number === "number") {
             arr.push(number);
         }
     });
     return arr.sort();
 }
 
-function filterNumbers(numbers){
+function filterNumbers(numbers) {
     arr = [];
-    numbers.forEach(function(number){
-        if (typeof number === "number"){
+    numbers.forEach(function (number) {
+        if (typeof number === "number") {
             arr.push(number);
         }
     });
     return arr.sort();
 }
 
-function filterNumbers(numbers){
+function filterNumbers(numbers) {
     arr = [];
-    numbers.forEach(function(number){
-        if (typeof number === "number"){
+    numbers.forEach(function (number) {
+        if (typeof number === "number") {
             arr.push(number);
         }
     });
     return arr.sort();
 }
 
-function filterNumbers(numbers){
+function filterNumbers(numbers) {
     arr = [];
-    numbers.forEach(function(number){
-        if (typeof number === "number"){
+    numbers.forEach(function (number) {
+        if (typeof number === "number") {
             arr.push(number);
         }
     });
     return arr.sort();
 }
 
-function filterNumbers(numbers){
+function filterNumbers(numbers) {
     arr = [];
-    numbers.forEach(function(number){
-        if (typeof number === "number"){
+    numbers.forEach(function (number) {
+        if (typeof number === "number") {
             arr.push(number);
         }
     });
@@ -106,7 +106,51 @@ function filterNumbers(numbers){
 //     ```
 //
 // 2. Write a function, `getOlder()` that takes in array of dog objects and increases the value of the age properties by 1.
-//
+//console.log(object.age + 1);
+
+function getOlder(objects) {
+    objects.forEach(function (object) {
+        object.age++;
+    });
+    return objects;
+}
+
+function getOlder(objects) {
+    objects.forEach(function (object) {
+        object.age++;
+    });
+    return objects;
+}
+
+function getOlder(objects) {
+    objects.forEach(function (object) {
+        object.age++;
+    });
+    return objects;
+}
+
+function getOlder(objects) {
+    objects.forEach(function (object) {
+        object.age++;
+    });
+    return objects;
+}
+
+function getOlder(objects) {
+    objects.forEach(function (object) {
+        object.age++;
+    });
+    return objects;
+}
+
+function getOlder(objects) {
+    objects.forEach(function (object) {
+        object.age++;
+    });
+    return objects;
+}
+
+
 //     ```js
 //     //Example Input:
 //
@@ -151,6 +195,16 @@ function filterNumbers(numbers){
 //
 // 3. Write a function, `washCars()` that takes in a array of car objects and sets the boolean properties of isDirty to false
 //
+
+function washCars(objects) {
+    objects.forEach(function (object) {
+        if (object.isDirty === true) {
+            object.isDirty = false;
+        }
+    });
+    return objects;
+}
+
 //     ```js
 //             // Example input
 //             [
@@ -200,6 +254,21 @@ function filterNumbers(numbers){
 //     ```
 //
 // 4. Write a function, `adminList()` that takes in an array of user objects and returns a count of all admins based on the isAdmin property. Refactor to return an array of admin-only user emails. Refactor again to return an array of user objects that are admins.
+
+//need to fix below!
+
+// function adminList (arr) {
+//     var newArray = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         if(arr[i].isAdmin === true ){
+//             newArray.push(arr[i]);
+//         }
+//         return newArray.length
+//     }
+//     console.log(adminList(arr));
+// }
+
+
 //     ```js
 //          //Example Input:
 //           [
@@ -245,22 +314,73 @@ function filterNumbers(numbers){
 //
 // 5. Create a function, `makeSandwichObjects()` that takes in two array of strings, breads and fillings and returns an array of sandwichObjects that contain properties for bread and filling and values correspond to the same order of the two passed in arrays. Assume the two array inputs are the same length.
 //
+//var arr = [
+//     [1,2], [3,4], [5,6]
+// ];
+// for (var i = 0; i < arr.length; i++){
+//     for (var j = 0; j < arr[i].length; j++){
+//         console.log(arr[i][j]);
+//     }
+// }
+
+// function makeSandwichObjects([breads], [fillings]) {
+//     var breads = [
+//         "white",
+//         "wheat",
+//         "rhy",
+//         "white"
+//     ];
+//     var fillings = [
+//         "pb&j",
+//         "ham",
+//         "cheese steak",
+//         "tuna"
+//     ];
+//     var object = {};
+//     for (var i = 0; i < breads.length; i++) {
+//         object[breads[i]] = fillings[i];
+//     }
+//     console.log(object);
+// }
+//
+// //
+//
+// function makeSandwichObjects([breads], [fillings]) {
+//     var breads = [];
+//     var fillings = [];
+//     var result = fillings.reduce(function (result, field, index) {
+//         result[breads[index]] = field;
+//         return result;
+//     }, {});
+//     console.log(result);
+// }
+
+//
+function makeSandwichObjects(breads, fillings) {
+    var sandwiches = [];
+    for(var i = 0; i < breads.length; i++) {
+        sandwiches.push({bread: breads[i], filling: fillings[i]});
+    }
+    return sandwiches;
+}
+
+
 //     ```js
-//         //     Example Input:
-//
-//          var breads  = [
-//              "white",
-//              "wheat",
-//              "rhy",
-//              "white"
-//          ];
-//
-//          var fillings = [
-//              "pb&j",
-//              "ham",
-//              "cheese steak",
-//              "tuna"
-//          ];
+//     Example Input:
+
+var breads = [
+    "white",
+    "wheat",
+    "rhy",
+    "white"
+];
+
+var fillings = [
+    "pb&j",
+    "ham",
+    "cheese steak",
+    "tuna"
+];
 //
 //          makeSandwichObjects(breads, fillings) // example call to the function
 //     ```
