@@ -31,7 +31,7 @@
      */
 
     person.sayHello = function() {
-        console.log("Hello from " + person.firstName + ' ' + person.lastName); // you can also use "this" keyword here, for ex "this.firstName"
+        console.log("Hello from " + person.firstName + ' ' + person.lastName); // PSSSSSST!!! you can also use "this" keyword here, for ex "this.firstName"
     }
 
     console.log(person.sayHello());

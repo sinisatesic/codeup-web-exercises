@@ -1,4 +1,5 @@
 "use strict";
+
 console.log("Welcome to intro to arrays");
 /* ***************************************************************
 * 							INTRO TO ARRAYS

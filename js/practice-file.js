@@ -1,3 +1,5 @@
+"use strict";
+
 function fruit(name,color,shape){
     this.name = name;
     this.color = color;
@@ -386,7 +388,7 @@ let WP = new Book('War and Peace', 'Leo Tolstoy');
 
 //reversing a number without toString:
 
-Reverse = function(number) {
+function reverse(number) {
     var reversed = 0;
 
     while (number != 0) {
@@ -399,6 +401,8 @@ Reverse = function(number) {
     return reversed;
 
 }
+
+reverse(542);
 
 //edabit problem:
 //Your function will be passed two functions, f and g, that don't take any parameters. Your function has to call them, and return a string which indicates which function returned the larger number.
@@ -414,7 +418,7 @@ Reverse = function(number) {
 // whichIsLarger(() => 505050, () => 5050) ➞ "f"
 
 function whichIsLarger(f,g){
-    bucket = "";
+    var bucket = "";
     if (f() > g()){
         bucket = "f";
     } else if (g() > f()){
@@ -425,65 +429,65 @@ function whichIsLarger(f,g){
     return bucket; //remember, whenever you return bucket, it has to be within function it's referenced to
 }
 
-function whichIsLarger(f, g){
-    bucket = "";
-    if (f() > g()){
-        bucket = "f";
-    } else if (g() > f()){
-        bucket = "g";
-    } else {
-        bucket = "neither";
-    }
-    return bucket;
-}
-
-function whichIsLarger(f, g){
-    bucket = "";
-    if (f() > g()){
-        bucket = "f";
-    } else if (g() > f()){
-        bucket = "g";
-    } else {
-        bucket = "neither";
-    }
-    return bucket;
-}
-
-function whichIsLarger(f, g){
-    bucket = "";
-    if (f() > g()){
-        bucket = "f";
-    } else if (g() > f()){
-        bucket = "g";
-    } else {
-        bucket = "neither";
-    }
-    return bucket;
-}
-
-function whichIsLarger(f, g){
-    bucket = "";
-    if (f() > g()){
-        bucket = "f";
-    } else if (g() > f()){
-        bucket = "g";
-    } else {
-        bucket = "neither";
-    }
-    return bucket;
-}
-
-function whichIsLarger(f, g){
-    bucket = "";
-    if (f() > g()){
-        bucket = "f";
-    } else if (g() > f()){
-        bucket = "g";
-    } else {
-        bucket = "neither";
-    }
-    return bucket;
-}
+// function whichIsLarger(f, g){
+//     bucket = "";
+//     if (f() > g()){
+//         bucket = "f";
+//     } else if (g() > f()){
+//         bucket = "g";
+//     } else {
+//         bucket = "neither";
+//     }
+//     return bucket;
+// }
+//
+// function whichIsLarger(f, g){
+//     bucket = "";
+//     if (f() > g()){
+//         bucket = "f";
+//     } else if (g() > f()){
+//         bucket = "g";
+//     } else {
+//         bucket = "neither";
+//     }
+//     return bucket;
+// }
+//
+// function whichIsLarger(f, g){
+//     bucket = "";
+//     if (f() > g()){
+//         bucket = "f";
+//     } else if (g() > f()){
+//         bucket = "g";
+//     } else {
+//         bucket = "neither";
+//     }
+//     return bucket;
+// }
+//
+// function whichIsLarger(f, g){
+//     bucket = "";
+//     if (f() > g()){
+//         bucket = "f";
+//     } else if (g() > f()){
+//         bucket = "g";
+//     } else {
+//         bucket = "neither";
+//     }
+//     return bucket;
+// }
+//
+// function whichIsLarger(f, g){
+//     bucket = "";
+//     if (f() > g()){
+//         bucket = "f";
+//     } else if (g() > f()){
+//         bucket = "g";
+//     } else {
+//         bucket = "neither";
+//     }
+//     return bucket;
+// }
 
 //below is an example of a different answer for this; much shorter and elegant:
 

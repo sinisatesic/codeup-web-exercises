@@ -1,3 +1,5 @@
+"use strict";
+
 // 1. What is an array in Javascript?
 //  (from W3:) An array is a special character which can hold more than one value/multiple values at a time.
 
