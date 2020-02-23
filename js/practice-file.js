@@ -527,3 +527,24 @@ for (var i = 0; i < arr.length; i++){
         console.log(arr[i][j]);
     }
 }
+
+//practice looping through object:
+
+var data = {            //objects don't have indexes! access through their properties, if you targeting data within object
+    name: "sini",
+    age: 28,
+    hasToPoop: true
+}
+
+for (var elem in data) {   //this will only return properties, NOT the values
+    console.log(elem);
+}
+
+//if you wish to target properties AND values within object, you can do for loop below:
+
+for (var elem in data) {
+    console.log(elem, data[elem]); //elem alone will give you properties, but data[elem] will give you values
+}
+
+//if you wish to get only a specific value, you can do below (example):
+console.log(data["hasToPoop"]); //this logs true because of value for this property in object
