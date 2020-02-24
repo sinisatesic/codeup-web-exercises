@@ -259,16 +259,47 @@ function washCars(objects) {
 
 //need to fix below!
 
-// function adminList (arr) {
-//     var newArray = [];
-//     for (var i = 0; i < arr.length; i++) {
-//         if(arr[i].isAdmin === true ){
-//             newArray.push(arr[i]);
+// -----------Output # 1-----------
+// function adminList(array){ // function called adminList that takes in an array
+//
+//     var count = 0; // count begins at 0
+//
+//     array.forEach(function (item, instance){ //loop through the array and store the item and index values
+//
+//         if ( item.isAdmin === true){ //if the user is an admin
+//             count = instance + 1; //add 1 to the count
 //         }
-//         return newArray.length
-//     }
-//     console.log(adminList(arr));
+//     });
+//
+//     return count; // return the adjusted count
+//
 // }
+//-----------Output # 2-----------
+// function adminList(array){ // function called adminList that takes in an array
+//
+//     var adminEmail= []; // empty array for admin emails, bucket
+//
+//     array.forEach(function (item){ //loop through the array and store the item values
+//
+//         if ( item.isAdmin === true){ //if the user is an admin
+//             adminEmail.push(item.email); //add admin emails to the bucket
+//         }
+//     });
+//
+//     return adminEmail; // return the adjusted emails additions
+//
+// }
+//-----------Output # 3-----------
+function adminList(array){ // function called adminList that takes in an array
+    var adminEmail= []; // empty array for admin emails, bucket
+    array.forEach(function (item){ //loop through the array and store the item values
+        if ( item.isAdmin === true){ //if the user is an admin
+            adminEmail.push(item); //add admin object to the bucket
+        }
+    });
+    return adminEmail; // return the adjusted emails additions
+}
+console.log(adminList(adminInput));
 
 
 //     ```js
