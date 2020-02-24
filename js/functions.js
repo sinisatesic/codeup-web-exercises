@@ -62,8 +62,13 @@ var random = Math.floor((Math.random() * 3) + 1);
 //
 function isTwo(num) {
     return num === 2;
-
 }
+
+// isTwo(1);
+// isTwo(2);
+// isTwo(3);
+
+isTwo(random);
 
 console.log(random);
 console.log(isTwo(random));
@@ -150,6 +155,7 @@ console.log(applyDiscount(200, .37));
 // }
 //
 // console.log(identity(true));
+// console.log(identity(1235));
 
 
 // //4.
@@ -161,7 +167,7 @@ console.log(applyDiscount(200, .37));
 //     }
 // }
 //
-// console.log(isFive(11)); //no matter what numerical value is placed in input, output will result in 5.
+// console.log(isFive(11)); //no matter what numerical value is placed in input, output will result in false if not 5
 
 //5.
 // function addFive(input) {
@@ -188,7 +194,7 @@ console.log(applyDiscount(200, .37));
 // //     }
 // // }
 // //
-// // console.log(isThree(4)); //this will produce a "false" output, as input is not literally 3.
+// // console.log(isThree(4)); //this will produce a "false" output, as input is not 3.
 
 
 //8.
@@ -236,7 +242,7 @@ console.log(applyDiscount(200, .37));
 //    return Boolean(input) === true;
 // }
 //
-// console.log(isTruthy(false));
+// console.log(isTruthy(false)); //this will result in true, i think, for primitive types except for boolean literal false
 
 
 //14.
@@ -244,7 +250,7 @@ console.log(applyDiscount(200, .37));
 //     return Boolean(input) === false;
 // }
 //
-// console.log(isFalsy(false));
+// console.log(isFalsy(false)); // only true if argument is boolean literal false
 
 
 //15. //need more context on this one so it comes more naturally, or find a simpler method
@@ -269,8 +275,8 @@ console.log(applyDiscount(200, .37));
 //     var consonants = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "X", "Z", "W", "Y",
 //     "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x", "z", "w", "y"];
 //
-//     for (var i2 = 0; i2 < consonants.length; i2++) {
-//         if (letter === consonants[i2]) {
+//     for (var i = 0; i < consonants.length; i++) {
+//         if (letter === consonants[i]) {
 //             return true;
 //         }
 //     }
@@ -299,8 +305,8 @@ console.log(applyDiscount(200, .37));
 
 
 //19.
-// function isSpace(letter) {
-//     return letter === " ";
+// function isSpace(input) {
+//     return input === " ";
 // }
 //
 // console.log(isSpace(" "));
@@ -345,7 +351,6 @@ console.log(applyDiscount(200, .37));
 // }
 //
 // console.log(triple(9));
-
 
 
 //25.
@@ -436,22 +441,23 @@ console.log(applyDiscount(200, .37));
 // console.log(cubeRoot(27));
 
 
-
 // //35.
-// function invertSign(number) {
-//     return number === +number && -number === -number;
-// }
+function invertSign(num) {
+    if (num > 0) {
+        return -Math.abs(num);
+    } else {
+        return Math.abs(num);
+    }
+}
+
+console.log(invertSign(-20));
 //
-// console.log(invertSign(-20));
 //
-//
-// OR, to change whether number value is positive or negative, use below:
-//
-//     let reverseSign = function(x){
-//         if(x > 0){
-//             return -x;
-//         }
-//         else {
-//             return +x;
-//         }
-//     }
+// Math.abs(num)
+// =>
+// Always
+// positive
+// - Math.abs(num)
+// =>
+// Always
+// negative
