@@ -25,10 +25,11 @@ do{
 //
 //
 // HEY - here, ask if you can use else if structure for below instead of an if and then if else
-for(var i = 1; i <= 50; i++){
+for (var i = 1; i <= 50; i++){
     if(i % 2 === 0){
         continue; //skip
     }
+
 
     if(i === userNumber){
         console.log("Yikes, skipping num: "+ userNumber);
@@ -37,20 +38,27 @@ for(var i = 1; i <= 50; i++){
     }
 }
 
+for (var i = 1; i <= 50; i++){
+    if(i % 2 === 0){
+        continue;
+    }
+    console.log(i);
+}
+
 //
 
 
 
 
 // another approach for the for-loop portion(2nd portion):
-// for(var i = 1; i <= 50; i+=2){
-//     if(i === userNumber){
-//         console.log("Yikes! skipping number: " + userNumber);
-//         continue;
-//     }
-//
-//     console.log("here's an odd number " + i);
-// }
+for(var i = 1; i <= 50; i+=2){
+    if(i === userNumber){
+        console.log("Yikes! skipping number: " + userNumber);
+        continue;
+    }
+
+    console.log("here's an odd number " + i);
+}
 
 // var userPrompt = prompt("Pick an odd number from 1 and 50");
 // for (var i = userPrompt; userPrompt < 50 && userPrompt > 0; userPrompt++){

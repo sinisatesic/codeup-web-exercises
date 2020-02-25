@@ -3,8 +3,49 @@
 //OY, practice typing these and inputting them into console; muscle memory and console comfort in that way
 
 
-function showMultiplicationTable(a) {
+function showMultiplicationTable(a) {       //CORRECT!!!
     for (var i = 1; i <= 10; i++) {
+        var result = a * i;
+        console.log(a + ' * ' + i + ' = ' + result);
+    }
+}
+
+function showMultiplication(a){
+    for (var i = 1; i <= 10; i++){
+        var result = a * i;
+        console.log(a + ' * ' + i + ' = ' + result);
+    }
+}
+
+function multiplication(a){
+    for (var i = 1; i <= 10; i++){
+        var result = a * i;
+        console.log(a + ' * ' + i + ' = ' + result);
+    }
+}
+
+function multiplication(a){
+    for (var i = 1; i <= 10; i++){
+        var result = a * i;
+        console.log(a + " * " + i + " = " + result);
+    }
+}
+
+function mulitiplicationTable(a){
+    for (var i = 1; i <= 10; i++){
+        var result = a * i;
+        console.log(a + ' * ' + i + ' = ' + result);
+    }
+}
+
+function mulitiplicationTable(a){
+    for(var i = 1; i <= 10; i++){
+        console.log(a + ' * ' + i + ' = ' + result);
+    }
+}
+
+function mulitiply(a){
+    for (var i = 1; i <= 10; i++){
         var result = a * i;
         console.log(a + ' * ' + i + ' = ' + result);
     }
@@ -29,7 +70,19 @@ for (var i = 1; i <= 100; i++){
     else console.log(i);
 }
 
+for (var i = 0; i <= 100; i++){
+    if (i % 15 === 0) console.log("FizzBuzz");
+    else if (i % 3 === 0) console.log("Fizz");
+    else if (i % 5 === 0) console.log("Buzz");
+    else console.log(i);
+}
 
+for (var i = 0; i <= 100; i++){
+    if (i % 15 === 0) console.log("FizzBuzz");
+    else if (i % 3 === 0) console.log("Fizz");
+    else if (i % 5 === 0) console.log("Buzz");
+    else console.log(i);
+}
 //
 //
 //
@@ -57,7 +110,7 @@ for (var i = 1; i < 51; i++){
     if (i % 2 === 0) {
         console.log(i + ' is even');
     } else {
-        console.log(i + ' is false');
+        console.log(i + ' is odd');
     }
 }
 

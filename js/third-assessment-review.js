@@ -44,17 +44,17 @@
 //////////////////////////////////
 //my answer:
 //////////////////////////////////
-function filterNumbers(numbers) {
-    arr = [];
-    numbers.forEach(function (number) {
-        if (typeof number === "number") {
-            arr.push(number)
-        }
-    });
-    return arr.sort(); //this would fail for double(or more) digit numbers for ascending!!!!!
-}
-
-filterNumbers(["fred", true, 5, 3]);
+// function filterNumbers(numbers) {
+//     arr = [];
+//     numbers.forEach(function (number) {
+//         if (typeof number === "number") {
+//             arr.push(number)
+//         }
+//     });
+//     return arr.sort(); //this would fail for double(or more) digit numbers for ascending!!!!!
+// }
+//
+// filterNumbers(["fred", true, 5, 3]);
 //////////////////////////////////
 //Vivian's answer (forEach, first):
 //////////////////////////////////
