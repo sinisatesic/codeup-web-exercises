@@ -65,7 +65,7 @@ function filterNumbers(inputArray){
         if (typeof item === "number") {
             bucket.push(item);
         }
-    })
+    });
     return bucket.sort(function (a, b) {
         return a - b;
     });
@@ -235,8 +235,8 @@ console.log(washCars(carList));
 //Vivian's pseudo code below!!!
 //PART 1 - COUNT (counting bucket/counter)
 // 1. write a function called adminList(users)
-// 2. var adminCount = 0;
-//3. have to loop through array: forEach user --> user.isAdmin (check if they're admin) --> adminCount += 1 (if they're admin, need to add one to the counter)
+// 2. var adminCount = 0; //the counter
+//3. have to loop through array: forEach user --> user.isAdmin (check if they're admin, if so:) --> adminCount += 1 (if they're admin, need to add one to the counter)
 //4. return adminCount
 
 function adminList(users){
@@ -246,7 +246,7 @@ function adminList(users){
         if(user.isAdmin){
             adminCount += 1;
         }
-    })
+    });
 
     return adminCount;
 }
@@ -267,7 +267,7 @@ function adminList(users){
         if (user.isAdmin){
             bucket.push(user.email);
         }
-    })
+    });
 
     return bucket;
 }
@@ -285,7 +285,7 @@ function adminList(users){
         if (user.isAdmin){
             bucket.push(user);
         }
-    })
+    });
 
     return bucket;
 }
@@ -370,50 +370,10 @@ function adminList(users){
 //
 // 5. Create a function, `makeSandwichObjects()` that takes in two array of strings, breads and fillings and returns an array of sandwichObjects that contain properties for bread and filling and values correspond to the same order of the two passed in arrays. Assume the two array inputs are the same length.
 //
-//var arr = [
-//     [1,2], [3,4], [5,6]
-// ];
-// for (var i = 0; i < arr.length; i++){
-//     for (var j = 0; j < arr[i].length; j++){
-//         console.log(arr[i][j]);
-//     }
-// }
 
-// function makeSandwichObjects([breads], [fillings]) {
-//     var breads = [
-//         "white",
-//         "wheat",
-//         "rhy",
-//         "white"
-//     ];
-//     var fillings = [
-//         "pb&j",
-//         "ham",
-//         "cheese steak",
-//         "tuna"
-//     ];
-//     var object = {};
-//     for (var i = 0; i < breads.length; i++) {
-//         object[breads[i]] = fillings[i];
-//     }
-//     console.log(object);
-// }
-//
-// //
-//
-// function makeSandwichObjects([breads], [fillings]) {
-//     var breads = [];
-//     var fillings = [];
-//     var result = fillings.reduce(function (result, field, index) {
-//         result[breads[index]] = field;
-//         return result;
-//     }, {});
-//     console.log(result);
-// }
 
-//
 //////////////////////////////////
-//my answer:
+//Danielle's answer:
 //////////////////////////////////
 function makeSandwichObjects(breads, fillings) {
     var sandwiches = [];
@@ -454,19 +414,19 @@ function makeSandwichObjects(breads, fillings) {
 //     ```js
 //     Example Input:
 
-// var breads = [
-//     "white",
-//     "wheat",
-//     "rhy",
-//     "white"
-// ];
-//
-// var fillings = [
-//     "pb&j",
-//     "ham",
-//     "cheese steak",
-//     "tuna"
-// ];
+var breads = [
+    "white",
+    "wheat",
+    "rhy",
+    "white"
+];
+
+var fillings = [
+    "pb&j",
+    "ham",
+    "cheese steak",
+    "tuna"
+];
 //
 //          makeSandwichObjects(breads, fillings) // example call to the function
 //     ```
@@ -509,11 +469,13 @@ function keepYellow(colors){
         if (color === "yellow"){
             bucket.push(color);
         }
-    })
+    });
     return bucket;
 }
 
+///////
 //for this last one above^, below is using for loop for it:
+///////
 
 function keepYellow(colors){
     var bucket = [];

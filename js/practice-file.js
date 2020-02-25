@@ -506,13 +506,14 @@ function whichIsLarger(f, g) {
 // oneOddOneEven(22) ➞ false
 //most simple solution i found on edabit:
 
-function oneOddOneEven(n){
-    if (n % 2 == 0){
-        return "false";
-    } else {
-        return "true";
-    }
-}
+// function oneOddOneEven(n){
+//     if (n % 2 == 0){
+//         return "false";
+//     } else {
+//         return "true";
+//     }
+// }        //i don't think this is correct lols
+
 //practice below
 var array = [];
 for (var i = 0; i < 5; i++){

@@ -67,10 +67,10 @@
     //here ends array of objects; per advice, I separated each of them for readability and clarity on user end.
     shoppers.forEach(function(shopper){
         if (shopper.amount > 200){ //take notice on syntax on calling content from shoppers array; notice because of forEach, you have to log it as shopper.amount
-            var discount = shopper.amount - shopper.amount * .20;
+            var discount = shopper.amount - shopper.amount * .12;
             console.log("Shopper " + shopper.name + " has earned a 12% discount; total equals = " + discount);
         } else {
-            console.log("Shopper " + shopper.name + " total equals = " + shopper.amount); //you can also add toFixed here after shopper.amount, for greater accuracy
+            console.log("Shopper " + shopper.name + " total equals = " + shopper.amount); //you can also add .toFixed here after shopper.amount, for greater accuracy
         }
     });
 
@@ -124,7 +124,7 @@
             title: "Republic",
             author: {
                 firstName: "Aristokles",
-                lastName: "Plato"
+                lastName: "Platon"
             }
         },
     ];

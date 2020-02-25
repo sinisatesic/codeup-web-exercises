@@ -31,6 +31,9 @@
     var stringWithBreaks = planetsArray.join("<br>");
     console.log(stringWithBreaks);
 
+    var sorted = planetsArray.sort();
+    console.log(sorted);
+
 
     //it would be useful when utilizing the string on html file; it would create new line for each of the string components
 
