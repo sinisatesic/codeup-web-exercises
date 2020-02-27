@@ -24,7 +24,7 @@
 // $('li').css('background', 'pink');
 
 
-// var h1Alert = $('h1').html(); //reate a jQuery statement to alert the contents of your h1 element(s).
+// var h1Alert = $('h1').html(); //create a jQuery statement to alert the contents of your h1 element(s).
 // alert(h1Alert);
 
 //OR (right below)
@@ -90,21 +90,21 @@
 
 //1.
 $('h1').click(function() {
-    $(this).css('background-color', 'pink');
+    $(this).css('background-color', 'pink').css('transform', 'scale(.5)')
 });
 
 //2.
 $('p').dblclick(function() {
-    $(this).css('font-size', '18px');
+    $('p').css('font-size', '18px'); //instead of this, utilize tag because this will only affect item being double-clicked
 });
 
 //3.
 $('li').hover(
     function() {
-        $(this).css('color', 'red');
+        $('li').css('color', 'red'); //if you want individual elements of li to have color change, input this instead of li within functions
     },
     function(){
-        $(this).css('color', 'black');
+        $('li').css('color', 'black');
     }
 );
 
