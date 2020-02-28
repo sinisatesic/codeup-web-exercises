@@ -7,8 +7,11 @@
 </head>
 
 <body>
-<img src="img/jedi-order.png" alt="jedi-order symbol">
-<h1 id="jedi-title">FIND THE KONAMI SYSTEM COORDINATES, YOUNG PADAWAN</h1>
+
+    <img src="img/jedi-order.png" class="jedi-order-symbol" alt="jedi-order symbol">
+
+
+<h1 class="jedi-title">FIND THE KONAMI SYSTEM COORDINATES, YOUNG PADAWAN</h1>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
@@ -22,13 +25,38 @@
         keyArray.push(event.key); //the event being called is being pushed into the empty array
         if(keyArray.toString().indexOf(konamiCode) >= 0){ //if the array is string value and indexed as such in the konamiCode, and greater or equal to 0 (konamiCode)//you can zero change to false
             // $(document).off("keydown"); //event is turned off on keydown
-            $('body').html('<img src="img/jarjar.png" alt="you were close">');
+            $('html').css('background', 'black');
+            // $(document).html('<img src="img/galaxy.jpg" style="max-width: 100%; object-fit: cover; opacity: .25; >')
             var audio = new Audio('mp3/fates.mp3');
             audio.play();
+            // $('h1').("YOU HAVE LOCATED THE KONAMI SYSTEM").css({})
+            $('h1').hover(
+                function() {
+                    $('h1').html("YOU HAVE LOCATED THE KONAMI SYSTEM").css('color', 'white'); //if you want individual elements of li to have color change, input this instead of li within functions
+                },
+                function(){
+                    $('h1').css('color', 'black');
+                }
+            );
+
+            $('body').click(function() {
+                $('html').css('background-image', 'url("img/fates.jpg")').css('object-fit', 'cover'); //instead of this, utilize tag because this will only affect item being double-clicked
+                $('h1').css('color', '#2578b3')
+                $('h1').hover(
+                    function(){
+                        $('h1').css('color', '#b32525');
+                    },
+                    function(){
+                        $('h1').css('color', '#943a34');
+                    }
+                )
+            });
             // alert("You have added 30 lives");
             keyArray = [];      //resetting into empty array for new event input
         }
     });
+
+
 
 
 

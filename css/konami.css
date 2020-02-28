@@ -1,5 +1,88 @@
-#jedi-title {
+html {
+    padding: 0;
+    background: #d2d2d2;
+}
+
+/*#main-page-image-outline {*/
+/*    !*border-radius: 50%;*!*/
+
+/*    width: 40vw;*/
+/*    border: 10px solid black;*/
+
+/*}*/
+
+.jedi-order-symbol {
+    padding: 0;
+    border: 10px solid #bdbdbd;
+    border-radius: 50%;
+    height: 25%;
+    width: 25%;
+    margin-left: 35%;
+    margin-top: 7%;
+    -webkit-box-shadow: 0 8px 6px 2px #b7bcc9;
+    -moz-box-shadow: 0 8px 6px 4px #b7bcc9;
+    box-shadow: 0 8px 6px 5px #b7bcc9;
+    animation: upDownAnimation 8s ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes upDownAnimation {
+    10% {
+        transform: translate3d(0, 6px, 0);
+    }
+    20%{
+        transform: translate3d(0, 1px, 0);
+    }
+    30%{
+        transform: translate3d(0, .5px, 0);
+    }
+    40%{
+        transform: translate3d(0, .25px, 0);
+    }
+    50%{
+        transform: translate3d(0, .15px, 0);
+    }
+    60%{
+        transform: translate3d(0, .25px, 0);
+    }
+    70%{
+        transform: translate3d(0, .5px, 0);
+    }
+    80%{
+        transform: translate3d(0, 1px, 0);
+    }
+    90%{
+        transform: translate3d(0, 5px, 0);
+    }
+    100%{
+        transform: translate3d(0, 6, 0);
+    }
+}
+
+/*here is main header*/
+.jedi-title {
     text-align: center;
-    margin-top: 30%;
+    margin-top: 2%;
     font-family: 'Poller One';
+    animation: glow 3s infinite;
+}
+@keyframes glow {
+    0% {
+        transform: scaleX(1);
+    }
+    20% {
+        transform: scaleX(1.02);
+    }
+    30% {
+        transform: scaleX(1.03);
+    }
+    60% {
+        transform: scaleX(1.03);
+    }
+    80% {
+        transform: scaleX(1.02);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
