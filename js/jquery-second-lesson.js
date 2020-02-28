@@ -43,9 +43,9 @@ $('h1').mouseenter(function() {
         .off("mouseenter"); // We'll talk about this later.
 });
 
-$('#submit').click(function(e) {
+$('#submit').click(function(e) { //this is for a submit button/entry within a form
     e.preventDefault();
-    var val = $('input').val().toLowerCase();
+    var val = $('input').val().toLowerCase(); //input here matches element input on html
     console.log(val);
     if (val === 'pikachu') {
         $('#picture-example').html('<img class="push" src="img/pikachu.gif" alt="pikachu gif">');

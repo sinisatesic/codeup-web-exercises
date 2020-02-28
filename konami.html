@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="css/konami.css">
+    <link href="https://fonts.googleapis.com/css?family=Poller+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<img src="img/jedi-order.png" alt="jedi-order symbol">
+<h1 id="jedi-title">FIND THE KONAMI SYSTEM COORDINATES, YOUNG PADAWAN</h1>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+    var keyArray = []; //we have empty array in which we will push the konamiCode into;
+    var konamiCode = "ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,b,a,Enter"//this variable is the code that is to be input in order to attain event(alert); keycode numeric values are depreciated;
+
+    $(document).keydown(function(event){ //jquery calls document; anonymous function listens for .keyup
+        console.log(event.key); //loggin konamiCode
+
+        keyArray.push(event.key); //the event being called is being pushed into the empty array
+        if(keyArray.toString().indexOf(konamiCode) >= 0){ //if the array is string value and indexed as such in the konamiCode, and greater or equal to 0 (konamiCode)//you can zero change to false
+            // $(document).off("keydown"); //event is turned off on keydown
+            $('body').html('<img src="img/jarjar.png" alt="you were close">');
+            var audio = new Audio('mp3/fates.mp3');
+            audio.play();
+            // alert("You have added 30 lives");
+            keyArray = [];      //resetting into empty array for new event input
+        }
+    });
+
+
+
+
+</script>
+</body>
+</html>
