@@ -10,8 +10,24 @@
 
     <img src="img/jedi-order.png" class="jedi-order-symbol" alt="jedi-order symbol">
 
+    <div class="orb-container">
 
-<h1 class="jedi-title">FIND THE KONAMI SYSTEM COORDINATES, YOUNG PADAWAN</h1>
+        <div class="orb" id="orb1"></div>
+        <div class="orb" id="orb2"></div>
+        <div class="orb" id="orb3"></div>
+        <div class="orb" id="orb4"></div>
+        <div class="orb" id="orb5"></div>
+        <div class="orb" id="orb6"></div>
+        <div class="orb" id="orb7"></div>
+        <div class="orb" id="orb8"></div>
+        <div class="orb" id="orb9"></div>
+        <div class="orb" id="orb10"></div>
+        <div class="orb" id="orb11"></div>
+
+    </div>
+
+
+    <h1 class="jedi-title">RETRIEVE THE KONAMI SYSTEM COORDINATES, YOUNG PADAWAN</h1>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
@@ -51,6 +67,10 @@
                     }
                 )
             });
+
+            $('body').dblclick(function() {
+                $('html').css()
+            })
             // alert("You have added 30 lives");
             keyArray = [];      //resetting into empty array for new event input
         }

@@ -86,3 +86,292 @@ html {
         transform: scaleX(1);
     }
 }
+
+/*here is beginning of CSS for orb container and individual orbs*/
+.orb-container {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    display: none;
+}
+/*orb class to style provide all orbs default styling*/
+.orb {
+    height: 15px;
+    width: 15px;
+    background: white;
+    border-radius: 50%;
+}
+/*first orb movement below*/
+#orb1 {
+    margin-left: 25%;
+    animation: orb1-animation 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes orb1-animation {
+    0% {
+        transform: translate3d(-550px, 35px, 100px);
+    }
+    25% {
+        transform: translate3d(350px, 45px, 200px);
+    }
+    50% {
+        transform: translate3d(1450px ,55px, 300px);
+    }
+    75% {
+        transform: translate3d(-200px, 45px, 200px);
+    }
+    100%{
+        transform: translate3d(-550px, 35px, 100px);
+    }
+}
+
+/*second orb movement here*/
+#orb2 {
+    margin-left: 50%;
+    animation: orb2-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+@keyframes orb2-animation {
+    0% {
+        transform: translate3d(-550px, 75px, 100px);
+    }
+    25% {
+        transform: translate3d(550px, 200px, 200px);
+    }
+    50% {
+        transform: translate3d(1450px ,350px, 300px);
+    }
+    75% {
+        transform: translate3d(-400px, 200px, 200px);
+    }
+    100%{
+        transform: translate3d(-550px, 75px, 100px);
+    }
+}
+
+/*orb 3 movement here*/
+#orb3 {
+    margin-left: 75%;
+    animation: orb3-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+}
+@keyframes orb3-animation {
+    0% {
+        transform: translate3d(-750px, -200px, 600px);
+    }
+    25% {
+        transform: translate3d(550px, -400px, 200px);
+    }
+    50% {
+        transform: translate3d(1450px ,-1000px, 300px);
+    }
+    75% {
+        transform: translate3d(-400px, -500px, 200px);
+    }
+    100%{
+        transform: translate3d(-750px, -200px, 600px);
+    }
+}
+
+/*orb 4 animation here*/
+#orb4 {
+    margin-left: 100%;
+    animation: orb4-animation 5;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+@keyframes orb4-animation {
+    0% {
+        transform: translate3d(-950px, -200px, 50px);
+    }
+    25% {
+        transform: translate3d(-400px, -400px, 100px);
+    }
+    50% {
+        transform: translate3d(-850px ,-500px, 250px);
+    }
+    75% {
+        transform: translate3d(-400px, -400px, 100px);
+    }
+    100%{
+        transform: translate3d(-950px, -200px, 50px);
+    }
+}
+
+/*here is orb 5 animation*/
+#orb5 {
+    margin-left: 75%;
+    animation: orb5-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2.5s;
+}
+@keyframes orb5-animation {
+    0% {
+        transform: translate3d(125px, -50px, -500px);
+    }
+    25% {
+        transform: translate3d(550px, -400px, 200px);
+    }
+    50% {
+        transform: translate3d(950px ,-1000px, 300px);
+    }
+    75% {
+        transform: translate3d(550px, -400px, 200px);
+    }
+    100%{
+        transform: translate3d(125px, -50px, -500px);
+    }
+}
+
+/*here is orb 6 animation*/
+#orb6 {
+    margin-left: 50%;
+    animation: orb6-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+@keyframes orb6-animation {
+    0% {
+        transform: translate3d(-75px, -50px, -700px);
+    }
+    25% {
+        transform: translate3d(550px, -400px, 200px);
+    }
+    50% {
+        transform: translate3d(750px ,-700px, 700px);
+    }
+    75% {
+        transform: translate3d(550px, -400px, 200px);
+    }
+    100%{
+        transform: translate3d(-75px, -50px, -700px);
+    }
+}
+
+/*here is orb 7 animation*/
+#orb7 {
+    margin-left: 25%;
+    animation: orb7-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3.5s;
+}
+@keyframes orb7-animation {
+    0% {
+        transform: translate3d(-550px, 35px, 100px);
+    }
+    25% {
+        transform: translate3d(350px, 45px, 200px);
+    }
+    50% {
+        transform: translate3d(1450px ,55px, 300px);
+    }
+    75% {
+        transform: translate3d(-200px, 45px, 200px);
+    }
+    100%{
+        transform: translate3d(-550px, 35px, 100px);
+    }
+}
+
+/*here is orb8 animation */
+#orb8 {
+    margin-left: 50%;
+    animation: orb8-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+}
+@keyframes orb8-animation {
+    0% {
+        transform: translate3d(-550px, 35px, 100px);
+    }
+    25% {
+        transform: translate3d(350px, 45px, 200px);
+    }
+    50% {
+        transform: translate3d(1450px ,55px, 300px);
+    }
+    75% {
+        transform: translate3d(-200px, 45px, 200px);
+    }
+    100%{
+        transform: translate3d(-550px, 35px, 100px);
+    }
+}
+
+/*here is orb 9 animation*/
+#orb9 {
+    margin-left: 75%;
+    animation: orb9-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 4.5s;
+}
+@keyframes orb9-animation {
+    0% {
+        transform: translate3d(-125px, -50px, -500px);
+    }
+    25% {
+        transform: translate3d(-750px, -400px, 200px);
+    }
+    50% {
+        transform: translate3d(-1050px ,-1000px, 300px);
+    }
+    75% {
+        transform: translate3d(-550px, -400px, 200px);
+    }
+    100%{
+        transform: translate3d(-125px, -50px, -500px);
+    }
+}
+
+/*here is orb 10 animation*/
+#orb10 {
+    margin-left: 100%;
+    animation: orb10-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+@keyframes orb10-animation {
+    0% {
+        transform: translate3d(-325px, -50px, 400px);
+    }
+    25% {
+        transform: translate3d(-550px, -400px, 200px);
+    }
+    50% {
+        transform: translate3d(-7050px ,-1000px, 300px);
+    }
+    75% {
+        transform: translate3d(-550px, -400px, 200px);
+    }
+    100%{
+        transform: translate3d(-325px, -50px, 400px);
+    }
+}
+
+/*here is orb 11 animation*/
+#orb11 {
+    margin-left: 75%;
+    animation: orb11-animation 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 5.5s;
+}
+@keyframes orb11-animation {
+    0% {
+        transform: translate3d(-550px, 35px, 100px);
+    }
+    25% {
+        transform: translate3d(350px, 45px, 200px);
+    }
+    50% {
+        transform: translate3d(1450px ,55px, 300px);
+    }
+    75% {
+        transform: translate3d(-200px, 45px, 200px);
+    }
+    100%{
+        transform: translate3d(-550px, 35px, 100px);
+    }
+}
