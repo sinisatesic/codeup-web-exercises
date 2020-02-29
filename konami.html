@@ -49,18 +49,22 @@
 <script>
     "use strict";
     var keyArray = []; //we have empty array in which we will push the konamiCode into;
-    var konamiCode = "ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,b,a,Enter"//this variable is the code that is to be input in order to attain event(alert); keycode numeric values are depreciated;
+    var konamiCode = "ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,b,a,Enter";//this variable is the code that is to be input in order to attain event(alert); keycode numeric values are depreciated;
+    var cortana = "s,1,1,7,Enter";
+    var audio = new Audio('mp3/fates.mp3');
+    var secondAudio = new Audio('mp3/halo.mp3');
 
     $(document).keydown(function(event){ //jquery calls document; anonymous function listens for .keyup
-        console.log(event.key); //loggin konamiCode
+        console.log(event.key); //logging konamiCode
 
         keyArray.push(event.key); //the event being called is being pushed into the empty array
         if(keyArray.toString().indexOf(konamiCode) >= 0){ //if the array is string value and indexed as such in the konamiCode, and greater or equal to 0 (konamiCode)//you can zero change to false
             // $(document).off("keydown"); //event is turned off on keydown
             $('html').css('background', 'black');
             // $(document).html('<img src="img/galaxy.jpg" style="max-width: 100%; object-fit: cover; opacity: .25; >')
-            var audio = new Audio('mp3/fates.mp3');
+            // var audio = new Audio('mp3/fates.mp3');
             audio.play();
+            secondAudio.pause();
             // $('h1').("YOU HAVE LOCATED THE KONAMI SYSTEM").css({})
             $('h1').hover(
                 function() {
@@ -94,7 +98,18 @@
 
             // alert("You have added 30 lives");
             keyArray = [];      //resetting into empty array for new event input
+
         }
+        else if(keyArray.toString().indexOf(cortana) >= 0){
+            $('html').css('background', 'teal');
+            audio.pause();
+            // var secondAudio = new Audio('mp3/halo.mp3');
+            secondAudio.play();
+            $('.jedi-order-symbol').css('display', 'none');
+
+            $('h1').html('WELCOME, SPARTAN 117');
+        }
+
     });
 
 

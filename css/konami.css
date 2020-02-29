@@ -100,7 +100,7 @@ html {
     width: 15px;
     background: #c43c33;
     border-radius: 50%;
-    filter: blur(.85em);
+    filter: blur(.55em);
 }
 /*first orb movement below*/
 #orb1 {
