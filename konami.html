@@ -26,6 +26,22 @@
 
     </div>
 
+    <div class="orb-container">
+
+        <div class="orb" id="orb12"></div>
+        <div class="orb" id="orb13"></div>
+        <div class="orb" id="orb14"></div>
+        <div class="orb" id="orb15"></div>
+        <div class="orb" id="orb16"></div>
+        <div class="orb" id="orb17"></div>
+        <div class="orb" id="orb18"></div>
+        <div class="orb" id="orb19"></div>
+        <div class="orb" id="orb20"></div>
+        <div class="orb" id="orb21"></div>
+        <div class="orb" id="orb22"></div>
+
+    </div>
+
 
     <h1 class="jedi-title">RETRIEVE THE KONAMI SYSTEM COORDINATES, YOUNG PADAWAN</h1>
 
@@ -56,7 +72,7 @@
             );
 
             $('body').click(function() {
-                $('html').css('background-image', 'url("img/fates.jpg")').css('object-fit', 'cover'); //instead of this, utilize tag because this will only affect item being double-clicked
+                $('html').css('background-image', 'url("img/fates.jpg")'); //instead of this, utilize tag because this will only affect item being double-clicked
                 $('h1').css('color', '#2578b3')
                 $('h1').hover(
                     function(){
@@ -69,8 +85,11 @@
             });
 
             $('body').dblclick(function() {
-                $('html').css()
-            })
+                $('.orb-container').css('display', 'block');
+                $('.orb-container:nth-child(2)').css('display', 'block');
+                $('.jedi-title').html('ALL IS AS THE FORCE WILLS IT')
+                $('.jedi-title').css('margin-top', '-50%');
+            });
             // alert("You have added 30 lives");
             keyArray = [];      //resetting into empty array for new event input
         }
