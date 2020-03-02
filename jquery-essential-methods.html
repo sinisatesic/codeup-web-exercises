@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Essential Methods</title>
+    <style type="text/css">
+        .red {
+            color: red;
+            fill: red;
+        }
+        #red.circle {
+            background-color: red;
+        }
+        .orange {
+            color: darkorange;
+            fill: darkorange;
+        }
+        #orange.circle {
+            background-color: darkorange;
+        }
+        .yellow {
+            color: #FACE0A;
+            fill: #FACE0A;
+        }
+        #yellow.circle {
+            background-color: #FACE0A;
+        }
+        .green {
+            color: #8cd63d;
+            fill: #8cd63d;
+        }
+        #green.circle {
+            background-color: #8cd63d;
+        }
+        .blue {
+            color: darkblue;
+            fill: darkblue;
+        }
+        #blue.circle {
+            background-color: darkblue;
+        }
+        .purple {
+            color: rebeccapurple;
+            fill: rebeccapurple;
+        }
+        #purple.circle {
+            background-color: rebeccapurple;
+        }
+        .black {
+            fill: black;
+        }
+        #rainbow.circle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #rainbowBorders {
+            width: 5px;
+            height: 5px;
+            border-radius: 2.5px;
+            box-shadow:
+                    0 0 0 5px #ff0000,
+                    0 0 0 10px #ff7700,
+                    0 0 0 15px #FFDD00,
+                    0 0 0 20px #00FF00,
+                    0 0 0 25px #0000FF,
+                    0 0 0 30px #C77DF3,
+                    0 0 0 35px #8A2BE2;
+        }
+        .circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 35px;
+            float: left;
+            margin-left: 15px;
+        }
+        .circles {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-bottom: 30px;
+        }
+        .caps {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="project-header" class="codeup">jQuery Essential Methods</h1>
+<hr>
+<div>
+    <h2 class="logo-header">Codeup Logo in SVG Form - <span id="colorText" class="green">green</span></h2>
+    <!-- SVG Codeup Logo for manipulation -->
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="xMidYMid meet" viewBox="0 0 600 450" width="600" height="450">
+        <defs class="codeup-logo">
+            <path d="M174.86 146.23L354.65 146.23L354.65 169.34L174.86 169.34L174.86 146.23Z" id="path1" class="green"/>
+            <path d="M355.05 146.04L467.84 302.75L449.09 316.25L336.3 159.53L355.05 146.04Z" id="path2" class="green"/>
+            <path d="M121.64 234.48L301.43 234.48L301.43 257.58L121.64 257.58L121.64 234.48Z" id="path3" class="green"/>
+            <path d="M103.05 244.83L173.89 145.52L192.7 158.94L121.86 258.25L103.05 244.83Z" id="path4" class="green"/>
+            <path d="M301.73 234.48L400.75 372.08L382 385.57L282.98 247.98L301.73 234.48Z" id="path5" class="green"/>
+            <path d="M372.41 372.9L448.17 289.06L465.31 304.54L389.55 388.39L372.41 372.9Z" id="path6" class="green"/>
+        </defs>
+        <g>
+            <g><use xlink:href="#path1" opacity="1" fill="#8cd63d" fill-opacity="1"/></g>
+            <g><use xlink:href="#path2" opacity="1" fill="#8cd63d" fill-opacity="1"/></g>
+            <g><use xlink:href="#path5" opacity="1" fill="#8cd63d" fill-opacity="1"/></g>
+            <g><use xlink:href="#path6" opacity="1" fill="#8cd63d" fill-opacity="1"/></g>
+            <g><use xlink:href="#path4" opacity="1" fill="#8cd63d" fill-opacity="1"/></g>
+            <g><use xlink:href="#path3" opacity="1" fill="#8cd63d" fill-opacity="1"/></g>
+        </g>
+    </svg>
+
+    <!-- Color Balls -->
+    <div class="circles">
+        <div id="red" class="circle"></div>
+        <div id="orange" class="circle"></div>
+        <div id="yellow" class="circle"></div>
+        <div id="green" class="circle"></div>
+        <div id="blue" class="circle"></div>
+        <div id="purple" class="circle"></div>
+        <div id="rainbow" class="circle">
+            <div id="rainbowBorders"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/jquery-essential-methods.js"></script>
+
+</body>
+</html>
