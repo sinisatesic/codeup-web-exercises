@@ -14,6 +14,11 @@
         .highlight {
             background: lime;
         }
+
+        .div-container {
+            display: flex;
+            flex-direction: row;
+        }
     </style>
 </head>
 <body>
@@ -63,12 +68,19 @@
         <li>Davis Mountains</li>
         <li>Enchanted Rock</li>
     </ul>
-    <button id="parks-button"></button>
+    <button id="parks-button">BUTTON</button>
 </dl>
 
-<!--<div id="toggling">-->
-<!--    Toggle Park Faqs-->
-<!--</div>-->
+
+<!--attempt at bonus below-->
+<div class="div-container">
+    <div style="width: 250px; height: 200px; border: 1px solid black" class="divImages" id="first-div-image" ><img src="img/darthcopy.png" style="max-height: 100%; max-width: 100%" alt="durthvurder"></div>
+<!--    <button id="first-div">First Div</button>-->
+    <div style="width: 250px; height: 200px; border: 1px solid black" class="divImages" id="second-div-image"><img src="img/obicopy.png" style="max-height: 100%; max-width: 100%" alt="oberwern"></div>
+<!--    <button id="second-div">Second Div</button>-->
+    <div style="width: 250px; height: 200px; border: 1px solid black" class="divImages" id="third-div-image"><img src="img/eagle.png" style="max-height: 100%; max-width: 100%" alt="ergle"></div>
+<!--    <button id="third-div">Third Div</button>-->
+</div>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
 
@@ -77,6 +89,66 @@
         $( this ).toggleClass( "highlight" );
         $('dl dd').toggleClass("invisible");
     });
+
+
+    //traversing section
+
+    $('#parks-button').click( function () {
+        $('ul').each( function (){
+           $(this).children().last().css('background', 'yellow');
+        });
+    });
+///
+
+    $('h3').click( function () {
+        $(this).next().css('font-weight', 'bold');
+    })
+////
+
+    $('li').click( function () {
+        $('ul').each( function (){
+            $(this).children().first().css('color', 'blue');
+        });
+    });
+
+    $('#first-div-image img').click( function () {
+        var firstDiv = this;
+        var src = this.src;
+        $('#second-div-image img').fadeOut(400, function () {
+            firstDiv.src = this.src;
+            $(this).fadeIn(400)[0].src = src;
+        });
+    });
+
+    function generate() {
+        $('.divImages').text(Math.floor(Math.random() * 3) + 1);
+    }
+
+    // $('#second-div-image img').click( function () {
+    //     var secondDiv = this;
+    //     var src = this.src;
+    //     $(generate()).fadeOut(400, function () {
+    //         secondDiv.src = this.src;
+    //         $(this).fadeIn(400)[0].src = src;
+    //     });
+    // })
+
+    $('#third-div-image img').click( function () {
+        var thirdDiv = this;
+        var src = this.src;
+        $('#second-div-image img').fadeOut(400, function () {
+            thirdDiv.src = this.src;
+            $(this).fadeIn(400)[0].src = src;
+        });
+    })
+
+
+
+
+    // $('#parks-button').click(function (index){
+    //     return $('li').each.last().css('background', 'yellow');
+    //     console.log("adding yellow background to li " + index);
+    // });
 
     //LOOK AT CASEY'S COMPLETION FROM PULLED DOWN FORTUNA FILE
 
