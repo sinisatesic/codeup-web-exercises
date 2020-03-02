@@ -10,37 +10,55 @@
 
     <img src="img/jedi-order.png" class="jedi-order-symbol" alt="jedi-order symbol">
 
-    <div class="orb-container">
-
-        <div class="orb" id="orb1"></div>
-        <div class="orb" id="orb2"></div>
-        <div class="orb" id="orb3"></div>
-        <div class="orb" id="orb4"></div>
-        <div class="orb" id="orb5"></div>
-        <div class="orb" id="orb6"></div>
-        <div class="orb" id="orb7"></div>
-        <div class="orb" id="orb8"></div>
-        <div class="orb" id="orb9"></div>
-        <div class="orb" id="orb10"></div>
-        <div class="orb" id="orb11"></div>
-
+    <div class="red-orb-container">
+        <div class="red-orb" id="orb1"></div>
+        <div class="red-orb" id="orb2"></div>
+        <div class="red-orb" id="orb3"></div>
+        <div class="red-orb" id="orb4"></div>
+        <div class="red-orb" id="orb5"></div>
+        <div class="red-orb" id="orb6"></div>
+        <div class="red-orb" id="orb7"></div>
+        <div class="red-orb" id="orb8"></div>
+        <div class="red-orb" id="orb9"></div>
+        <div class="red-orb" id="orb10"></div>
+        <div class="red-orb" id="orb11"></div>
+        <div class="red-orb" id="orb12"></div>
+        <div class="red-orb" id="orb13"></div>
+        <div class="red-orb" id="orb14"></div>
+        <div class="red-orb" id="orb15"></div>
+        <div class="red-orb" id="orb16"></div>
+        <div class="red-orb" id="orb17"></div>
+        <div class="red-orb" id="orb18"></div>
+        <div class="red-orb" id="orb19"></div>
+        <div class="red-orb" id="orb20"></div>
+        <div class="red-orb" id="orb21"></div>
+        <div class="red-orb" id="orb22"></div>
     </div>
 
-<!--    <div class="orb-container">-->
-
-<!--        <div class="orb" id="orb12"></div>-->
-<!--        <div class="orb" id="orb13"></div>-->
-<!--        <div class="orb" id="orb14"></div>-->
-<!--        <div class="orb" id="orb15"></div>-->
-<!--        <div class="orb" id="orb16"></div>-->
-<!--        <div class="orb" id="orb17"></div>-->
-<!--        <div class="orb" id="orb18"></div>-->
-<!--        <div class="orb" id="orb19"></div>-->
-<!--        <div class="orb" id="orb20"></div>-->
-<!--        <div class="orb" id="orb21"></div>-->
-<!--        <div class="orb" id="orb22"></div>-->
-
-<!--    </div>-->
+    <div class="blue-orb-container">
+        <div class="blue-orb" id="orb23"></div>
+        <div class="blue-orb" id="orb24"></div>
+        <div class="blue-orb" id="orb25"></div>
+        <div class="blue-orb" id="orb26"></div>
+        <div class="blue-orb" id="orb27"></div>
+        <div class="blue-orb" id="orb28"></div>
+        <div class="blue-orb" id="orb29"></div>
+        <div class="blue-orb" id="orb30"></div>
+        <div class="blue-orb" id="orb31"></div>
+        <div class="blue-orb" id="orb32"></div>
+        <div class="blue-orb" id="orb33"></div>
+        <div class="blue-orb" id="orb34"></div>
+        <div class="blue-orb" id="orb35"></div>
+        <div class="blue-orb" id="orb36"></div>
+        <div class="blue-orb" id="orb37"></div>
+        <div class="blue-orb" id="orb38"></div>
+        <div class="blue-orb" id="orb39"></div>
+        <div class="blue-orb" id="orb40"></div>
+        <div class="blue-orb" id="orb41"></div>
+        <div class="blue-orb" id="orb42"></div>
+        <div class="blue-orb" id="orb43"></div>
+        <div class="blue-orb" id="orb44"></div>
+    </div>
 
 
     <h1 class="jedi-title">RETRIEVE THE KONAMI SYSTEM COORDINATES, YOUNG PADAWAN</h1>
@@ -59,16 +77,13 @@
 
         keyArray.push(event.key); //the event being called is being pushed into the empty array
         if(keyArray.toString().indexOf(konamiCode) >= 0){ //if the array is string value and indexed as such in the konamiCode, and greater or equal to 0 (konamiCode)//you can zero change to false
-            // $(document).off("keydown"); //event is turned off on keydown
-            $('html').css('background', 'black');
-            // $(document).html('<img src="img/galaxy.jpg" style="max-width: 100%; object-fit: cover; opacity: .25; >')
-            // var audio = new Audio('mp3/fates.mp3');
+            $('html').css('background', '#000');
             audio.play();
             secondAudio.pause();
-            // $('h1').("YOU HAVE LOCATED THE KONAMI SYSTEM").css({})
+
             $('h1').hover(
                 function() {
-                    $('h1').html("YOU HAVE LOCATED THE KONAMI SYSTEM").css('color', 'white'); //if you want individual elements of li to have color change, input this instead of li within functions
+                    $('h1').html("YOU HAVE LOCATED THE KONAMI SYSTEM").css('color', '#fff'); //if you want individual elements of li to have color change, input this instead of li within functions
                 },
                 function(){
                     $('h1').css('color', 'black');
@@ -90,20 +105,16 @@
             });
 
             $('body').dblclick(function() {
-                $('.orb-container').css('display', 'block');
-                $('.orb-container:nth-child(2)').css('display', 'block');
-                $('.jedi-title').html('ALL IS AS THE FORCE WILLS IT').css('margin-top', '-40%')
-                // $('.jedi-order-symbol').css('puff-in-center', '@keyframes')
+                $('.red-orb-container').css('display', 'block');
+                $('.blue-orb-container').css('display', 'block');
+                $('.jedi-title').html('ALL IS AS THE FORCE WILLS IT').css('margin-top', '-50%')
             });
-
-            // alert("You have added 30 lives");
-            keyArray = [];      //resetting into empty array for new event input
+            keyArray = [];
 
         }
         else if(keyArray.toString().indexOf(masterChief) >= 0){
-            $('html').css('background', 'teal');
+            $('html').css('background', '#4a6d55');
             audio.pause();
-            // var secondAudio = new Audio('mp3/halo.mp3');
             secondAudio.play();
             $('.jedi-order-symbol').css('display', 'none');
 
@@ -111,7 +122,10 @@
             $(document).click( function() {
                 $('html').css('background-image', 'url("img/master-chief.png")').css('background-size','cover');
             });
-            // keyArray = [];
+            $(document).dblclick( function(){
+                $('html').css('background-image', 'url("img/fates.jpg")');
+            });
+            keyArray = [];
         }
     });
 

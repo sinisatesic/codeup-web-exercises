@@ -84,18 +84,12 @@ html {
 }
 
 /*here is beginning of CSS for orb container and individual orbs*/
-.orb-container {
+.red-orb-container {
     background: transparent;
     display: none;
 }
 
-/*here is second orb container; altered margin*/
-.orb-container:nth-child(2){
-    background: transparent;
-    display: none;
-}
-/*orb class to style provide all orbs default styling*/
-.orb {
+.red-orb {
     height: 15px;
     width: 15px;
     background: #c43c33;
@@ -182,19 +176,19 @@ html {
 }
 @keyframes orb4-animation {
     0% {
-        transform: translate3d(-950px, -200px, 50px);
+        transform: translate3d(950px, -200px, 50px);
     }
     25% {
-        transform: translate3d(-400px, -400px, 100px); background: #e00202;
+        transform: translate3d(400px, -400px, 100px); background: #e00202;
     }
     50% {
-        transform: translate3d(-850px ,-500px, 250px); background: #f7631e;
+        transform: translate3d(850px ,-500px, 250px); background: #f7631e;
     }
     75% {
-        transform: translate3d(-400px, -400px, 100px); background: #e00202;
+        transform: translate3d(400px, -400px, 100px); background: #e00202;
     }
     100%{
-        transform: translate3d(-950px, -200px, 50px);
+        transform: translate3d(950px, -200px, 50px);
     }
 }
 
@@ -278,19 +272,19 @@ html {
 }
 @keyframes orb8-animation {
     0% {
-        transform: translate3d(-550px, 35px, 100px);
+        transform: translate3d(-550px, 125px, 100px);
     }
     25% {
-        transform: translate3d(350px, 45px, 200px); background: #e00202;
+        transform: translate3d(350px, 150px, 200px); background: #e00202;
     }
     50% {
-        transform: translate3d(1450px ,55px, 300px); background: #f7631e;
+        transform: translate3d(1450px, 250px, 300px); background: #f7631e;
     }
     75% {
-        transform: translate3d(-200px, 45px, 200px); background: #e00202;
+        transform: translate3d(-200px, 350px, 200px); background: #e00202;
     }
     100%{
-        transform: translate3d(-550px, 35px, 100px);
+        transform: translate3d(-550px, 125px, 100px);
     }
 }
 
@@ -302,19 +296,19 @@ html {
 }
 @keyframes orb9-animation {
     0% {
-        transform: translate3d(-125px, -50px, -500px);
+        transform: translate3d(125px, -50px, -500px);
     }
     25% {
-        transform: translate3d(-750px, -400px, 200px); background: #e00202;
+        transform: translate3d(750px, -400px, 200px); background: #e00202;
     }
     50% {
-        transform: translate3d(-1050px ,-1000px, 300px); background: #f7631e;
+        transform: translate3d(1050px ,-1000px, 300px); background: #f7631e;
     }
     75% {
-        transform: translate3d(-550px, -400px, 200px); background: #e00202;
+        transform: translate3d(550px, -400px, 200px); background: #e00202;
     }
     100%{
-        transform: translate3d(-125px, -50px, -500px);
+        transform: translate3d(125px, -50px, -500px);
     }
 }
 
@@ -326,19 +320,19 @@ html {
 }
 @keyframes orb10-animation {
     0% {
-        transform: translate3d(-325px, -50px, 400px);
+        transform: translate3d(325px, -50px, 400px);
     }
     25% {
-        transform: translate3d(-550px, -400px, 200px); background: #e00202;
+        transform: translate3d(550px, -400px, 200px); background: #e00202;
     }
     50% {
-        transform: translate3d(-7050px ,-1000px, 300px); background: #f7631e;
+        transform: translate3d(7050px ,-1000px, 300px); background: #f7631e;
     }
     75% {
-        transform: translate3d(-550px, -400px, 200px); background: #e00202;
+        transform: translate3d(550px, -400px, 200px); background: #e00202;
     }
     100%{
-        transform: translate3d(-325px, -50px, 400px);
+        transform: translate3d(325px, -50px, 400px);
     }
 }
 
@@ -383,14 +377,14 @@ html {
 
 /*here is orb 14 animation*/
 #orb14 {
-    animation: orb3-animation .75s;
+    animation: orb3-animation 2s;
     animation-iteration-count: infinite;
     animation-delay: 7s;
 }
 
 /*here is orb 15 animation*/
 #orb15 {
-    animation: orb4-animation .05s;
+    animation: orb4-animation 2s;
     animation-iteration-count: infinite;
     animation-delay: 7.5s;
 }
@@ -418,7 +412,7 @@ html {
 
 /*here is orb 19 animation*/
 #orb19 {
-    animation: orb11-animation .55s;
+    animation: orb11-animation 1.5s;
     animation-iteration-count: infinite;
     animation-delay: 9.5s;
 }
@@ -445,41 +439,336 @@ html {
 }
 
 
-/*/////// Here is attempt to jquery method animation:*/
+/*here is beginning of blue orbs and their styling/animations*/
+.blue-orb {
+    height: 15px;
+    width: 15px;
+    background: #1f78ff;
+    border-radius: 50%;
+    filter: blur(.55em);
+}
 
-.puff-in-center {
-    -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-    animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+.blue-orb-container {
+    background: transparent;
+    display: none;
+    margin-left: 99%;
+    margin-top: -18%;
 }
-@-webkit-keyframes puff-in-center {
+
+#orb23 {
+    animation: orb23-animation 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes orb23-animation {
     0% {
-        -webkit-transform: scale(2);
-        transform: scale(2);
-        -webkit-filter: blur(4px);
-        filter: blur(4px);
-        opacity: 0;
+        transform: translate3d(-150px, 0, 0);
     }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
+    25% {
+        transform: translate3d(-350px, 0, 0); background: #49c1d1;
+    }
+    50% {
+        transform: translate3d(-1550px, 0, 0); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(-350px, 0, 0); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(-150px, 0, 0);
     }
 }
-@keyframes puff-in-center {
+
+#orb24 {
+    animation: orb24-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+@keyframes orb24-animation {
     0% {
-        -webkit-transform: scale(2);
-        transform: scale(2);
-        -webkit-filter: blur(4px);
-        filter: blur(4px);
-        opacity: 0;
+        transform: translate3d(-150px, 75px, 0);
     }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
+    25% {
+        transform: translate3d(-350px, 200px, 0); background: #49c1d1;
     }
+    50% {
+        transform: translate3d(-1550px, 350px, 0); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(-350px, 200px, 0); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(-150px, 75px, 0);
+    }
+}
+
+#orb25 {
+    animation: orb25-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+}
+@keyframes orb25-animation {
+    0% {
+        transform: translate3d(-750px, -200px, 600px);
+    }
+    25% {
+        transform: translate3d(-550px, -400px, 200px); background: #49c1d1;
+    }
+    50% {
+        transform: translate3d(-1550px, -1000px, 300px); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(-350px, -500px, 200px); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(-150px, -200px, 600px);
+    }
+}
+
+#orb26 {
+    animation: orb26-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+@keyframes orb26-animation {
+    0% {
+        transform: translate3d(-950px, -200px, 50px);
+    }
+    25% {
+        transform: translate3d(-400px, -400px, 100px); background: #49c1d1;
+    }
+    50% {
+        transform: translate3d(-850px, -500px, 250px); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(-400px, -400px, 100px); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(-950px, -200px, 50px);
+    }
+}
+
+#orb27 {
+    animation: orb27-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2.5s;
+}
+@keyframes orb27-animation {
+    0% {
+        transform: translate3d(-125px, -50px, -500px);
+    }
+    25% {
+        transform: translate3d(-550px, -400px, 200px); background: #49c1d1;
+    }
+    50% {
+        transform: translate3d(-950px, -1000px, 300px); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(-550px, -400px, 200px); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(-125px, -50px, -500px);
+    }
+}
+
+#orb28 {
+    animation: orb28-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+@keyframes orb28-animation {
+    0% {
+        transform: translate3d(75px, -50px, -700px);
+    }
+    25% {
+        transform: translate3d(-550px, -400px, 200px); background: #49c1d1;
+    }
+    50% {
+        transform: translate3d(-750px, -700px, 700px); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(-550px, -400px, 200px); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(75px, -50px, -700px);
+    }
+}
+
+#orb29 {
+    animation: orb29-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3.5s;
+}
+@keyframes orb29-animation {
+    0% {
+        transform: translate3d(550px, 35px, 100px);
+    }
+    25% {
+        transform: translate3d(-350px, 45px, 200px); background: #49c1d1;
+    }
+    50% {
+        transform: translate3d(-1450px, 55px, 300px); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(200px, 45px, 200px); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(550px, 35px, 100px);
+    }
+}
+
+#orb30 {
+    animation: orb30-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+}
+@keyframes orb30-animation {
+    0% {
+        transform: translate3d(550px, 125px, 100px);
+    }
+    25% {
+        transform: translate3d(-350px, 150px, 200px); background: #49c1d1;
+    }
+    50% {
+        transform: translate3d(-1450px, 250px, 300px); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(200px, 350px, 200px); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(550px, 125px, 100px);
+    }
+}
+
+#orb31 {
+    animation: orb31-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 4.5s;
+}
+@keyframes orb31-animation {
+    0% {
+        transform: translate3d(-125px, -50px, -500px);
+    }
+    25% {
+        transform: translate3d(-750px, -400px, 200px); background: #49c1d1;
+    }
+    50% {
+        transform: translate3d(-1050px, -1000px, 300px); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(-550px, -400px, 200px); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(-125px, -50px, -500px);
+    }
+}
+
+#orb32 {
+    animation: orb32-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+@keyframes orb32-animation {
+    0% {
+        transform: translate3d(-325px, -50px, 400px);
+    }
+    25% {
+        transform: translate3d(-550px, -400px, 200px); background: #49c1d1;
+    }
+    50% {
+        transform: translate3d(-7050px, -1000px, 300px); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(-550px, -400px, 200px); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(-325px, -50px, 400px);
+    }
+}
+
+#orb33 {
+    animation: orb33-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 5.5s;
+}
+@keyframes orb33-animation {
+    0% {
+        transform: translate3d(550px, 35px, 100px);
+    }
+    25% {
+        transform: translate3d(-350px, 45px, 200px); background: #49c1d1;
+    }
+    50% {
+        transform: translate3d(-1450px, 55px, 300px); background: #3d3de3;
+    }
+    75% {
+        transform: translate3d(200px, 45px, 200px); background: #49c1d1;
+    }
+    100%{
+        transform: translate3d(550px, 35px, 100px);
+    }
+}
+
+#orb34 {
+    animation: orb24-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 6s;
+}
+
+#orb35 {
+    animation: orb26-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 6.5s;
+}
+
+#orb36 {
+    animation: orb25-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 7s;
+}
+
+#orb37 {
+    animation: orb26-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 7.5s;
+}
+
+#orb38 {
+    animation: orb27-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 8s;
+}
+
+#orb39 {
+    animation: orb28-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 8.5s;
+}
+
+#orb40 {
+    animation: orb29-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 9s;
+}
+
+#orb41 {
+    animation: orb33-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 9.5s;
+}
+
+#orb42 {
+    animation: orb31-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 10s;
+}
+
+#orb43 {
+    animation: orb25-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 10.5s;
+}
+
+#orb44 {
+    animation: orb33-animation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 11s;
 }
