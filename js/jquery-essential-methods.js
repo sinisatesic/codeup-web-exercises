@@ -146,21 +146,28 @@ $('.circle').click( function () {
 // .each()   .first()    .last()    .children()    .parent()    .next()
 
 // TODO: Let's give each of the selection circles a 1px black border
-
+$('.circle').each(function (index){
+    return $(this).css('border', '1px solid black');
+    console.log("added 1px solid black border to circle " + index);
+});
 
 // TODO: Let's take the border away from the first circle
-
+$('.circle').first().css('border','none');
 
 // TODO: Let's make the last circle disappear
-
+$('.circle').last().css('display', 'none');
 
 // TODO: Find the children of the circle row, and remove borders from all of them, then unhide the last circle
-
+$('.circles').children().css('border', 'none').last().css('display','inline-flex');
 
 // TODO: while changing the fist path element to have a black fill, give its grandparent a light gray background and 10px padding
-
+$('#path1').removeClass().addClass('black').parent().parent().css({
+    'background': 'lightgray',
+    'margin': '20px'
+});
 
 // TODO: change the second path element to blue, then change the 'next' element to yellow
-
+$('#path2').removeClass().addClass('blue').next().removeClass().addClass('yellow');
 
 // TODO: What's the difference between changing the class to change the color, and simply changing the color directly?
+//more "surgery" involved when wanting to change back and forth a very specific color. Also, with adding class, you can have predefined class which has particular shade of color and/or other properties

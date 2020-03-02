@@ -38,6 +38,32 @@
     <dd class="invisible">Park 9</dd>
     <dt>PARK STUFF TEN</dt>
     <dd class="invisible">Park 10</dd>
+
+    <h3 id="national-parks-heading">National Parks</h3>
+    <ul id="parks1">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3>State Parks of Texas</h3>
+    <ul id="parks2">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+    <h3>State Parks of Texas</h3>
+    <ul id="parks3">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+    <button id="parks-button"></button>
 </dl>
 
 <!--<div id="toggling">-->
@@ -45,39 +71,21 @@
 <!--</div>-->
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-    // var clickedClass = $(this).attr('class');
-    var facts = $(this).attr('invisible')
-    //
-    // if($('dl dd').attr('class') === clickedClass){
-    //     $('#toggling').toggleClass('invisible');
-    // } else {
-    //     $('#toggling').removeClass('invisible');
-    // }
 
-    // function getTargetClass(target){
-    //     return $(target).attr('class');
-    // }
-    // $(".park").click( function() {
-    //     $(this).toggleClass("invisible")
-    // });
 
     $('dl dt').click(function() {
         $( this ).toggleClass( "highlight" );
         $('dl dd').toggleClass("invisible");
     });
 
+    //LOOK AT CASEY'S COMPLETION FROM PULLED DOWN FORTUNA FILE
 
 
 
 
-        // if($('.codeup-logo').attr('id') === clickedColor) {
-        //     //what we are now clicking, toggle the caps class
-        //     $('#colorText').toggleClass('caps');
-        //     console.log("clicked the same color");
-        // } else { //user clicked a different color
-        //     $('#colorText').removeClass('caps'); //removing class of caps because it will not go to lowercase when different color clicked, otherwise
-        //     circleClickCount = 0;
-        // }
+
+
+
 
 </script>
 </body>
