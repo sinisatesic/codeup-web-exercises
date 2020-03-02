@@ -120,18 +120,38 @@
         });
     });
 
-    function generate() {
-        $('.divImages').text(Math.floor(Math.random() * 3) + 1);
+    //attempt at randomizing second div image is right here; not working
+    function randsort(c) {
+        var arr = new Array();
+        for (var i = 0; i < c; i++) {
+            var n = Math.floor(Math.random()*c);
+            if( jQuery.inArray(n, arr) > 0 ) --i;
+            else arr.push(n);
+        }
+        return arr;
     }
 
-    // $('#second-div-image img').click( function () {
-    //     var secondDiv = this;
-    //     var src = this.src;
-    //     $(generate()).fadeOut(400, function () {
-    //         secondDiv.src = this.src;
-    //         $(this).fadeIn(400)[0].src = src;
-    //     });
-    // })
+    var elementsBeingSearched = $('.divImages');
+    var size = elementsBeingSearched.size();
+    var random = randsort(size);
+
+    // $('.divImages').each( function (i) {
+    //     var e = $(this);
+    //     e.fadeTo(0, 0.05);
+    //     setTimeout( function () {
+    //         e.fadeTo(250, 1);
+    //     }, random[i]*10);
+    // });
+
+$('#second-div-image img').click().each( function (i) {
+    var e = $(this);
+    e.fadeTo(0, 0.05);
+    setTimeout( function () {
+        e.fadeTo(250, 1);
+    }, random[i]*10);
+});
+
+
 
     $('#third-div-image img').click( function () {
         var thirdDiv = this;
@@ -140,7 +160,11 @@
             thirdDiv.src = this.src;
             $(this).fadeIn(400)[0].src = src;
         });
-    })
+    });
+
+    // $('#bttn-pic1').click(function(){
+    //     $('#pic1').insertAfter('#pic2');
+    // })
 
 
 
