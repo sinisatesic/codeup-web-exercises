@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+        .highlight {
+            background: lime;
+        }
+    </style>
+</head>
+<body>
+<dl>
+    <dt>PARK STUFF ONE</dt>
+    <dd class="invisible">Park 1</dd>
+    <dt>PARK STUFF TWO</dt>
+    <dd class="invisible">Park 2</dd>
+    <dt>PARK STUFF THREE</dt>
+    <dd class="invisible">Park 3</dd>
+    <dt>PARK STUFF FOUR</dt>
+    <dd class="invisible">Park 4</dd>
+    <dt>PARK STUFF FIVE</dt>
+    <dd class="invisible">Park 5</dd>
+    <dt>PARK STUFF SIX</dt>
+    <dd class="invisible">Park 6</dd>
+    <dt>PARK STUFF SEVEN</dt>
+    <dd class="invisible">Park 7</dd>
+    <dt>PARK STUFF EIGHT</dt>
+    <dd class="invisible">Park 8</dd>
+    <dt>PARK STUFF NINE</dt>
+    <dd class="invisible">Park 9</dd>
+    <dt>PARK STUFF TEN</dt>
+    <dd class="invisible">Park 10</dd>
+</dl>
+
+<!--<div id="toggling">-->
+<!--    Toggle Park Faqs-->
+<!--</div>-->
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    // var clickedClass = $(this).attr('class');
+    var facts = $(this).attr('invisible')
+    //
+    // if($('dl dd').attr('class') === clickedClass){
+    //     $('#toggling').toggleClass('invisible');
+    // } else {
+    //     $('#toggling').removeClass('invisible');
+    // }
+
+    // function getTargetClass(target){
+    //     return $(target).attr('class');
+    // }
+    // $(".park").click( function() {
+    //     $(this).toggleClass("invisible")
+    // });
+
+    $('dl dt').click(function() {
+        $( this ).toggleClass( "highlight" );
+        $('dl dd').toggleClass("invisible");
+    });
+
+
+
+
+
+        // if($('.codeup-logo').attr('id') === clickedColor) {
+        //     //what we are now clicking, toggle the caps class
+        //     $('#colorText').toggleClass('caps');
+        //     console.log("clicked the same color");
+        // } else { //user clicked a different color
+        //     $('#colorText').removeClass('caps'); //removing class of caps because it will not go to lowercase when different color clicked, otherwise
+        //     circleClickCount = 0;
+        // }
+
+</script>
+</body>
+</html>
