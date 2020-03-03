@@ -19,9 +19,19 @@
             display: flex;
             flex-direction: row;
         }
+
     </style>
 </head>
+
 <body>
+<!--    here is start of jquery effects exercise-->
+<div id="effectsDiv">
+    <h1>Would you like to sign up for our newsletter?<span style="color: maroon; cursor: pointer"> [ X ]</span></h1>
+</div>
+<!--    here is end of jquery effects-->
+
+<h2>Ya wanna register to the site?</h2>
+
 <dl>
     <dt>PARK STUFF ONE</dt>
     <dd class="invisible">Park 1</dd>
@@ -45,7 +55,7 @@
     <dd class="invisible">Park 10</dd>
 
     <h3 id="national-parks-heading">National Parks</h3>
-    <ul id="parks1">
+    <ul id="parks1" class="park-lists">
         <li>Arches</li>
         <li>Badlands</li>
         <li>Carlsbad Caverns</li>
@@ -53,7 +63,7 @@
         <li>Everglades</li>
     </ul>
     <h3>State Parks of Texas</h3>
-    <ul id="parks2">
+    <ul id="parks2" class="park-lists">
         <li>Abilene</li>
         <li>Big Bend</li>
         <li>Choke Canyon</li>
@@ -61,7 +71,7 @@
         <li>Enchanted Rock</li>
     </ul>
     <h3>State Parks of Texas</h3>
-    <ul id="parks3">
+    <ul id="parks3" class="park-lists">
         <li>Abilene</li>
         <li>Big Bend</li>
         <li>Choke Canyon</li>
@@ -111,6 +121,9 @@
         });
     });
 
+
+    /// here starts code for bonus - relating to switching images around when clicked
+
     $('#first-div-image img').click( function () {
         var firstDiv = this;
         var src = this.src;
@@ -135,13 +148,6 @@
     var size = elementsBeingSearched.size();
     var random = randsort(size);
 
-    // $('.divImages').each( function (i) {
-    //     var e = $(this);
-    //     e.fadeTo(0, 0.05);
-    //     setTimeout( function () {
-    //         e.fadeTo(250, 1);
-    //     }, random[i]*10);
-    // });
 
 $('#second-div-image img').click().each( function (i) {
     var e = $(this);
@@ -160,6 +166,30 @@ $('#second-div-image img').click().each( function (i) {
             $(this).fadeIn(400)[0].src = src;
         });
     });
+
+
+    //here is jQuery effects exercise content:
+//At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up for our newsletter?" and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.
+    $('span').click( function () {
+        $('#effectsDiv').hide();
+    });
+
+//The uls next to each h3 that contain facts about each park should start out hidden, and when the corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.
+
+$('.park-lists').hide();
+
+$('h3').click( function () {
+    $(this).next().slideDown(500); //"this" h3, and then the "next" sibling
+});
+
+//After the user has been on the page for 8 seconds, an h2 should fade in that asks the user to register for the site.
+
+$('h2').hide();
+
+$('h2').delay(8000).fadeIn(2000);
+
+
+
 
     // $('#bttn-pic1').click(function(){
     //     $('#pic1').insertAfter('#pic2');

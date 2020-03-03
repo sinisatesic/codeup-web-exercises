@@ -8,18 +8,70 @@
     <title>Document</title>
 </head>
 <body>
-<h1>List One</h1>
-<ul>
-    <li class="odd list-one-item">List 1, Item 1</li>
-    <li class="even list-one-item">List 1, Item 2</li>
-</ul>
-<h1>List Two</h1>
-<ul>
-    <li class="odd list-two-item">List 2, Item 1</li>
-    <li class="even list-two-item">List 2, Item 2</li>
-</ul>
+    <button id="btnToClick">Click Me</button>
+    <h1>List One</h1>
+    <ul>
+        <li class="odd list-one-item">List 1, Item 1</li>
+        <li class="even list-one-item">List 1, Item 2</li>
+    </ul>
+    <h1>List Two</h1>
+    <ul>
+        <li class="odd list-two-item">List 2, Item 1</li>
+        <li class="even list-two-item">List 2, Item 2</li>
+    </ul>
+
+    <h1 id="main-heading">Hello World!</h1>
+    <div id="main-section">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+
+
+</div>
 
 <script>
+    //first exercise practice
+    (function () {
+        var btnToClick = document.getElementById("btnToClick");
+
+        console.log(btnToClick);
+    })();
+
+    //second exercise practice
+    (function () {
+        var evenElements = document.getElementsByClassName('even');
+
+        console.log(evenElements[0]);
+
+        for (var i = 0; i < evenElements.length; i++) {
+            console.log(evenElements[i]);
+        }
+
+        var listItems = document.getElementsByTagName('li');
+
+        console.log(listItems[0]);
+
+        for (var i = 0; i < listItems.length; i++) {
+            console.log(listItems[i]);
+        }
+    })();
+
+    //third exercise practice
+(function () {
+    var mainHeading = document.getElementById('main-heading');
+
+    console.log(mainHeading.innerHTML);
+
+    mainHeading.innerHTML = "Hello Codeup!";
+
+    console.log(mainHeading.innerHTML); //Prints Hello Codeup!
+
+    //get the main section div by id
+    var mainSection = document.getElementById('main-section');
+
+    console.log(mainSection.innerHTML);
+})();
+
+
 
 </script>
 </body>
