@@ -27,6 +27,28 @@
       <button id="highlight">Highlight</button>
     </div>
   </div>
+
+
+  <script src="js/jquery-2.2.4.js"></script>
+  <script>
+    // - Allow the user to type in their favorite food into the input and append it to the list once the button is clicked.
+
+    $('#add-to-list').click( function () {
+      $('ul').append('<li>' + $('#input').val() + '</li>');
+    });
+
+// - When the heading 'Change Me' is double clicked, change its background-color to purple.
+    $('#change-me').dblclick( function () {
+      return $(this).css('background-color', 'purple');
+    });
+
+// - Write some JavaScript that changes the background-color of the container to pink after 3 seconds.
+    $('.container')
+            .delay(3000)
+            .queue( function () {
+              $(this).css('background-color','pink');
+            });
+  </script>
 </body>
 </html>
 
@@ -39,11 +61,16 @@
 
 <!--Open up `dom-review.html` and follow the instructions:-->
 
+
+
 <!-- - Allow the user to type in their favorite food into the input and append it-->
 <!--to the list once the button is clicked.-->
+<!--complete above-->
 
 <!-- - When the heading 'Change Me' is double clicked, change its-->
 <!--background-color to purple.-->
+<!--(complete above)-->
+
 
 <!-- - Allow the user to input their cohort name. Once Update button is clicked,-->
 <!--the text should should update with the name of the cohort.-->
@@ -57,3 +84,4 @@
 
 <!-- - Write some JavaScript that changes the background-color of the container to-->
 <!--pink after 3 seconds.-->
+<!--complete above-->
