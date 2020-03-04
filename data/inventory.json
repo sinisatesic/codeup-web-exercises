@@ -1,14 +1,14 @@
 [
     {
         "title": "Fear Inoculum",
-        "quantity": 25,
+        "quantity": 9900,
         "categories": [
             "tool"
         ],
         "price": 20
     }, {
         "title": "Schism",
-        "quantity": 5,
+        "quantity": 80,
         "categories": [
             "tool",
             "powered"
@@ -16,7 +16,7 @@
         "price": 100
     }, {
         "title": "Parabola",
-        "quantity": 5,
+        "quantity": 10,
         "categories": [
             "tool",
             "gas",
@@ -25,7 +25,7 @@
         "price": 200
     }, {
         "title": "Parabolas",
-        "quantity": 25,
+        "quantity": 10,
         "categories": [
             "tool"
         ],

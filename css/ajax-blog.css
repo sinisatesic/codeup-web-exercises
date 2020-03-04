@@ -1,0 +1,80 @@
+* {
+    background-color: #FFD8D8;
+}
+
+div.blogDate {
+    margin-bottom: 25px;
+}
+
+h5.card-title {
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    font-size: 4em;
+}
+
+#slav-squat {
+    margin-left: 40%;
+    animation: slidey-slav 3s ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes slidey-slav {
+    0% {
+        transform: translateX(-15px);
+    }
+    50% {
+        transform: translateX(-30px);
+    }
+    100%{
+        transform: translateX(-15px);
+    }
+}
+
+p.card-text {
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+}
+
+div.blogHeader {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+div.blogContent {
+    font-family: 'Fredericka the Great', cursive;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+div.blogContent:hover {
+    cursor: pointer;
+    animation: hover-scale 2s ease-in-out;
+}
+@keyframes hover-scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+div.blogCategory {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+div.blogDate {
+
+}
+
+img.card-img-top {
+    border-radius: 25px;
+    -webkit-box-shadow: 0 8px 6px 2px #cc3535;
+    -moz-box-shadow: 0 8px 6px 4px #cc3535;
+    box-shadow: 0 8px 6px 5px #cc3535;
+}
