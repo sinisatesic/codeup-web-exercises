@@ -1,13 +1,13 @@
 [
     {
-        "title": "Hammer",
+        "title": "Fear Inoculum",
         "quantity": 25,
         "categories": [
             "tool"
         ],
         "price": 20
     }, {
-        "title": "Drill",
+        "title": "Schism",
         "quantity": 5,
         "categories": [
             "tool",
@@ -15,7 +15,7 @@
         ],
         "price": 100
     }, {
-        "title": "Mower",
+        "title": "Parabola",
         "quantity": 5,
         "categories": [
             "tool",
@@ -24,7 +24,7 @@
         ],
         "price": 200
     }, {
-        "title": "Screwdrivers",
+        "title": "Parabolas",
         "quantity": 25,
         "categories": [
             "tool"
