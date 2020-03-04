@@ -5,77 +5,109 @@
 </head>
 <body>
 
-<h1>My Tool Store</h1>
+<div class="h1Container">
+    <div class="h1">My Tool Store</div>
+</div>
 
 <table id="products">
     <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
-(function() {
-    "use strict";
-    // TODO: Create an ajax GET request for /data/inventory.json
-    $.get("data/inventory.json", {
-    }).done(function(data) {
-        console.log(data);
-    });
-
-    // TODO: Take the data from inventory.json and append it to the products table
-    $.get('data/inventory.json').done( function (data) {
-        $(data).each( function (index, item) {
-            var title = data.title;
-            var quantity = data.quantity;
-            var categories = data.categories;
-            var price = data.price;
+    (function () {
+        "use strict";
+        // TODO: Create an ajax GET request for /data/inventory.json
+        $.get('data/inventory.json', {}).done(function (data) {
+            console.log(data);
         });
-        var all = title + quantity + categories + price;
-        all.append('<tbody>' + $('#insertProducts') + '</tbody>')
-    });
 
 
-    // $('#add-to-list').click( function () {
-    //     $('ul').append('<tbody>' + $('#insertProducts').val() + '</tbody>');
-    // });
+        // TODO: Take the data from inventory.json and append it to the products table
 
-    // $("#btnAddProject").click(function (e) {
-    //     var json = {};
-    //
-    //     debugger;
-    //     for (var i in json) {
-    //         $("#idProject").append(i+ ":" + json[i]+ " ");
-    //     }
-    //
-    //     $("#divbindProject").hide();
-    //     $("#divbindProjectlist").show();
-    //
-    //     $.each(json, function (i, field) {
-    //         $("#idProject").append(field.name + ":" + field.value + " ");
-    //     });
-    //
-    //     var str = JSON.stringify(json);
-    //     $("#hdPremUserProject").val(str);
-    //
-    // });
+        $(document).ready(function () {
 
-    // $('#add-to-list').click( function () {
-    //     $('ul').append('<li>' + $('#input').val() + '</li>');
-    // });
+            var products = $('#insertProducts');
+
+            $('.h1Container').append(`<button id="refresh"  type="button" class="toolButton" style="margin: 10px 10px">Refresh</button>`)
+
+            var request = () => {
+                var productList = './data/inventory.json';
+                var ajaxRequest = $.get(productList)
+                ajaxRequest.done(function (data) {
+                    var text = "";
+
+                    data.forEach(item => {
+                        text += '<tr>';
+
+                        text +=
+                            `<td>${item.title}</td> <td>${item.quantity}</td>
+                             <td>${item.price}</td>
+                             <td>${item.categories[0]}</td>`
+                        text += `</tr>`
+                    });
+                    products.html(text);
+                })
+                ajaxRequest.fail(function (e) {
+                    console.log('Failed Request');
+                })
+            }
+            request();
+
+            var refresh = $('#refresh');
+            refresh.click(function () {
+                request()
+            });
+        });
 
 
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
-})();
+        // function getAllTools() {
+        //
+        //
+        //     var tools = $.ajax("data/inventory.json");
+        //
+        //     tools.done(function (data) {
+        //         console.log(data);
+        //
+        //         $.each(data, function (index, tool) {
+        //
+        //             var eachTool = "<tr>";
+        //             eachTool += "<td>";
+        //             eachTool += tool.title;
+        //             eachTool += "</td>";
+        //             eachTool += "<td>";
+        //             eachTool += tool.quantity;
+        //             eachTool += "</td>";
+        //             eachTool += "<td>";
+        //             eachTool += tool.price;
+        //             eachTool += "</td>";
+        //             eachTool += "<td>";
+        //             eachTool += tool.categories;
+        //             eachTool += "</td>";
+        //             eachTool += "</tr>";
+        //
+        //             $('#insertProducts').append(tools);
+        //         })
+        //     })
+        // }
+        //
+        // getAllTools();
+        //
+        //
+        // $('#buttonForTools').click(function () {
+        //     $('#insertProducts').html("");
+        //     getAllTools();
+        // });
+
+    })();
 </script>
 
 </body>
