@@ -3,43 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
+<div class="container-fluid">
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<!--<div id="location"></div>-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+<!--cards start here-->
 <div id="card-container">
-    <div class="card" style="width: 100%;">
-        <img class="card-img-top" id="cloud" src="img/cloud.png" alt="Card image cap">
-        <div class="card-body">
-            <div id="location"></div>
+    <div class="row">
+        <div class="card" id="location-card" style="width: 100%;">
+            <div class="card-body">
+                <div id="location">
+                    <video autoplay muted loop class="sky">
+                        <source src="img/sky.mp4">
+                    </video>
+                    <img class="card-img-top" id="cloud" src="img/cloud.png" alt="Card image cap">
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="card" style="width: 100%;">
-        <div class="card-body">
-            <div id="today"></div>
+        <div class="card col-6" style="width: 100%;">
+            <div class="card-body">
+                <div id="today"></div>
+            </div>
         </div>
-    </div>
-    <div class="card" style="width: 100%;">
-        <div class="card-body">
-            <div id="tomorrow"></div>
+        <div class="card col-6" style="width: 100%;">
+            <div class="card-body">
+                <div id="test"></div>
+            </div>
         </div>
-    </div>
-    <div class="card" style="width: 100%;">
-        <div class="card-body">
-            <div id="next-tomorrow"></div>
+        <div class="card col-6" style="width: 100%;">
+            <div class="card-body">
+                <div id="tomorrow"></div>
+            </div>
+        </div>
+        <div class="card col-6" style="width: 100%;">
+            <div class="card-body">
+                <div id="test2"></div>
+            </div>
+        </div>
+        <div class="card col-6" style="width: 100%;">
+            <div class="card-body">
+                <div id="next-tomorrow"></div>
+            </div>
+        </div>
+        <div class="card col-6" style="width: 100%;">
+            <div class="card-body">
+                <div id="test3"></div>
+            </div>
         </div>
     </div>
 </div>
 
+<!--mapbox content starts here-->
 
+<div id='map'></div>
+
+</div>
+<!--fluid container ends here-->
 <script src="js/jquery-2.2.4.js" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
-<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 <script>
 
     $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/37.8267,-122.4233").done(function (data) {
@@ -52,33 +120,111 @@
             var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             $('#today').append(
                 '<h1>Today: </h1>' +
-                '<h3>' + item.currently.summary + '</h3>' +
-                '   <p>The current day is: ' + days[new Date(item.currently.time * 1000).getDay()] + '</p>'
+                // '<h3>' + item.currently.summary + '</h3>' +
+                '<h3>' + data.daily.data[0].summary + '</h3>' +
+                '<p>It is ' + days[new Date(item.currently.time * 1000).getDay()] + '!' + '</p>'
             );
             console.log(new Date(item.currently.time * 1000));
         });
 
+
+        //Location
+        $('#location').append(
+            '<h1>San Antonio</h1>'
+        );
+
         //tomorrow
         $('#tomorrow').append(
-            '<h1>Tomorrow: </h1>' +
+            '<h2>Tomorrow: </h2>' +
             '<h3>' + data.daily.data[1].summary + '</h3>'
         );
 
         // day after tomorrow
         $('#next-tomorrow').append(
-            '<h1>Day After Tomorrow: </h1>' +
+            '<h2>Day After Tomorrow: </h2>' +
             '<h3>' + data.daily.data[2].summary + '</h3>'
         );
 
-        //Location
-        $('#location').append(
-            '<h1>San Antonio</h1>'
-        )
+        //temperature for today
+        $('#test').append(
+            '<h2>Min &#8457;</h2>' +
+            '<h3>' + data.daily.data[0].temperatureMin + '</h3>' +
+            '<h2>Max &#8457;</h2>' +
+            '<h3>' + data.daily.data[0].temperatureMax + '</h3>'
+        );
+
+        //temperature for tomorrow
+        $('#test2').append(
+            '<h2>Min &#8457;</h2>' +
+            '<h3>' + data.daily.data[1].temperatureMin + '</h3>' +
+            '<h2>Max &#8457;</h2>' +
+            '<h3>' + data.daily.data[1].temperatureMax + '</h3>'
+        );
+
+        //temparature for day after tomorrow
+        $('#test3').append(
+            '<h2>Min &#8457;</h2>' +
+            '<h3>' + data.daily.data[2].temperatureMin + '</h3>' +
+            '<h2>Max &#8457;</h2>' +
+            '<h3>' + data.daily.data[2].temperatureMax + '</h3>'
+        );
+
     });
 
 
+    ////////////Mapbox JS content starts here
 
-    // console.log(data.currently.summary);
+    mapboxgl.accessToken = mapboxToken;
+
+    ///////
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+    });
+
+    ///////
+
+    var markerOptions = { //this is an object that is being passed into the marker (below)
+        color: "#ff0000", //here, option is "color"
+        draggable: true
+    }
+
+    geocode("San Antonio, TX", mapboxToken).then(function (result) {
+        console.log(result);
+        map.setCenter(result);
+        map.flyTo({center: result, zoom: 11});
+    });
+
+
+    //////// Location(s) and marker(s) starts here
+
+    // favoriteRestaurants = [
+    //     {
+    //         location: [-98.4623839, 29.4730411],
+    //         name: "<h1 id='volare1'>Volare</h1>"
+    //     },
+    //     {
+    //         location:[-98.47796662173043, 29.61080750918382],
+    //         name: "<h1 id='hoppimonk2'>Hoppi Monk</h1>"
+    //     },
+    //     {
+    //         location:[-98.5650461, 29.5296703],
+    //         name: "<h1 id='alibaba3'>Ali Baba Market</h1>"
+    //     }];
+    //
+    // favoriteRestaurants.forEach(function(restaurant){
+    //     var marker1 = new mapboxgl.Marker(markerOptions)
+    //         .setLngLat(restaurant.location)
+    //         .addTo(map);
+    //
+    //
+    //     var volarePopup = new mapboxgl.Popup()
+    //         .setHTML(restaurant.name)
+    //         .addTo(map);
+    //
+    //     marker1.setPopup(volarePopup).togglePopup();
+    // });
 </script>
 
 </body>
