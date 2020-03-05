@@ -37,6 +37,7 @@
 <p id="thundercats"><span>Thunder</span> <span>Thunder</span> <span>Thundercats</span> <span>HOOOOOOOO!!!!!!</span></p>
 <button id="get-hype">Get Hype</button>
 </body>
+
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <!-- <script src="assessment-three-review.js"></script> -->
 <script>
@@ -44,18 +45,122 @@
 
     //Write a function that changes the text color of the <h1> when the <h1> is clicked
     //Hard mode: Change the text color to either Blue, Yellow or Red if the b, y or r keys are pressed
+    $('h1').click( function () {
+        $(this).css('color', 'lime');
+    })
+
+    //hard mode for above:
+
+    // 66 b 89 y 82 r (keycode.info)
+
+    $('*').keydown( function (event) {
+        if(event.keyCode === 66){
+            $("h1").css('color','blue');
+        }else if(event.keyCode === 89){
+            $("h1").css('color','yellow');
+        }else if(event.keyCode === 82){
+            $("h1").css('color','red');
+        }
+    });
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
     //Write a function that causes the runner div to move to the right side of the screen when the mouse moves over it
     //Hard mode: Have the div go to the other side of the screen regardless of where it is.
+    // $('.runner').hover(
+    //     function () {
+    //         $(this).css('margin-left','90%');
+    //     },
+    //     function () {
+    //         $(this).css('margin-left','0%');
+    //     }
+    // )
+
+    //Brance used mouseEnter/ example below is with mouseOver
+
+    // $('.runner').mouseover(function(){
+    //     $(this).css('margin-left', 'auto'); //float can also work here instead of margin-left
+    // });
+
+    //hard mode for this below
+
+    var whereAreWe = "left";
+    $('.runner').mouseenter(function () {
+        if(whereAreWe === "left"){
+            $(this).css('margin-left','auto');
+            $(this).css('margin-right', '0');
+            whereAreWe = "right";
+        } else if(whereAreWe === "right"){
+            $(this).css('margin-right','auto');
+            $(this).css('margin-left', '0');
+            whereAreWe = "left";
+        }
+    });
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     //Write a function to take the value from the input and append the value onto the ul with the id of add-to-me.
     //Hard mode: when you click on an li move it from it's current location to the top of the ul
+    $('#add-btn').click( function () {
+        var myList = $('#input').val();
+        $('#add-to-me').append('<li>' + $('#input').val() + '</li>');      //val("") after input would return
+        $("#add-to-me").children().last().bind("click", moveLIs);   //if you get rid of .first() and .last() in this and next one, it will traverse through all list items
+    });
+
+    //hard mode for this one below
+
+    function moveLIs(){
+        var whatWasClicked = $(this).text();
+
+        $(this).remove();
+        $("#add-to-me").prepend("<li>" + whatWasClicked + "</li>");
+
+        $("#add-to-me").children().first().bind('click', moveLIs);
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     //Write a function that changes the font of all text to comic sans 5 seconds after the page loads
     //Hard mode: Change the background to this image after 10 seconds. https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?cs=srgb&dl=black-and-white-laptop-2740956.jpg&fm=jpg
+    $('*')
+    .delay(5000)
+    .queue( function () {
+        $(this).css('font-family','Comic Sans MS');
+    });
+
+    // OR, you can use below for this one:
+
+    setTimeout(function () {
+        $("body").css("font-family", "Comic Sans MS");
+    }, 1000);
+
+    //hard mode for this one below
+
+    // setTimeout(function () {
+    //     $('*').css('background-image', 'url(https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?cs=srgb&dl=black-and-white-laptop-2740956.jpg&fm=jpg)');
+    // }, 2000);
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     //Write a function that bolds the words in the paragraph element with the id of thundercats when the get hype button is pressed
     //Hard mode: Bold one word every time the button is pressed
+    $('#get-hype').click( function () {
+        $('#thundercats').css('font-weight', 'bold');
+    })
 
+    //hard mode for this one below
+
+    $("#get-hype").click( function () {
+        $('#thundercats span:nth-child(" + counter + ")').css("font-weight", "bold");
+        counter++;
+    });
 </script>
 </html>
