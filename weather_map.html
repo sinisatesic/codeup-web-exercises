@@ -2,83 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Da Wae Map</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
-<div class="container">
-    <div class="card mb-3">
-        <img src="img/dawae.png" class="card-img-top" alt="knorkles">
+
+
+<!--<div id="location"></div>-->
+<div id="card-container">
+    <div class="card" style="width: 100%;">
+        <img class="card-img-top" id="cloud" src="img/cloud.png" alt="Card image cap">
         <div class="card-body">
-
-            <table class="table table-striped table-dark" id="weatherInfo">
-                <thead>
-                <tr>
-                    <th scope="row">Title</th>
-                    <th scope="row">Quantity</th>
-                    <th scope="row">Price</th>
-                    <th scope="row">Categories</th>
-                </tr>
-                </thead>
-                <tbody id="insertWeather"></tbody>
-            </table>
-
+            <div id="location"></div>
+        </div>
+    </div>
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <div id="today"></div>
+        </div>
+    </div>
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <div id="tomorrow"></div>
+        </div>
+    </div>
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <div id="next-tomorrow"></div>
         </div>
     </div>
 </div>
+
+
+<script src="js/jquery-2.2.4.js" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script>
-    (function () {
-        "use strict";
 
+    $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/37.8267,-122.4233").done(function (data) {
+        console.log(data);
+    });
 
-        $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/37.8267,-122.4233").done(function (data) {
-            console.log(data);
-            console.log(new Date(data.currently.time * 1000)); //logs current time by multiplying provided data for time by 1000 (David said it's most likely to increase performance of their API)
-            console.log(new Date(data.daily.summary));
+    //today
+    $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/37.8267,-122.4233").done(function (data) {
+        $(data).each(function (index, item) {
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            $('#today').append(
+                '<h1>Today: </h1>' +
+                '<h3>' + item.currently.summary + '</h3>' +
+                '   <p>The current day is: ' + days[new Date(item.currently.time * 1000).getDay()] + '</p>'
+            );
+            console.log(new Date(item.currently.time * 1000));
         });
 
-        var request = () => {
-            var weather = $('#insertWeather');
-            var darkSkyURL = ("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/37.8267,-122.4233");
-            var ajaxRequest = $.get(darkSkyURL)
-            ajaxRequest.done( function (data) {
-                var text = "";
+        //tomorrow
+        $('#tomorrow').append(
+            '<h1>Tomorrow: </h1>' +
+            '<h3>' + data.daily.data[1].summary + '</h3>'
+        );
 
-                data.forEach(item => {
-                    text += '${item.currently.time}';
-                })
-                weather.html(text);
-            });
-                ajaxRequest.fail( function (e) {
-                    console.log("failure");
-                });
-        }
-        request();
+        // day after tomorrow
+        $('#next-tomorrow').append(
+            '<h1>Day After Tomorrow: </h1>' +
+            '<h3>' + data.daily.data[2].summary + '</h3>'
+        );
 
-
-
-
-    })();
+        //Location
+        $('#location').append(
+            '<h1>San Antonio</h1>'
+        )
+    });
 
 
 
-
+    // console.log(data.currently.summary);
 </script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+
 </body>
 </html>
