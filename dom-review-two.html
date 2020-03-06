@@ -47,7 +47,8 @@
     //Hard mode: Change the text color to either Blue, Yellow or Red if the b, y or r keys are pressed
     $('h1').click( function () {
         $(this).css('color', 'lime');
-    })
+    });
+
 
     //hard mode for above:
 
@@ -62,6 +63,7 @@
             $("h1").css('color','red');
         }
     });
+
 
 
     //OR, you can use switch statement below:
@@ -98,9 +100,11 @@
 
     //Brance used mouseEnter/ example below is with mouseOver
 
-    // $('.runner').mouseover(function(){
-    //     $(this).css('margin-left', 'auto'); //float can also work here instead of margin-left
-    // });
+    $('.runner').mouseover(function(){
+        $(this).css('margin-left', 'auto'); //float can also work here instead of margin-left
+    });
+
+
 
     //hard mode for this below
 
@@ -118,6 +122,8 @@
     });
 
 
+
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -128,6 +134,7 @@
         $('#add-to-me').append('<li>' + myList + '</li>');      //val("") after input would return
         $("#add-to-me").children().last().bind("click", moveLIs);   //if you get rid of .first() and .last() in this and next one, it will traverse through all list items
     });
+
 
     //hard mode for this one below
 
@@ -141,28 +148,39 @@
     }
 
 
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     //Write a function that changes the font of all text to comic sans 5 seconds after the page loads
     //Hard mode: Change the background to this image after 10 seconds. https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?cs=srgb&dl=black-and-white-laptop-2740956.jpg&fm=jpg
-    $('*')
-    .delay(5000)
-    .queue( function () {
-        $(this).css('font-family','Comic Sans MS');
+    // $('*')
+    // .delay(5000)
+    // .queue( function () {
+    //     $(this).css('font-family','Comic Sans MS');
+    // });
+
+    $('*').delay(5000).queue(function () {
+        $(this).css('font-family', 'Comic Sans MS');
     });
 
     // OR, you can use below for this one:
 
-    setTimeout(function () {
-        $("body").css("font-family", "Comic Sans MS");
-    }, 1000);
+    // setTimeout(function () {
+    //     $("body").css("font-family", "Comic Sans MS");
+    // }, 1000);
 
     //hard mode for this one below
 
     // setTimeout(function () {
     //     $('*').css('background-image', 'url(https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?cs=srgb&dl=black-and-white-laptop-2740956.jpg&fm=jpg)');
     // }, 2000);
+    //
+
+
+    $('*').delay(2000).queue( function () {
+        $(this).css('background-image', 'url(https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?cs=srgb&dl=black-and-white-laptop-2740956.jpg&fm=jpg)');
+    });
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -170,18 +188,27 @@
 
     //Write a function that bolds the words in the paragraph element with the id of thundercats when the get hype button is pressed
     //Hard mode: Bold one word every time the button is pressed
+
     // $('#get-hype').click( function () {
     //     $('#thundercats').css('font-weight', 'bold');
-    // })
+    // });
+
+
 
     //hard mode for this one below
 
-    var whatSpanWeOn = 1;
+    // var whatSpanWeOn = 1;
+    //
+    // $("#get-hype").click(function(){
+    //     $("#thundercats span:nth-child(" + whatSpanWeOn + ")") .css("font-weight", "bold");
+    //     whatSpanWeOn++;
+    // });
 
-    $("#get-hype").click(function(){
-        $("#thundercats span:nth-child(" + whatSpanWeOn + ")") .css("font-weight", "bold");
+    var whatSpanWeOn = 1;
+    $("#get-hype").click( function () {
+        $("#thundercats span:nth-child(" + whatSpanWeOn + ")").css("font-weight", "bold");
         whatSpanWeOn++;
-    })
+    });
 </script>
 </html>
 

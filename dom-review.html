@@ -37,10 +37,14 @@
       $('#favorite-food').append('<li>' + $('#input').val() + '</li>');
     });
 
+
+
 // - When the heading 'Change Me' is double clicked, change its background-color to purple.
     $('#change-me').dblclick( function () {
       $(this).css('background-color', 'purple');
     });
+
+
 
 //     - Allow the user to input their cohort name. Once Update button is clicked,
 //             the text should should update with the name of the cohort.
@@ -52,11 +56,15 @@ $('#change-cohort').click( function () {
   $('#my-cohort').append('<span>' + $('#cohort-name').val() + '</span>');
 });
 
+
+
     // - When 'Highlight' button is clicked, change the background color of the cohort name to yellow.
 
 $('#highlight').click( function () {
   $('#my-cohort').css('background-color', 'yellow');
 });
+
+
 
 // - Write some JavaScript that changes the background-color of the container to pink after 3 seconds.
     $('.container')
@@ -64,6 +72,8 @@ $('#highlight').click( function () {
             .queue( function () {
               $(this).css('background-color','pink');
             });
+
+
   </script>
 </body>
 </html>
