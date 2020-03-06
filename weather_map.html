@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/weather_map.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Josefin+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -169,6 +170,11 @@
             '<h3>' + data.daily.data[2].temperatureMax + '</h3>'
         );
 
+        $('.card').click( function (e) {
+            e.preventDefault();
+            $(this).addClass('click-background-color');
+        })
+
     });
 
 
@@ -199,32 +205,33 @@
 
     //////// Location(s) and marker(s) starts here
 
-    // favoriteRestaurants = [
-    //     {
-    //         location: [-98.4623839, 29.4730411],
-    //         name: "<h1 id='volare1'>Volare</h1>"
-    //     },
-    //     {
-    //         location:[-98.47796662173043, 29.61080750918382],
-    //         name: "<h1 id='hoppimonk2'>Hoppi Monk</h1>"
-    //     },
-    //     {
-    //         location:[-98.5650461, 29.5296703],
-    //         name: "<h1 id='alibaba3'>Ali Baba Market</h1>"
-    //     }];
-    //
-    // favoriteRestaurants.forEach(function(restaurant){
-    //     var marker1 = new mapboxgl.Marker(markerOptions)
-    //         .setLngLat(restaurant.location)
-    //         .addTo(map);
-    //
-    //
-    //     var volarePopup = new mapboxgl.Popup()
-    //         .setHTML(restaurant.name)
-    //         .addTo(map);
-    //
-    //     marker1.setPopup(volarePopup).togglePopup();
-    // });
+    spots = [
+        {
+            location: [29.4241, 98.4936],
+            name: "<h1>San Antonio</h1>"
+        }
+        ];
+
+    spots.forEach(function(spot){
+        var marker1 = new mapboxgl.Marker(markerOptions)
+            .setLngLat(spot.location)
+            .addTo(map);
+
+
+        var popup = new mapboxgl.Popup()
+            .setHTML(spot.name)
+            .addTo(map);
+
+        marker1.setPopup(popup).togglePopup();
+    });
+
+
+
+    //1. need to create draggable marker for mapbox api
+    //2. need be able to obtain coordinates (geocode? reverse geocode?)
+    //3. put coordinates into a variable
+    //4. plug the variable into function or loop? to then sync those coordinates to weather data
+
 </script>
 
 </body>

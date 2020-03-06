@@ -1,7 +1,42 @@
 
 * {
     padding: 5px;
+    font-family: 'Comfortaa', cursive;
+}
 
+*:hover {
+    font-weight: bolder;
+}
+
+.click-background-color {
+    animation: background-color-change 3s ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes background-color-change {
+    0%{
+        background-color: #faf7e3;
+    }
+    25%{
+        background-color: #f5dd42;
+    }
+    50%{
+        background-color: #f5b342;
+    }
+    75%{
+        background-color: #f5dd42;
+    }
+    100%{
+        background-color: #faf7e3;
+    }
+}
+
+#navbar {
+    background-color: #faf7e3;
+    border-radius: 25px;
+}
+
+.card {
+    cursor: pointer;
 }
 
 .card-body:hover {
@@ -29,7 +64,7 @@
 
 div.card-body {
     text-align: center;
-    background-color: #f7f0bc;
+    background-color: #faf7e3;
     border-radius: 25px;
 }
 

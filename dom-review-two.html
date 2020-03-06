@@ -63,6 +63,24 @@
         }
     });
 
+
+    //OR, you can use switch statement below:
+
+    // $("body").keydown(function(event){
+    //
+    //     switch (event.keyCode){
+    //         case 66:
+    //             $("h1").css("color", "blue");
+    //             break;
+    //         case 89:
+    //             $("h1").css("color", "yellow");
+    //             break;
+    //         case 82:
+    //             $("h1").css("color", "red");
+    //             break;
+    //     }
+    // })
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -107,7 +125,7 @@
     //Hard mode: when you click on an li move it from it's current location to the top of the ul
     $('#add-btn').click( function () {
         var myList = $('#input').val();
-        $('#add-to-me').append('<li>' + $('#input').val() + '</li>');      //val("") after input would return
+        $('#add-to-me').append('<li>' + myList + '</li>');      //val("") after input would return
         $("#add-to-me").children().last().bind("click", moveLIs);   //if you get rid of .first() and .last() in this and next one, it will traverse through all list items
     });
 
@@ -152,16 +170,18 @@
 
     //Write a function that bolds the words in the paragraph element with the id of thundercats when the get hype button is pressed
     //Hard mode: Bold one word every time the button is pressed
-    $('#get-hype').click( function () {
-        $('#thundercats').css('font-weight', 'bold');
-    })
+    // $('#get-hype').click( function () {
+    //     $('#thundercats').css('font-weight', 'bold');
+    // })
 
     //hard mode for this one below
 
-    $("#get-hype").click( function () {
-        $('#thundercats span:nth-child(" + counter + ")').css("font-weight", "bold");
-        counter++;
-    });
+    var whatSpanWeOn = 1;
+
+    $("#get-hype").click(function(){
+        $("#thundercats span:nth-child(" + whatSpanWeOn + ")") .css("font-weight", "bold");
+        whatSpanWeOn++;
+    })
 </script>
 </html>
 
