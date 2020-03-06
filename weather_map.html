@@ -13,7 +13,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
         <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -26,7 +27,8 @@
                     <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -47,61 +49,62 @@
         </div>
     </nav>
 
-<!--cards start here-->
-<div id="card-container">
-    <div class="row">
-        <div class="card" id="location-card" style="width: 100%;">
-            <div class="card-body">
-                <div id="location">
-                    <video autoplay muted loop class="sky">
-                        <source src="img/sky.mp4">
-                    </video>
-                    <img class="card-img-top" id="cloud" src="img/cloud.png" alt="Card image cap">
+    <!--cards start here-->
+    <div id="card-container">
+        <div class="row">
+            <div class="card" id="location-card" style="width: 100%;">
+                <div class="card-body">
+                    <div id="location">
+                        <video autoplay muted loop class="sky">
+                            <source src="img/sky.mp4">
+                        </video>
+                        <img class="card-img-top" id="cloud" src="img/cloud.png" alt="Card image cap">
+                    </div>
+                </div>
+            </div>
+            <div class="card col-6" style="width: 100%;">
+                <div class="card-body">
+                    <div id="today"></div>
+                </div>
+            </div>
+            <div class="card col-6" style="width: 100%;">
+                <div class="card-body">
+                    <div id="test"></div>
+                </div>
+            </div>
+            <div class="card col-6" style="width: 100%;">
+                <div class="card-body">
+                    <div id="tomorrow"></div>
+                </div>
+            </div>
+            <div class="card col-6" style="width: 100%;">
+                <div class="card-body">
+                    <div id="test2"></div>
+                </div>
+            </div>
+            <div class="card col-6" style="width: 100%;">
+                <div class="card-body">
+                    <div id="next-tomorrow"></div>
+                </div>
+            </div>
+            <div class="card col-6" style="width: 100%;">
+                <div class="card-body">
+                    <div id="test3"></div>
                 </div>
             </div>
         </div>
-        <div class="card col-6" style="width: 100%;">
-            <div class="card-body">
-                <div id="today"></div>
-            </div>
-        </div>
-        <div class="card col-6" style="width: 100%;">
-            <div class="card-body">
-                <div id="test"></div>
-            </div>
-        </div>
-        <div class="card col-6" style="width: 100%;">
-            <div class="card-body">
-                <div id="tomorrow"></div>
-            </div>
-        </div>
-        <div class="card col-6" style="width: 100%;">
-            <div class="card-body">
-                <div id="test2"></div>
-            </div>
-        </div>
-        <div class="card col-6" style="width: 100%;">
-            <div class="card-body">
-                <div id="next-tomorrow"></div>
-            </div>
-        </div>
-        <div class="card col-6" style="width: 100%;">
-            <div class="card-body">
-                <div id="test3"></div>
-            </div>
-        </div>
     </div>
-</div>
 
-<!--mapbox content starts here-->
+    <!--mapbox content starts here-->
+    <div id="inputContainer" class="coordinates"></div>
+    <div id="map"></div>
 
-<div id='map'></div>
-
+<br><br><br>
 </div>
 <!--fluid container ends here-->
 <script src="js/jquery-2.2.4.js" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
@@ -170,7 +173,7 @@
             '<h3>' + data.daily.data[2].temperatureMax + '</h3>'
         );
 
-        $('.card').click( function (e) {
+        $('.card').click(function (e) {
             e.preventDefault();
             $(this).addClass('click-background-color');
         })
@@ -179,52 +182,45 @@
 
 
     ////////////Mapbox JS content starts here
-
-    mapboxgl.accessToken = mapboxToken;
-
-    ///////
-
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
-    });
-
-    ///////
-
-    var markerOptions = { //this is an object that is being passed into the marker (below)
-        color: "#ff0000", //here, option is "color"
-        draggable: true
-    }
-
-    geocode("San Antonio, TX", mapboxToken).then(function (result) {
+    geocode("San Antonio, TX", mapboxToken).then(function(result){
         console.log(result);
         map.setCenter(result);
         map.flyTo({center: result, zoom: 11});
     });
+    //
+
+    mapboxgl.accessToken = mapboxToken;
 
 
-    //////// Location(s) and marker(s) starts here
-
-    spots = [
-        {
-            location: [29.4241, 98.4936],
-            name: "<h1>San Antonio</h1>"
-        }
-        ];
-
-    spots.forEach(function(spot){
-        var marker1 = new mapboxgl.Marker(markerOptions)
-            .setLngLat(spot.location)
-            .addTo(map);
-
-
-        var popup = new mapboxgl.Popup()
-            .setHTML(spot.name)
-            .addTo(map);
-
-        marker1.setPopup(popup).togglePopup();
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-98.23562438964818, 29.42512193456345],
+        zoom: 10
     });
 
+    var coordinates = [-98.23562438964818, 29.42512193456345];
+
+    var markerOptions = {
+        color: "#333000",
+        draggable: true
+    };
+    var marker = new mapboxgl.Marker(markerOptions)
+        .setLngLat(coordinates)
+        .addTo(map);
+
+
+
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        var lngLatMessage = ('Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat);
+        $('#inputContainer').html(lngLatMessage);
+        console.log(lngLatMessage);
+    }
+    marker.on('dragend', onDragEnd);
+
+    /////////////////////
 
 
     //1. need to create draggable marker for mapbox api

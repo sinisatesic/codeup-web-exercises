@@ -8,6 +8,12 @@
     font-weight: bolder;
 }
 
+
+.coordinates {
+border: 5px solid red;
+    height: 200%;
+}
+
 .click-background-color {
     animation: background-color-change 3s ease-in-out;
     animation-iteration-count: infinite;
@@ -60,6 +66,10 @@
 .sky {
     max-height: 95%;
     max-width: 95%;
+}
+
+div.card {
+    border-style: none;
 }
 
 div.card-body {
