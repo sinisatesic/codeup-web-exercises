@@ -29,7 +29,7 @@
         transform: translate3d(0, -5px, 0); background-color: #EB9D3A;
     }
     75% {
-        transform: translate3d(0, -14px, 0); background-color: #E6563B;
+        transform: translate3d(0, -7px, 0); background-color: #E6563B;
     }
     100%{
         transform: translate3d(0, 12px, 0); background-color: #f5dd42;
