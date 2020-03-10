@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map, Filter, Reduce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style type="text/css">
+        #main-title {
+            padding-top: 25px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 id="main-title">Map, Filter, Reduce</h1>
+    <hr>
+
+    <h2>map()</h2>
+    <hr>
+    <div class="container row pb-4">
+        <div class="card col-4">
+            <div class="card-body">
+                <h4 class="card-title">Using forEach</h4>
+                <ul id="forEach" class="card-text"></ul>
+            </div>
+        </div>
+
+        <div class="card col-4">
+            <div class="card-body">
+                <h4 class="card-title">Using map</h4>
+                <ul id="map" class="card-text"></ul>
+            </div>
+        </div>
+
+        <div class="card col-4">
+            <div class="card-body">
+                <h4 class="card-title">Using map (ES6)</h4>
+                <ul id="mapES6" class="card-text"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>filter()</h2>
+    <hr>
+    <div class="container row pb-4">
+        <div class="card col-4">
+            <div class="card-body">
+                <h4 class="card-title">Using forEach</h4>
+                <ul id="filterForEach" class="card-text"></ul>
+            </div>
+        </div>
+        <div class="card col-4">
+            <div class="card-body">
+                <h4 class="card-title">Using filter</h4>
+                <ul id="filter" class="card-text"></ul>
+            </div>
+        </div>
+        <div class="card col-4">
+            <div class="card-body">
+                <h4 class="card-title">Using ES6</h4>
+                <ul id="filterEs6" class="card-text"></ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <h2>reduce()</h2>
+    <hr>
+    <div class="container row pb-4">
+        <div class="card col-4">
+            <div class="card-body">
+                <h4 class="card-title">Using forEach</h4>
+                <p id="reduceForEach" class="card-text"></p>
+            </div>
+        </div>
+        <div class="card col-4">
+            <div class="card-body">
+                <h4 class="card-title">Using filter</h4>
+                <p id="reduce" class="card-text"></p>
+            </div>
+        </div>
+        <div class="card col-4">
+            <div class="card-body">
+                <h4 class="card-title">Using ES6</h4>
+                <p id="reduceEs6" class="card-text"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/map-filter-reduce.js"></script>
+</body>
+</html>

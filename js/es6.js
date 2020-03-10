@@ -93,7 +93,7 @@ users.forEach(user => {
   const {name, email, languages} = user;    //needs to be this manner if destructuring
 
   // TODO: rewrite the assignment below to use template strings
-  developers.push(`${name} '\'s email is ' ${email}. ${name} ' knows ' ${languages.join(', ')}`);
+  developers.push(`${name} '\'s email is ' ${email}. ${name} ' knows ' ${languages.join(', ')}`);   //BACKTICKS!
 });
 
 // TODO: Use `let` for the following variable
@@ -103,7 +103,7 @@ let list = '<ul>';
 for (let developer of developers) {
 
   // TODO: rewrite the assignment below to use template strings
-  list += `<li> ${developer} </li>`;
+  list += `<li> ${developer} </li>`;    //BACKTICKS!
 }
 list += '</ul>';
 
