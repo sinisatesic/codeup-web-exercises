@@ -42,11 +42,15 @@ function getGithubUsernames() {
     return fetch('https://api.github.com/users/sinisatesic/events/public', {headers: {'Authorization': 'token '+ githubToken}})
         .then(response => response.json());
 }
-getGithubUsernames().then((data) => {
+getGithubUsernames().then((data) => {           //this date is same thing as above response.json()
+    // console.log(data);
     console.log(data[0].payload.commits[0].message);
 }).catch(error => console.error(error));
 
-getGithubUsernames().then
+function getGithubUsernames() {
+    return fetch()
+}
+
 
 
 
