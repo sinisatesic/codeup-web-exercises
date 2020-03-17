@@ -155,3 +155,51 @@ Promise.all([                      //an array of all promises we want to run
 
 
 //url for video Justin shared:  https://www.youtube.com/watch?v=DHvZLI7Db8E
+
+
+
+//za film proekat:
+module.exports = {
+    getMovies: () => {
+        return fetch('/api/movies')
+            .then(response => response.json());
+    },
+    editMovie: (id, movie) => {
+        return fetch(`api/movies/${id}`,{
+            method: 'Patch',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(movie)
+        })
+            .then(resonse => response.json())
+    },
+    deleteMovie: (id) => {
+        return fetch(`api/movies/${id}`,{
+            method: 'Delete',
+            headers: {
+                'Content-Type':'application/json'
+            }
+        })
+            .then(response => response.json());
+    }
+}
+// editMovie: (id, movie) => {
+//     return fetch(`api/movies/${id}`,{
+//         method: 'Patch',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(movie)
+//     })
+//         .then(resonse => response.json())
+// },
+//     deleteMovie: (id) => {
+//     return fetch(`api/movies/${id}`,{
+//         method: 'DETE',
+//         headers: {
+//             'Content-Type':'application/json'
+//         }
+//     })
+//         .then(response => response.json());
+// }
