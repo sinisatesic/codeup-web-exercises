@@ -1,0 +1,231 @@
+/*.ls {*/
+/*    display: block;*/
+/*    !*background: red;*!*/
+/*    height: 50px;*/
+/*    width: 50px;*/
+/*}*/
+
+/*.ls-hilt {*/
+/*    position: absolute;*/
+/*    width: 200px;*/
+/*    height: 20px;*/
+/*    background: silver;*/
+/*    border-top-left-radius: 35px;*/
+/*    border-bottom-right-radius: 35px;*/
+/*}*/
+
+/*.hilt-part1 {*/
+/*    position: absolute;*/
+/*    height: 19px;*/
+/*    width: 30px;*/
+/*    background: black;*/
+/*    border: .5px solid grey;*/
+/*    left: 25px;*/
+/*    border-top-left-radius: 3px;*/
+/*    border-bottom-left-radius: 3px;*/
+/*}*/
+/*.hilt-part1:nth-child(2){*/
+/*    position: absolute;*/
+/*    left:50px;*/
+/*}*/
+/*.hilt-part1:nth-child(3){*/
+/*   position: absolute;*/
+/*    left: 75px;*/
+/*}*/
+/*.hilt-part1:nth-child(4){*/
+/*    position: absolute;*/
+/*    left: 100px;*/
+/*}*/
+
+/*.hilt-part2 {*/
+/*    position: absolute;*/
+/*    height: 18px;*/
+/*    width: 11px;*/
+/*    background: silver;*/
+/*    border: 1px solid darkgrey;*/
+/*    left: 130px;*/
+/*}*/
+/*!*.hilt-part2:nth-child(2) {*!*/
+/*!*    position: absolute;*!*/
+/*!*    height: 18px;*!*/
+/*!*    width: 11px;*!*/
+/*!*    background: silver;*!*/
+/*!*    border: 1px solid darkgrey;*!*/
+/*!*    left: 190px;*!*/
+/*!*}*!*/
+/*.hilt-part3 {*/
+/*    position: absolute;*/
+/*    height: 18px;*/
+/*    width: 7px;*/
+/*    background: silver;*/
+/*    border: 1px solid darkgrey;*/
+/*    left: 140px;*/
+/*}*/
+/*.hilt-part4 {*/
+/*    position: absolute;*/
+/*    height: 18px;*/
+/*    width: 7px;*/
+/*    background: silver;*/
+/*    border: 1px solid darkgrey;*/
+/*    left: 149px;*/
+/*}*/
+
+/*.ls-button {*/
+/*    position: absolute;*/
+/*    margin-top: 5px;*/
+/*    background: goldenrod;*/
+/*    height: 10px;*/
+/*    width: 10px;*/
+/*    border-radius: 50%;*/
+/*    left: 155px;*/
+/*    border: 1px solid gold;*/
+/*}*/
+
+/*.hilt-part5 {*/
+/*    position: absolute;*/
+/*    height: 18px;*/
+/*    width: 3px;*/
+/*    background: silver;*/
+/*    border: 1px solid darkgrey;*/
+/*    left: 170px;*/
+/*}*/
+
+/*.saber {*/
+/*    position: absolute;*/
+/*    left: 185px;*/
+/*    top: -1.15px;*/
+/*    height: 20px;*/
+/*    width: 300px;*/
+/*    background: greenyellow;*/
+/*    border-top-right-radius: 25px;*/
+/*    border-bottom-right-radius: 25px;*/
+/*    animation: lightsaber-power .75s;*/
+/*    animation-iteration-count: 1;*/
+/*    filter: blur(2px);*/
+/*}*/
+/*@keyframes lightsaber-power {*/
+/*    0% {*/
+/*        width: 0px;*/
+/*    }*/
+/*    100%{*/
+/*        width: 300px;*/
+/*    }*/
+/*}*/
+
+
+
+/*below is all the same but with saber 75% smaller*/
+
+.ls {
+    display: block;
+    /*background: red;*/
+    height: 12.5px;
+    width: 12.5px;
+}
+
+.ls-hilt {
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: silver;
+    border-top-left-radius: 3.75px;
+    border-bottom-right-radius: 3.75px;
+    border-bottom-left-radius: 3.75px;
+}
+
+.hilt-part1 {
+    position: absolute;
+    height: 4.75px;
+    width: 7.5px;
+    background: #898a88;
+    border: .5px solid grey;
+    left: 6.25px;
+    top: -.5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.hilt-part1:nth-child(2){
+    position: absolute;
+    left: 3.125px;
+    top: -.5px;
+}
+.hilt-part1:nth-child(3){
+    position: absolute;
+    left: 18.75px;
+    top: -.5px;
+}
+.hilt-part1:nth-child(4){
+    position: absolute;
+    left: 25px;
+    top: -.5px;
+}
+
+.hilt-part2 {
+    position: absolute;
+    height: 4.5px;
+    width: 2.75px;
+    background: silver;
+    border: .25px solid darkgrey;
+    left: 32.5px;
+}
+
+.hilt-part3 {
+    position: absolute;
+    height: 4.5px;
+    width: 1.75px;
+    background: silver;
+    border: .25px solid darkgrey;
+    left: 26.25px;
+}
+
+.hilt-part4 {
+    position: absolute;
+    height: 4.5px;
+    width: 1.75px;
+    background: silver;
+    border: .25px solid darkgrey;
+    left: 37.25px;
+}
+
+.ls-button {
+    position: absolute;
+    margin-top: 1.25px;
+    background: goldenrod;
+    height: 2.5px;
+    width: 2.5px;
+    border-radius: 50%;
+    left: 38.75px;
+    border: .25px solid gold;
+}
+
+.hilt-part5 {
+    position: absolute;
+    height: 4.5px;
+    width: .75px;
+    background: silver;
+    border: .25px solid darkgrey;
+    left: 42.5px;
+}
+
+.saber {
+    position: absolute;
+    left: 49px;
+    top: -.2875px;
+    height: 5px;
+    width: 100px;
+    background: greenyellow;
+    border-top-right-radius: 6.25px;
+    border-bottom-right-radius: 6.25px;
+    animation: lightsaber-power 1s;
+    animation-iteration-count: 1;
+    filter: blur(1px);
+    /*filter: saturate(1);*/
+}
+@keyframes lightsaber-power {
+    0% {
+        width: 0px;
+    }
+    100%{
+        width: 100px;
+    }
+}
