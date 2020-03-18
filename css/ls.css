@@ -1,9 +1,4 @@
-/*.ls {*/
-/*    display: block;*/
-/*    !*background: red;*!*/
-/*    height: 50px;*/
-/*    width: 50px;*/
-/*}*/
+
 
 /*.ls-hilt {*/
 /*    position: absolute;*/
@@ -116,15 +111,9 @@
 
 /*below is all the same but with saber 75% smaller*/
 
-.ls {
-    display: block;
-    /*background: red;*/
-    height: 12.5px;
-    width: 12.5px;
-}
 
 .ls-hilt {
-    position: absolute;
+    position: relative;
     width: 50px;
     height: 5px;
     background: silver;
@@ -141,13 +130,13 @@
     border: .5px solid grey;
     left: 6.25px;
     top: -.5px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border-radius: 1px;
 }
 .hilt-part1:nth-child(2){
     position: absolute;
     left: 3.125px;
     top: -.5px;
+    border-top-right-radius: 3px;
 }
 .hilt-part1:nth-child(3){
     position: absolute;
@@ -187,17 +176,6 @@
     left: 37.25px;
 }
 
-.ls-button {
-    position: absolute;
-    margin-top: 1.25px;
-    background: goldenrod;
-    height: 2.5px;
-    width: 2.5px;
-    border-radius: 50%;
-    left: 38.75px;
-    border: .25px solid gold;
-}
-
 .hilt-part5 {
     position: absolute;
     height: 4.5px;
@@ -207,25 +185,39 @@
     left: 42.5px;
 }
 
+.ls-button {
+    top: -.5px;
+    position: absolute;
+    margin-top: 1.25px;
+    background: goldenrod;
+    height: 2.5px;
+    width: 2.5px;
+    border-radius: 50%;
+    left: 38.75px;
+    border: .35px solid gold;
+    cursor: pointer;
+}
+
+
 .saber {
     position: absolute;
     left: 49px;
-    top: -.2875px;
+    top: -.15px;
     height: 5px;
-    width: 100px;
+    width: 140px;
     background: greenyellow;
     border-top-right-radius: 6.25px;
     border-bottom-right-radius: 6.25px;
     animation: lightsaber-power 1s;
     animation-iteration-count: 1;
     filter: blur(1px);
-    /*filter: saturate(1);*/
+    display: none;
 }
 @keyframes lightsaber-power {
     0% {
         width: 0px;
     }
     100%{
-        width: 100px;
+        width: 140px;
     }
 }
