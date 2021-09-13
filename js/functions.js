@@ -433,12 +433,14 @@ console.log(applyDiscount(200, .37));
 // console.log(squareRoot(64));
 //
 //
-// //34.
-// function cubeRoot(n) {
-//     return Math.cbrt(n);
-// }
-//
-// console.log(cubeRoot(27));
+//34.
+function cubeRoot(n) {
+    return Math.cbrt(n);
+}
+
+console.log(cubeRoot(27));
+
+const cubeRootTertiary = (n) => Math.cbrt(n);
 
 
 // //35.
@@ -451,6 +453,8 @@ function invertSign(num) {
 }
 
 console.log(invertSign(-20));
+
+const invertSignTertiary = (num) => num > 0 ? -Math.abs(num) : Math.abs(num);
 //
 //
 // Math.abs(num)
