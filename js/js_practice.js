@@ -198,3 +198,30 @@ function concat(...args) {
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
+
+//
+
+// Find the Discount
+// Create a function that takes two arguments: the original price and the discount percentage as integers and returns the final price after the discount.
+
+// Alternative Text
+
+// Examples
+// dis(1500, 50) ➞ 750
+
+// dis(89, 20) ➞ 71.2
+
+// dis(100, 75) ➞ 25
+// Notes
+// Your answer should be rounded to two decimal places.
+
+function dis(price, discount) {
+	let stuff = discount/100
+	return Math.round((price - (price * stuff))* 100)/100;
+}
+
+// bolji odgovor:
+
+function dis(price, discount) {
+	return (100 - discount) / 100 * price	
+}

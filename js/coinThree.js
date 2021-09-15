@@ -121,7 +121,7 @@ const getTrends = async () => {
 };
 
 const getPrices = async () => {
-  container.innerHTML = '';
+container.innerHTML = '';
 
   // if(document.readyState !== 'complete'){
   //   let loadDiv = document.createElement('div');
