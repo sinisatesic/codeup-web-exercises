@@ -118,3 +118,83 @@ function numLayers(n) {
 	}
 	return `${(ppr/1000)/2}m`;
 }
+
+// Find the nth Tetrahedral Number
+// A tetrahedron is a pyramid with a triangular base and three sides. A tetrahedral number is a number of items within a tetrahedron.
+
+// Create a function that takes an integer n and returns the nth tetrahedral number.
+
+// Alternative Text
+
+// Examples
+// tetra(2) ➞ 4
+
+// tetra(5) ➞ 35
+
+// tetra(6) ➞ 56
+// Notes
+// There is a formula for the nth tetrahedral number.
+
+function tetra(n) {
+	return (n * (n + 1) * (n + 2))/6;
+}
+
+//
+
+// Function Factory
+// Create a function that takes a "base number" as an argument. This function should return another function which takes a new argument, and returns the sum of the "base number" and the new argument.
+
+// Please check the examples below for a clearer representation of the behavior expected.
+
+// Examples
+// // Calling makePlusFunction(5) returns a new function that takes an input,
+// // and returns the result when adding 5 to it.
+
+// const plusFive = makePlusFunction(5)
+
+// plusFive(2) ➞ 7
+
+// plusFive(-8) ➞ -3
+
+// // Calling makePlusFunction(10) returns a new function that takes an input,
+// // and returns the result when adding 10 to it.
+
+// const plusTen = makePlusFunction(10)
+
+// plusTen(0) ➞ 10
+
+// plusTen(188) ➞ 198
+
+// plusFive(plusTen(0)) ➞ 15
+// Notes
+// All inputs will be valid numbers.
+
+function makePlusFunction(baseNum) {
+	return function anotherOne(e){
+		return e + baseNum;
+	}
+}
+
+//
+
+// Concatenate Variable Number of Input Arrays
+// Create a function that concatenates n input arrays, where n is variable.
+
+// Examples
+// concat([1, 2, 3], [4, 5], [6, 7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+// concat([1], [2], [3], [4], [5], [6], [7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+// concat([1, 2], [3, 4]) ➞ [1, 2, 3, 4]
+
+// concat([4, 4, 4, 4, 4]) ➞ [4, 4, 4, 4, 4]
+// Notes
+// Arrays should be concatenated in order of the arguments.
+
+//
+
+function concat(...args) {
+	return [...args].flat();
+}
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
