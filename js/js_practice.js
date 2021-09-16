@@ -244,3 +244,16 @@ function dis(price, discount) {
 function intWithinBounds(n, lower, upper) {
 	return n >= lower && n < upper && Number.isInteger(n);
 }
+
+//
+
+// Flatten an array of arrays
+let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+  function(previousValue, currentValue) {
+    return previousValue.concat(currentValue)
+  },
+  []
+)
+// flattened is [0, 1, 2, 3, 4, 5]
+
+//
