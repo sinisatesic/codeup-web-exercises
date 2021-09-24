@@ -336,3 +336,50 @@ function redundant(str) {
 
 const redundant = str => () => str;
 
+
+
+// Find the Discount
+// Create a function that takes two arguments: the original price and the discount percentage as integers and returns the final price after the discount.
+
+// Alternative Text
+
+// Examples
+// dis(1500, 50) ➞ 750
+
+// dis(89, 20) ➞ 71.2
+
+// dis(100, 75) ➞ 25
+// Notes
+// Your answer should be rounded to two decimal places.
+
+function dis(price, discount) {
+	let stuff = discount/100
+	return Math.round((price - (price * stuff))* 100)/100;
+}
+
+//
+
+// Move Capital Letters to the Front
+// Create a function that moves all capital letters to the front of a word.
+
+// Examples
+// capToFront("hApPy") ➞ "APhpy"
+
+// capToFront("moveMENT") ➞ "MENTmove"
+
+// capToFront("shOrtCAKE") ➞ "OCAKEshrt"
+// Notes
+// Keep the original relative order of the upper and lower case letters the same.
+
+function capToFront(s) {
+	let poop1 = '';
+	let poop2 = '';
+	for(let i = 0; i < s.length; i++){
+		if(s[i] === s[i].toUpperCase()){
+			poop1 += s[i];
+		}else if(s[i] === s[i].toLowerCase()){
+			poop2 += s[i];
+		}
+	}
+	return poop1 + poop2;
+}
