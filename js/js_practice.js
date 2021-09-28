@@ -381,5 +381,35 @@ function capToFront(s) {
 			poop2 += s[i];
 		}
 	}
-	return poop1 + poop2;
+    return poop1 + poop2;
+}
+
+
+// 2. Write a function, `getOlder()` that takes in array of dog objects and increases the value of the age properties by 1.
+//console.log(object.age + 1);
+
+//Vivian's pseudo code below!!!
+//1. write a function --> getOlder(dogs)
+//2. Since we are taking in array --> we have to loop through each object (each dog, in Vivian's example) --> dog.age += 1;
+//3. return dogs (parameter name, which is objects in my example)
+
+//////////////////////////////////
+//my answer:
+//////////////////////////////////
+function getOlder(objects) {
+    objects.forEach(function (object) {
+        object.age++;
+    });
+    return objects;
+}
+
+//////////////////////////////////
+//Vivian's answer:
+//////////////////////////////////
+function getOlder(dogs) {
+    dogs.forEach(function (dog) {
+        dog.age += 1;
+    });
+
+    return dogs;
 }
