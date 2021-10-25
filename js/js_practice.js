@@ -824,3 +824,42 @@ function getLength(arr) {
 	});
 	return count;
 }
+
+// Basketball Points
+// You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
+
+// Examples
+// points(1, 1) ➞ 5
+
+// points(7, 5) ➞ 29
+
+// points(38, 8) ➞ 100
+// Notes
+// N/A
+
+function points(two, three) {
+	return two*2+three*3;
+}
+
+// Return the Objects Keys and Values
+// Create a function that takes an object and returns the keys and values as separate arrays. Return the keys sorted alphabetically, and their corresponding values in the same order.
+
+// Examples
+// keysAndValues({ a: 1, b: 2, c: 3 })
+// ➞ [["a", "b", "c"], [1, 2, 3]]
+
+// keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" })
+// ➞ [["a", "b", "c"], ["Apple", "Microsoft", "Google"]]
+
+// keysAndValues({ key1: true, key2: false, key3: undefined })
+// ➞ [["key1", "key2", "key3"], [true, false, undefined]]
+// Notes
+// Remember to sort the keys.
+
+function keysAndValues(obj) {
+	var keys = Object.keys(obj),
+			values = keys.map(function (key) {
+				return obj[key];
+			});
+		return [keys, values];
+	}
