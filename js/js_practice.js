@@ -1185,3 +1185,35 @@ function isRepdigit(num) {
 		return arr.every(x => x === arr[0])
 	}
 }
+
+// Reverse Words Starting With a Particular Letter
+// Write a function that reverses all the words in a sentence that start with a particular letter.
+
+// Examples
+// specialReverse("word searches are super fun", "s")
+// ➞ "word sehcraes are repus fun"
+
+// specialReverse("first man to walk on the moon", "m")
+// ➞ "first nam to walk on the noom"
+
+// specialReverse("peter piper picked pickled peppers", "p")
+// ➞ "retep repip dekcip delkcip sreppep"
+// Notes
+// Reverse the words themselves, not the entire sentence.
+// All characters in the sentence will be in lower case.
+
+function specialReverse(s, c) {
+	let substrings = s.split(' ');
+	  let reversed;
+	  let arr = [];
+  
+	  for(var i = 0; i < substrings.length; i++){
+		  if(substrings[i].charAt(0) == c){
+			  reversed = substrings[i].split('').reverse().join('');
+			  arr.push(reversed)
+		  } else {
+			  arr.push(substrings[i]);
+		  }
+	  }
+	  return arr.join(' ');
+  }
