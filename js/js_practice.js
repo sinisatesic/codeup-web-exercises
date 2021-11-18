@@ -1236,3 +1236,47 @@ function specialReverse(s, c) {
 function totalVolume(...boxes) {
 	return boxes.reduce((a,b) => a + b.reduce((a,c) => a * c), 0);
 }
+
+// Find Number of Digits in Number
+// Create a function that will return an integer number corresponding to the amount of digits in the given integer num.
+
+// Examples
+// num_of_digits(1000) ➞ 4
+
+// num_of_digits(12) ➞ 2
+
+// num_of_digits(1305981031) ➞ 10
+
+// num_of_digits(0) ➞ 1
+// Notes
+// Try to solve this challenge without using strings!
+
+function num_of_digits(num) {
+	return Math.max(Math.floor(Math.log10(Math.abs(num))), 0) + 1;
+}
+
+//or
+
+function num_of_digits(num) {
+	let n = Math.abs(num), i = 1;
+	while ((n /= 10)  >= 1) { i++; }
+	return i;
+}
+
+//or
+
+function num_of_digits(num) {
+	num = Math.abs(num)
+	let arr = []
+	if (num == 0){
+		return 1
+	}else{
+	while(num>0){
+		arr.push(num % 10)
+		num = parseInt(num / 10)
+	}
+	console.log(arr)
+	return arr.length	
+	}
+	
+}
