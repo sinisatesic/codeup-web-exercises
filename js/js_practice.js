@@ -1280,3 +1280,5 @@ function num_of_digits(num) {
 	}
 	
 }
+
+//https://stackoverflow.com/questions/14879691/get-number-of-digits-with-javascript
