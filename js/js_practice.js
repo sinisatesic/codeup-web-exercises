@@ -1440,3 +1440,4 @@ function numbersSum(arr) {
 	}
 	return wut;
 }
+
