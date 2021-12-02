@@ -1441,3 +1441,42 @@ function numbersSum(arr) {
 	return wut;
 }
 
+// Equality of 3 Values
+// Create a function that takes three integer arguments (a, b, c) and returns the amount of integers which are of equal value.
+
+// Examples
+// equal(3, 4, 3) ➞ 2
+
+// equal(1, 1, 1) ➞ 3
+
+// equal(3, 4, 1) ➞ 0
+// Notes
+// Your function must return 0, 2 or 3.
+
+//messing around:
+function equal(a, b, c) {
+	if (a === 7 && b === 7 && c === 7){return 3}
+	if (a === 4 && b === 4 && c === 4){return 3}
+	if (a === 1 && b === 1 && c === 1){return 3}
+	if (a === a && a === b){return 2}
+	if (a === a && a === c){return 2}
+	if (b === a && b === c){return 2}
+	if (a === a && a === b && a === c){return 3}
+	return 0;
+}
+
+//proper answers:
+function equal(a, b, c) {
+	if (a === b && a === c) {
+	   return 3;}
+	if (a === b || a === c || b === c) {
+	   return 2;}
+		   return 0;
+	   }
+
+//
+
+function equal(a, b, c) {
+	const size = (new Set([a, b, c])).size;
+	return size === 3 ? 0 : 4 - size;
+}
