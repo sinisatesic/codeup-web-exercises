@@ -1539,3 +1539,30 @@ function matchLastItem(arr) {
 function matchLastItem(arr) {
 	return arr.pop() === arr.join('');
 }
+
+// Reverse Words in a String
+// Given an input string, reverse the string word by word, the first word will be the last, and so on.
+
+// Examples
+// reverseWords(" the sky is blue") ➞ "blue is sky the"
+
+// reverseWords("hello   world!  ") ➞ "world! hello"
+
+// reverseWords("a good example") ➞ "example good a"
+// Notes
+// A word is defined as a sequence of non-space characters.
+// The input string may contain leading or trailing spaces. However, your reversed string should not contain leading or trailing spaces.
+// You need to reduce multiple spaces between two words to a single space in the reversed string.
+// Try to solve this in linear time.
+
+function reverseWords(string) {
+	let arrEles = string.split(' ');
+	arrEles.reverse();
+	return arrEles.join(' ');
+}
+
+// bolje:
+
+function reverseWords(s) {
+	return s.split(" ").reverse().join(" ")
+}
