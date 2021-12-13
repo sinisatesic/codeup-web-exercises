@@ -1609,3 +1609,50 @@ function isTriplet(n1, n2, n3) {
 	arr.sort((a,b) => a-b);
 	return Math.pow(arr[0], 2) + Math.pow(arr[1], 2) == Math.pow(arr[2], 2)
 }
+
+// Multiplying Numbers in a String
+// Given a string of numbers separated by a comma and space, return the product of the numbers.
+
+// Examples
+// multiplyNums("2, 3") ➞ 6
+
+// multiplyNums("1, 2, 3, 4") ➞ 24
+
+// multiplyNums("54, 75, 453, 0") ➞ 0
+
+// multiplyNums("10, -2") ➞ -20
+// Notes
+// Bonus: Try to complete this challenge in one line!
+
+function multiplyNums(nums) {
+	return Number(nums.split(', ').reduce((a, b) => Number(a) * Number(b)));
+}
+
+// redundant Number constructors; only need initial
+
+// Mirror Array
+// Given an integer array, transform that array into a mirror.
+
+// Examples
+// mirror([0, 2, 4, 6]) ➞ [0, 2, 4, 6, 4, 2, 0]
+
+// mirror([1, 2, 3, 4, 5]) ➞ [1, 2, 3, 4, 5, 4, 3, 2, 1]
+
+// mirror([3, 5, 6, 7, 8]) ➞ [3, 5, 6, 7, 8, 7, 6, 5, 3]
+// Notes
+// Do not repeat the last item of the given array.
+
+function mirror(arr) {
+	let arrTwo = arr.slice(', ').reverse();
+	  arrTwo.shift();
+	  return arr.concat(arrTwo);
+  }
+
+  // mozda brzi odgovor:
+
+  function mirror(arr) {
+	for(let i=arr.length-2;i>=0;i--){
+		arr.push(arr[i])
+	}
+	return arr
+}
