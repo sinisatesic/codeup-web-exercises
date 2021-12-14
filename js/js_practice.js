@@ -1688,3 +1688,9 @@ function getLength(arr) {
 	});
 	return count;
 }
+
+// insteresting answer :
+
+function getLength(arr) {
+	return arr.join("|").split("|").join("").split(",").join("").length
+}
