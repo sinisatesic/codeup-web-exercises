@@ -1780,3 +1780,10 @@ function mean(num) {
 	}
 	return wat/arr.length;
 }
+
+//with reduce:
+
+function mean(num) {
+	let s=String(Math.abs(num)).split('');
+	return s.reduce((x,y)=>x+Number(y),0)/s.length;
+}
