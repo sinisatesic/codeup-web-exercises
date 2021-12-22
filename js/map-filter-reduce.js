@@ -81,7 +81,7 @@ console.log(longest);
 
 // Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 let listNames = users.reduce((allNames, instructor) => {
-    return `${allNames} ${instructor.name}`
+    return `${allNames}, ${instructor.name}`
 }, "instructors: ");
 console.log(listNames);
 
