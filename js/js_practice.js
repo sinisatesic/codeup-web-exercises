@@ -1878,3 +1878,14 @@ function checkEquals(arr1, arr2) {
 function checkEquals(arr1, arr2) {
 	return arr1.toString() == arr2.toString();
 }
+
+// COOL QUICK TRICK: Get numbers only from string with numbers (returns as string):
+
+function getYear(yearString) {
+	let yearArr,bucket;
+	[yearArr, bucket] = [yearString.split(''),[]];
+	for(var i=3; i>=0; i--) {
+		bucket[i] = yearArr.pop();
+	}
+	return bucket.join('');
+}
