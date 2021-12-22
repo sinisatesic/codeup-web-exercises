@@ -1817,3 +1817,11 @@ function factorChain(arr) {
 	}
 	return true;
 }
+
+//
+
+const factorChain = arr => {
+	return arr.reduce((bool, element, i) => {
+		return arr[i]%arr[i-1]===0;
+	})
+}
