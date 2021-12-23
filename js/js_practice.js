@@ -1911,3 +1911,14 @@ function makeTitle(str) {
 // using regex:
 
 let makeTitle = x => x.replace(/(^\w|\s\w)/g, x => x.toUpperCase());
+
+
+// cool regex trick from Mozilla:
+
+// Switching words in a string
+// The following script switches the words in the string. For the replacement text, the script uses capturing groups and the $1 and $2 replacement patterns.
+
+let re = /(\w+)\s(\w+)/;
+let str = 'John Smith';
+let newstr = str.replace(re, '$2, $1');
+console.log(newstr);  // Smith, John
