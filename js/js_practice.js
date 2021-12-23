@@ -1907,3 +1907,7 @@ function getYear(yearString) {
 function makeTitle(str) {
 	return str.split(' ').map((a) => a.charAt(0).toUpperCase() + a.substring(1)).join(' ');
 }
+
+// using regex:
+
+let makeTitle = x => x.replace(/(^\w|\s\w)/g, x => x.toUpperCase());
