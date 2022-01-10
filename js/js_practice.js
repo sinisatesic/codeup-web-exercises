@@ -256,6 +256,8 @@ let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
 )
 // flattened is [0, 1, 2, 3, 4, 5]
 
+let flattenedE6 = [[0, 1], [2, 3], [4, 5]].reduce((prevVal, curVal) => prevVal.concat(curVal), []);
+
 //
 
 // Integer Digits Count
@@ -1953,3 +1955,43 @@ const missingNum = (arr) => {
 	  if (arr.indexOf(i) === -1) return i;
 	}
   }
+
+//   function firstPlace(road) {
+// 	let wut = '';
+  
+// 	for(let i = 0; i < road.length; i++){
+// 		  if (road == ""){
+// 		wut = 'No road available';
+// 	  }
+// 		  let tempArr = Array(road);
+// 	  if (road.match(a => a == '=')){
+// 			  wut = 'No car available';
+// 			  }
+// 	  if (road.length === 1){
+// 		wut = road;
+// 	  }
+		//   if (road !== null && !road.includes('=')){
+		// 	  wut = road.match(/[a-z-A-Z]/g).slice(-1).toString();
+		//   }
+	  
+// 	}
+// 	return wut;
+//   }
+
+function firstPlace(road) {
+	let str = "";
+	let tempArr = [];
+	tempArr.push(road);
+	if (tempArr.every(a => a === tempArr[0])){
+		str = "No car available";
+	}
+	if (road === ""){
+		str = "No road available";
+	}
+	for(let i = 0; i < road.length; i++){
+		if (road[i] !== "=" && road[i] !== "" && road[i] !== null){
+			str = road.replace(/[^a-z]/gi, '').split('').join(' ')[0];
+		}
+	}
+	return str;
+}
