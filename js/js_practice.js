@@ -1978,9 +1978,23 @@ const missingNum = (arr) => {
 // 	return wut;
 //   }
 
+
+// Who's in First Place?
+// Create a function that takes a string road and returns the car that's in first place. The road will be made of "=", and cars will be represented by letters in the alphabet.
+
+// Examples
+// firstPlace("====b===O===e===U=A==") ➞ "A"
+
+// firstPlace("e==B=Fe") ➞ "e"
+
+// firstPlace("proeNeoOJGnfl") ➞ "l"
+// Notes
+// Return "No car available" if there is no car on the road and "No road available" if there is no road.
+
 function firstPlace(road) {
 	let str = "";
 	let tempArr = [];
+	let newStr = "";
 	tempArr.push(road);
 	if (tempArr.every(a => a === tempArr[0])){
 		str = "No car available";
@@ -1988,9 +2002,10 @@ function firstPlace(road) {
 	if (road === ""){
 		str = "No road available";
 	}
-	for(let i = 0; i < road.length; i++){
-		if (road[i] !== "=" && road[i] !== "" && road[i] !== null){
-			str = road.replace(/[^a-z]/gi, '').split('').join(' ')[0];
+	newStr = road.split('').reverse().join('');
+	for(let i = 0; i < newStr.length; i++){
+		if (newStr[i] !== "=" && newStr[i] !== "" && newStr[i] !== null){
+			str = newStr.replace(/[^a-z]/gi, '').split('').join(' ')[0];
 		}
 	}
 	return str;
