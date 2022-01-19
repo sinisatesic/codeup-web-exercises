@@ -2103,3 +2103,50 @@ function XO(str) {
 function XO(str) {
 	return str.toLowerCase().split("x").length == str.split("o").length;
   }
+
+//   Something in the Box?
+// Create a function that returns true if an asterisk * is inside a box.
+
+// Examples
+// inBox([
+//   "###",
+//   "#*#",
+//   "###"
+// ]) ➞ true
+
+// inBox([
+//   "####",
+//   "#* #",
+//   "#  #",
+//   "####"
+// ]) ➞ true
+
+// inBox([
+//   "*####",
+//   "# #",
+//   "#  #*",
+//   "####"
+// ]) ➞ false
+
+// inBox([
+//   "#####",
+//   "#   #",
+//   "#   #",
+//   "#   #",
+//   "#####"
+// ]) ➞ false
+// Notes
+// The asterisk may be in the array, however, it must be inside the box, if it exists.
+
+function inBox(arr) {
+	let theSwordOfAThousandTruths;
+	if(!arr.includes('*')){
+		theSwordOfAThousandTruths = false;
+	}
+	 for (let i = 0; i < arr.length; i++){
+		 if (arr[i].includes("*")){
+			 theSwordOfAThousandTruths = true;
+		 }
+	 }
+	return theSwordOfAThousandTruths;
+}
