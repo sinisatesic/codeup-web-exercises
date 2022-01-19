@@ -2150,3 +2150,7 @@ function inBox(arr) {
 	 }
 	return theSwordOfAThousandTruths;
 }
+
+//bolji odgovor:
+
+const inBox = arr => arr.some(str => str.includes('*'));
