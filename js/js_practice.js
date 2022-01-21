@@ -2170,3 +2170,49 @@ function inBox(arr) {
 function reverseArr(num) {
 	return [...String(num)].reverse().map((a) => parseInt(a));
 }
+
+// function multiplicationTable(n) {
+// 	let arr = [];
+	
+// 	for(let j = 1; j <= n; j++){
+// 		arr.push(j)
+// 	}
+// 	let secondArr = arr.map((a => Array.from(arr, x => x + x)))
+	
+	
+// 	for(let i = 0; i < secondArr.length; i++){
+// 		arr[i] = new Array(secondArr);
+		
+// 	}
+// 	return arr;
+// }
+// function multiplicationTable(n) {
+// 	let arr = [];
+// 	let secArr = [];
+// 	for(let i = 1; i <= n; i++){
+// 		arr.push(i);
+// 	}
+// 	secArr.push(arr);
+// 	for(let j = 1; j < n; j++){
+// 		if (secArr[j] !== arr[j]){
+// 			secArr.push(arr.map((a) => a + a))
+// 		}
+// 	}
+// 	return secArr;
+// }
+
+//pronouncing the x's challenge
+// function xPronounce(sentence) {
+// 	let final = '';
+// 	let splitSen = sentence.split(' ');
+// 	for(let i = 0; i < splitSen.length; i++){
+// 		if (splitSen[i] === "x"){
+// 			final = sentence.replace(splitSen[i], "ecks")
+// 		} else if (splitSen[i][0] === "x"){
+// 			final = sentence.replace(splitSen[i][0], "z");
+// 		} else if (splitSen[i].includes("x")){
+// 			final = sentence.replace("x", "cks")
+// 		}
+// 	}
+// 	return final;
+// }
