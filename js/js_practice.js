@@ -2272,3 +2272,64 @@ function multiplicationTable(n) {
 	}
 	return res;
 }
+
+// Which Generation Are You?
+// Try finding your ancestors and offspring with code.
+
+// Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
+
+// If the number is negative, return the related ancestor.
+// If positive, return the related descendant.
+// You are generation 0. In the case of 0 (male or female), return "me!".
+// Examples
+// generation(2, "f") ➞ "granddaughter"
+
+// generation(-3, "m") ➞ "great grandfather"
+
+// generation(1, "f") ➞ "daughter"
+// Notes
+// Check the Resources tab for helpful hints.
+
+// Generation	Male	Female
+// -3	great grandfather	great grandmother
+// -2	grandfather	grandmother
+// -1	father	mother
+// 0	me!	me!
+// 1	son	daughter
+// 2	grandson	granddaughter
+// 3	great grandson	great granddaughter
+
+// lol
+
+function generation(x, y) {
+	let dontJudgeMe = '';
+	if (x == (-3) && y == "f"){ dontJudgeMe = "great grandmother"}
+	if (x == (-2) && y == "f"){ dontJudgeMe = "grandmother"}
+	if (x == (-1) && y == "f"){ dontJudgeMe = "mother"}
+	if (x == (0) && y == "f"){ dontJudgeMe = "me!"}
+	if (x == 1 && y == "f"){ dontJudgeMe = "daughter"}
+	if (x == 2 && y == "f"){ dontJudgeMe = "granddaughter"}
+	if (x == 3 && y == "f"){ dontJudgeMe = "great granddaughter"}
+	if (x == (-3) && y == "m"){ dontJudgeMe = "great grandfather"}
+	if (x == (-2) && y == "m"){ dontJudgeMe = "grandfather"}
+	if (x == (-1) && y == "m"){ dontJudgeMe = "father"}
+	if (x == (0) && y == "m"){ dontJudgeMe = "me!"}
+	if (x == 1 && y == "m"){ dontJudgeMe = "son"}
+	if (x == 2 && y == "m"){ dontJudgeMe = "grandson"}
+	if (x == 3 && y == "m"){ dontJudgeMe = "great grandson"}
+	return dontJudgeMe;
+}
+// odgovor sa obdjekt-om:
+function generation(x, y) {
+	gen = {
+    "-3": {m: "great grandfather", f: "great grandmother"},
+    "-2": {m: "grandfather", f: "grandmother"},
+    "-1": {m: "father", f: "mother"},
+    "0": {m: "me!", f: "me!"},
+    "1": {m: "son", f: "daughter"},
+    "2": {m: "grandson", f: "granddaughter"},
+    "3": {m:"great grandson", f: "great granddaughter"}
+  }
+  return gen[x][y]
+}
+
