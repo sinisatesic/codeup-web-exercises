@@ -2373,3 +2373,7 @@ function weight(r, h) {
 function lonelyInteger(arr) {
 	return arr.find((a) => !arr.includes(-a));
 }
+
+// dobar odgovor:
+
+const lonelyInteger = arr => arr.filter(a=>!arr.includes(-a))[0]
