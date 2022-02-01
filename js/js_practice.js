@@ -2407,3 +2407,10 @@ function findHighest(arr) {
  }
  return max;
 }
+
+// bolje:
+
+function findHighest( arr ) {
+	arr.sort().reverse()
+	return arr[ 0 ]
+  }
