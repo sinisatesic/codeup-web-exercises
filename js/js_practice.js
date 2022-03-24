@@ -2516,3 +2516,13 @@ function backToHome(directions){
 		(directions.split("N").length - 1) % 2 === 0;
 	}
 }
+
+// bolji odgovor:
+
+function backToHome(directions){
+	const north = directions.split('').filter(x => x == 'N').length
+	  const south = directions.split('').filter(x => x == 'S').length
+	  const east = directions.split('').filter(x => x == 'E').length
+	  const west = directions.split('').filter(x => x == 'W').length
+	  return north == south && east == west
+  }
