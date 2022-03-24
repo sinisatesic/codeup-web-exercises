@@ -2526,3 +2526,14 @@ function backToHome(directions){
 	  const west = directions.split('').filter(x => x == 'W').length
 	  return north == south && east == west
   }
+
+  // najbolji odgovor da razumjem sta se desava:
+
+  function backToHome(directions){
+	let n = directions.split("N").length - 1 //syntax simply counts # of instances of specificed letter
+	let e = directions.split("E").length - 1
+	let s = directions.split("S").length - 1
+	let w = directions.split("W").length - 1 // need -1 since otherwise the instance of the specificed letter will count as occurrence
+
+	return n == s && e == w;;
+}
