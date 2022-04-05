@@ -2687,3 +2687,27 @@ const replacements = { a:1, e:2, i:3, o:4, u: 5}
 function replaceVowel(word){
 	return word.replace(/[aeiou]/g, el => replacements[el])
 }
+
+// Sum of the Items in an Array
+// Create a function that takes an array and returns the sum of all items in the array.
+
+// Examples
+// sumArray([1, 2, 3]) ➞ 6
+// // 1 + 2 + 3 = 6
+
+// sumArray([1, [2, [1]], 3]) ➞ 7
+// // 1 + 2 + 1 + 3 = 7
+// Notes
+// The item in an array can be another array.
+
+function sumArray(arr) {
+	let arrTwo;
+	arrTwo = arr.flat();
+	return arrTwo.reduce((a, b) => Number(a) + Number(b))
+}
+
+// bolji odgovor:
+
+function sumArray(arr){
+	return arr.flat(Infinity).reduce((a,c)=>a+c);
+	}
