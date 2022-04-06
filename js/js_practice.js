@@ -2711,3 +2711,41 @@ function sumArray(arr) {
 function sumArray(arr){
 	return arr.flat(Infinity).reduce((a,c)=>a+c);
 	}
+
+// 	Number of Arrays in an Array
+// Return the total number of arrays inside a given array.
+
+// Examples
+// numOfSubbarrays([[1, 2, 3]]) ➞ 1
+
+// numOfSubbarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3]]) ➞ 3
+
+// numOfSubbarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]) ➞ 4
+
+// numOfSubbarrays([1, 2, 3]) ➞ 0
+// Notes
+// N/A
+
+function numOfSubbarrays(arr) {
+	let counter = 0;
+	for(let i = 0; i < arr.length; i++){
+		if (Array.isArray(arr[i])){
+			counter++;
+		}
+	}
+	return counter;
+}
+
+//bolji odgovor:
+
+function numOfSubbarrays(arr) {
+	return arr.filter(a => a instanceof Array).length;
+}
+
+//jos jedan:
+
+function numOfSubbarrays(arr) {
+	return arr
+		.filter(Array.isArray)
+		.length
+}
