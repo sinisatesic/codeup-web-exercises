@@ -2871,3 +2871,12 @@ function evenLast(arr) {
 	evenNums = arr.filter((el, index) => index % 2 === 0);
 return arr.length == 0 ? 0 : evenNums.reduce((a, b) => a + b, 0) * arr.pop();
 }
+
+//bolji odgovor:
+
+function evenLast(arr) {
+	return arr.length > 0
+	  ? arr.filter((x, i) => i % 2 === 0).reduce((total, cur) => total + cur, 0) *
+		  arr[arr.length - 1]
+	  : 0;
+  }
