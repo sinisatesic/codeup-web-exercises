@@ -2880,3 +2880,27 @@ function evenLast(arr) {
 		  arr[arr.length - 1]
 	  : 0;
   }
+
+//   Double Letters
+// Create a function that takes a word and returns true if the word has two consecutive identical letters.
+
+// Examples
+// doubleLetters("loop") ➞ true
+
+// doubleLetters("yummy") ➞ true
+
+// doubleLetters("orange") ➞ false
+
+// doubleLetters("munchkin") ➞ false
+// Notes
+// N/A
+
+function doubleLetters(word) {
+	return word.match(/([a-z])\1+/g) ? true : false;
+}
+
+// bolji odgovor:
+
+function doubleLetters(word) {
+	return /(\w)\1/.test(word)
+}
