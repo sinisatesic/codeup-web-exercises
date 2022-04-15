@@ -2931,3 +2931,11 @@ function sumTwoSmallestNums(arr) {
 	}
 
 	//my readability here is A1
+
+	//even better:
+
+	function sumTwoSmallestNums(arr) {
+		arr = arr.sort((a,b) => a - b).filter(x => x > 0);
+		return arr[0] + arr[1];
+	   
+	   }
