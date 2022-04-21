@@ -2934,8 +2934,27 @@ function sumTwoSmallestNums(arr) {
 
 	//even better:
 
-	function sumTwoSmallestNums(arr) {
-		arr = arr.sort((a,b) => a - b).filter(x => x > 0);
-		return arr[0] + arr[1];
+	// function sumTwoSmallestNums(arr) {
+	// 	arr = arr.sort((a,b) => a - b).filter(x => x > 0);
+	// 	return arr[0] + arr[1];
 	   
-	   }
+	//    }
+
+
+	//    Chess Board Squares
+	//    Create a function that takes a chess board square's coordinate and return its color.
+	   
+	//    Alternative Text
+	   
+	//    Examples
+	//    chessBoard("a1") ➞ "black"
+	   
+	//    chessBoard("e5") ➞ "black"
+	   
+	//    chessBoard("d1") ➞ "white"
+	//    Notes
+	//    N/A
+
+	const chessBoard = ([file, rank]) => (
+		(file.charCodeAt() % 2 === rank % 2) ? 'black' : 'white'
+	);
