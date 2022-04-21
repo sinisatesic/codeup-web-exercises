@@ -2958,3 +2958,15 @@ function sumTwoSmallestNums(arr) {
 	const chessBoard = ([file, rank]) => (
 		(file.charCodeAt() % 2 === rank % 2) ? 'black' : 'white'
 	);
+
+	// OBJECT MULTI CONDITIONAL TERNARY 
+	var obj = {
+		x: true,
+		y: {
+		  xy: 'some value'
+		}
+	  }
+	  
+	  var result = obj ? obj.y ? obj.y.xy ? obj.y.xy : 'N/A' : 'N/A' : 'N/A'
+	  
+	  console.log(result) // "some value"
