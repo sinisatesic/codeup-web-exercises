@@ -2970,3 +2970,29 @@ function sumTwoSmallestNums(arr) {
 	  var result = obj ? obj.y ? obj.y.xy ? obj.y.xy : 'N/A' : 'N/A' : 'N/A'
 	  
 	  console.log(result) // "some value"
+
+// 	  Harshad Number
+// A number is said to be Harshad if it's exactly divisible by the sum of its digits. Create a function that determines whether a number is a Harshad or not.
+
+// Examples
+// isHarshad(75) ➞ false
+// // 7 + 5 = 12
+// // 75 is not exactly divisible by 12
+
+// isHarshad(171) ➞ true
+// // 1 + 7 + 1 = 9
+// // 9 exactly divides 171
+
+// isHarshad(481) ➞ true
+
+// isHarshad(89) ➞ false
+
+// isHarshad(516) ➞ true
+
+// isHarshad(200) ➞ true
+// Notes
+// A recursive version of this challenge can be found here.
+
+function isHarshad(n) {
+	return n % n.toString().split('').map(Number).reduce((a, b) => a + b, 0) === 0;
+}
