@@ -2996,3 +2996,9 @@ function sumTwoSmallestNums(arr) {
 function isHarshad(n) {
 	return n % n.toString().split('').map(Number).reduce((a, b) => a + b, 0) === 0;
 }
+
+//jaci odgovor:
+
+const isHarshad = num =>
+	!(num % [...String(num)].reduce((x, y) => x + +y, 0))
+
