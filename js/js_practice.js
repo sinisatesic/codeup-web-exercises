@@ -3081,3 +3081,9 @@ function getDays(date1, date2) {
 	let day = 24 * 60 * 60 * 1000;
 	return Math.round(Math.abs(date1 - date2)/day)
 }
+
+// cool option:
+
+function getDays(date1, date2) {
+	return new Date(date2 - date1).getDate() - 1
+}
