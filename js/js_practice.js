@@ -3026,3 +3026,6 @@ function oddishOrEvenish(num) {
 	return num.toString().split('').map(Number).reduce((a, b) => a + b, 0) % 2 !== 0 ? "Oddish" : "Evenish";
 }
 // boom!
+
+// neat:
+const oddishOrEvenish = n => ['Even','Odd'][[...''+n].reduce((a,v) => +v+a, 0) % 2]+'ish';
