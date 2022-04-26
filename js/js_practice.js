@@ -3029,3 +3029,7 @@ function oddishOrEvenish(num) {
 
 // neat:
 const oddishOrEvenish = n => ['Even','Odd'][[...''+n].reduce((a,v) => +v+a, 0) % 2]+'ish';
+
+//sick af:
+const oddishOrEvenish = n => eval([...n+''].join`+`) % 2
+  ? 'Oddish' : 'Evenish'
