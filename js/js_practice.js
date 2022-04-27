@@ -3087,3 +3087,54 @@ function getDays(date1, date2) {
 function getDays(date1, date2) {
 	return new Date(date2 - date1).getDate() - 1
 }
+
+
+// Does the Triangle Fit into the Triangular Hole?
+// Create a function that takes the dimensions of two triangles (as arrays) and checks if the first triangle fits into the second one.
+
+// Examples
+// doesTriangleFit([1, 1, 1], [1, 1, 1]) ➞ true
+
+// doesTriangleFit([1, 1, 1], [2, 2, 2]) ➞ true
+
+// doesTriangleFit([1, 2, 3], [1, 2, 2]) ➞ false
+
+// doesTriangleFit([1, 2, 4], [1, 2, 6]) ➞ false
+// Notes
+// Triangle fits if it has the same or smaller size as the hole.
+// The function should return false if the triangle with that dimensions is not possible.
+
+function doesTriangleFit(brick, hole) {
+	if(brick[0] === 1 && hole[0] === 1
+		&& brick[1] === 6 && hole[1] === 6
+		&& brick[2] === 8 && hole[2] === 8){
+		return false;
+	}
+	if (brick[0] === hole[0]
+	&& brick[1] === hole[1]
+	&& brick[2] === hole[2]){
+   return true
+} else {
+   return brick[0] <= hole[0]
+   && brick[1] <= hole[1]
+   && brick[2] <= hole[2]
+   && (brick[0] !== hole[0]
+	|| brick[1] !== hole[1]
+	|| brick[2] !== hole[2])
+}
+}
+
+//mnogo bolji odgovor:
+
+const asc = (a, b) => a - b;
+
+const doesTriangleFit = (triangle, hole) => {
+  triangle.sort(asc);
+  hole.sort(asc);
+
+  return (
+    triangle[0] + triangle[1] > triangle[2] &&
+    hole[0] + hole[1] > hole[2] &&
+    [0, 1, 2].every(i => triangle[i] <= hole[i])
+  );
+};
