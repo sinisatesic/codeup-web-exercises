@@ -3160,3 +3160,52 @@ function isExactlyThree(n) {
 		if(n % i === 0) return false
 	return Number.isInteger(sqrt) && n > 1
 }
+
+
+// Rectangle Series 1: Skeleton
+// Write a class called Rectangle that represents a rectangular two-dimensional region. It should have the following constructor:
+
+// constructor(x, y, width, height)
+// Constructs a new rectangle whose top-left corner is specified by the given coordinates and with the given width and height.
+// It should have the following properties:
+
+// x
+
+// y
+
+// width
+
+// height
+// It should have the following methods:
+
+// toString()
+// Returns a string representation of this rectangle, as [x=1, y=2, width=3, height=4].
+
+let string = ''
+class Rectangle {
+	constructor(x, y, width, height){
+		this.x = 1;
+		this.y = 2;
+		this.width = 3;
+		this.height = 4;
+	}
+	string = `[x=${this.x}, y=${this.y}, width=${this.width}, height=${this.height}`
+}
+return string;
+
+//bolji odgovor:
+
+class Rectangle {
+	constructor(x, y, width, height) {
+		this.x = x;
+		this.y = y;
+		this.width = width;
+		this.height = height;
+	}
+	
+	toString() {
+		const {x, y, width, height} = this;
+		return `[x=${x}, y=${y}, width=${width}, height=${height}]`;
+	}
+}
+
