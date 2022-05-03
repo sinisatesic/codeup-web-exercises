@@ -3324,3 +3324,21 @@ function colorPatternTimes(cols) {
 function colorPatternTimes(cl) {
 	return cl.length*2 + cl.slice(1).reduce((a,c,i)=>c===cl[i]?a:a+1,0)
 }
+
+// Reverse the Odd Length Words
+// Given a string, reverse all the words which have odd length. The even length words are not changed.
+
+// Examples
+// reverseOdd("Bananas") ➞ "sananaB"
+
+// reverseOdd("One two three four") ➞ "enO owt eerht four"
+
+// reverseOdd("Make sure uoy only esrever sdrow of ddo length")
+// ➞ "Make sure you only reverse words of odd length"
+// Notes
+// There is exactly one space between each word and no punctuation is used.
+
+function reverseOdd(str) {
+	let arrs = str.split(' ');
+	return arrs.map(a => a.length % 2 !== 0 ? [...a].reverse().join('') : a).join(' ');
+}
