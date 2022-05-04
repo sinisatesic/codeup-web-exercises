@@ -3342,3 +3342,21 @@ function reverseOdd(str) {
 	let arrs = str.split(' ');
 	return arrs.map(a => a.length % 2 !== 0 ? [...a].reverse().join('') : a).join(' ');
 }
+
+// Is the Word an Isogram?
+// An isogram is a word that has no duplicate letters. Create a function that takes a string and returns either true or false depending on whether or not it's an "isogram".
+
+// Examples
+// isIsogram("Algorism") ➞ true
+
+// isIsogram("PasSword") ➞ false
+// // Not case sensitive.
+
+// isIsogram("Consecutive") ➞ false
+// Notes
+// Ignore letter case (should not be case sensitive).
+// All test cases contain valid one word strings.
+
+function isIsogram(str) {
+	return str.toLowerCase().split('').filter((item, pos, arr)=> arr.indexOf(item) == pos).length == str.length;
+}
