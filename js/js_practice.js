@@ -3360,3 +3360,9 @@ function reverseOdd(str) {
 function isIsogram(str) {
 	return str.toLowerCase().split('').filter((item, pos, arr)=> arr.indexOf(item) == pos).length == str.length;
 }
+
+// mnogo brze:
+
+function isIsogram(str) {
+	return str.length === (new Set(str.toLowerCase())).size;
+  }
