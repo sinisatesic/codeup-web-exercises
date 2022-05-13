@@ -3421,3 +3421,14 @@ function maskify(str) {
 	}
 	return arr.join("");
   }
+
+  // jos jedan interesantan odgovor:
+
+  const maskify = (str, char = '#') => {
+	if(!str || str.length <= 4) return str
+	
+	const last4 = str.slice(-4)
+	const maskified = char.repeat(str.length - 4)
+	
+	return maskified + last4
+  }
