@@ -3410,3 +3410,14 @@ function factorize(num) {
 function maskify(str) {
 	return str.replace(/.(?=.{4,}$)/g, '#')
 }
+
+// svidja mi se ovaj odgovor isto:
+
+function maskify(str) {
+	var arr = str.split("");
+	if (str.length > 4) {
+	  for(var i=0; i<str.length-4; i++)
+		arr[i] = '#';
+	}
+	return arr.join("");
+  }
