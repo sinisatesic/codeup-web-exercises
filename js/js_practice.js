@@ -3432,3 +3432,22 @@ function maskify(str) {
 	
 	return maskified + last4
   }
+
+
+  // length of longest substring:
+
+  var lengthOfLongestSubstring = function(s) {
+    let max = 0;
+    let str = ‘’;
+    for (let i = 0; i < s.length; i++) {
+        if (str.indexOf(s[i]) === -1) {
+            str += s[i];
+            if (str.length > max) {
+                max = str.length;
+            }
+        } else {
+            str = str.slice(str.indexOf(s[i]) + 1) + s[i];
+        }
+    }
+    return max;
+};
