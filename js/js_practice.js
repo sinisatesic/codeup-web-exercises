@@ -3509,3 +3509,9 @@ function doubleFactorial(num) {
 	} 
 	return res;
 }
+
+// bolji odgovor:
+
+function doubleFactorial(num) {
+	return num < 1 ? 1 : num * doubleFactorial(num - 2);
+}
