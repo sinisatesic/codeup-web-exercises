@@ -3479,3 +3479,33 @@ function isSastry(number) {
 	let concatNum = "" + number + (number + 1);
 	return Math.sqrt(concatNum) % 1 === 0
 }
+
+
+// Double Factorial
+// Create a function that takes a number num and returns its double factorial.
+
+// Examples
+// doubleFactorial(0) ➞ 1
+
+// doubleFactorial(2) ➞ 2
+
+// doubleFactorial(9) ➞ 945
+// // 9*7*5*3*1 = 945
+
+// doubleFactorial(14) ➞ 645120
+// Notes
+// Assume all input values are greater than or equal to -1.
+// Try to solve it with recursion.
+// Double factorial is not the same as factorial * 2.
+
+function doubleFactorial(num) {
+	let res = 1;
+	for (let i = num; i >= 0; i = i-2)
+	{
+		if (i == 0 || i == 1)
+			return res;
+		else
+			res *= i;
+	} 
+	return res;
+}
