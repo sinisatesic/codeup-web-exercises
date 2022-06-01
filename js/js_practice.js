@@ -3554,3 +3554,9 @@ function isPositiveDominant(a) {
 	
 	return positives.size > negatives.size;
 }
+
+// jos bolji odgovor:
+
+function isPositiveDominant(a) {
+	return new Set(a.filter(x=>x>0)).size>new Set(a.filter(x=>x<0)).size
+}
