@@ -3545,3 +3545,12 @@ function isPositiveDominant(a) {
 	}
 	return pos > neg ? true : false;
 }
+
+// bolji odgovor:
+
+function isPositiveDominant(a) {
+	const positives = new Set(a.filter(n => n > 0));
+	const negatives = new Set(a.filter(n => n < 0));
+	
+	return positives.size > negatives.size;
+}
