@@ -3515,3 +3515,33 @@ function doubleFactorial(num) {
 function doubleFactorial(num) {
 	return num < 1 ? 1 : num * doubleFactorial(num - 2);
 }
+
+// Positive Dominant
+// An array is positive dominant if it contains strictly more unique positive values than unique negative values. Write a function that returns true if an array is positive dominant.
+
+// Examples
+// isPositiveDominant([1, 1, 1, 1, -3, -4]) ➞ false
+// // There is only 1 unique positive value (1).
+// // There are 2 unique negative values (-3, -4).
+
+// isPositiveDominant([5, 99, 832, -3, -4]) ➞ true
+
+// isPositiveDominant([5, 0]) ➞ true
+
+// isPositiveDominant([0, -4, -1]) ➞ false
+// Notes
+// 0 counts as neither a positive nor a negative value.
+
+function isPositiveDominant(a) {
+	let uniqueArr = [... new Set(a)];
+	let pos = 0, neg = 0;
+	for(let i = 0; i < uniqueArr.length; i++){
+		if (uniqueArr[i] > 0 && uniqueArr[i] !== 0){
+			pos+=1;
+		}
+		if (uniqueArr[i] < 0 && uniqueArr[i] !== 0){
+				neg+=1;
+			}
+	}
+	return pos > neg ? true : false;
+}
