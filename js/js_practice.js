@@ -3613,7 +3613,7 @@ function chunkify(arr, size) {
 
 const chunkify = (arr, size) => {
 	let results = [];
-	while (arr.length) {
+	while (arr.length) { // can also specify more distinctally here with arr.length > 0
 		results.push(arr.splice(0, size));
 	}
 	return results;
