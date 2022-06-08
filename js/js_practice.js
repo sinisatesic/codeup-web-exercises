@@ -3191,7 +3191,7 @@ class Rectangle {
 	}
 	string = `[x=${this.x}, y=${this.y}, width=${this.width}, height=${this.height}`
 }
-return string;
+// return string;
 
 //bolji odgovor:
 
