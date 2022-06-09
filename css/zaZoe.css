@@ -102,7 +102,7 @@
     overflow: hidden;
     height: 100%;
     bottom: -1px;
-    background-image: linear-gradient(to top, #09948d 20%, #23234a 80%);
+    /* background-image: linear-gradient(to top, #09948d 20%, #23234a 80%); */
 }
 .bgTop {
     z-index: 15;
@@ -146,7 +146,43 @@
     animation: move_wave 15s linear infinite;
 }
 
+#firstWaveWrap {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background-image: linear-gradient(to top, #09948d 20%, #23234a 80%);
+}
 
+#secondWaveWrap {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background-image: linear-gradient(to top, #23234a 20%, #09948d 09948d 80%);
+}
+
+#test {
+    /* background-color: #09948d; */
+    /* padding-bottom: 200px; */
+    /* border-bottom-left-radius: 75%; */
+    /* border-bottom-right-radius: 75%; */
+    /* clip-path: polygon(51% 36%, 80% 24%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 21% 25%); */
+    /* clip-path: polygon(51% 12%, 79% 0, 100% 35%, 100% 70%, 94% 96%, 51% 100%, 6% 96%, 0% 70%, 0% 35%, 23% 0); */
+    /* clip-path: polygon(50% 6%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 0 0); */
+    /* z-index: 999; */
+    /* background-image: linear-gradient(to top, #09948d 30%, #fff 70%); */
+    background-image: linear-gradient(to bottom, #ffffff, #e2e7f3, #bcd2e6, #8fbfd5, #5cadbc, #5cadbc, #5cadbc, #5cadbc, #8fbfd5, #bcd2e6, #e2e7f3, #ffffff);
+
+
+
+}
 
 .card-title, .card-text {
     text-align: center;
@@ -154,6 +190,9 @@
 
 .card { 
     box-shadow: 0 11px 15px rgba(0, 0, 0, 0.30), 0 12px 12px rgba(0, 0, 0, 0.22);
+    z-index: 999;
+    border: transparent;
+    /* position: relative; */
 }
 .card:hover {
     box-shadow: 0 11px 15px rgba(0, 0, 0, 0.30), 0 12px 12px rgba(0, 0, 0, 0.22);
@@ -178,10 +217,14 @@
     z-index: 0;
     margin-left: -15px;
     position: absolute;
+    margin-top: -600px;
 }
 
 .columns {
     opacity: 0.5;
+    /* height: 3000px; */
+    /* margin-top: -200px; */
+
 }
 
 .column1 {
@@ -189,32 +232,45 @@
     width: 172px;
     background: #09948d;
     position: absolute;
-    animation: column-fading 3s ease-in-out infinite;
+    animation: column-fading 2s ease-in-out infinite;
 }
 @keyframes column-fading {
     0% {
-        height: 0vh;
+        background-color: transparent;
+        height: 0px;
         opacity: 0;
+        /* background-image: linear-gradient(to top, #fff 20%, #09948d 80%); */
     }
     25%{
-        opacity: .25;
+        /* background-color: #fff; */
+        background-color: transparent;
+        opacity: 1;
     }
     50%{
+        /* background-color: #fff; */
+        background-color: transparent;
         opacity: 1;
     }
     75%{
-        opacity: .25;
+        opacity: 1;
+        /* background-color: #09948d; */
+        /* background-image: linear-gradient(to top, #fff 20%, #09948d 80%); */
+        background-image: linear-gradient(to bottom, transparent, transparent, transparent, transparent, #5cadbc, #5cadbc, #5cadbc, #5cadbc, #8fbfd5, #bcd2e6, #e2e7f3, #ffffff);
     }
     100%{
-        height: 100vh;
+        height: 1000px;
         opacity: 0;
+        /* background-color: #09948d; */
+        /* background-image: linear-gradient(to top, #fff 20%, #09948d 80%); */
+        /* background-image: linear-gradient(to bottom, #ffffff, #e2e7f3, #bcd2e6, #8fbfd5, #5cadbc, #5cadbc, #5cadbc, #5cadbc, #8fbfd5, #bcd2e6, #e2e7f3, #ffffff); */
+        background-image: linear-gradient(to bottom, transparent, transparent, transparent, transparent, #5cadbc, #5cadbc, #5cadbc, #5cadbc, #8fbfd5, #bcd2e6, #e2e7f3, #ffffff);
     }
 }
 
 .column2 {
-    height: 100vh;
+    /* height: 100vh; */
     width: 172px;
-    background: #23234a;
+    /* background: #09948d; */
     position: absolute;
     margin-left: 11%;
     animation: column-fading 3s ease-in-out infinite;
@@ -222,19 +278,19 @@
 }
 
 .column3 {
-    min-height: 100vh;
+    /* height: 100vh; */
     width: 172px;
-    background: #09948d;
+    /* background: #09948d; */
     position: absolute;
     margin-left: 22%;
-    animation: column-fading 3s ease-in-out infinite;
+    animation: column-fading 2s ease-in-out infinite;
     animation-delay: 1.5s;
 }
 
 .column4 {
-    min-height: 100vh;
+    /* height: 100vh; */
     width: 172px;
-    background: #23234a;
+    /* background: #09948d; */
     position: absolute;
     margin-left: 33%;
     animation: column-fading 3s ease-in-out infinite;
@@ -242,19 +298,19 @@
 }
 
 .column5 {
-    min-height: 100vh;
+    /* height: 100vh; */
     width: 172px;
-    background: #09948d;
+    /* background: #09948d; */
     position: absolute;
     margin-left: 44%;
-    animation: column-fading 3s ease-in-out infinite;
+    animation: column-fading 2s ease-in-out infinite;
     animation-delay: 2.5s;
 }
 
 .column6 {
-    min-height: 100vh;
+    /* height: 100vh; */
     width: 172px;
-    background: #23234a;
+    /* background: #09948d; */
     position: absolute;
     margin-left: 55%;
     animation: column-fading 3s ease-in-out infinite;
@@ -262,19 +318,19 @@
 }
 
 .column7 {
-    min-height: 100vh;
+    /* height: 100vh; */
     width: 172px;
-    background: #09948d;
+    /* background: #09948d; */
     position: absolute;
     margin-left: 66%;
-    animation: column-fading 3s ease-in-out infinite;
+    animation: column-fading 2s ease-in-out infinite;
     animation-delay: 3.5s;
 }
 
 .column8 {
-    min-height: 100vh;
+    /* height: 100vh; */
     width: 172px;
-    background: #23234a;
+    /* background: #09948d; */
     position: absolute;
     margin-left: 77%;
     animation: column-fading 3s ease-in-out infinite;
@@ -282,15 +338,18 @@
 }
 
 .column9 {
-    min-height: 100vh;
+    /* height: 100vh; */
     width: 172px;
     background: #09948d;
     position: absolute;
     margin-left: 88%;
-    animation: column-fading 3s ease-in-out infinite;
+    animation: column-fading 2s ease-in-out infinite;
     animation-delay: 4.5s;
 }
 
 .footer {
-    border: 5px solid red;
+    /* border: 5px solid red; */
+    height: 500px;
+    position: relative;
+    /* margin-top: 25%; */
 }
