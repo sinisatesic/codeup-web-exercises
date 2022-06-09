@@ -46,18 +46,27 @@ fnLetters.from("#last-name-W", 25, {
 }, "-=2");
 
 
-var slideIndex = 1;
-showSlides(slideIndex);
+// let lastNameFirstO = document.getElementById('last-name-O');
+// let lastNameSecondO = document.getElementById('last-name-second-O');
 
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
+// document.addEventListener('mousemove', () => {
+//     lastNameFirstO.classList.add('moving-letters');
+//     lastNameSecondO.classList.add('moving-letters');
+// });
 
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+
+// var slideIndex = 1;
+// showSlides(slideIndex);
+
+// // Next/previous controls
+// function plusSlides(n) {
+//     showSlides(slideIndex += n);
+// }
+
+// // Thumbnail image controls
+// function currentSlide(n) {
+//     showSlides(slideIndex = n);
+// }
 
 // function showSlides(n) {
 //     var i;
