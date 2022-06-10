@@ -23,10 +23,13 @@
     top: 50%;
     left: 50%;
     margin-top: -50px;
-    margin-left: -100px;
-    width: 100px;
+    margin-left: -70px;
+    width: 200px;
     height: 100px;
     z-index: 999;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+    /* padding: 20px; */
 }
 #lastName {
     position: absolute;
@@ -34,9 +37,12 @@
     left: 50%;
     margin-top: -50px;
     margin-left: 0px;
-    width: 100px;
+    width: 200px;
     height: 100px;
     z-index: 999;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+    /* padding: 20px; */
 }
 .letters {
     font-size: 1.5em;
