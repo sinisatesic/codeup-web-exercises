@@ -3618,3 +3618,35 @@ const chunkify = (arr, size) => {
 	}
 	return results;
 };
+
+// Numbers in Strings
+// Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.
+
+// Examples
+// numInStr(["1a", "a", "2b", "b"]) ➞ ["1a", "2b"]
+
+// numInStr(["abc", "abc10"]) ➞ ["abc10"]
+
+// numInStr(["abc", "ab10c", "a10bc", "bcd"]) ➞ ["ab10c", "a10bc"]
+
+// numInStr(["this is a test", "test1"]) ➞ ["test1"]
+// Notes
+// The strings can contain white spaces or any type of characters.
+// Bonus: Try solving this without RegEx.
+
+function numInStr(arr) {
+    var bucket = [];
+	var numbers = [1,2,3,4,5,6,7,8,9,0];
+    for (var i = 0;i < arr.length; i++){
+			
+			for (var j = 0; j < numbers.length; j++){
+				  if (arr[i].indexOf(numbers[j]) !== -1){
+            bucket.push(arr[i]);
+						break;
+        }
+			}
+      
+        
+    }
+	return bucket;
+}
