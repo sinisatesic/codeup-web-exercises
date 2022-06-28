@@ -1,8 +1,10 @@
 
 
 // console.log('test');
-import { BOOK_API_KEY } from "./content";
-
+// import { BOOK_API_KEY } from "./content";
+// require('dotenv').config();
+// const BOOK_API_KEY = require("./content");
+const BOOK_API_KEY = `UGVUgCb0zGwwH6xHCf8gCHqNsPNC5xAP`;
 // const test_list = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
 // const test_list = `https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=${API_KEY}`
 const test_list = `https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=${BOOK_API_KEY}`

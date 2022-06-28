@@ -5,6 +5,8 @@ js/tutorSession.js
 js/keys.js
 js/jsPractice.js
 js/dom-assessment.js
+.env
+js/books.js
 js/content.js
 content.js
-./content.js
+books.js
