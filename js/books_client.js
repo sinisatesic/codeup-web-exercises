@@ -1,9 +1,16 @@
+
+
+// console.log('test');
+// import { BOOK_API_KEY } from "./content";
+// require('dotenv').config();
+// const BOOK_API_KEY = require("./content");
+
 // const test_list = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
 // const test_list = `https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=${API_KEY}`
 const test_list = `https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=${BOOK_API_KEY}`
 
-const row = document.getElementById('row');
-const containerFluid = document.getElementsByClassName('container-fluid');
+// const row = document.getElementById('row');
+// const containerFluid = document.getElementsByClassName('container-fluid');
 const mainContainer = document.getElementById('customContainerMain');
 
 // console.log(test_list)
@@ -30,10 +37,6 @@ const testList = async (e) => {
         // console.log(book)
         console.log(book.author)
         //
-        // console.log(test)
-        let column = document.createElement('div');
-        column.classList.add('col');
-
         let card = document.createElement('div');
         card.classList.add('card');
 
@@ -43,17 +46,17 @@ const testList = async (e) => {
         let cardBody = document.createElement('div');
         cardBody.classList.add('card-body');
 
-        let paragraph = document.createElement('p');
-        paragraph.classList.add('card-text');
+        let text = document.createElement('text');
+        text.innerHTML = `${book.title} - ${book.author}
+        <br>
+        test`
+        text.classList.add('test');
 
-        paragraph.innerText = `${book.author}`
+        cardBody.appendChild(text);
+        card.appendChild(cardBody);
+        card.appendChild(img);
+        mainContainer.appendChild(card);
 
-        cardBody.appendChild(paragraph);
-        card.appendChild(img, cardBody)
-        column.appendChild(card);
-        // row.appendChild(column);
-        // containerFluid.appendChild(row);
-        // mainContainer.appendChild(containerFluid);
         
     })
 }
