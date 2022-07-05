@@ -47,9 +47,13 @@ const testList = async (e) => {
         cardBody.classList.add('card-body');
 
         let text = document.createElement('text');
-        text.innerHTML = `${book.title} - ${book.author}
+        text.innerHTML = `"${book.title}" - ${book.author}
+        <br>
+        ${book.description}
         <br>
         test`
+
+
         text.classList.add('test');
 
         cardBody.appendChild(text);
