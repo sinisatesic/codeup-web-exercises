@@ -35,6 +35,17 @@ const testList = async (e) => {
 
     jsonTest.results.forEach(book => {
         // console.log(book)
+
+        let cardTest = document.getElementById('test-card').innerHTML;
+        let testLink = document.getElementById('test-link').innerHTML;
+        let res = book.author;
+        res = document.getElementById('test-link');
+
+        cardTest.append(
+            `<div>${res}</div>`
+        )
+
+
         console.log(book.author)
         //
         let card = document.createElement('div');
@@ -66,3 +77,5 @@ const testList = async (e) => {
 }
 
 testList();
+
+
