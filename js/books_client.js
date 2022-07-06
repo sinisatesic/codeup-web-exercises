@@ -38,11 +38,12 @@ const testList = async (e) => {
 
         let cardTest = document.getElementById('test-card').innerHTML;
         let testLink = document.getElementById('test-link').innerHTML;
+        let testPar = document.getElementById('test-par');
         let res = book.author;
-        res = document.getElementById('test-link');
+        document.getElementById('test-par').innerHTML = res;
 
         cardTest.append(
-            `<div>${res}</div>`
+            book.author
         )
 
 
@@ -63,6 +64,10 @@ const testList = async (e) => {
         ${book.description}
         <br>
         test`
+
+        // var div = document.getElementById('divID');
+
+        // div.innerHTML += 'Extra stuff';
 
 
         text.classList.add('test');
