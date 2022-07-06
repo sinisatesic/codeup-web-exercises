@@ -69,6 +69,18 @@ const testList = async (e) => {
 
         // div.innerHTML += 'Extra stuff';
 
+        //using appendChild
+
+        // var theDiv = document.getElementById("<ID_OF_THE_DIV>");
+        // var content = document.createTextNode("<YOUR_CONTENT>");
+        // theDiv.appendChild(content);
+
+        // Using innerHTML:
+        // This approach will remove all the listeners to the existing elements as mentioned by @BiAiB.
+        // So use caution if you are planning to use this version.
+
+        // var theDiv = document.getElementById("<ID_OF_THE_DIV>");
+        // theDiv.innerHTML += "<YOUR_CONTENT>"; 
 
         text.classList.add('test');
 
