@@ -3650,3 +3650,18 @@ function numInStr(arr) {
     }
 	return bucket;
 }
+
+// note regarding .at() method in JS:
+
+// Use the JavaScript .at() feature to grab an array item by it's negative index (-1 for the last item)
+
+const fruits = ['apple', 'banana', 'pear'];
+
+const lastFruit = fruits.at(-1);
+// pear
+
+const lastChar = 'This is a string'.at(-6);
+// 's'
+
+// how it used to be done:
+// const lastFruit = fruits[fruits.length - 1];

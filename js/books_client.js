@@ -36,10 +36,28 @@ const testList = async (e) => {
     jsonTest.results.forEach(book => {
         // console.log(book)
 
+        // var div = document.getElementById('divID');
+
+        // div.innerHTML += 'Extra stuff';
+
+        //using appendChild
+
+        // var theDiv = document.getElementById("<ID_OF_THE_DIV>");
+        // var content = document.createTextNode("<YOUR_CONTENT>");
+        // theDiv.appendChild(content);
+
+        // Using innerHTML:
+        // This approach will remove all the listeners to the existing elements as mentioned by @BiAiB.
+        // So use caution if you are planning to use this version.
+
+        // var theDiv = document.getElementById("<ID_OF_THE_DIV>");
+        // theDiv.innerHTML += "<YOUR_CONTENT>"; 
+
         let cardTest = document.getElementById('test-card').innerHTML;
         let testLink = document.getElementById('test-link').innerHTML;
         let testPar = document.getElementById('test-par');
         let res = book.author;
+
         document.getElementById('test-par').innerHTML = res;
 
         cardTest.append(
@@ -65,22 +83,6 @@ const testList = async (e) => {
         <br>
         test`
 
-        // var div = document.getElementById('divID');
-
-        // div.innerHTML += 'Extra stuff';
-
-        //using appendChild
-
-        // var theDiv = document.getElementById("<ID_OF_THE_DIV>");
-        // var content = document.createTextNode("<YOUR_CONTENT>");
-        // theDiv.appendChild(content);
-
-        // Using innerHTML:
-        // This approach will remove all the listeners to the existing elements as mentioned by @BiAiB.
-        // So use caution if you are planning to use this version.
-
-        // var theDiv = document.getElementById("<ID_OF_THE_DIV>");
-        // theDiv.innerHTML += "<YOUR_CONTENT>"; 
 
         text.classList.add('test');
 
