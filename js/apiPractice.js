@@ -1,6 +1,6 @@
-const firstAPI = `http://geodb-free-service.wirefreethought.com/`
+const firstAPI = `https://openlibrary.org/api/books`
 
-const getData = async (e) => {
+const getData = async ( ) => {
     const response = await fetch(firstAPI);
     const jsonResponse = await response.json();
 
