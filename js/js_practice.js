@@ -3700,6 +3700,7 @@ function progressDays(runs) {
 function progressDays(runs) {
 	return runs.filter((run, i) => runs[i + 1] > run).length;
 }
+//filter((element, index, array) => { /* ... */ } )
 
 
 // Adding Parity Bits
