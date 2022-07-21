@@ -3751,3 +3751,49 @@ function addParityBit(b) {
 	var hold = a ? 0 : 1
 	return b + hold 
 }
+
+// Get the Century
+// Create a function that takes in a year and returns the correct century.
+
+// Examples
+// century(1756) ➞ "18th century"
+
+// century(1555) ➞ "16th century"
+
+// century(1000) ➞ "10th century"
+
+// century(1001) ➞ "11th century"
+
+// century(2005) ➞ "21st century"
+// Notes
+// All years will be between 1000 and 2010.
+// The 11th century is between 1001 and 1100.
+// The 18th century is between 1701-1800.
+
+//moj odgovor:
+
+function century(year) {
+	let cent = 0;
+	if(year > 2000){return `21st century`}
+	if(year <= 1000){cent = 10}
+	if(year >= 1001 && year <= 1100){cent = 11}
+	if(year >= 1101 && year <= 1200){cent = 12}
+	if(year >= 1201 && year <= 1300){cent = 13}
+	if(year >= 1301 && year <= 1400){cent = 14}
+	if(year >= 1401 && year <= 1500){cent = 15}
+	if(year >= 1501 && year <= 1600){cent = 16}
+	if(year >= 1601 && year <= 1700){cent = 17}
+	if(year >= 1701 && year <= 1800){cent = 18}
+	if(year >= 1801 && year <= 1900){cent = 19}
+	if(year >= 1901 && year <= 2000){cent = 20}
+	return `${cent}th century`
+}
+
+// mnogo bolji odgovor:
+
+function century(year) {
+	const century = Math.ceil(year / 100);
+  return century !== 21 
+		? `${century}th century` 
+		: `${century}st century`;
+}
