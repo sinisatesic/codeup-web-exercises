@@ -3797,3 +3797,28 @@ function century(year) {
 		? `${century}th century` 
 		: `${century}st century`;
 }
+
+// Geometry 1: Length of Line Segment
+// Write a function that takes coordinates of two points on a two-dimensional plane and returns the length of the line segment connecting those two points.
+
+// Examples
+// lineLength([15, 7], [22, 11]) ➞ 8.06
+
+// lineLength([0, 0], [0, 0]) ➞ 0
+
+// lineLength([0, 0], [1, 1]) ➞ 1.41
+// Notes
+// The order of the given numbers is X, Y.
+// This challenge is easier than it looks.
+// Round your result to two decimal places.
+
+function lineLength([x1, y1], [x2, y2]) {
+	let hypot = Math.hypot((x2 - x1), (y2 - y1));
+	return Number(hypot.toFixed(2));
+}
+
+// cisci odgovor:
+
+function lineLength([x1, y1], [x2, y2]) {
+	return +Math.hypot(x1 - x2, y1 - y2).toFixed(2);
+}
