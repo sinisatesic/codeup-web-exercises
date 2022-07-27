@@ -3852,3 +3852,4 @@ function lineLength([x1, y1], [x2, y2]) {
 // just modulo 9 is answer
 
 const digitalRoot = num => num % 9
+//https://www.flyingcoloursmaths.co.uk/a-neat-number-trick-digital-roots-and-modulo-9-arithmetic/
