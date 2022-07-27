@@ -565,12 +565,12 @@ const getGlobalInfo = async () => {
 ////// getGlobalInfo();
 
 // event listeners:
-// trendingButton.addEventListener('click', getTrends);
-// popularButton.addEventListener('click', getPrices);
-// newsButton.addEventListener('click', getStatusInfo);
-// platformsButton.addEventListener('click', getPlatformsInfo);
-// productsButton.addEventListener('click', getProductsInfo)
-// globalButton.addEventListener('click', getGlobalInfo);
+trendingButton.addEventListener('click', getTrends);
+popularButton.addEventListener('click', getPrices);
+newsButton.addEventListener('click', getStatusInfo);
+platformsButton.addEventListener('click', getPlatformsInfo);
+productsButton.addEventListener('click', getProductsInfo)
+globalButton.addEventListener('click', getGlobalInfo);
 /////
 
 document.addEventListener("DOMContentLoaded", () => {
