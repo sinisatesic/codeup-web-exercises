@@ -3853,3 +3853,35 @@ function lineLength([x1, y1], [x2, y2]) {
 
 const digitalRoot = num => num % 9
 //https://www.flyingcoloursmaths.co.uk/a-neat-number-trick-digital-roots-and-modulo-9-arithmetic/
+
+
+// Orthogonal Vector
+// Create a function that takes two vectors as arrays and checks if the two vectors are orthogonal or not. The return value is boolean. Two vectors a and b are orthogonal if their dot product is equal to zero.
+
+// Examples
+// isOrthogonal([1, 2], [2, -1]) ➞ true
+
+// isOrthogonal([3, -1], [7, 5]) ➞ false
+
+// isOrthogonal([1, 2, 0], [2, -1, 10]) ➞ true
+// Notes
+// The two arrays will be of same length.
+// Check out the Resources tab.
+
+//moj odgovor:
+
+function isOrthogonal(arr1, arr2) {
+	if (arr1.length == 2){
+		return arr1[0]*arr2[0] + arr1[1]*arr2[1] === 0;
+	} else {
+		return arr1[0]*arr2[0] + arr1[1]*arr2[1] + arr1[2]*arr2[2] === 0;
+	}
+}
+
+// bolji odgovor ali treba bolje znanje:
+
+function isOrthogonal(arr1, arr2) {
+	return !arr1.reduce((t,c,i)=> t+c*arr2[i],0)
+}
+// reduce((previousValue, currentValue, currentIndex) => { /* … */ } )
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
