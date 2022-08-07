@@ -3888,3 +3888,26 @@ function isOrthogonal(arr1, arr2) {
 }
 // reduce((previousValue, currentValue, currentIndex) => { /* … */ } )
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+
+
+
+//greeter function?
+
+const greet = (nameOne, nameTwo) => {
+	let greeting = '';
+	if(nameOne){
+		if(nameTwo) {
+			greeting = `Hi ${nameOne}, I am ${nameTwo}.`
+		} else {
+			greeting = `Hi ${nameOne}.`
+		}
+	} else {
+		greeting = 'Hi!'
+	}
+	return greeting;
+}
+
+// with this, sad path for first conditional is easiest to first understand. If there is no argument added to function, sad path defaults to 'Hi!'
+// Happy path encompasses two argument option within nested if statement.
+// happy path of nested if will provide output if two names provided, while said path for nested targets one argument input.
+// 
