@@ -3983,3 +3983,87 @@ const add = n => passed => n + passed;
 function freeShipping(order) {
 	return Object.values(order).reduce((a, b) => a + b) > 50;
 }
+
+
+// One Plus One
+// Create a function that outputs the result of a math expression in words.
+
+// Examples
+// wordedMath("One plus one") ➞ "Two"
+
+// wordedMath("zero Plus one") ➞ "One"
+
+// wordedMath("one minus one") ➞ "Zero"
+// Notes
+// Expect only the operations plus and minus.
+// Expect to only get numbers and answers from 0 to 2.
+// The first letter of the answer must be capitalised.
+
+const wordedMath = (expr) => {
+	let tot = 0, firstNum = 0, secondNum = 0, ans = '';
+	let splitted = expr.split(' ');
+	for(let i = 0; i < splitted.length; i++){
+		if(splitted[0] === "zero" || splitted[0] === "Zero"){
+			firstNum = 0;
+		}
+		if(splitted[0] === "one" || splitted[0] === "One"){
+			firstNum = 1;
+		}
+		if(splitted[2] === "zero" || splitted[2] === "Zero"){
+			secondNum = 0;
+		}
+		if(splitted[2] === "one" || splitted[2] === "One"){
+			secondNum = 1;
+		}
+		splitted[1] === "plus" || splitted[1] === "Plus"
+		? tot = firstNum + secondNum
+		: tot = firstNum - secondNum;
+		return ans = tot === 0 ? 'Zero' : tot === 1 ? 'One' : 'Two'
+	}
+}
+
+// function oriented answer but using eval() which is security risk:
+
+function wordedMath(expr) {
+	var output = ["Zero", "One", "Two"];
+	var exprs = expr.split(" ").map(a=> a.toLowerCase());
+	return output[eval(stringToNumber(exprs[0]) + stringToOperator(exprs[1]) + stringToNumber(exprs[2]))];
+}
+function stringToNumber(str){
+	return str === "zero" ? 0 : 
+         str === "one" ? 1 : 2;
+}
+function stringToOperator(str){
+	return str === "plus" ? "+" : "-";
+}
+
+// prolly clearest/best answer without using eval
+
+function stringToNum(str) {
+	if (str.toLowerCase() === "zero") {
+	  return 0;
+	} else if (str.toLowerCase() === "one") {
+	  return 1;
+	} else {
+	  return 2;
+	}
+}
+
+function numToString(num) {
+	if (num === 0) {
+	  return "Zero";
+	} else if (num === 1) {
+	  return "One";
+	} else {
+	  return "Two";
+	}
+}
+
+function wordedMath(expr) {
+  expr = expr.split(" ");
+  if (expr[1].toLowerCase() === "plus") {
+	return numToString(stringToNum(expr[0]) + stringToNum(expr[2]));
+  } else {
+	return numToString(stringToNum(expr[0]) - stringToNum(expr[2]));
+  }
+}
