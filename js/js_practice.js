@@ -4067,3 +4067,56 @@ function wordedMath(expr) {
 	return numToString(stringToNum(expr[0]) - stringToNum(expr[2]));
   }
 }
+
+//
+
+// All About Strings
+// Create a function that, given a string with at least three characters, returns an array of its:
+
+// Length.
+// First character.
+// Last character.
+// Middle character, if the string has an odd number of characters. Middle TWO characters, if the string has an even number of characters.
+// Index of the second occurrence of the second character in the format "@ index #" and "not found" if the second character doesn't occur again.
+// Examples
+// allAboutStrings("LASA") ➞ [4, "L", "A", "AS", "@ index 3"]
+
+// allAboutStrings("Computer") ➞ [8, "C", "r", "pu", "not found"]
+
+// allAboutStrings("Science") ➞ [7, "S", "e", "e", "@ index 5"]
+// Notes
+// N/A
+
+// moj odgovor:
+
+function allAboutStrings(str) {
+	let arr = [];
+	let length = str.length;
+	let indexOfSec = !/(.).*\1/.test(str)
+	? 'not found'
+	: `@ index ${str.split(str.charAt(1), 2).join(str.charAt(1)).length}`
+	let firstChar = str.split('')[0]
+	let mid = str.length % 2 === 1 ? str[Math.floor(str.length/2)]
+	: (str[Math.floor(str.length/2) - 1]) + str[Math.floor(str.length/2)]
+	let lastChar = str.split('')[str.length - 1]
+	
+	arr.push(length, firstChar, lastChar, mid, indexOfSec);
+	
+	return arr;
+}
+
+// for future reference:
+// const second = str[1];
+// const indexOfSecond = str.indexOf(second, 2);
+// ^ to find second instance of specific character
+
+// bolji odgovor:
+
+function allAboutStrings(str) {
+	const length = str.length
+	const first = str[0]
+	const last = str[length - 1]
+	const mid = length % 2 === 0 ? str.slice(length / 2 - 1, length / 2 + 1) : str[Math.floor(length / 2)]
+	const index = [...str].indexOf(str[1], 2)
+	return [length, first, last, mid, index > -1 ? `@ index ${index}` : 'not found']
+}
