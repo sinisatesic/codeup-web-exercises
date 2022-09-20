@@ -4177,6 +4177,27 @@ function allAboutStrings(str) {
 // Both binary strings will have an equal number of zeroes and ones.
 // A swap is switching two elements in a string (swaps do not have to be adjacent).
 
-function minSwaps(s1, s2) {
-	return s1.split('').filter((a,b) => a !== s2[b]).length/2
+// function minSwaps(s1, s2) {
+// 	return s1.split('').filter((a,b) => a !== s2[b]).length/2
+// }
+
+// Pandigital Numbers
+// A pandigital number contains all digits (0-9) at least once. Write a function that takes an integer, returning true if the integer is pandigital, and false otherwise.
+
+// Examples
+// isPandigital(98140723568910) ➞ true
+
+// isPandigital(90864523148909) ➞ false
+// // 7 is missing.
+
+// isPandigital(112233445566778899) ➞ false
+// Notes
+// Think about the properties of a pandigital number when all duplicates are removed.
+
+function isPandigital(num) {
+	let arr = num.toString().split('').map(Number);
+	let noDups = [...new Set(arr)];
+	let target = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+	
+	return target.every((a) => noDups.includes(a));
 }
