@@ -4261,7 +4261,30 @@ function chosenWine(wines) {
 	return wines.sort((a,b) => a.price - b.price)[1].name
 }
 
+// ternary: 
+
 const chosenWine = (wines) => wines.length === 0
 ? null
 : wines.length === 1
 ? wines[0].name : wines.sort((a,b) => a.price - b.price)[1].name;
+
+
+
+// Return the Middle Character(s) of a String
+// Create a function that takes a string and returns the middle character(s). If the word's length is odd, return the middle character. If the word's length is even, return the middle two characters.
+
+// Examples
+// getMiddle("test") ➞ "es"
+
+// getMiddle("testing") ➞ "t"
+
+// getMiddle("middle") ➞ "dd"
+
+// getMiddle("A") ➞ "A"
+// Notes
+// All test cases contain a single word (as a string).
+
+function getMiddle(str) {
+	return str.length % 2 === 1 ? str[Math.floor(str.length/2)]
+	: (str[Math.floor(str.length/2) - 1]) + str[Math.floor(str.length/2)]
+}
