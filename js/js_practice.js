@@ -4288,3 +4288,76 @@ function getMiddle(str) {
 	return str.length % 2 === 1 ? str[Math.floor(str.length/2)]
 	: (str[Math.floor(str.length/2) - 1]) + str[Math.floor(str.length/2)]
 }
+
+// Disarium Number
+// A number is said to be Disarium if the sum of its digits raised to their respective positions is the number itself.
+
+// Create a function that determines whether a number is a Disarium or not.
+
+// Examples
+// isDisarium(75) ➞ false
+// // 7^1 + 5^2 = 7 + 25 = 32
+
+// isDisarium(135) ➞ true
+// // 1^1 + 3^2 + 5^3 = 1 + 9 + 125 = 135
+
+// isDisarium(544) ➞ false
+
+// isDisarium(518) ➞ true
+
+// isDisarium(8) ➞ true
+
+// isDisarium(466) ➞ false
+// Notes
+// Position of the digit is 1-indexed.
+// A recursive version of this challenge can be found via this link.
+
+function isDisarium(n) {
+	let arr = Array.from(String(n), Number)
+	return arr.reduce((a,b,c) => a + (b**(c+1))) === n;
+}
+
+// another exmaple of converting a number to an array of seperate elements:
+// const numsArr = n.toString().split('').map(x => Number(x))
+
+
+// Find Value in a Binary Tree
+// An array that represents a Binary Tree is in the following form:
+
+// binaryTree = [val, arrLeft, arrRight]
+// When arrLeft is the left side of the tree and arrRight is the right side of the tree.
+
+// To illustrate:
+
+// const arr1 = [3, [ 8, [ 5, null, null], null], [ 7, null, null]]
+
+// // arr1 represents the following Binary Tree:
+
+//                     3
+//                    / \
+//                   8   7
+//                  /\   /\
+//                 5  N N  N
+//                /\
+//                N N
+
+// // Where N represents null.
+// Create a function that takes an array that represent a Binary Tree and a value and return true if the value is in the tree and, false otherwise.
+
+// Examples
+// valueInTree(arr1, 5) ➞ true
+
+// valueInTree(arr1, 9) ➞ false
+
+// valueInTree(arr2, 51) ➞ false
+// Notes
+// The tree will contain integers only and will be presented by an array in the specified format.
+
+function valueInTree(tree, val) {
+	let flattened = tree.flat(Infinity);
+	return flattened.includes(val);
+}
+
+// bolji odgovor:
+
+const valueInTree = (tree, val) => tree.flat(Infinity).includes(val);
