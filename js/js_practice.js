@@ -4361,3 +4361,58 @@ function valueInTree(tree, val) {
 // bolji odgovor:
 
 const valueInTree = (tree, val) => tree.flat(Infinity).includes(val);
+
+
+// Product of Digits of Sum
+// Create a function that takes one, two or more numbers as arguments and adds them together to get a new number. The function then repeatedly multiplies the digits of the new number by each other, yielding a new number, until the product is only 1 digit long. Return the final product.
+
+// Examples
+// sumDigProd(16, 28) ➞ 6
+// // 16 + 28 = 44
+// // 4 * 4 =  16
+// // 1 * 6 = 6
+
+// sumDigProd(0) ➞ 0
+
+// sumDigProd(1, 2, 3, 4, 5, 6) ➞ 2
+// Notes
+// The input of the function is at least one number.
+
+function sumDigProd(...args) {
+	let arr = [], ans, productArr, secondProdArr,
+	sumOfSecondProdArr, tempNum, nestNumArr;
+	arr.push(...args);
+	let sumOfArr = arr.reduce((a,b) => a + b)
+	let afterAdditionArr = Array.from(String(sumOfArr), Number);
+	if (afterAdditionArr.length === 1){
+		ans = afterAdditionArr.shift();
+	} else {
+			productArr = afterAdditionArr.reduce((a,b) => a * b);
+			ans = productArr;
+			if (productArr.toString().length > 1){
+				secondProdArr = Array.from(String(productArr), Number);
+				ans = secondProdArr;
+				if (secondProdArr.length !== 1){
+					ans = secondProdArr.reduce((a,b) => a * b)
+					if (ans.toString().length !== 1){
+						ans = Array.from(String(ans), Number);
+						if (ans.constructor === Array){
+							ans = ans.reduce((a,b) => a * b);
+							if (ans.toString().length !== 1){
+								ans = Array.from(String(ans), Number);
+								if (ans.constructor === Array){
+									ans = ans.reduce((a,b) => a * b);
+								}
+							}
+						}
+					}
+				} 
+		}
+	}
+	return ans
+}
+
+// mnogo, mnogo... mnogo bolji odgovor lol:
+
+let prod = n => n < 10 ? n : prod(+String(n).split('').reduce((a,b)=>a*b));
+let sumDigProd = (...arr) => prod(arr.reduce((a,b)=>a+b));
