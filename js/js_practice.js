@@ -4416,3 +4416,47 @@ function sumDigProd(...args) {
 
 let prod = n => n < 10 ? n : prod(+String(n).split('').reduce((a,b)=>a*b));
 let sumDigProd = (...arr) => prod(arr.reduce((a,b)=>a+b));
+
+
+// Exactly Three
+// You are given a number n. Determine whether n has exactly 3 divisors or not.
+
+// Examples
+// isExactlyThree(4) ➞ true
+// // 4 has only 3 divisors: 1, 2 and 4
+
+// isExactlyThree(12) ➞ false
+// // 12 has 6 divisors: 1, 2, 3, 4, 6, 12
+
+// isExactlyThree(25) ➞ true
+// // 25 has only 3 divisors: 1, 5, 25
+// Notes
+// 1 ≤ n ≤ 10^12
+
+function isExactlyThree(n) {
+	let sqrt = Math.sqrt(n)
+	for(let i = 2; i < sqrt; i++)
+		if(n % i === 0) return false
+	return Number.isInteger(sqrt) && n > 1
+}
+
+//
+
+function isExactlyThree(n) {
+	if (n < 4) {
+		return false;
+	}
+	
+	const square = Math.sqrt(n);
+	if (!Number.isInteger(square)) {
+		return false;
+	}
+	
+	for (let x = 2; x < square; x += 1) {
+		if (Number.isInteger(n / x)) {
+			return false;
+		}
+	}
+	
+	return true;
+}
