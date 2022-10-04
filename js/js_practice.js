@@ -4460,3 +4460,112 @@ function isExactlyThree(n) {
 	
 	return true;
 }
+
+////
+
+function isExactlyThree(n) {
+	if (n === 1) return false
+	const nSR = ~~Math.sqrt(n)
+	if (nSR * nSR !== n) return false
+	// console.log(nSquareRoot)
+	// let divisors = 0
+	for(let i = 2; i*i <= nSR; i++) {
+	  // console.log(i)
+	  if (n % i === 0) return false
+	}
+	return true
+  }
+
+//   Secret Agent Password
+// Mubashir is going on a secret mission. He needs your help but you have to learn how to encode a secret password to communicate safely with other agents. Create a function that takes an argument message and returns the encoded password.
+
+// There are some variations on the rules of encipherment. One version of the cipher rules are outlined below:
+
+// secretPassword("mubashirh") ➞ "hsajsi13u2"
+// Step 1: Message length should be of nine characters containing only lowercase letters from 'a' to 'z'. If the argument doesn't meet this requirement you must return "BANG! BANG! BANG!" (Remember, there are no second chances in the spy world!)
+
+// Step 2: Divide the string into three equal parts of three characters each:
+
+// 1 - mub
+// 2 - ash
+// 3 - irh
+// Step 3: Convert the first and third letter to the corresponding number, according to the English alphabets (ex. a = 1, b = 2, c = 3 ... z = 26, etc).
+
+// mub = 13u2
+// Step 4: Reverse the fourth, fifth, and sixth letters:
+
+// ash = hsa
+// Step 5: Replace seventh, eighth, and ninth letter with next letter (z will be substituted with a).
+
+// irh = jsi
+// Step 6: Return the string in the following order: "Part_2+Part_3+Part_1"
+
+// "hsajsi13u2"
+// See the below examples for a better understanding:
+
+// Examples
+// secretPassword("mubashirh") ➞ "hsajsi13u2"
+
+// secretPassword("mattedabi") ➞ "detbcj13a20"
+
+// secretPassword("HeLen-eda") ➞ "BANG! BANG! BANG!"
+// // Length is not equal to 9
+// // Contains characters other than lower alphabets
+// Notes
+// N/A
+
+function secretPassword(message) {
+	let ans, arr, firstBlock, secondBlock, thirdBlock;
+	let first = '', second = '', third = '';
+	
+	const nextString = (str) => {
+		if (str === 'z'){
+			return String.fromCharCode(str.charCodeAt() - 25);
+		} else {
+			return str.substring(0, str.length - 1) +
+				String.fromCharCode(str.charCodeAt(str.length - 1) + 1);
+		}
+	}
+	
+	const testChars = (str) => {
+		for (var i=0; i<str.length; i++){
+      if (str.charAt(i) == str.charAt(i).toUpperCase() && str.charAt(i).match(/[a-z]/i)){
+        return true;
+      }
+    }
+    return false;
+	}
+	
+	if (testChars(message)
+			|| message.length !== 9
+			|| /[~`!#$%\^&*+=\-\[\]\\';,/{}|\_\":<>\?]/g.test(message)
+			|| /\d/.test(message)
+		 ){
+		ans = `BANG! BANG! BANG!`
+	} else {
+		ans = message.match(/.{1,3}/g);
+		firstBlock = ans[0]
+		secondBlock = ans[1]
+		thirdBlock = ans[2]
+		
+		for(let i = 0; i < firstBlock.length; i++){
+			if (firstBlock.charAt(0)){
+				first = firstBlock.charAt(0).charCodeAt(0)-96
+			}
+			if (firstBlock.charAt(1)){
+				second = firstBlock[1]
+			}
+			if (firstBlock.charAt(2)){
+				third = firstBlock.charAt(2).charCodeAt(0)-96
+			}
+		}
+		
+		firstBlock = first+second+third;
+		secondBlock = secondBlock.split('').reverse().join('');
+		thirdBlock = nextString(thirdBlock[0])
+		+ nextString(thirdBlock[1])
+		+ nextString(thirdBlock[2]);
+		ans = secondBlock + thirdBlock + firstBlock;
+	}
+	return ans;
+}
