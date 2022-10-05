@@ -4569,3 +4569,22 @@ function secretPassword(message) {
 	}
 	return ans;
 }
+
+// bolji odgovor:
+
+function secretPassword(message) {
+	const letterNumber = c => c.charCodeAt() - 96;
+	const nextAlphabet = c => c === "z" ? "a" : String.fromCharCode(letterNumber(c) + 97);
+  
+	if (!/^[a-z]{9}$/.test(message)) return "BANG! BANG! BANG!";
+  
+	let part1 = message.slice(0, 3);
+	let part2 = message.slice(3, 6);
+	let part3 = message.slice(6, 9);
+  
+	part1 = letterNumber(part1[0]) + part1[1] + letterNumber(part1[2]);
+	part2 = part2[2] + part2[1] + part2[0];
+	part3 = nextAlphabet(part3[0]) + nextAlphabet(part3[1]) + nextAlphabet(part3[2]);
+  
+	return part2 + part3 + part1;
+  }
