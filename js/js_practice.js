@@ -4570,6 +4570,9 @@ function secretPassword(message) {
 	return ans;
 }
 
+// destructuring and match for array:
+let [p1, p2, p3] = message.match(/.../g);
+
 // bolji odgovor:
 
 function secretPassword(message) {
