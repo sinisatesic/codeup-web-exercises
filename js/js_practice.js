@@ -4619,3 +4619,10 @@ function leapYear(year){
    }
   return year % 4 == 0;	
 }
+
+// bolji odgovor:
+
+function isLeap(year) {
+	return new Date(year, 1, 29).getDate() === 29;
+  }
+  // checks if February has 29 days
