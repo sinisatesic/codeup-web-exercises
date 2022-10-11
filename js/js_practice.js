@@ -4721,3 +4721,9 @@ var lengthOfLastWord = function(s) {
     let arr = s.trim().split(" ");
     return arr[arr.length - 1].length;
 };
+
+// bolji odgovor:
+
+var lengthOfLastWord = function(s) {
+	return s.trim().split(" ")[s.trim().split(" ").length -1 ].length;
+ };
