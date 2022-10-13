@@ -4727,3 +4727,72 @@ var lengthOfLastWord = function(s) {
 var lengthOfLastWord = function(s) {
 	return s.trim().split(" ")[s.trim().split(" ").length -1 ].length;
  };
+
+//  Given a non-negative integer x, compute and return the square root of x.
+
+// Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.
+
+// Note: You are not allowed to use any built-in exponent function or operator, such as pow(x, 0.5) or x ** 0.5.
+
+ 
+
+// Example 1:
+
+// Input: x = 4
+// Output: 2
+// Example 2:
+
+// Input: x = 8
+// Output: 2
+// Explanation: The square root of 8 is 2.82842..., and since the decimal part is truncated, 2 is returned.
+
+var mySqrt = function(x) {
+    return Math.floor(Math.sqrt(x));
+};
+
+// 67. Add Binary
+// Easy
+
+// 6047
+
+// 639
+
+// Add to List
+
+// Share
+// Given two binary strings a and b, return their sum as a binary string.
+
+ 
+
+// Example 1:
+
+// Input: a = "11", b = "1"
+// Output: "100"
+// Example 2:
+
+// Input: a = "1010", b = "1011"
+// Output: "10101"
+ 
+
+// Constraints:
+
+// 1 <= a.length, b.length <= 104
+// a and b consist only of '0' or '1' characters.
+// Each string does not contain leading zeros except for the zero itself.
+
+
+var addBinary = function(str1, str2) {
+    let carry = 0;
+   const res = [];
+   let l1 = str1.length, l2 = str2.length;
+   for (let i = l1 - 1, j = l2 - 1; 0 <= i || 0 <= j; --i, --j) {
+      let a = 0 <= i ? Number(str1[i]) : 0,
+      b = 0 <= j ? Number(str2[j]) : 0;
+      res.push((a + b + carry) % 2);
+      carry = 1 < a + b + carry;
+   };
+   if (carry){
+      res.push(1);
+   }
+   return res.reverse().join('');
+};
