@@ -4896,3 +4896,34 @@ const getFrequencies = arr =>
 	}
 	return out;
 }
+
+// digital root is single digit of sequence of adding any multiple digit numbers together
+// if number is 256, first add them: 2 + 5 + 6 = 13. Since 13 is not single digit, then keep adding all multiple digits: 1 + 3 = 4
+// So, digital root of 256 is 4.
+
+const digitalRoot = num => {
+	let sum = 0;
+	while(num){
+		sum += num % 10;
+		num = Math.floor(num/10);
+	}
+	return sum;
+}
+
+const digitalRoot = num => {
+	let sum = 0;
+	sum = num
+		.toString()
+		.split('')
+		.map(Number)
+		.reduce((a, b) => {
+			return a + b;
+		}, 0);
+
+	return sum;
+}
+
+// just modulo 9 is answer
+
+const digitalRoot = num => num % 9 
+// this wil
