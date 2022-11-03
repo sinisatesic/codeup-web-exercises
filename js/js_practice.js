@@ -4986,3 +4986,7 @@ function doubleSwap(str, c1, c2) {
 		}
 	return newStr;
 }
+
+//bolji odgovor:
+
+const doubleSwap = (str, c1, c2) => [...str].map(v => v === c1 ? c2 : v === c2 ? c1 : v).join('');
