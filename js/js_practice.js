@@ -4901,7 +4901,7 @@ const getFrequencies = arr =>
 // if number is 256, first add them: 2 + 5 + 6 = 13. Since 13 is not single digit, then keep adding all multiple digits: 1 + 3 = 4
 // So, digital root of 256 is 4.
 
-const digitalRoot = num => {
+const digitalRootAgain = num => {
 	let sum = 0;
 	while(num){
 		sum += num % 10;
@@ -4910,7 +4910,7 @@ const digitalRoot = num => {
 	return sum;
 }
 
-const digitalRoot = num => {
+const digitalRootAgain = num => {
 	let sum = 0;
 	sum = num
 		.toString()
@@ -4925,5 +4925,64 @@ const digitalRoot = num => {
 
 // just modulo 9 is answer
 
-const digitalRoot = num => num % 9 
-// this wil
+const digitalRootAgain = num => num % 9 
+
+
+
+//  Grouping objects by a property  :
+
+const people = [
+	{ name: "Alice", age: 21 },
+	{ name: "Max", age: 20 },
+	{ name: "Jane", age: 20 },
+  ];
+  
+  function groupBy(objectArray, property) {
+	return objectArray.reduce((acc, obj) => {
+	  const key = obj[property];
+	  const curGroup = acc[key] ?? [];
+  
+	  return { ...acc, [key]: [...curGroup, obj] };
+	}, {});
+  }
+  
+  const groupedPeople = groupBy(people, "age");
+  // groupedPeople is:
+  // {
+  //   20: [
+  //     { name: 'Max', age: 20 },
+  //     { name: 'Jane', age: 20 }
+  //   ],
+  //   21: [{ name: 'Alice', age: 21 }]
+  // }
+
+//   Double Character Swap
+// Write a function to replace all instances of character c1 with character c2 and vice versa.
+
+// Examples
+// doubleSwap( "aabbccc", "a", "b") ➞ "bbaaccc"
+
+// doubleSwap("random w#rds writt&n h&r&", "#", "&")
+// ➞ "random w&rds writt#n h#r#"
+
+// doubleSwap("128 895 556 788 999", "8", "9")
+// ➞ "129 985 556 799 888"
+// Notes
+// Both characters will show up at least once in the string.
+
+function doubleSwap(str, c1, c2) {
+	let arr = [], newStr = '';
+	for(let i = 0; i < str.length; i++){
+		if (str[i] === c1){
+			arr.push(c2)
+		} else if (str[i] === c2){
+			arr.push(c1)
+		} else {
+			arr.push(str[i]);
+		}
+	}
+	for(let j = 0; j < arr.length; j++){
+			newStr += arr[j]
+		}
+	return newStr;
+}
