@@ -4990,3 +4990,13 @@ function doubleSwap(str, c1, c2) {
 //bolji odgovor:
 
 const doubleSwap = (str, c1, c2) => [...str].map(v => v === c1 ? c2 : v === c2 ? c1 : v).join('');
+
+// dobar odgovor za citanje koda:
+
+function doubleSwap(str, c1, c2) {
+	return [...str].map((character) => {
+		if (character === c1) return c2
+		if (character === c2) return c1
+		return character
+	}).join('')
+}
