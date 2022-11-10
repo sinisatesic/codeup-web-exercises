@@ -5125,3 +5125,64 @@ function findZip(str) {
 		return str.lastIndexOf("zip");
 	}
 }
+
+
+// Filter Repeating Character Strings
+// Create a function that keeps only strings with repeating identical characters (in other words, it has a set size of 1).
+
+// Examples
+// identicalFilter(["aaaaaa", "bc", "d", "eeee", "xyz"]) 
+// ➞ ["aaaaaa", "d", "eeee"]
+
+// identicalFilter(["88", "999", "22", "545", "133"]) 
+// ➞ ["88", "999", "22"]
+
+// identicalFilter(["xxxxo", "oxo", "xox", "ooxxoo", "oxo"]) 
+// ➞ []
+// Notes
+// A string with a single character is trivially counted as a string with repeating identical characters.
+// If there are no strings with repeating identical characters, return an empty array (see example #3).
+
+function identicalFilter(arr) {
+	let newArr = [];
+	for(let i = 0; i < arr.length; i++){
+		if (/^(.)\1*$/.test(arr[i])){
+			newArr.push(arr[i]);
+		}
+	}
+	return newArr;
+}
+
+// broken down:
+
+function identicalFilter(arr) {
+	// create results array
+   var result = [];
+
+  // iterate over arr 
+  for (var i  = 0; i < arr.length; i++) {
+    // convert current string to arr 
+    var current = arr[i].split('');
+    // iterate over current array
+    var repeatChars = true; 
+    for (var j = 0; j < current.length; j++) {
+      // compare all elements with current[0]
+      
+      if (current[0] !== current[j]) {
+        repeatChars = false;
+        break;
+      }
+    }
+    if (repeatChars) {
+      result.push(arr[i]);
+    }
+    // outside of inner for loop if passed add results arr
+  }
+  return result; 
+}
+
+// least code:
+
+function identicalFilter(arr){
+    return arr.filter((str) => new Set(str).size === 1)
+}
