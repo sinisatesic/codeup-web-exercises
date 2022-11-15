@@ -5265,3 +5265,21 @@ function lastDig(a, b, c) {
 	let splitProduct = productAB.toString().split('');
 	return Number(splitProduct[splitProduct.length - 1]) === Number(strC[strC.length - 1]);
 }
+
+// wizard math stuff:
+
+function lastDig(a, b, c) {
+	return ((a%10)*(b%10))%10 === c%10
+}
+
+// clever:
+
+function lastDig(a, b, c) {
+	var result = (a * b).toString()
+	return c.toString().endsWith(result.slice(-1))
+}
+
+// even more clever:
+
+const lastDig = (a, b, c) =>
+	[...String([...String(a)].pop() * [...String(b)].pop())].pop() === [...String(c)].pop();
