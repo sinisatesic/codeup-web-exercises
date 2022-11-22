@@ -5281,5 +5281,46 @@ function lastDig(a, b, c) {
 
 // even more clever:
 
-const lastDig = (a, b, c) =>
-	[...String([...String(a)].pop() * [...String(b)].pop())].pop() === [...String(c)].pop();
+const lastDig = (a, b, c) => [...String([...String(a)].pop() * [...String(b)].pop())].pop() === [...String(c)].pop();
+
+
+// Reverse the Order of Words with Five Letters or More
+// Write a function that takes a string of one or more words as an argument and returns the same string, but with all five or more letter words reversed. Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+// Examples
+// reverse("Reverse") ➞ "esreveR"
+
+// reverse("This is a typical sentence.") ➞ "This is a lacipyt .ecnetnes"
+
+// reverse("The dog is big.") ➞ "The dog is big."
+// Notes
+// You can expect a valid string to be provided for each test case.
+
+// moj odgovor:
+
+function reverse(str) {
+	let splitArr = str.split(' '), finalStr = '';
+	if (splitArr.length == 1 && splitArr.toString().length > 4){
+		finalStr = str.split('').reverse().join('');
+	} else {
+		for(let i = 0; i < splitArr.length; i++){
+			if (splitArr[i].toString().length > 4){
+				splitArr[i] = splitArr[i].split('').reverse().join('');
+			}
+			finalStr = splitArr.join(' ');
+		}
+	}
+	return finalStr;
+}
+
+// using regex and replace/match:
+
+const reverse = str => str.replace(/(\S{5,})/gi, match =>
+	[...match].reverse().join('')
+)
+
+// using map:
+
+function reverse(str) {
+	return str.split(' ').map(x => x.length > 4 ? x.split('').reverse().join('') : x).join(' ');
+  }
