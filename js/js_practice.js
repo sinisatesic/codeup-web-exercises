@@ -5324,3 +5324,8 @@ const reverse = str => str.replace(/(\S{5,})/gi, match =>
 function reverse(str) {
 	return str.split(' ').map(x => x.length > 4 ? x.split('').reverse().join('') : x).join(' ');
   }
+
+
+// 
+
+var isPalindrome = function(x) { let newN = x.toString().split(‘’).reverse().join(‘’); return Number(newN) === x; };
