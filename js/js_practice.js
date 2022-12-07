@@ -5329,3 +5329,12 @@ function reverse(str) {
 // 
 
 var isPalindrome = function(x) { let newN = x.toString().split(‘’).reverse().join(‘’); return Number(newN) === x; };
+
+//roman numeral to int conversion:
+
+function parseRoman(s) {
+    var val = { M: 1000, D: 500, C: 100, L: 50, X: 10, V: 5, I: 1 };
+    return s.toUpperCase().split('').reduce(function (r, a, i, aa) {
+        return r + (val[a] < val[aa[i + 1]] ? -val[a] : val[a]);
+    }, 0);
+}
