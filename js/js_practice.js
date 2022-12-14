@@ -4910,22 +4910,22 @@ const digitalRootAgain = num => {
 	return sum;
 }
 
-const digitalRootAgain = num => {
-	let sum = 0;
-	sum = num
-		.toString()
-		.split('')
-		.map(Number)
-		.reduce((a, b) => {
-			return a + b;
-		}, 0);
+// const digitalRootAgain = num => {
+// 	let sum = 0;
+// 	sum = num
+// 		.toString()
+// 		.split('')
+// 		.map(Number)
+// 		.reduce((a, b) => {
+// 			return a + b;
+// 		}, 0);
 
-	return sum;
-}
+// 	return sum;
+// }
 
 // just modulo 9 is answer
 
-const digitalRootAgain = num => num % 9 
+// const digitalRootAgain = num => num % 9 
 
 
 
@@ -5464,4 +5464,33 @@ var longestCommonPrefix = function(strs) {
 
 function DECIMATOR(str) {
 	return str.slice(0, -(Math.ceil(str.length*0.1)))
+}
+
+// problem for corresponding braces:
+
+let expectedBrackets = [];
+    // Loop through the letters in the input string
+    for (let i = 0; i < s.length; i++) {
+        // Push the closing equivelant of any open brackets found
+        if (s[i] == '{') {
+            expectedBrackets.push('}');
+        } else if (s[i] == '[') {
+            expectedBrackets.push(']');
+        } else if (s[i] == '(') {
+            expectedBrackets.push(')');
+        }
+        // If a close bracket is found, check that it matches the last stored open bracket
+        else if (expectedBrackets.pop() !== s[i]) {
+            return false;
+        }
+    }
+    // Return based on whether or not anything remains
+    // (indicates that there were incorrect brackets)
+//     return !expectedBrackets.length;
+// };
+
+const test = (q, p) => {
+    let price = q * p
+    let discount = Math.floor(q/3) * p
+    return price - discount;
 }
