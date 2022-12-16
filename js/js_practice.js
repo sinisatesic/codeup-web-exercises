@@ -5525,3 +5525,31 @@ function getDistance(a, b) {
 	function getDistance(a, b) {
 		return +Math.hypot((b.x - a.x), (b.y - a.y)).toFixed(3);
 	}
+
+// 	Find Unique Character Strings
+// Create a function that returns only strings with unique characters.
+
+// Examples
+// filterUnique(["abb", "abc", "abcdb", "aea", "bbb"]) ➞ ["abc"]
+// // "b" occurs in "abb" more than once, "b" occurs in "abcdb" more than once, etc.
+
+// filterUnique(["88", "999", "989", "9988", "9898"]) ➞ []
+
+// filterUnique(["ABCDE", "DDEB", "BED", "CCA", "BAC"]) ➞ ["ABCDE", "BED", "BAC"]
+// Notes
+// N/A
+
+function filterUnique(arr) {
+	let newArr = [];
+	for(let i = 0; i < arr.length; i++){
+		if (arr[i].length == new Set(arr[i]).size){
+			newArr.push(arr[i]);
+		}
+	}
+	return newArr;
+}
+
+// manji odgovor:
+
+const filterUnique = arr =>
+arr.filter(x => new Set(x).size == x.length);
