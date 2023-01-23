@@ -5553,3 +5553,23 @@ function filterUnique(arr) {
 
 const filterUnique = arr =>
 arr.filter(x => new Set(x).size == x.length);
+
+// Valid Division
+// Create a function that takes a division equation d and checks if it will return a whole number without decimals after dividing.
+
+// Examples
+// validDivision("6/3") ➞ true
+
+// validDivision("30/25") ➞ false
+
+// validDivision("0/3") ➞ true
+// Notes
+// Return "invalid" if division by zero.
+
+function validDivision(d) {
+	let s = d.split('/');
+	let first = Number(s[0])
+	let second = Number(s[1])
+	if (second == 0){return 'invalid'}
+	return first/second % 1 == 0 
+}
