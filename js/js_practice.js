@@ -5573,3 +5573,13 @@ function validDivision(d) {
 	if (second == 0){return 'invalid'}
 	return first/second % 1 == 0 
 }
+
+// fin odgovor:
+
+function validDivision(d) {
+	console.log(d)
+	let numOne=parseInt(d.split("/")[0])
+	let numTwo = parseInt(d.split("/")[1])
+	
+	return numTwo === 0 ? 'invalid' : numOne % numTwo === 0
+}
