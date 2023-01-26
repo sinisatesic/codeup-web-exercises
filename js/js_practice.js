@@ -5611,3 +5611,16 @@ function uniqueArr(arr) {
 // bolji odgovor:
 
 const uniqueArr = arr => [...new Set(arr)].filter(v => v > 0);
+
+// jos jedan odgovor:
+
+function uniqueArr(arr) {
+	let newArr = [];
+	
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] > 0 && !newArr.includes(arr[i])) {
+			newArr.push(arr[i]);
+		}
+	}
+	return newArr;
+}
