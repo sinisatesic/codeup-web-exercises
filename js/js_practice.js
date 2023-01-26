@@ -5607,3 +5607,7 @@ function uniqueArr(arr) {
 	}
 	return [...new Set(newArr)];
 }
+
+// bolji odgovor:
+
+const uniqueArr = arr => [...new Set(arr)].filter(v => v > 0);
