@@ -5684,3 +5684,19 @@ function dashed(str) {
 	}
 	return s
 }
+
+// jos jedan :
+
+function dashed(str) {
+	let newStr=''
+	let vowel="aeiou"
+	for(let item of str){
+		if(vowel.includes(item.toLowerCase())){
+			newStr += `-${item}-`
+		}else{
+			newStr += item
+			
+		}
+	}
+	return newStr
+}
