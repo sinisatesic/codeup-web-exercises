@@ -5624,3 +5624,63 @@ function uniqueArr(arr) {
 	}
 	return newArr;
 }
+
+// Dashed Vowels
+// Create a function that takes a string and returns dashes on the left and right side of every vowel (a e i o u).
+
+// Examples
+// dashed("Edabit") ➞ "-E-d-a-b-i-t"
+
+// dashed("Carpe Diem") ➞ "C-a-rp-e- D-i--e-m"
+
+// dashed("Fight for your right to party!") ➞ "F-i-ght f-o-r y-o--u-r r-i-ght t-o- p-a-rty!"
+// Notes
+// A string can contain uppercase and lowercase vowels.
+// Y is not considered a vowel.
+
+function dashed(str) {
+	let final = '';
+	for(let character of str){
+		if (character == 'a' ||
+				character == 'e' ||
+				character == 'i' ||
+				character == 'o' ||
+				character == 'u' ||
+				character == 'e' ||
+				character == 'A' ||
+				character == 'E' ||
+				character == 'I' ||
+				character == 'O' ||
+				character == 'U'
+			 ){
+			final += `-${character}-`;
+		} else {
+			final += character;
+		}
+	}
+	return final
+}
+
+// sa replace i regex:
+
+// sa map:
+
+function dashed(str) {
+	const vowels = ["a", "e", "i", "o", "u"];
+	  return str.split("").map(char => vowels.includes(char.toLowerCase()) ? `-${char}-` : char).join("");
+  }
+
+  // na bolji:
+
+  function dashed(str) {
+	let vow = 'aeiouAEIOU'
+	let s=''
+	for(let i=0;i<str.length;i++){
+		if(vow.includes(str[i])){
+			s+='-' + str[i] + '-'
+		} else {
+			s+=str[i]
+		}
+	}
+	return s
+}
