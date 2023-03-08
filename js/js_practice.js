@@ -5725,3 +5725,5 @@ function totalDistance(height, length, tower) {
 	ans = (height + length) * steps
 	return Number(ans.toFixed(1))
 }
+
+//
