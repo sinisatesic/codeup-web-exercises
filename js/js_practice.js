@@ -5758,3 +5758,8 @@ function measureDepth(arr) {
 	}
 	return counter;
 }
+//bolji odgovor:
+const measureDepth = arr => JSON.stringify(arr).indexOf(']');
+
+// jos jedan bolji odgovor:
+const measureDepth = arr => JSON.stringify(arr).length / 2;
