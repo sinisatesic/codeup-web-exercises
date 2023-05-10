@@ -5828,3 +5828,23 @@ function neutralise(s1, s2) {
 function neutralise(s1, s2) {
 	return [...s1].map((i, idx) => i === s2[idx] ? i : '0').join('');
 }
+
+
+// math spiral problem; in progress:
+// Given a positive integer, n, generate an nxn matrix filled with elements from 1 to n squared in a spiral. Ex: n = 3:
+// [[1,2,3], [8,9,4], [7,6,5]]
+
+const difficult = (n) => {
+	let arrOfArrs = Array(n).fill().map(arrSize => []);
+	for(let i = 1; i <= n; i++){
+		arrOfArrs[0].push(i);
+	}
+	let numToAdd = 0;
+	for(let i = 3; i <= n; i++){
+		numToAdd++;
+	}
+	for(let j = 1; j <= n; j++){
+		arrOfArrs[arrOfArrs.length - 1].push(n * 2 + numToAdd--);
+	}
+    return arrOfArrs;
+}
