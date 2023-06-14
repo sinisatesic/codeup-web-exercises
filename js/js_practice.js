@@ -5851,3 +5851,54 @@ const difficult = (n) => {
 	}
     return arrOfArrs;
 }
+
+const randomizer = () => {
+	
+	let arr = [], specialChars = '!$#&@';
+
+		arr.push(Math.floor((Math.random() * 9) + 1));
+		arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+		arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toLowerCase());
+		arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
+		arr.push(Math.floor((Math.random() * 9) + 1));
+		arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+		arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toLowerCase());
+		arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
+		arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+		arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
+	
+		
+		console.log(arr.join(''));
+		
+	// for(let i = 1; i <= num; i++){
+	// 	console.log(arr.join(''));
+	// }
+
+}
+
+const logs = (num) => {
+
+	const randomizer = () => {
+	
+		let arr = [], specialChars = '!$#&@';
+	
+			arr.push(Math.floor((Math.random() * 9) + 1));
+			arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+			arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toLowerCase());
+			arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
+			arr.push(Math.floor((Math.random() * 9) + 1));
+			arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+			arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toLowerCase());
+			arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
+			arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+			arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
+		
+			
+			console.log(arr.join(''));
+			
+	}
+
+	for(let i = 0; i < num; i++){
+		randomizer();
+	}
+}
