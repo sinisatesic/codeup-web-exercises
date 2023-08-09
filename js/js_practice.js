@@ -5894,7 +5894,7 @@ const logs = (num) => {
 			arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
 		
 			
-			console.log(arr.join(''));
+			console.table(arr.join(''));
 			
 	}
 
@@ -5902,3 +5902,36 @@ const logs = (num) => {
 		randomizer();
 	}
 }
+
+// Mubashir's Mystery Challenge
+// Mubashir has written a mysterious function that takes two numbers a and b and returns multiplication?. Solve the riddle of what Mubashir's function is by having a look at some of the examples below.
+
+// Examples
+// mubashirFunction(0, 1) ➞ 0
+
+// mubashirFunction(1, 2) ➞ 2
+
+// mubashirFunction(10, 10) ➞ 1
+// Notes
+// Check the Tests tab for more examples.
+// This isn't really a coding challenge, more of a fun riddle ;)
+
+function mubashirFunction(a, b) {
+	let aSum = a.toString().split('');
+	let bSum = b.toString().split('');
+	let arrNumA = 0, arrNumB = 0;
+	for(let i = 0; i < aSum.length; i++){
+		arrNumA += Number(aSum[i]);
+	}
+	for(let j = 0; j < bSum.length; j++){
+		arrNumB += Number(bSum[j]);
+	}
+	return arrNumA * arrNumB;
+}
+
+//bolji odgovor:
+
+function mubashirFunction(a, b){
+  const c = a => String(a).split('').reduce((a,b)=>Number(a)+Number(b))
+	return c(a)*c(b)
+	}
