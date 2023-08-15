@@ -5977,3 +5977,7 @@ function reverseImage(image) {
 function reverseImage(image) {
 	return image.map(el => el.map(e => (e === 0) ? 1 : 0));
 }
+
+// nize:
+
+const reverseImage = image => image.map(row => row.map(num => Number(!num)));
