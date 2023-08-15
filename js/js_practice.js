@@ -5955,3 +5955,19 @@ function mubashirFunction(a, b){
 function rectangles(step) {
 	return Math.pow((step * (step+1))/2, 2)
 }
+
+// Negative Image
+// Suppose an image can be represented as a 2D array of 0s and 1s. Write a function to reverse an image. Replace the 0s with 1s and vice versa.
+
+function reverseImage(image) {
+	for (let i = 0; i < image.length; i++){
+		for (let j = 0; j < image[i].length; j++){
+			if (image[i][j] == 0){
+				image[i][j] = 1
+			} else if (image[i][j] == 1){
+				image[i][j] = 0;
+			}
+		}
+	}
+	return image;
+}
