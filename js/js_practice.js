@@ -5971,3 +5971,9 @@ function reverseImage(image) {
 	}
 	return image;
 }
+
+//mnogo lakse:
+
+function reverseImage(image) {
+	return image.map(el => el.map(e => (e === 0) ? 1 : 0));
+}
