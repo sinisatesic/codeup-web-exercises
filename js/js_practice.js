@@ -6010,3 +6010,41 @@ function countPosSumNeg(arr) {
 	}
 	return arr.length == 0 ? [] : [count, sum]
 }
+
+// Check If Lines Are Parallel
+// Given two lines, determine whether or not they are parallel.
+
+// Lines are represented by an array [a, b, c], which corresponds to the line ax+by=c.
+
+// Examples
+// linesAreParallel([1, 2, 3], [1, 2, 4]) ➞ true
+// // x+2y=3 and x+2y=4 are parallel.
+
+// linesAreParallel([2, 4, 1], [4, 2, 1]) ➞ false
+// // 2x+4y=1 and 4x+2y=1 are not parallel.
+
+// linesAreParallel([0, 1, 5], [0, 1, 5]) ➞ true
+// // Lines are parallel to themselves.
+// Notes
+// Two lines are parallels if they have the same slope. If the slopes are different, the lines are not parallel.
+// All test cases use valid input (no lists of the wrong size, for example).
+// All coefficients will be integers (whole numbers).
+
+function linesAreParallel(l1, l2) {
+	let first = 0, second = 0;
+	for(let i = 0; i < l1.length; i++){
+		if (l1[0].toString().split('')[0] == '-'){
+			first = String(l1[0].substr(1,2));
+		} else {
+			first = l1[0].toString().split('')[0]
+		}
+	}
+	for(let j = 0; j < l2.length; j++){
+		if (l2[0].toString().split('')[0] == '-'){
+			second = String(l2[0].substr(1,2));
+		} else {
+			second = l2[0].toString().split('')[0]
+		}
+	}
+	return Number(first) == Number(second);
+}
