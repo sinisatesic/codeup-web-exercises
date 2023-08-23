@@ -6068,3 +6068,20 @@ function areaOfCountry(name, area) {
 	let clm = area/wlm*100;
 	return `${name} is ${(clm).toFixed(2)}% of the total world's landmass`;
 }
+
+
+// get first digit in an integer:
+
+function firstDigit(num) {
+    // 1: get first digit using regex pattern
+    const matches = String(num).match(/\d/);
+    // 2: convert matched item to integer
+    const digit = Number(matches[0]);
+    // 3: add sign back as needed
+    return (num < 0) ? -digit : digit;
+}
+
+console.log(firstDigit(1234)); // 1
+console.log(firstDigit(-1234)); // -1
+console.log(firstDigit(0)); // 0
+console.log(firstDigit(-0)); // 0
