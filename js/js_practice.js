@@ -6085,3 +6085,18 @@ console.log(firstDigit(1234)); // 1
 console.log(firstDigit(-1234)); // -1
 console.log(firstDigit(0)); // 0
 console.log(firstDigit(-0)); // 0
+
+// quick check for key in object
+
+const object = {
+  key1: "value1",
+  key2: "value2"
+};
+
+const key = "key1";
+
+if (key in object) {
+  // The key exists
+} else {
+  // The key does not exist
+}
