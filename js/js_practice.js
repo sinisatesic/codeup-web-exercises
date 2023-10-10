@@ -6124,3 +6124,58 @@ function halveCount(a, b) {
 	}
 	return count;
 }
+
+
+// String Slice-athon
+// This challenge has five miniature exercises to help practice proficiency in string slicing. Check the examples below for a visual indicator of how to slice the strings. Good luck!
+
+// Examples
+// const s = "abcdefghijklmnopqrstuvwxyz"
+// challenge1(s) ➞ "abcde"
+// // First 5 characters of the string.
+
+// challenge2(s) ➞ "vwxyz"
+// // Last 5 characters of the string.
+
+// challenge3(s) ➞ "zyxwvutsrqponmlkjihgfedcba"
+// // All characters in the string from back.
+
+// challenge4(s) ➞ "fedcba"
+// // First 6 characters in the string (start with 6th character and go backwards).
+
+// challenge5(s) ➞ "tvxz"
+// // Take last 7 characters and only return odd positioned ones.
+// Notes
+// Check the Tests tab for more examples.
+// See the Resources tab for further information on learning string slicing.
+// You may use methods other than slice() as needed to complete some of the challenges.
+// All test cases follow the same slicing pattern as the above example.
+
+function challenge1(s) {
+	return s.slice(0, 5)
+}
+
+function challenge2(s) {
+	return s.slice(-5)
+}
+
+function challenge3(s) {
+	return s.split('').reverse().join('');
+}
+
+function challenge4(s) {
+	return s.slice(0, 6).split('').reverse().join('');
+}
+
+function challenge5(s) {
+	return s.slice(-7).match(/./g).filter((char, index) => index % 2 !== 1).join('');
+}
+
+
+// bolji odgovor:
+
+let challenge1 = s => s.slice(0,5);
+let challenge2 = s => s.slice(-5);
+let challenge3 = s =>[...s].reverse().join('');
+let challenge4 = s => [...s.slice(0,6)].reverse().join('');
+let challenge5 = s => [...s.slice(-8)].filter((a,b)=>b%2).join('');
