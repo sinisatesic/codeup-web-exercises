@@ -6179,3 +6179,20 @@ let challenge2 = s => s.slice(-5);
 let challenge3 = s =>[...s].reverse().join('');
 let challenge4 = s => [...s.slice(0,6)].reverse().join('');
 let challenge5 = s => [...s.slice(-8)].filter((a,b)=>b%2).join('');
+
+
+// Remove the Special Characters from a String
+// Create a function that takes a string, removes all "special" characters (e.g. ., !, @, #, $, %, ^, &, \, *, (, )) and returns the new string. The only non-alphanumeric characters allowed are dashes -, underscores _ and spaces.
+
+// Examples
+// removeSpecialCharacters("The quick brown fox!") ➞ "The quick brown fox"
+
+// removeSpecialCharacters("%fd76$fd(-)6GvKlO.") ➞ "fd76fd-6GvKlO"
+
+// removeSpecialCharacters("D0n$c sed 0di0 du1") ➞ "D0nc sed 0di0 du1"
+// Notes
+// N/A
+
+function removeSpecialCharacters(str) {
+	return str.replace(/[^\w- ]/gi, "");
+  }
