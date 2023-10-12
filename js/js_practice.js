@@ -6196,3 +6196,20 @@ let challenge5 = s => [...s.slice(-8)].filter((a,b)=>b%2).join('');
 function removeSpecialCharacters(str) {
 	return str.replace(/[^\w- ]/gi, "");
   }
+
+
+//   Format Number with Comma(s) Separating Thousands
+// Create a function that takes a number as an argument and returns a string formatted to separate thousands.
+
+// Examples
+// formatNum(1000) ➞ "1,000"
+
+// formatNum(100000) ➞ "100,000"
+
+// formatNum(20) ➞ "20"
+// Notes
+// You can expect a valid number for all test cases.
+
+function formatNum(num) {
+	return num.toLocaleString();
+}
