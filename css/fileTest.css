@@ -1,7 +1,26 @@
+* {
+	padding: 10px;
+}
+
 .container {
 	border: 5px solid green;
 	
 }
+
+.navFlex {
+	display: flex;
+	/*justify-content: center;*/
+}
+
+.tableFlex {
+	display: flex;
+	justify-content: space-between;
+}
+
+#refreshButton {
+	cursor: pointer;
+}
+
 
 .image-preview {
 	width: 300px;
@@ -21,3 +40,32 @@
 	display: none;
 	width: 100%;
 }
+
+#tableA {
+	border: 1px solid black;
+	background: black;
+	border-radius: 10px;
+	max-height: 300px;
+	max-width: 300px;
+}
+
+#tableB {
+	border: 1px solid black;
+	/*background: black;*/
+	border-radius: 10px;
+	/*position: absolute;*/
+	width: 600px;
+	height: 380px;
+	background-image: url("snailWait.gif") no-repeat;
+	background-position: center center;
+	/*background-repeat: no-repeat;*/
+}
+
+tr {
+	border: 1px solid red;
+	background: black;
+}
+td {
+	background: white;
+}
+

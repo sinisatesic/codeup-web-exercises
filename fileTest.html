@@ -11,15 +11,37 @@
   <body>
     <div class="container">
 
-      <h1>Image Preview on File Uploads</h1>
+      <!-- <h1>Image Preview on File Uploads</h1> -->
       <input type="file" name="inpFile" id="inpFile">
       <div class="image-preview" id="imagePreview">
         <img src="" alt="Image Preview"  class="image-preview__image">  </img>
         <span class="image-preview__default-text">Image Preview</span>
 
       </div>
+
+      <h1>Upload CSV File</h1>
+        <div class="navFlex">
+          <div>Import<input type="file"></div>
+          <button id="refreshButton">Refresh</button>
+        </div>
+
+        <div class="tableFlex">
+          <table id="tableA"></table>
+          <table id="tableB"></table>
+        </div>
+      
     </div>
     
+    <label for="automations">Choose automation:</label> 
+    <br>
+    <select name="automations" id="automations"> 
+        <option value="option1">Option1</option> 
+        <option value="option2">Option2</option> 
+        <option value="option3">Option3</option> 
+        <option value="option4">Option4</option> 
+    </select>
+  
+
 
     <!-- You can also require other files to run in this process -->
     <script src="./interface.js"></script>
