@@ -6213,3 +6213,41 @@ function removeSpecialCharacters(str) {
 function formatNum(num) {
 	return num.toLocaleString();
 }
+
+// Find the Highest Integer in the Array Using Recursion
+// Create a function that finds the highest integer in the array using recursion.
+
+// Examples
+// findHighest([-1, 3, 5, 6, 99, 12, 2]) ➞ 99
+
+// findHighest([0, 12, 4, 87]) ➞ 87
+
+// findHighest([6,7,8]) ➞ 8
+// Notes
+// Please use the recursion to solve this (not the max() method).
+
+function findHighest(arr) {
+	let max = -Infinity;
+ for(var i = 0; i < arr.length; i++)
+ {
+	 let el = arr[i];
+	 if ( Array.isArray(el) )
+	 {
+		 el = findMax1( el );
+	 }
+	 if ( el > max )
+	 {
+		 max = el;
+	 }
+ }
+ return max;
+}
+
+// bolje:
+
+function findHighest( arr ) {
+	arr.sort().reverse()
+	return arr[ 0 ]
+  }
+
+  
