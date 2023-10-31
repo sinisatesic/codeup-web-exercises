@@ -6297,3 +6297,28 @@ function cubeDiagonal(volume){
 	let result =  Math.sqrt(3) * (Math.cbrt(volume));
    return Number(result.toFixed(2))
 }
+
+
+// Lowercase and Uppercase Map
+// Write a function that creates an object with each (key, value) pair being the (lower case, upper case) versions of a letter, respectively.
+
+// Examples
+// mapping(["p", "s"]) ➞ { "p": "P", "s": "S" }
+
+// mapping(["a", "b", "c"]) ➞ { "a": "A", "b": "B", "c": "C" }
+
+// mapping(["a", "v", "y", "z"]) ➞ { "a": "A", "v": "V", "y": "Y", "z": "Z" }
+// Notes
+// All of the letters in the input list will always be lowercase.
+
+function mapping(l) {
+	let c={}
+	l.map(e=>c[e]=e.toUpperCase())
+	return c	
+}
+
+// jos jedan odgovor (prvi je bolji):
+
+function mapping(letters) {
+	return letters.reduce((a, c) => (a[c] = c.toUpperCase(), a), {});
+}
