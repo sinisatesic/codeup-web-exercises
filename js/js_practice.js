@@ -6454,3 +6454,40 @@ function inBox(arr) {
 //bolji odgovor:
 
 // const inBox = arr => arr.some(str => str.includes('*'));
+
+
+// Hex to Binary
+// Create a function that will take a HEX number and returns the binary equivalent (as a string).
+
+// Examples
+// toBinary(0xFF) ➞ "11111111"
+
+// toBinary(0xAA) ➞ "10101010"
+
+// toBinary(0xFA) ➞ "11111010"
+// Notes
+// The number will be always an 8-bit number.
+
+const toBinary = (input) => {
+	return (input >>> 0).toString(2)
+} 
+
+// Drink Sorting
+// You will be given an array of drinks, with each drink being an object with two properties: name and price. Create a function that has the drinks array as an argument and return the drinks objects sorted by price in ascending order.
+
+// Assume that the following array of drink objects needs to be sorted:
+
+// drinks = [
+//   {name: "lemonade", price: 50},
+//   {name: "lime", price: 10}
+// ]
+// The output of the sorted drinks object will be:
+
+// Examples
+// sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
+// Notes
+// N/A
+
+function sortDrinkByPrice(drinks) {
+	return drinks.sort((a, b) => a.price > b.price ? 1 : -1);
+}
