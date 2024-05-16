@@ -6574,3 +6574,64 @@ function generateHashtag(str) {
 	
 	
 }
+
+// scratch above, below:
+
+function generateHashtag(str) {
+	if (!str.replace(/\s/g, '').length) return false;
+	
+	
+	let capStr = str.toLowerCase()
+	.split(' ')
+	.map((e) => e.charAt(0).toUpperCase() + e.substring(1))
+	.join(' ');
+	
+	capStr = '#' + capStr;
+	capStr = capStr.replace(/ +/g, "")
+	return capStr.length > 140 ? false : capStr.replace(/\s/g, '')
+}
+
+
+// bolje da se razumije:
+
+function generateHashtag(str) {
+	if (str.length < 1) {
+		return false
+	}
+	let result = []
+	let chunk = ""
+	for (let chr of str) {
+		if (/^[a-zA-Z0-9]+$/.test(chr)) {
+			if (chunk.length < 1) {
+              console.log("here")
+              	const upper = chr.toUpperCase()
+              	console.log(chr)
+				chunk = chunk.concat(upper)
+              	console.log(chunk)
+			} else {
+              	const lower = chr.toLowerCase()
+				chunk = chunk.concat(lower)
+			}
+		} else {
+			if (chunk.length > 0) {
+				result.push(chunk)
+				chunk = ""
+			}
+		}
+	}
+	if (chunk.length > 0) {
+      result.push(chunk)
+    }
+	//console.log(result)
+	if (result.length === 0) {
+		return false
+	}
+	let joined = result.join("")
+	if (joined.length + 1 > 140) {
+		return false
+	}
+	console.log("#"+result.join(""))
+	return "#" + result.join("")
+	
+	
+}
