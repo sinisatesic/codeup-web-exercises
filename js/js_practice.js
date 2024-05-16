@@ -6635,3 +6635,42 @@ function generateHashtag(str) {
 	
 	
 }
+
+// 
+
+// Case and Index Inverter
+// Write a function that takes a string input and returns the string in a reversed case and order.
+
+// Examples
+// invert("dLROW YM sI HsEt") ➞ "TeSh iS my worlD"
+
+// invert("ytInIUgAsnOc") ➞ "CoNSaGuiNiTY"
+
+// invert("step on NO PETS") ➞ "step on NO PETS"
+
+// invert("XeLPMoC YTiReTXeD") ➞ "dExtErIty cOmplEx"
+// Notes
+// No empty strings and will neither contain special characters nor punctuation.
+// A recursive version of this challenge can be found via this link.
+
+function invert(s) {
+	let splitStr = s.split(''), final = [];
+	for(let i = 0; i < splitStr.length; i++){
+		if (splitStr[i] == splitStr[i].toUpperCase()){
+			splitStr[i] = splitStr[i].toLowerCase()
+		} else if (splitStr[i] == splitStr[i].toLowerCase()){
+			splitStr[i] = splitStr[i].toUpperCase();
+		}
+	}
+	splitStr.reverse();
+	
+	return splitStr.join('');
+}
+
+// bolji odgovor:
+
+function invert(s) {
+	return [...s].reverse().map(c => {
+		return c.toLowerCase() === c ? c.toUpperCase() : c.toLowerCase()
+	}).join('')
+}
