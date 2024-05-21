@@ -6691,3 +6691,18 @@ array.forEach(element => {
 
 console.log(read)
 
+
+//create a Set to store unique elements and an array to collect duplicates. While traversing the original array, use has() to check for the element's presence in the Set. If found, it is a duplicate; otherwise, add the element to the Set.
+const array = [1, 2, 3, 2, 4, 5, 4, 5];
+const uniqueElements = new Set();
+const duplicates = [];
+
+array.forEach(item => {
+  if (uniqueElements.has(item)) {
+    duplicates.push(item);
+  } else {
+    uniqueElements.add(item);
+  }
+});
+
+console.log(duplicates); // Output: [2, 4, 5]
