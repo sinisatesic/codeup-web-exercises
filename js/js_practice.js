@@ -6674,3 +6674,20 @@ function invert(s) {
 		return c.toLowerCase() === c ? c.toUpperCase() : c.toLowerCase()
 	}).join('')
 }
+
+// neat:
+
+let array = [1, 2, 3, 4, 5, 1, 2, 3, 5]
+let read = []
+
+array.forEach(element => {
+  if (read.indexOf(element) == -1) {
+    read.push(element)
+    console.log("This is the first time" + element + " appears in the array")
+  } else {
+    console.log(element + " is already in the array")
+  }
+})
+
+console.log(read)
+
