@@ -6693,7 +6693,7 @@ console.log(read)
 
 
 //create a Set to store unique elements and an array to collect duplicates. While traversing the original array, use has() to check for the element's presence in the Set. If found, it is a duplicate; otherwise, add the element to the Set.
-const array = [1, 2, 3, 2, 4, 5, 4, 5];
+let array = [1, 2, 3, 2, 4, 5, 4, 5];
 const uniqueElements = new Set();
 const duplicates = [];
 
@@ -6706,3 +6706,61 @@ array.forEach(item => {
 });
 
 console.log(duplicates); // Output: [2, 4, 5]
+
+let fb = n => {
+	let box = [];
+for(let i = 1; i < n; i++){
+	if (i % 15 === 0){
+		box.push('FizzBuzz');
+	} else if (i % 3 === 0){
+		box.push('Fizz');
+	} else if (i % 5 === 0){
+		box.push('Buzz');
+	} else {
+		box.push(i.toString())
+	}
+}
+console.log(box);
+}
+
+// Burglary Series (03): Is It Gone?
+// Your spouse is not concerned with the loss of material possessions but rather with his/her favorite pet. Is it gone?!
+
+// Given an object of the stolen items and a string in lowercase representing the name of the pet (e.g. "rambo"), return:
+
+// "Rambo is gone..." if the name is on the list.
+// "Rambo is here!" if the name is not on the list.
+// Note that the first letter of the name in the return statement is capitalized.
+
+// Examples
+// const obj = {
+//   tv: 30,
+//   timmy: 20,
+//   stereo: 50,
+// } ➞ "Timmy is gone..."
+// // Timmy is in the object.
+
+
+// const obj = {
+//   tv: 30,
+//   stereo: 50,
+// } ➞ "Timmy is here!"
+// // Timmy is not in the stolen list object.
+
+
+// const obj = { } ➞ "Timmy is here!"
+// // Timmy is not in the object.
+// Notes
+// N/A
+
+
+function findIt(obj, name) {
+	return name in obj ? `${name[0].toUpperCase() + name.slice(1)} is gone...` : `${name[0].toUpperCase() + name.slice(1)} is here!`
+}
+
+// bolji odgovor:
+
+const findIt = (obj, name) => {
+	const displayName = name[0].toUpperCase() + name.slice(1);
+	return `${displayName} is ${(name in obj) ? 'gone...' : 'here!'}`;
+};
