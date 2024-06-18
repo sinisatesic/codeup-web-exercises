@@ -6937,3 +6937,53 @@ function swap(a, b, c) {
 function swap(a, b, c) {
 	return a+b-c;
 }
+
+// Zip It, If You Can?
+// Given an array of women and an array of men, either:
+
+// Return "sizes don't match" if the two arrays have different sizes.
+// If the sizes match, return an array of pairs, with the first woman paired with the first man, second woman paired with the second man, etc.
+// Examples
+// zipIt(["Elise", "Mary"], ["John", "Rick"])
+//  ➞ [["Elise", "John"], ["Mary", "Rick"]]
+
+// zipIt(["Ana", "Amy", "Lisa"], ["Bob", "Josh"])
+//  ➞ "sizes don't match"
+
+// zipIt(["Ana", "Amy", "Lisa"], ["Bob", "Josh", "Tim"])
+//  ➞ [["Ana", "Bob"], ["Amy", "Josh"],["Lisa", "Tim"]]
+// Notes
+// N/A
+
+//lol:
+function zipIt(women, men) {
+	if (women.length !== men.length){return `sizes don't match`}
+	for(let i = 0; i < women.length; i++){
+		for(let j = 0; j < men.length; i++){
+			if(women.length == 2){
+				return [[women[i], men[i]], [women[i+1], men[i+1]]]
+			}
+			if(women.length == 3){
+				return [[women[i], men[i]], [women[i+1], men[i+1]], [women[i+2], men[i+2]]]
+			} else {
+				return [[women[i], men[i]], [women[i+1], men[i+1]], [women[i+2], men[i+2]], [women[i+3], men[i+3]]]
+			}
+		}
+	}
+}
+
+//mnogo bolji odgovor:
+
+const zipIt = (women, men) => {
+	if (women.length === men.length) {
+		return women.map((woman, i) => [woman, men[i]]);
+	}
+	return `sizes don't match`;
+};
+
+// i ovaj je dobar:
+
+const zipIt = (women, men) => 
+	women.length === men.length ?
+	women.map((elsement, index) => [elsement, men[index]]) :
+	"sizes don't match"
