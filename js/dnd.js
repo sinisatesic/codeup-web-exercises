@@ -1,6 +1,6 @@
 
 
-let api = `https://www.dnd5eapi.co/api/`;
+let api = `https://www.dndeapi.co/api/`;
 // let thumbnails = document.querySelector('.thumbnail')
 // let thumbnailImg = document.querySelector('.thumbnailImg');
 
@@ -11,15 +11,27 @@ let api = `https://www.dnd5eapi.co/api/`;
 //     console.log(monsterResponseJSON);
 // }
 const getMonsters = async () => {
-    fetch(api + `monsters`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        console.log("TEST TEST");
-    })
-    .catch(error => console.error(error));
+    try {
+        const monsterResponse = await fetch(api + `monsters`);
+        const monsterResponseJSON = await monsterResponse.json();
+        console.log("TESTY TEST TESTTSSTST")
+        console.log(monsterResponseJSON)
+    } catch(err) {
+        console.error(err)
+        console.error("ERROR MATE")
+    }
 }
 getMonsters();
+// const getMonsters = () => {
+//     fetch(api + `monsters`)
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data)
+//         console.log("TEST TEST");
+//     })
+//     .catch(error => console.error(error));
+// }
+// getMonsters();
 
 const getSpells = async () => {
     const spellResponse = await fetch(api + `spells`);
