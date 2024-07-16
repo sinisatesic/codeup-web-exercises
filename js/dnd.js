@@ -1,6 +1,6 @@
 
 
-let api = `https://www.dndeapi.co/api/`;
+let api = `https://www.dnd5eapi.co/api/`;
 // let thumbnails = document.querySelector('.thumbnail')
 // let thumbnailImg = document.querySelector('.thumbnailImg');
 
@@ -22,6 +22,7 @@ const getMonsters = async () => {
     }
 }
 getMonsters();
+
 // const getMonsters = () => {
 //     fetch(api + `monsters`)
 //     .then(response => response.json())
