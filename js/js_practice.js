@@ -7010,3 +7010,15 @@ function unrepeated(str) {
 	let ans = [...newObj].join('');
 	return ans;
 }
+
+// isto ali bez metoda:
+
+function unrepeated(str) {
+	let arr = [];
+	  for(let i=0; i< str.length; i++){
+		  if(!arr.includes(str[i])){
+			  arr.push(str[i]);
+		  }
+	  }
+	  return arr.join("");
+  }
