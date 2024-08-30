@@ -7011,6 +7011,12 @@ function unrepeated(str) {
 	return ans;
 }
 
+// jos bolje:
+
+function unrepeated(str) {
+	return [...new Set(str)].join('');
+  }
+
 // isto ali bez metoda:
 
 function unrepeated(str) {
