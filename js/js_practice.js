@@ -6987,3 +6987,26 @@ const zipIt = (women, men) =>
 	women.length === men.length ?
 	women.map((elsement, index) => [elsement, men[index]]) :
 	"sizes don't match"
+
+// 	Remove Repeated Characters
+// Create a function that will remove any repeated character(s) in a word passed to the function. Not just consecutive characters, but characters repeating anywhere in the input.
+
+// Examples
+// unrepeated("hello") ➞ "helo"
+
+// unrepeated("aaaaa") ➞ "a"
+
+// unrepeated("WWE!!!") ➞ "WE!"
+
+// unrepeated("call 911") ➞ "cal 91"
+// Notes
+// No more than two words will be passed.
+// Try to use new data type introduced in ES6.
+// Notice that a string is iterable.
+
+function unrepeated(str) {
+	let arrStr = str.split('');
+	let newObj = new Set(arrStr);
+	let ans = [...newObj].join('');
+	return ans;
+}
