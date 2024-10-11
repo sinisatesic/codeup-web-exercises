@@ -46,15 +46,22 @@ let test = document.getElementById("test");
 //     console.log('bounce');
 // })
 const getMonsters = async () => {
+    let monsterResponse;
+    let monsterResponseJSON;
     try {
-        const monsterResponse = await fetch(api + `monsters`);
-        const monsterResponseJSON = await monsterResponse.json();
+        monsterResponse = await fetch(api + `monsters`);
+        monsterResponseJSON = await monsterResponse.json();
         console.log("TESTY TEST TESTTSSTST")
         console.log(monsterResponse)
         console.log(monsterResponseJSON.count);
         console.log(monsterResponseJSON.name)
 
-        let dynamicP = document.createElement("p");
+    } catch(err) {
+        console.error(err)
+        console.error("ERROR MATE")
+    }
+
+    let dynamicP = document.createElement("p");
         dynamicP.classList.add("mt-5", "line-clamp-3", "text-sm", "leading-6", "text-gray-600");
 
         monsterResponseJSON.results.forEach((e) => {
@@ -63,10 +70,6 @@ const getMonsters = async () => {
                 test.appendChild(dynamicP)
             }
         })
-    } catch(err) {
-        console.error(err)
-        console.error("ERROR MATE")
-    }
 }
 getMonsters();
 
