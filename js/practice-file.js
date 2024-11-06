@@ -598,3 +598,5 @@ function wordLengths(array){
 // removeLeadingTrailing("03.1400") ➞ "3.14"
 //
 // removeLeadingTrailing("30") ➞ "30"
+
+//test
