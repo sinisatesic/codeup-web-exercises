@@ -7090,3 +7090,8 @@ function sumFoundIndexes(arr, n) {
 // bolji odgovor:
 
 const sumFoundIndexes = (arr, n) => arr.reduce((a, b, i) => a + (b === n ? i : 0), 0);
+
+// jos bolji odgovor:
+
+const sumFoundIndexes = (arr, n) => 
+	arr.reduce((sum, el, i) => el === n ? sum + i : sum, 0);
