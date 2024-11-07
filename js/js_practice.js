@@ -7075,6 +7075,8 @@ function inclusiveArray(startNum, endNum) {
 // Notes
 // 0 can be the result if no number in the array matches or if the only matching element is at index 0.
 
+// moj odgovor:
+
 function sumFoundIndexes(arr, n) {
 	let ans = [];
 	for(let i = 0; i < arr.length; i++){
@@ -7084,3 +7086,7 @@ function sumFoundIndexes(arr, n) {
 	}
 	return ans.reduce((a, b) => a + b, 0)
 }
+
+// bolji odgovor:
+
+const sumFoundIndexes = (arr, n) => arr.reduce((a, b, i) => a + (b === n ? i : 0), 0);
