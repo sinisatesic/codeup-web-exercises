@@ -7095,3 +7095,19 @@ const sumFoundIndexes = (arr, n) => arr.reduce((a, b, i) => a + (b === n ? i : 0
 
 const sumFoundIndexes = (arr, n) => 
 	arr.reduce((sum, el, i) => el === n ? sum + i : sum, 0);
+
+// Rectangle in Circle
+// Create a function that takes three numbers — the width and height of a rectangle, and the radius of a circle — and returns true if the rectangle can fit inside the circle, false if it can't.
+
+// Examples
+// rectangleInCircle(8, 6, 5) ➞ true
+
+// rectangleInCircle(5, 9, 5) ➞ false
+
+// rectangleInCircle(4, 7, 4) ➞ false
+// Notes
+// N/A
+
+function rectangleInCircle(w, h, radius) {
+	return Math.sqrt(w**2 + h**2) >= radius*2 ? false : true
+}
