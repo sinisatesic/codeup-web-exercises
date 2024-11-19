@@ -7154,3 +7154,38 @@ function sumOfEvens(arr) {
 	}
 	return ans.reduce((a, b) => a + b, 0);
 }
+
+//bolji odgovori s flat/flatMap metode:
+
+const sumOfEvens = matrix => matrix.flat()
+	.reduce((total, num) => total + (num % 2 === 0 ? num : 0), 0)
+
+//
+
+function sumOfEvens(arr) {
+	return arr.flatMap(e=>e).filter(e=>!(e%2)).reduce((p,c)=>p+c,0)
+}
+
+// Transcribe to mRNA
+// Transcribe the given DNA strand into corresponding mRNA - a type of RNA, that will be formed from DNA after transcription. DNA has the bases A, T, G and C, while RNA converts to U, A, C and G respectively.
+
+// Examples
+// dnaToRna("ATTAGCGCGATATACGCGTAC") ➞ "UAAUCGCGCUAUAUGCGCAUG"
+
+// dnaToRna("CGATATA") ➞ "GCUAUAU"
+
+// dnaToRna("GTCATACGACGTA") ➞ "CAGUAUGCUGCAU"
+// Notes
+// Transcription is the process of making complementary strand.
+// A, T, G and C in DNA converts to U, A, C and G respectively in mRNA.
+
+function dnaToRna(dna) {
+	let a = {
+		"A":"U",
+		"T":"A",
+		"G":"C",
+		"C":"G"
+	}
+	
+	return dna.replace(/A|T|G|C/g, el => a[el]);
+}

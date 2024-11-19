@@ -62,7 +62,7 @@ const getMonsters = async () => {
     }
 
     let dynamicP = document.createElement("p");
-        dynamicP.classList.add("mt-5", "line-clamp-3", "text-sm", "leading-6", "text-gray-600");
+        // dynamicP.classList.add("mt-5", "line-clamp-3", "text-sm", "leading-6", "text-gray-600");
 
         monsterResponseJSON.results.forEach((e) => {
             if (e == monsterResponseJSON.results[0]){
