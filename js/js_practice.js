@@ -7203,3 +7203,14 @@ const dnaToRna = d  => {
 	p = {A: 'U', T: 'A', G: 'C', C: 'G'}
 	return [...d].reduce((v, k) => v + p[k], '')
 }
+
+// neat:
+
+function dnaToRna(dna) {
+	let mrna ="", index = 0
+	for(const l of dna) {
+		l === "A" ? mrna += "U" : l==="T" ? mrna += "A" : l==="G" ? mrna += "C" : mrna +="G"
+		index++
+	}
+	return mrna
+}
