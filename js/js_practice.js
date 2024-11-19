@@ -7189,3 +7189,17 @@ function dnaToRna(dna) {
 	
 	return dna.replace(/A|T|G|C/g, el => a[el]);
 }
+
+// drugaci odgovor:
+
+function dnaToRna(dna) {
+	const converted = {'A': 'U', 'T': 'A', 'C': 'G', 'G': 'C'};
+	return [...dna].map(i => converted[i]).join('');
+}
+
+// jos jedan odgovor:
+
+const dnaToRna = d  => {
+	p = {A: 'U', T: 'A', G: 'C', C: 'G'}
+	return [...d].reduce((v, k) => v + p[k], '')
+}
