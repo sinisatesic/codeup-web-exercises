@@ -7230,3 +7230,19 @@ function dnaToRna(dna) {
 function numberLenSort(arr) {
 	return arr.sort((a, b) => a.toString().length - b.toString().length);
 }
+
+// nize (another answer, robust but cool logic, from Edabit):
+
+function numberLenSort(array) {
+	let arr= array.concat();
+	for(let i=0; i<=arr.length-2; i++){
+			for(let j=0; j<=arr.length-2; j++){
+				if(arr[j].toString().length > arr[j+1].toString().length){
+					let temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp
+				}
+			}
+	}
+	return arr
+}
