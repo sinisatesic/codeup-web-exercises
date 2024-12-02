@@ -7266,3 +7266,8 @@ function wormLength(worm) {
 	if (Array(worm).filter((el) => el == "-")){a = `${worm.length * 10} mm.`;}
 	return a;
 }
+
+// bolji odgovor:
+
+const wormLength = str =>
+	/^-+$/.test(str) ? `${str.length * 10} mm.` : 'invalid';
