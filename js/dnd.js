@@ -46,15 +46,13 @@ let test = document.getElementById("test");
 //     console.log('bounce');
 // })
 const getMonsters = async () => {
-    let monsterResponse;
-    let monsterResponseJSON;
+    let monsterResponse, monsterResponseJSON;
     try {
         monsterResponse = await fetch(api + `monsters`);
         monsterResponseJSON = await monsterResponse.json();
-        console.log("TESTY TEST TESTTSSTST")
         console.log(monsterResponse)
         console.log(monsterResponseJSON.count);
-        console.log(monsterResponseJSON.name)
+        console.log(monsterResponseJSON.name);
 
     } catch(err) {
         console.error(err)
