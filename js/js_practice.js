@@ -7246,3 +7246,23 @@ function numberLenSort(array) {
 	}
 	return arr
 }
+
+// Length of Worm
+// Given a string worm create a function that takes the length of the worm and converts it into millimeters. Each - represents one centimeter.
+
+// Examples
+// wormLength("----------") ➞ "100 mm."
+
+// wormLength("") ➞ "invalid"
+
+// wormLength("---_-___---_") ➞ "invalid"
+// Notes
+// Return "invalid" if an empty string is given or if the string has characters other than -.
+
+function wormLength(worm) {
+	let a, reg = /[a-zA-Z]/g;
+	if (worm === "" || worm.includes("_") || reg.test(worm)){ return "invalid"}
+	if (Array(worm).filter((el) => el != "-")){a = "invalid";}
+	if (Array(worm).filter((el) => el == "-")){a = `${worm.length * 10} mm.`;}
+	return a;
+}
