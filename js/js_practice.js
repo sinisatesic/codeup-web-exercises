@@ -7295,3 +7295,14 @@ function fracRound(frac, n) {
 	let result = (top/bottom).toFixed(n);
 	return `${frac} rounded to ${n} decimal places is ${result}`;
 }
+
+// jos kraci odgovor:
+
+const fracRound = (f, n) => `${f} rounded to ${n} decimal places is ${eval(f).toFixed(n)}`;
+
+// jos jedan odgovor:
+
+function fracRound(frac, n) {
+	let f = frac.split('/');
+	return `${frac} rounded to ${n} decimal places is ${(f[0] / f[1]).toFixed(n)}`; 
+}
