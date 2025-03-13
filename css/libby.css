@@ -1,0 +1,15 @@
+.cardCenter {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardImage {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-radius: 50%;
+}
+
+.networkImg {
+    padding-bottom: 30px;
+}
