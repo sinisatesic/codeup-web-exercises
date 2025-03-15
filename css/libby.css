@@ -7,9 +7,15 @@
 .cardImage {
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
-    border-radius: 50%;
 }
 
 .networkImg {
-    padding-bottom: 30px;
+    padding-bottom: 100px;
 }
+
+.customCard {
+    max-width: 100vw;
+    min-height: 70vh;
+    background-color: yellow;
+}
+
