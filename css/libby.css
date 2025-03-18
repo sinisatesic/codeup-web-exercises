@@ -20,14 +20,37 @@
     }
 }
 
+#nestedContainer {
+    background-color: #d58258;
+}
+
+#fruitingBodiesTitle {
+    z-index: 1;
+    color: #963a2f;
+}
+
+#subTitle {
+    max-height: 80vh;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.navbar {
+    background-color: transparent;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+.navbar.navbarScrolled {
+    background-color: #963a2f;
+}
+
 .logoCard {
     max-width: 100vw;
     min-height: 100vh;
     position: relative; /* Make sure it doesn't interfere with background layers */
-    z-index: 1; /* Ensure it's above the background */
+    z-index: 2; /* Ensure it's above the background; set to 2 to ensure Fruiting Bodies title is front-most*/
     pointer-events: none; /* Makes sure it doesn’t block interactions */
     text-align: center;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     line-height: 100vh;
     font-size: 9rem;
     font-family: "Norican", cursive;
@@ -36,9 +59,19 @@
 }
 
 .cardCenter {
-    max-width: fit-content;
+    border: none;
+    background-color: #ecb984;
+    margin-top: 50px;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+.cardCenter:hover {
+    border: none;
+    background-color: #d58258;
+    color: #fff;
+    /* transition: ease-in-out 300ms; */
 }
 
 .cardCenterVert {
@@ -65,7 +98,7 @@
     background: url("../img/nmmountain.avif") no-repeat center fixed;
     background-size: cover;
     opacity: 0.5;
-    z-index: -1; /* Pushes the image behind everything */
+    z-index: 1; /* Pushes top background image to the front  */
 }
 .networkImg::after {
     content: "";
@@ -81,6 +114,7 @@
 
 
 .customCard {
+    margin-top: 50px;
     max-width: 100vw;
     min-height: 70vh;
     background-color: yellow;
