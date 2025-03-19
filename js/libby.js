@@ -1,13 +1,8 @@
-// console.log("test")
-
-const navbar = document.querySelector(".navbar");
 const cards = document.querySelectorAll(".card");
-const cardCenter = document.querySelector(".cardCenter");
-const cardBody = document.querySelector(".card-body");
-const cardTitle = document.querySelector(".card-title");
-const cardText = document.querySelector(".card-text");
+
 
 document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.querySelector(".navbar");
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50){
