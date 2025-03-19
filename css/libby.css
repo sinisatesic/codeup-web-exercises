@@ -5,18 +5,9 @@
 @keyframes easingHue {
     0% {
         opacity: 0;
-        /* -webkit-transform: translateX(0);
-        transform: translateX(0); */
     }
-    50%{
-        /* opacity: 0.5; */
-        /* -webkit-transform: translateX(-20px);
-        transform: translateX(-20px); */
-    }
-    100%{
+    100% {
         opacity: 1;
-        /* -webkit-transform: translateX(-50px);
-        transform: translateX(-50px); */
     }
 }
 
@@ -83,11 +74,19 @@
 .cardImage {
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
+    overflow: hidden;
+    transition: border-radius 0.5s ease-in-out;
 }
-
-.cardImageCircle {
+.cardImage:hover {
     border-radius: 50%;
 }
+
+
+.cardImageCircleAnimation {
+    border-radius: 50%;
+    animation: borderRadiusChange ease-in-out 2s;
+}
+
 
 .networkImg {
     position: absolute;
