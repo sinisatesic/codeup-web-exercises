@@ -16,8 +16,20 @@
 }
 
 #fruitingBodiesTitle {
-    z-index: 1;
-    color: #963a2f;
+    /* z-index: 1;
+    color: #963a2f; */
+
+    font-size: clamp(3rem, 7vw, 9rem); /* Scales properly */
+    font-family: "Norican", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 10px;
+    
 }
 
 #subTitle {
@@ -48,12 +60,7 @@
     z-index: 2; /* Ensure it's above the background; set to 2 to ensure Fruiting Bodies title is front-most*/
     pointer-events: none; /* Makes sure it doesn’t block interactions */
     text-align: center;
-    /* vertical-align: middle; */
     line-height: 100vh;
-    font-size: 9rem;
-    font-family: "Norican", cursive;
-    font-weight: 400;
-    font-style: normal;
 }
 
 .cardCenter {
