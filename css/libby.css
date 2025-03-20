@@ -32,6 +32,12 @@
 }
 .navbar.navbarScrolled {
     background-color: #963a2f;
+    color: #fff !important;
+}
+.navItems{
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+.navItemScrolled {
     color: #fff;
 }
 
@@ -118,6 +124,10 @@
     max-width: 100vw;
     min-height: 70vh;
     background-color: yellow;
+}
+
+.card-text {
+    line-height: 200%;
 }
 
 
