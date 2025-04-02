@@ -1,4 +1,10 @@
 
+/* body {
+    margin: 0;
+    padding: 0;
+} */
+
+
 #primaryContainer {
     animation: easingHue ease-in 2.6s;
 }
@@ -76,7 +82,7 @@
 .cardCenter {
     border: none;
     background-color: #ecb984;
-    margin-top: 50px;
+    margin-top: 150px;
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -163,8 +169,44 @@
 
 .card-text {
     line-height: 200%;
+    font-size: 1.25rem;
 }
 
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+.footer {
+    color: #fff;
+    background-color: #1a2f5e;
+    height: 30vh;
+    min-width: 100vw;
+}
+.footer-subtext {
+    color: #e5c84f;
+    text-decoration: none;
+    padding-left: 50px;
+}
+.footer-link a, .footer-link a:hover {
+    text-decoration: none;
+}
+.footer-link {
+    list-style-type: none;
+}
+.footer-list {
+    color: #fff;
+    padding-left: 50px;
+}
+.footer-list:hover {
+    color: #e5c84f;
+}
+.footer-title:first-child {
+    padding-left: 50px;
+}
 
 
 
