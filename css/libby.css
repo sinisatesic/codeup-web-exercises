@@ -1,10 +1,4 @@
 
-/* body {
-    margin: 0;
-    padding: 0;
-} */
-
-
 #primaryContainer {
     animation: easingHue ease-in 2.6s;
 }
@@ -82,6 +76,9 @@
 .cardCenter {
     border: none;
     background-color: #ecb984;
+    /* background-image: url(../img/wallpaper.png);
+    background-blend-mode: lighten;
+    background-color: rgba(255,255,255,0.6); */
     margin-top: 150px;
     max-width: 80%;
     margin-left: auto;
@@ -119,34 +116,6 @@
 
 
 
-
-/* .networkImg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../img/flowerField.mp4") no-repeat center fixed;
-    background-size: cover;
-    opacity: 0.5;
-    z-index: 1;
-}
-.networkImg::after {
-    content: "";
-    background: url("../img/flowerField.mp4") no-repeat fixed center;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    position: absolute;
-} */
-
-/* video {
-    z-index: -1;
-} */
-
 .backgroundVideo {
     position: absolute;
     top: 50%;
@@ -169,7 +138,7 @@
 
 .card-text {
     line-height: 200%;
-    font-size: 1.25rem;
+    font-size: 1.20rem;
 }
 
 
@@ -181,13 +150,23 @@
   }
 
 .footer {
-    color: #fff;
-    background-color: #1a2f5e;
+    color: #000;
+    /* background-color: #1a2f5e; */
+    /* background-color: transparent; */
+    background-image: url(../img/wallpaper.png);
+    background-blend-mode: lighten;
+    background-color: #d58258;
     height: 30vh;
     min-width: 100vw;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+.footer:hover {
+    /* background-color: #d58258; */
+    background-blend-mode: lighten;
+    background-color: rgba(255,255,255,0.4);
 }
 .footer-subtext {
-    color: #e5c84f;
+    color: #963a2f;
     text-decoration: none;
     padding-left: 50px;
 }
@@ -198,7 +177,7 @@
     list-style-type: none;
 }
 .footer-list {
-    color: #fff;
+    color: #963a2f;
     padding-left: 50px;
 }
 .footer-list:hover {
@@ -207,7 +186,3 @@
 .footer-title:first-child {
     padding-left: 50px;
 }
-
-
-
-
