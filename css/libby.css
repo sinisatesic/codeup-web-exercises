@@ -155,16 +155,12 @@
     /* background-color: transparent; */
     background-image: url(../img/wallpaper.png);
     background-blend-mode: lighten;
-    background-color: #d58258;
+    background-color: rgba(255,255,255,0.4);
     height: 30vh;
     min-width: 100vw;
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
 }
-.footer:hover {
-    /* background-color: #d58258; */
-    background-blend-mode: lighten;
-    background-color: rgba(255,255,255,0.4);
-}
+
 .footer-subtext {
     color: #963a2f;
     text-decoration: none;
@@ -186,3 +182,21 @@
 .footer-title:first-child {
     padding-left: 50px;
 }
+
+#libby2Img {
+    background-image: url("../img/ripples.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.5; /* optional */
+    text-align: center;
+    line-height: 100vh;
+    color: white;
+}
+
