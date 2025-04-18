@@ -96,6 +96,7 @@
     margin-left: auto;
     margin-right: auto;
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 750ms ease-in-out;
 }
 .cardCenter:hover {
     border: none;
