@@ -90,6 +90,7 @@
     /* background-image: url(../img/wallpaper.png);
     background-blend-mode: lighten;
     background-color: rgba(255,255,255,0.6); */
+    box-shadow: 10px 10px 5px black;
     margin-top: 150px;
     max-width: 80%;
     margin-left: auto;
@@ -100,7 +101,8 @@
     border: none;
     background-color: #d58258;
     color: #fff;
-    /* transition: ease-in-out 300ms; */
+    box-shadow: 10px 10px 5px transparent;
+    transition: ease-in-out 300ms;
 }
 
 .cardCenterVert {
@@ -161,27 +163,35 @@
   }
 
 .footer {
-    color: #000;
+    /* color: #000; */
     /* background-color: #1a2f5e; */
     /* background-color: transparent; */
-    background-image: url(../img/wallpaper.png);
-    background-blend-mode: lighten;
-    background-color: rgba(255,255,255,0.4);
-    height: 30vh;
-    min-width: 100vw;
-    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+    background-image: url(../img/wallpaper2.png);
+    width: 100vw; /* full viewport width */
+  /* margin-left: calc(-50vw + 50%); removes container centering if you're inside one */
+  /* background-image: url('path-to-your-image.png'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; or use '100% 100%' if you want it to stretch */
+  /* background-position: center; */
+  /* background-blend-mode: color-dodge; */
 }
 
 .footer-subtext {
-    color: #963a2f;
+    color: white;
     text-decoration: none;
     padding-left: 50px;
 }
-.footer-link a, .footer-link a:hover {
+.footer-link a {
     text-decoration: none;
+    color: white;
+} 
+.footer-link a:hover {
+    text-decoration: none;
+    color: #ecb984;
 }
 .footer-link {
     list-style-type: none;
+    color: white;
 }
 .footer-list {
     color: #963a2f;
@@ -192,6 +202,7 @@
 }
 .footer-title:first-child {
     padding-left: 50px;
+    color: white;
 }
 
 #libby2Img {
