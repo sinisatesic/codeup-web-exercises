@@ -1,4 +1,17 @@
 
+#libby2Img {
+    background-image: url("../img/ripples.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
 #primaryContainer {
     animation: easingHue ease-in 2.6s;
 }
@@ -13,6 +26,10 @@
 
 #nestedContainer {
     background-color: #d58258;
+}
+
+#nestedContainer_Services {
+    background-color: #74a36b;
 }
 
 .pageHeaders {
@@ -206,16 +223,13 @@
     color: white;
 }
 
-#libby2Img {
-    background-image: url("../img/ripples.avif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
+
+
+.vert-cards {
+    margin: 100px 50px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 
+.vert-image-services {
+    background-color: #f6edd9;
+}
