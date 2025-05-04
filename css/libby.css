@@ -112,7 +112,7 @@
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-    transition: background-color 400ms ease-in-out, color 400ms ease-in-out, box-shadow 500ms ease-in-out;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out, box-shadow 300ms ease-in-out;
     /* transition: box-shadow 500ms ease-in-out; */
 }
 .cardCenter:hover {
@@ -120,7 +120,7 @@
     background-color: #d58258;
     color: #fff;
     box-shadow: 10px 10px 5px transparent;
-    transition: background-color ease-in-out 500ms, color 500ms ease-in-out;
+    transition: background-color ease-in-out 400ms, color 400ms ease-in-out;
 }
 
 .cardCenterVert {
