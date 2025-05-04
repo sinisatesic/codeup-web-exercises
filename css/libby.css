@@ -29,7 +29,7 @@
 }
 
 #nestedContainer_Services {
-    background-color: #74a36b;
+    background-color: #d58258;
 }
 
 .pageHeaders {
@@ -112,15 +112,15 @@
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
-    transition: box-shadow 750ms ease-in-out;
+    transition: background-color 400ms ease-in-out, color 400ms ease-in-out;
+    transition: box-shadow 500ms ease-in-out;
 }
 .cardCenter:hover {
     border: none;
     background-color: #d58258;
     color: #fff;
     box-shadow: 10px 10px 5px transparent;
-    transition: ease-in-out 300ms;
+    transition: background-color ease-in-out 500ms, color 500ms ease-in-out;
 }
 
 .cardCenterVert {
