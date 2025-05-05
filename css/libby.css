@@ -1,3 +1,6 @@
+a.nav-link {
+    font-size: 20px;
+}
 
 #libby2Img {
     background-image: url("../img/ripples.avif");
@@ -123,6 +126,22 @@
     transition: background-color ease-in-out 400ms, color 400ms ease-in-out, box-shadow 500ms ease-in-out;
 }
 
+.cardCenterNoShadow {
+    border: none;
+    background-color: #ecb984;
+    margin-top: 150px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out, box-shadow 900ms ease-in-out;
+}
+.cardCenterNoShadow:hover {
+    border: none;
+    background-color: #d58258;
+    color: #fff;
+    transition: background-color ease-in-out 400ms, color 400ms ease-in-out, box-shadow 500ms ease-in-out;
+}
+
 .cardCenterVert {
     display: flex;
     align-items: center; /* Centers vertically */
@@ -169,7 +188,8 @@
 
 .card-text {
     line-height: 200%;
-    font-size: 1.20rem;
+    /* font-size: 1.20rem; */
+    font-size: 20px;
 }
 
 
@@ -233,6 +253,152 @@
 .vert-image-services {
     background-color: #f6edd9;
 }
+
+
+
+/* below is custom css cards on services-offerings */
+#customCard1 {
+    background-color: #e5c84f;
+}
+#customCard2 {
+    background-color: #963a2f;
+}
+#customCard3 {
+    background-color: #00b2b3;
+}
+#customCard4 {
+    background-color: #ffb5a2;
+}
+#customCard5 {
+    background-color: #582b39;
+}
+#customCard6 {
+    background-color: #709544;
+}
+
+
+.test-h5
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+}
+
+/* .test-p
+{
+  font-size:12px;
+} */
+
+.center
+{
+  height:100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End Non-Essential  */
+
+.property-card
+{
+  height:500px;
+  width:400px;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  /* -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff; */
+  /* box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff; */
+}
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+
+.property-image
+{
+  height:400px;
+  width:400px;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+/* Bottom Card Section */
+
+.property-description
+{
+  background-color: #FAFAFC;
+  height:12em;
+  width:400px;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+}
+
+/* Social Icons */
+
+.property-social-icons
+{
+  width:1em;
+  height:1em;
+  background-color:black;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description
+{
+  height:0em;
+  padding:0px 1em;
+}
+.property-card:hover .property-image
+{
+  height:100vh;
+}
+
+.property-card:hover .property-social-icons
+{
+  background-color:white;
+}
+
+.property-card:hover .property-social-icons:hover
+{
+  background-color:blue;
+  cursor:pointer;
+}
+
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+    overflow-x: hidden;
+  }
 
 
 
