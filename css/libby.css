@@ -2,6 +2,14 @@ a.nav-link {
     font-size: 20px;
 }
 
+
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+    overflow-x: hidden;
+  }
+
 #libby2Img {
     background-image: url("../img/ripples.avif");
     background-size: cover;
@@ -164,6 +172,33 @@ a.nav-link {
     animation: borderRadiusChange ease-in-out 2s;
 }
 
+.card-img-top {
+    height: 300px; /* or any fixed value */
+    object-fit: cover; /* makes image fill the area while keeping aspect ratio */
+    width: 100%;
+  /* display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden; */
+  transition: transform ease-in-out 500ms, box-shadow ease-in-out 500ms;
+}
+
+.cardImgTopAnimation {
+    transform: translateY(75%);
+    transition: transform ease-in-out 500ms, box-shadow ease-in-out 500ms;
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+
+
 
 
 .backgroundVideo {
@@ -188,8 +223,7 @@ a.nav-link {
 
 .card-text {
     line-height: 200%;
-    /* font-size: 1.20rem; */
-    font-size: 20px;
+    font-size: 1.20rem;
 }
 
 
@@ -246,17 +280,18 @@ a.nav-link {
 
 
 .vert-cards {
+    height: 50%;
+    width: 50%;
     margin: 100px 50px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    border: none;
+    background-image: url("../img/wallpaper2.png");
 }
 
 .vert-image-services {
     background-color: #f6edd9;
 }
 
-
-
-/* below is custom css cards on services-offerings */
 #customCard1 {
     background-color: #e5c84f;
 }
@@ -276,29 +311,29 @@ a.nav-link {
     background-color: #709544;
 }
 
+/* below is custom css cards on services-offerings */
 
-.test-h5
+
+
+/* .test-h5
 {
   margin:0px;
   font-size:1.4em;
   font-weight:700;
 }
 
-/* .test-p
-{
-  font-size:12px;
-} */
+
 
 .center
 {
   height:100vh;
-  width:100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* End Non-Essential  */
+
 
 .property-card
 {
@@ -317,17 +352,14 @@ a.nav-link {
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   border-radius:16px;
   overflow:hidden;
-  /* -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff; */
-  /* box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff; */
-}
-/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
 
-/* Top Half of card, image. */
+}
+
 
 .property-image
 {
-  height:400px;
-  width:400px;
+  height:100%;
+  width:100%;
   padding:1em 2em;
   position:Absolute;
   top:0px;
@@ -339,7 +371,7 @@ a.nav-link {
   background-repeat:no-repeat;
 }
 
-/* Bottom Card Section */
+
 
 .property-description
 {
@@ -355,7 +387,7 @@ a.nav-link {
   text-align:center;
 }
 
-/* Social Icons */
+
 
 .property-social-icons
 {
@@ -370,7 +402,7 @@ a.nav-link {
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-/* Property Cards Hover States */
+
 
 .property-card:hover .property-description
 {
@@ -394,14 +426,10 @@ a.nav-link {
 }
 
 
-.row {
-    margin-right: 0;
-    margin-left: 0;
-    overflow-x: hidden;
-  }
 
 
 
 
 
 
+ */
