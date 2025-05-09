@@ -50,10 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
         vertCard.addEventListener("mouseenter", () => {
             vertCardImage.classList.add("cardImgTopAnimation");
+            vertCardImage.classList.add("cardImgTopInvis");
         });
     
         vertCard.addEventListener("mouseleave", () => {
             vertCardImage.classList.remove("cardImgTopAnimation");
+            vertCardImage.classList.remove("cardImgTopInvis");
         });
     });
 })
