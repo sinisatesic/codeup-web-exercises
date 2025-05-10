@@ -195,7 +195,7 @@ a.nav-link {
 .cardImgTopAnimation {
     /* animation: slideDownInvis ease-in-out 1s;
     animation-iteration-count: 1; */
-    opacity: 0.1;
+    opacity: 0;
     transform: translateY(100%);
     transition: transform ease-in-out 500ms, box-shadow ease-in-out 500ms;
     box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
@@ -210,33 +210,37 @@ a.nav-link {
     0% {
         opacity: 1;
     }
-    11.11%{
+    10%{
         opacity: 0.9;
     }
-    22.22%{
+    20%{
         opacity: 0.8;
     }
-    33.33%{
+    30%{
         opacity: 0.7;
     }
-    44.44%{
+    40%{
         opacity: 0.6;
     }
-    55.55%{
+    50%{
         opacity: 0.5;
     }
-    66.66% {
+    60% {
         opacity: 0.4;
     }
-    77.77% {
+    70% {
         opacity: 0.3;
     }
-    88.88% {
+    80% {
         opacity: 0.2;
     }
-    100%{
+    90%{
         opacity: 0.1;
     }
+    100%{
+        opacity: 0;
+    }
+    
 } 
 
 
@@ -326,7 +330,54 @@ a.nav-link {
     margin: 100px 50px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
     border: none;
-    background-image: url("../img/wallpaper2.png");
+    /* background-image: url("../img/wallpaper2.png"); */
+}
+#vert-card1 {
+    background-image: url("../img/vert-img1.webp");
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#vert-card2 {
+    background-image: url("../img/vert-img2.webp");
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#vert-card3 {
+    background-image: url("../img/vert-img3.webp");
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#vert-card4 {
+    background-image: url("../img/vert-img4.webp");
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#vert-card5 {
+    background-image: url("../img/vert-img5.webp");
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#vert-card6 {
+    background-image: url("../img/vert-img6.webp");
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .vert-image-services {
