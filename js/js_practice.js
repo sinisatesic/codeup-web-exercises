@@ -7306,3 +7306,50 @@ function fracRound(frac, n) {
 	let f = frac.split('/');
 	return `${frac} rounded to ${n} decimal places is ${(f[0] / f[1]).toFixed(n)}`; 
 }
+
+//binary tree w/ functions:
+
+
+// Function to create a new node
+function createNode(value) {
+  return {
+    value,
+    left: null,
+    right: null
+  };
+}
+
+// Function to insert a value into the binary tree
+function insertNode(root, value) {
+  if (root === null) {
+    return createNode(value);
+  }
+
+  if (value < root.value) {
+    root.left = insertNode(root.left, value);
+  } else {
+    root.right = insertNode(root.right, value);
+  }
+
+  return root;
+}
+
+// In-order traversal (Left, Root, Right)
+function inOrderTraversal(node) {
+  if (node !== null) {
+    inOrderTraversal(node.left);
+    console.log(node.value);
+    inOrderTraversal(node.right);
+  }
+}
+
+// Example usage
+let root = null;
+root = insertNode(root, 10);
+root = insertNode(root, 5);
+root = insertNode(root, 15);
+root = insertNode(root, 3);
+root = insertNode(root, 7);
+
+console.log("In-order traversal:");
+inOrderTraversal(root); // Output: 3, 5, 7, 10, 15
