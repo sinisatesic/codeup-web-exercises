@@ -7481,3 +7481,32 @@ var findMedianSortedArrays = function(nums1, nums2) {
     }
     return (merged[halfFirst] + merged[halfSecond])/2;
 };
+
+//bolji odgovor:
+
+var findMedianSortedArrays = function(nums1, nums2) {
+    let x=[...nums1,...nums2]
+    x=x.sort((a,b)=>a-b)
+    if(x.length%2==0){
+        return (x[x.length/2]+x[x.length/2-1])/2
+    }else{
+        return x[Math.floor(x.length/2)]
+    }
+    
+};
+
+//jos bolji:
+
+var findMedianSortedArrays = function(nums1, nums2) {
+    const arr = [...nums1, ...nums2].sort((a, b) => a - b);
+
+    if (arr.length < 2) return arr[0];
+
+    const mid = Math.floor(arr.length / 2)
+
+    if (arr.length % 2 !== 0) {
+        return arr[mid];
+    }
+
+    return (arr[mid - 1] + arr[mid]) / 2;
+};
